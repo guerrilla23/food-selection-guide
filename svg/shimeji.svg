@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 600" font-family="Noto Sans CJK JP, sans-serif">
+  <rect width="1080" height="600" fill="#FFFFFF" rx="20"/>
+
+  <!-- Header -->
+  <text x="60" y="60" font-size="44" font-weight="900" fill="#9B8870">しめじ</text>
+  <line x1="60" y1="75" x2="150" y2="75" stroke="#9B8870" stroke-width="4"/>
+  <text x="170" y="68" font-size="22" fill="#666">旬:9〜11月</text>
+
+  <line x1="540" y1="100" x2="540" y2="540" stroke="#DDD" stroke-width="2" stroke-dasharray="6,6"/>
+
+  <!-- OK side (watercolor Pattern A) -->
+  <g transform="translate(280, 320)">
+    <circle cx="-200" cy="-180" r="22" fill="#2C5F2D"/>
+    <text x="-200" y="-172" font-size="26" font-weight="900" fill="white" text-anchor="middle">○</text>
+    <defs>
+      <radialGradient id="wcBodyShimeji" cx="35%" cy="25%"><stop offset="0%" stop-color="#F0E5D5" stop-opacity="0.95"/><stop offset="40%" stop-color="#C8B89A" stop-opacity="0.9"/><stop offset="80%" stop-color="#988570" stop-opacity="0.85"/><stop offset="100%" stop-color="#5D4E37" stop-opacity="0.65"/></radialGradient>
+      <radialGradient id="wcLeafShimeji" cx="50%" cy="20%"><stop offset="0%" stop-color="#9BCB7A" stop-opacity="0.9"/><stop offset="60%" stop-color="#5D8F3D" stop-opacity="0.7"/><stop offset="100%" stop-color="#2C5F2D" stop-opacity="0.5"/></radialGradient>
+      <filter id="wcRoughShimeji" x="-10%" y="-10%" width="120%" height="120%">
+        <feTurbulence baseFrequency="0.04" numOctaves="3" seed="89"/>
+        <feDisplacementMap in="SourceGraphic" scale="4"/>
+      </filter>
+      <filter id="wcBlurShimeji"><feGaussianBlur stdDeviation="1.5"/></filter>
+    </defs>
+    <g filter="url(#wcBlurShimeji)" opacity="0.4"><ellipse cx="0" cy="0" rx="110" ry="110" fill="#C8B89A"/></g>
+    
+    <g filter="url(#wcRoughShimeji)"><path d="M -70 -50 Q -85 -90 -45 -100 Q -10 -90 -25 -50 Z" fill="url(#wcBodyShimeji)"/><path d="M -20 -55 Q -30 -100 10 -110 Q 45 -100 30 -55 Z" fill="url(#wcBodyShimeji)"/><path d="M 20 -50 Q 10 -95 50 -100 Q 80 -90 65 -45 Z" fill="url(#wcBodyShimeji)"/><path d="M -55 -50 L -55 70 Q -50 80 -45 80 L -40 70 L -40 -50 Z" fill="url(#wcBodyShimeji)"/><path d="M -10 -55 L -10 80 Q -5 90 0 90 L 5 80 L 5 -55 Z" fill="url(#wcBodyShimeji)"/><path d="M 35 -45 L 35 75 Q 40 85 45 85 L 50 75 L 50 -45 Z" fill="url(#wcBodyShimeji)"/></g>
+    <g stroke="#3D2817" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"><path d="M -70 -50 Q -85 -90 -45 -100 Q -10 -90 -25 -50 Z"/><path d="M -20 -55 Q -30 -100 10 -110 Q 45 -100 30 -55 Z"/><path d="M 20 -50 Q 10 -95 50 -100 Q 80 -90 65 -45 Z"/><path d="M -55 -50 L -55 70 L -40 70 L -40 -50"/><path d="M -10 -55 L -10 80 L 5 80 L 5 -55"/><path d="M 35 -45 L 35 75 L 50 75 L 50 -45"/><path d="M -65 -55 Q -45 -45 -25 -55" opacity="0.4" stroke-width="1.2"/><path d="M -15 -60 Q 5 -50 25 -60" opacity="0.4" stroke-width="1.2"/><path d="M 25 -50 Q 45 -40 65 -50" opacity="0.4" stroke-width="1.2"/></g>
+  </g>
+
+  <!-- NG side (flat) -->
+  <g transform="translate(800, 320)">
+    <circle cx="-200" cy="-180" r="22" fill="#C62828"/>
+    <text x="-200" y="-172" font-size="26" font-weight="900" fill="white" text-anchor="middle">×</text>
+    <path d="M -70 -50 Q -85 -90 -45 -100 Q -10 -90 -25 -50 Z" fill="#A8908070"/><path d="M -20 -55 Q -30 -100 10 -110 Q 45 -100 30 -55 Z" fill="#A8908070"/><path d="M 20 -50 Q 10 -95 50 -100 Q 80 -90 65 -45 Z" fill="#A8908070"/><path d="M -55 -50 L -55 70 L -40 70 L -40 -50 Z" fill="#A8908070"/><path d="M -10 -55 L -10 80 L 5 80 L 5 -55 Z" fill="#A8908070"/><path d="M 35 -45 L 35 75 L 50 75 L 50 -45 Z" fill="#A8908070"/><ellipse cx="-45" cy="-75" rx="18" ry="12" fill="#3D2817" opacity="0.55"/><ellipse cx="30" cy="-75" rx="14" ry="9" fill="#3D2817" opacity="0.5"/><path d="M -55 70 Q 0 80 50 75" stroke="#5D4E37" stroke-width="1.5" fill="none" opacity="0.55"/>
+  </g>
+
+  <!-- Comparison labels -->
+  <g font-size="20" fill="#333">
+    <rect x="60" y="495" width="460" height="80" rx="8" fill="#E8F5E9"/>
+    <text x="80" y="520" font-weight="bold" fill="#2C5F2D">● カサが小ぶりでハリ</text>
+    <text x="80" y="545" font-weight="bold" fill="#2C5F2D">● 株がしっかり、白い軸</text>
+    <text x="80" y="568" fill="#666" font-size="17">カサ表面に水滴=新鮮</text>
+
+    <rect x="560" y="495" width="460" height="80" rx="8" fill="#FFEBEE"/>
+    <text x="580" y="520" font-weight="bold" fill="#C62828">× カサが大きく開く・色暗</text>
+    <text x="580" y="545" font-weight="bold" fill="#C62828">× 軸がベタつく・茶色</text>
+    <text x="580" y="568" fill="#666" font-size="17">株がバラける=古い</text>
+  </g>
+</svg>

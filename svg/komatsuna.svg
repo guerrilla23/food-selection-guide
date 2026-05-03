@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 600" font-family="Noto Sans CJK JP, sans-serif">
+  <rect width="1080" height="600" fill="#FFFFFF" rx="20"/>
+
+  <!-- Header -->
+  <text x="60" y="60" font-size="44" font-weight="900" fill="#5D8F3D">小松菜</text>
+  <line x1="60" y1="75" x2="150" y2="75" stroke="#5D8F3D" stroke-width="4"/>
+  <text x="170" y="68" font-size="22" fill="#666">旬:11〜2月</text>
+
+  <line x1="540" y1="100" x2="540" y2="540" stroke="#DDD" stroke-width="2" stroke-dasharray="6,6"/>
+
+  <!-- OK side (watercolor Pattern A) -->
+  <g transform="translate(280, 320)">
+    <circle cx="-200" cy="-180" r="22" fill="#2C5F2D"/>
+    <text x="-200" y="-172" font-size="26" font-weight="900" fill="white" text-anchor="middle">○</text>
+    <defs>
+      <radialGradient id="wcBodyKomatsuna" cx="35%" cy="25%"><stop offset="0%" stop-color="#D4E8B5" stop-opacity="0.95"/><stop offset="40%" stop-color="#9BCB7A" stop-opacity="0.9"/><stop offset="80%" stop-color="#5D8F3D" stop-opacity="0.85"/><stop offset="100%" stop-color="#2C5F2D" stop-opacity="0.65"/></radialGradient>
+      <radialGradient id="wcLeafKomatsuna" cx="50%" cy="20%"><stop offset="0%" stop-color="#9BCB7A" stop-opacity="0.9"/><stop offset="60%" stop-color="#5D8F3D" stop-opacity="0.7"/><stop offset="100%" stop-color="#2C5F2D" stop-opacity="0.5"/></radialGradient>
+      <filter id="wcRoughKomatsuna" x="-10%" y="-10%" width="120%" height="120%">
+        <feTurbulence baseFrequency="0.04" numOctaves="3" seed="47"/>
+        <feDisplacementMap in="SourceGraphic" scale="4"/>
+      </filter>
+      <filter id="wcBlurKomatsuna"><feGaussianBlur stdDeviation="1.5"/></filter>
+    </defs>
+    <g filter="url(#wcBlurKomatsuna)" opacity="0.4"><ellipse cx="0" cy="-50" rx="110" ry="90" fill="#9BCB7A"/><ellipse cx="0" cy="100" rx="30" ry="30" fill="#E8DCC0"/></g>
+    <g filter="url(#wcRoughKomatsuna)" opacity="0.8"><path d="M -65 -100 Q -90 -150 -50 -160 Q -25 -130 -40 -90 Z" fill="url(#wcLeafKomatsuna)"/><path d="M -25 -120 Q -50 -170 -10 -175 Q 15 -150 -5 -100 Z" fill="url(#wcLeafKomatsuna)"/><path d="M 15 -125 Q -10 -175 30 -175 Q 55 -150 35 -100 Z" fill="url(#wcLeafKomatsuna)"/><path d="M 50 -100 Q 25 -160 70 -150 Q 85 -125 65 -90 Z" fill="url(#wcLeafKomatsuna)"/></g>
+    <g filter="url(#wcRoughKomatsuna)"><path d="M -25 -90 L 25 -90 Q 30 -85 28 90 Q 25 110 0 115 Q -25 110 -28 90 Q -30 -85 -25 -90 Z" fill="url(#wcBodyKomatsuna)"/></g>
+    <g stroke="#3D2817" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"><path d="M -25 -90 L 25 -90 Q 30 -85 28 90 Q 25 110 0 115 Q -25 110 -28 90 Q -30 -85 -25 -90 Z"/><path d="M -65 -100 Q -90 -150 -50 -160 Q -25 -130 -40 -90 Z"/><path d="M -25 -120 Q -50 -170 -10 -175 Q 15 -150 -5 -100 Z"/><path d="M 15 -125 Q -10 -175 30 -175 Q 55 -150 35 -100 Z"/><path d="M 50 -100 Q 25 -160 70 -150 Q 85 -125 65 -90 Z"/><path d="M -55 -95 Q -65 -140 -45 -155" opacity="0.6" stroke-width="1.4"/><path d="M -15 -110 Q -25 -150 -5 -170" opacity="0.6" stroke-width="1.4"/><path d="M 25 -110 Q 15 -150 35 -170" opacity="0.6" stroke-width="1.4"/><path d="M 60 -95 Q 50 -140 70 -150" opacity="0.6" stroke-width="1.4"/><path d="M 0 -85 L 0 110" opacity="0.5" stroke-width="1.5"/></g>
+  </g>
+
+  <!-- NG side (flat) -->
+  <g transform="translate(800, 320)">
+    <circle cx="-200" cy="-180" r="22" fill="#C62828"/>
+    <text x="-200" y="-172" font-size="26" font-weight="900" fill="white" text-anchor="middle">×</text>
+    <path d="M -25 -90 L 25 -90 Q 30 -85 28 90 Q 25 110 0 115 Q -25 110 -28 90 Q -30 -85 -25 -90 Z" fill="#E8DC60"/><path d="M -65 -100 Q -90 -145 -55 -155 Q -25 -130 -40 -95 Z" fill="#A0A040"/><path d="M -20 -120 Q -50 -165 -15 -170 Q 15 -150 -5 -100 Z" fill="#A0A040"/><path d="M 18 -125 Q -10 -170 30 -170 Q 55 -150 35 -100 Z" fill="#A0A040"/><path d="M 50 -100 Q 25 -155 65 -145 Q 85 -125 65 -90 Z" fill="#A0A040"/><ellipse cx="-40" cy="-130" rx="12" ry="8" fill="#8B6F47" opacity="0.5"/><ellipse cx="30" cy="-135" rx="10" ry="7" fill="#8B6F47" opacity="0.5"/><path d="M -25 90 Q 0 95 25 90" stroke="#5D4E37" stroke-width="1.5" fill="none" opacity="0.6"/>
+  </g>
+
+  <!-- Comparison labels -->
+  <g font-size="20" fill="#333">
+    <rect x="60" y="495" width="460" height="80" rx="8" fill="#E8F5E9"/>
+    <text x="80" y="520" font-weight="bold" fill="#2C5F2D">● 葉が鮮やかな濃緑、ピン</text>
+    <text x="80" y="545" font-weight="bold" fill="#2C5F2D">● 茎の付け根がしっかり</text>
+    <text x="80" y="568" fill="#666" font-size="17">葉先まで張りあり=新鮮</text>
+
+    <rect x="560" y="495" width="460" height="80" rx="8" fill="#FFEBEE"/>
+    <text x="580" y="520" font-weight="bold" fill="#C62828">× 葉が黄ばむ、萎れる</text>
+    <text x="580" y="545" font-weight="bold" fill="#C62828">× 茎の切り口がベタつく</text>
+    <text x="580" y="568" fill="#666" font-size="17">黒い斑点=病気・傷み</text>
+  </g>
+</svg>

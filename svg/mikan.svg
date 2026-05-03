@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 600" font-family="Noto Sans CJK JP, sans-serif">
+  <rect width="1080" height="600" fill="#FFFFFF" rx="20"/>
+
+  <!-- Header -->
+  <text x="60" y="60" font-size="44" font-weight="900" fill="#FF8C42">みかん</text>
+  <line x1="60" y1="75" x2="150" y2="75" stroke="#FF8C42" stroke-width="4"/>
+  <text x="170" y="68" font-size="22" fill="#666">旬:11〜2月</text>
+
+  <line x1="540" y1="100" x2="540" y2="540" stroke="#DDD" stroke-width="2" stroke-dasharray="6,6"/>
+
+  <!-- OK side (watercolor Pattern A) -->
+  <g transform="translate(280, 320)">
+    <circle cx="-200" cy="-180" r="22" fill="#2C5F2D"/>
+    <text x="-200" y="-172" font-size="26" font-weight="900" fill="white" text-anchor="middle">○</text>
+    <defs>
+      <radialGradient id="wcBodyMikan" cx="35%" cy="25%"><stop offset="0%" stop-color="#FFD9B0" stop-opacity="0.95"/><stop offset="40%" stop-color="#FFB07A" stop-opacity="0.9"/><stop offset="80%" stop-color="#FF8C42" stop-opacity="0.85"/><stop offset="100%" stop-color="#D45F1A" stop-opacity="0.7"/></radialGradient>
+      <radialGradient id="wcLeafMikan" cx="50%" cy="20%"><stop offset="0%" stop-color="#9BCB7A" stop-opacity="0.9"/><stop offset="60%" stop-color="#5D8F3D" stop-opacity="0.7"/><stop offset="100%" stop-color="#2C5F2D" stop-opacity="0.5"/></radialGradient>
+      <filter id="wcRoughMikan" x="-10%" y="-10%" width="120%" height="120%">
+        <feTurbulence baseFrequency="0.04" numOctaves="3" seed="107"/>
+        <feDisplacementMap in="SourceGraphic" scale="4"/>
+      </filter>
+      <filter id="wcBlurMikan"><feGaussianBlur stdDeviation="1.5"/></filter>
+    </defs>
+    <g filter="url(#wcBlurMikan)" opacity="0.4"><ellipse cx="0" cy="0" rx="90" ry="75" fill="#FFB07A"/></g>
+    <g filter="url(#wcRoughMikan)" opacity="0.8"><path d="M 5 -85 Q 18 -100 25 -85 Q 18 -78 8 -83 Z" fill="url(#wcLeafMikan)"/></g>
+    <g filter="url(#wcRoughMikan)"><path d="M -80 -10 Q -85 60 0 80 Q 85 60 80 -10 Q 75 -75 0 -85 Q -75 -75 -80 -10 Z" fill="url(#wcBodyMikan)"/></g>
+    <g stroke="#3D2817" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"><path d="M -80 -10 Q -85 60 0 80 Q 85 60 80 -10 Q 75 -75 0 -85 Q -75 -75 -80 -10 Z"/><path d="M 0 -85 L -2 -100" opacity="0.85" stroke-width="2"/><path d="M 5 -85 Q 18 -100 25 -85 Q 18 -78 8 -83" opacity="0.85" stroke-width="2"/><path d="M -15 -80 Q 0 -78 15 -80" opacity="0.5" stroke-width="1.4"/><path d="M -15 75 Q 0 78 15 75" opacity="0.5" stroke-width="1.4"/><path d="M -65 -45 Q -45 -50 -50 -25" opacity="0.4" stroke-width="1.2"/><path d="M 65 -45 Q 45 -50 50 -25" opacity="0.4" stroke-width="1.2"/></g>
+  </g>
+
+  <!-- NG side (flat) -->
+  <g transform="translate(800, 320)">
+    <circle cx="-200" cy="-180" r="22" fill="#C62828"/>
+    <text x="-200" y="-172" font-size="26" font-weight="900" fill="white" text-anchor="middle">×</text>
+    <path d="M -80 -10 Q -85 60 0 80 Q 85 60 80 -10 Q 75 -75 0 -85 Q -75 -75 -80 -10 Z" fill="#C87830"/><ellipse cx="-25" cy="25" rx="22" ry="18" fill="#5D2A18" opacity="0.5"/><path d="M -60 -30 Q -25 -25 0 -35" stroke="#5D4E37" stroke-width="1.5" fill="none" opacity="0.55"/><path d="M 0 35 Q 30 30 55 40" stroke="#5D4E37" stroke-width="1.5" fill="none" opacity="0.55"/>
+  </g>
+
+  <!-- Comparison labels -->
+  <g font-size="20" fill="#333">
+    <rect x="60" y="495" width="460" height="80" rx="8" fill="#E8F5E9"/>
+    <text x="80" y="520" font-weight="bold" fill="#2C5F2D">● 色が濃い橙、ハリあり</text>
+    <text x="80" y="545" font-weight="bold" fill="#2C5F2D">● 皮が薄く、果軸が緑</text>
+    <text x="80" y="568" fill="#666" font-size="17">ヘタが小さい=甘い品種</text>
+
+    <rect x="560" y="495" width="460" height="80" rx="8" fill="#FFEBEE"/>
+    <text x="580" y="520" font-weight="bold" fill="#C62828">× 色がくすむ・凹み</text>
+    <text x="580" y="545" font-weight="bold" fill="#C62828">× 皮がブカブカ・浮く</text>
+    <text x="580" y="568" fill="#666" font-size="17">皮と中身に隙間=ボケ・水分抜け</text>
+  </g>
+</svg>

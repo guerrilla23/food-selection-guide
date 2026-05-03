@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-100 -160 200 290" font-family="Noto Sans CJK JP, sans-serif">
+<defs>
+      <radialGradient id="wcBodyNasu" cx="35%" cy="25%"><stop offset="0%" stop-color="#C8AED8" stop-opacity="0.95"/><stop offset="40%" stop-color="#8050C8" stop-opacity="0.9"/><stop offset="80%" stop-color="#5D2A6F" stop-opacity="0.85"/><stop offset="100%" stop-color="#3A1A50" stop-opacity="0.65"/></radialGradient>
+      <radialGradient id="wcLeafNasu" cx="50%" cy="20%"><stop offset="0%" stop-color="#9BCB7A" stop-opacity="0.9"/><stop offset="60%" stop-color="#5D8F3D" stop-opacity="0.7"/><stop offset="100%" stop-color="#2C5F2D" stop-opacity="0.5"/></radialGradient>
+      <filter id="wcRoughNasu" x="-10%" y="-10%" width="120%" height="120%">
+        <feTurbulence baseFrequency="0.04" numOctaves="3" seed="61"/>
+        <feDisplacementMap in="SourceGraphic" scale="4"/>
+      </filter>
+      <filter id="wcBlurNasu"><feGaussianBlur stdDeviation="1.5"/></filter>
+    </defs>
+    <g filter="url(#wcBlurNasu)" opacity="0.4"><ellipse cx="0" cy="10" rx="70" ry="110" fill="#7040A0"/><ellipse cx="0" cy="-110" rx="35" ry="22" fill="#5D8F3D"/></g>
+    <g filter="url(#wcRoughNasu)" opacity="0.8"><path d="M -25 -100 L -30 -130 L -10 -120 L 0 -135 L 10 -120 L 30 -130 L 25 -100 Q 0 -90 -25 -100 Z" fill="url(#wcLeafNasu)"/></g>
+    <g filter="url(#wcRoughNasu)"><path d="M -55 -50 Q -65 80 0 110 Q 65 80 55 -50 Q 50 -100 0 -100 Q -50 -100 -55 -50 Z" fill="url(#wcBodyNasu)"/></g>
+    <g stroke="#3D2817" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"><path d="M -55 -50 Q -65 80 0 110 Q 65 80 55 -50 Q 50 -100 0 -100 Q -50 -100 -55 -50 Z"/><path d="M -25 -100 L -30 -130 L -10 -120 L 0 -135 L 10 -120 L 30 -130 L 25 -100" opacity="0.85" stroke-width="2.5"/><path d="M 0 -135 L -3 -150" opacity="0.85" stroke-width="2.5"/><path d="M -25 -30 Q -28 30 -20 80" opacity="0.5" stroke-width="1.4"/></g>
+</svg>

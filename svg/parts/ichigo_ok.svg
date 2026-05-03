@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-100 -130 200 240" font-family="Noto Sans CJK JP, sans-serif">
+<defs>
+      <radialGradient id="wcBodyIchigo" cx="35%" cy="25%"><stop offset="0%" stop-color="#FFB0A8" stop-opacity="0.95"/><stop offset="40%" stop-color="#FF6655" stop-opacity="0.9"/><stop offset="80%" stop-color="#E33825" stop-opacity="0.85"/><stop offset="100%" stop-color="#A02818" stop-opacity="0.7"/></radialGradient>
+      <radialGradient id="wcLeafIchigo" cx="50%" cy="20%"><stop offset="0%" stop-color="#9BCB7A" stop-opacity="0.9"/><stop offset="60%" stop-color="#5D8F3D" stop-opacity="0.7"/><stop offset="100%" stop-color="#2C5F2D" stop-opacity="0.5"/></radialGradient>
+      <filter id="wcRoughIchigo" x="-10%" y="-10%" width="120%" height="120%">
+        <feTurbulence baseFrequency="0.04" numOctaves="3" seed="127"/>
+        <feDisplacementMap in="SourceGraphic" scale="4"/>
+      </filter>
+      <filter id="wcBlurIchigo"><feGaussianBlur stdDeviation="1.5"/></filter>
+    </defs>
+    <g filter="url(#wcBlurIchigo)" opacity="0.4"><ellipse cx="0" cy="0" rx="80" ry="80" fill="#FF6655"/></g>
+    <g filter="url(#wcRoughIchigo)" opacity="0.8"><path d="M -25 -85 L -40 -110 L -20 -90 L -10 -115 L 0 -90 L 10 -115 L 20 -90 L 40 -110 L 25 -85 Q 0 -78 -25 -85 Z" fill="url(#wcLeafIchigo)"/></g>
+    <g filter="url(#wcRoughIchigo)"><path d="M -60 -75 Q -85 -50 -75 -10 Q -50 70 0 95 Q 50 70 75 -10 Q 85 -50 60 -75 Q 30 -90 0 -85 Q -30 -90 -60 -75 Z" fill="url(#wcBodyIchigo)"/></g>
+    <g stroke="#3D2817" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"><path d="M -60 -75 Q -85 -50 -75 -10 Q -50 70 0 95 Q 50 70 75 -10 Q 85 -50 60 -75 Q 30 -90 0 -85 Q -30 -90 -60 -75 Z"/><path d="M -25 -85 L -40 -110 L -20 -90 L -10 -115 L 0 -90 L 10 -115 L 20 -90 L 40 -110 L 25 -85" opacity="0.85" stroke-width="2"/><path d="M -50 -40 L -48 -38" opacity="0.7" stroke-width="2"/><path d="M -25 -50 L -23 -48" opacity="0.7" stroke-width="2"/><path d="M 0 -55 L 2 -53" opacity="0.7" stroke-width="2"/><path d="M 25 -50 L 27 -48" opacity="0.7" stroke-width="2"/><path d="M 50 -40 L 52 -38" opacity="0.7" stroke-width="2"/><path d="M -45 0 L -43 2" opacity="0.7" stroke-width="2"/><path d="M -15 -10 L -13 -8" opacity="0.7" stroke-width="2"/><path d="M 15 -5 L 17 -3" opacity="0.7" stroke-width="2"/><path d="M 45 5 L 47 7" opacity="0.7" stroke-width="2"/><path d="M -25 35 L -23 37" opacity="0.7" stroke-width="2"/><path d="M 25 35 L 27 37" opacity="0.7" stroke-width="2"/><path d="M 0 50 L 2 52" opacity="0.7" stroke-width="2"/></g>
+</svg>

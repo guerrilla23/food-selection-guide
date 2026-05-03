@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-150 -130 300 270" font-family="Noto Sans CJK JP, sans-serif">
+<defs>
+      <radialGradient id="wcBodyLettuce" cx="35%" cy="25%"><stop offset="0%" stop-color="#E0F0CC" stop-opacity="0.95"/><stop offset="40%" stop-color="#B5DCA0" stop-opacity="0.9"/><stop offset="80%" stop-color="#7BAB46" stop-opacity="0.85"/><stop offset="100%" stop-color="#4A7C2E" stop-opacity="0.6"/></radialGradient>
+      <radialGradient id="wcLeafLettuce" cx="50%" cy="20%"><stop offset="0%" stop-color="#9BCB7A" stop-opacity="0.9"/><stop offset="60%" stop-color="#5D8F3D" stop-opacity="0.7"/><stop offset="100%" stop-color="#2C5F2D" stop-opacity="0.5"/></radialGradient>
+      <filter id="wcRoughLettuce" x="-10%" y="-10%" width="120%" height="120%">
+        <feTurbulence baseFrequency="0.04" numOctaves="3" seed="53"/>
+        <feDisplacementMap in="SourceGraphic" scale="4"/>
+      </filter>
+      <filter id="wcBlurLettuce"><feGaussianBlur stdDeviation="1.5"/></filter>
+    </defs>
+    <g filter="url(#wcBlurLettuce)" opacity="0.4"><ellipse cx="0" cy="0" rx="130" ry="110" fill="#9BCB7A"/></g>
+    
+    <g filter="url(#wcRoughLettuce)"><path d="M 0 -110 Q -120 -100 -120 -10 Q -125 90 0 110 Q 125 90 120 -10 Q 120 -100 0 -110 Z" fill="url(#wcBodyLettuce)"/></g>
+    <g stroke="#3D2817" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"><path d="M 0 -110 Q -120 -100 -120 -10 Q -125 90 0 110 Q 125 90 120 -10 Q 120 -100 0 -110 Z"/><path d="M -100 -50 Q -85 -65 -70 -45" opacity="0.7" stroke-width="1.6"/><path d="M -65 -90 Q -45 -100 -25 -85" opacity="0.7" stroke-width="1.6"/><path d="M 5 -100 Q 25 -110 50 -95" opacity="0.7" stroke-width="1.6"/><path d="M 70 -75 Q 90 -85 105 -55" opacity="0.7" stroke-width="1.6"/><path d="M -85 0 Q -60 10 -35 -5" opacity="0.5" stroke-width="1.4"/><path d="M -25 30 Q 0 40 30 25" opacity="0.5" stroke-width="1.4"/><path d="M 40 50 Q 65 65 90 50" opacity="0.5" stroke-width="1.4"/><path d="M 0 -110 L 0 50" opacity="0.4" stroke-width="1.2"/></g>
+</svg>

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-110 -170 220 320" font-family="Noto Sans CJK JP, sans-serif">
+<defs>
+      <radialGradient id="wcBodyHakusai" cx="35%" cy="25%"><stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.95"/><stop offset="40%" stop-color="#E5F0CC" stop-opacity="0.9"/><stop offset="80%" stop-color="#A8C76E" stop-opacity="0.8"/><stop offset="100%" stop-color="#5D8F3D" stop-opacity="0.6"/></radialGradient>
+      <radialGradient id="wcLeafHakusai" cx="50%" cy="20%"><stop offset="0%" stop-color="#9BCB7A" stop-opacity="0.9"/><stop offset="60%" stop-color="#5D8F3D" stop-opacity="0.7"/><stop offset="100%" stop-color="#2C5F2D" stop-opacity="0.5"/></radialGradient>
+      <filter id="wcRoughHakusai" x="-10%" y="-10%" width="120%" height="120%">
+        <feTurbulence baseFrequency="0.04" numOctaves="3" seed="59"/>
+        <feDisplacementMap in="SourceGraphic" scale="4"/>
+      </filter>
+      <filter id="wcBlurHakusai"><feGaussianBlur stdDeviation="1.5"/></filter>
+    </defs>
+    <g filter="url(#wcBlurHakusai)" opacity="0.4"><ellipse cx="0" cy="-100" rx="80" ry="60" fill="#9BCB7A"/><ellipse cx="0" cy="50" rx="80" ry="90" fill="#F0E8D0"/></g>
+    
+    <g filter="url(#wcRoughHakusai)"><path d="M -75 130 L -75 -50 Q -80 -130 0 -150 Q 80 -130 75 -50 L 75 130 Q 70 145 0 145 Q -70 145 -75 130 Z" fill="url(#wcBodyHakusai)"/></g>
+    <g stroke="#3D2817" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"><path d="M -75 130 L -75 -50 Q -80 -130 0 -150 Q 80 -130 75 -50 L 75 130 Q 70 145 0 145 Q -70 145 -75 130 Z"/><path d="M -50 -120 L -45 130" opacity="0.6" stroke-width="1.5"/><path d="M -25 -135 L -22 130" opacity="0.6" stroke-width="1.5"/><path d="M 0 -150 L 0 145" opacity="0.6" stroke-width="1.5"/><path d="M 25 -135 L 22 130" opacity="0.6" stroke-width="1.5"/><path d="M 50 -120 L 45 130" opacity="0.6" stroke-width="1.5"/><path d="M -40 -130 Q -30 -160 -15 -135" opacity="0.7" stroke-width="1.6"/><path d="M 5 -145 Q 20 -165 25 -140" opacity="0.7" stroke-width="1.6"/><path d="M 30 -135 Q 45 -155 50 -125" opacity="0.7" stroke-width="1.6"/><path d="M -65 130 Q 0 138 65 130" opacity="0.5" stroke-width="1.4"/></g>
+</svg>

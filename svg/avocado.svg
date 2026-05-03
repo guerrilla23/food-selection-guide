@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 600" font-family="Noto Sans CJK JP, sans-serif">
+  <rect width="1080" height="600" fill="#FFFFFF" rx="20"/>
+
+  <!-- Header -->
+  <text x="60" y="60" font-size="44" font-weight="900" fill="#4A7C2E">アボカド</text>
+  <line x1="60" y1="75" x2="180" y2="75" stroke="#4A7C2E" stroke-width="4"/>
+  <text x="200" y="68" font-size="22" fill="#666">旬:通年</text>
+
+  <line x1="540" y1="100" x2="540" y2="540" stroke="#DDD" stroke-width="2" stroke-dasharray="6,6"/>
+
+  <!-- OK side (watercolor Pattern A) -->
+  <g transform="translate(280, 320)">
+    <circle cx="-200" cy="-180" r="22" fill="#2C5F2D"/>
+    <text x="-200" y="-172" font-size="26" font-weight="900" fill="white" text-anchor="middle">○</text>
+    <defs>
+      <radialGradient id="wcBodyAvocado" cx="35%" cy="25%"><stop offset="0%" stop-color="#9BCB7A" stop-opacity="0.95"/><stop offset="40%" stop-color="#5D8F3D" stop-opacity="0.9"/><stop offset="80%" stop-color="#3D5F2D" stop-opacity="0.85"/><stop offset="100%" stop-color="#1A3F1A" stop-opacity="0.65"/></radialGradient>
+      <radialGradient id="wcLeafAvocado" cx="50%" cy="20%"><stop offset="0%" stop-color="#9BCB7A" stop-opacity="0.9"/><stop offset="60%" stop-color="#5D8F3D" stop-opacity="0.7"/><stop offset="100%" stop-color="#2C5F2D" stop-opacity="0.5"/></radialGradient>
+      <filter id="wcRoughAvocado" x="-10%" y="-10%" width="120%" height="120%">
+        <feTurbulence baseFrequency="0.04" numOctaves="3" seed="113"/>
+        <feDisplacementMap in="SourceGraphic" scale="4"/>
+      </filter>
+      <filter id="wcBlurAvocado"><feGaussianBlur stdDeviation="1.5"/></filter>
+    </defs>
+    <g filter="url(#wcBlurAvocado)" opacity="0.4"><ellipse cx="0" cy="10" rx="80" ry="115" fill="#5D8F3D"/></g>
+    
+    <g filter="url(#wcRoughAvocado)"><path d="M 0 -110 Q -25 -100 -35 -75 Q -55 -50 -65 0 Q -75 70 0 110 Q 75 70 65 0 Q 55 -50 35 -75 Q 25 -100 0 -110 Z" fill="url(#wcBodyAvocado)"/></g>
+    <g stroke="#3D2817" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"><path d="M 0 -110 Q -25 -100 -35 -75 Q -55 -50 -65 0 Q -75 70 0 110 Q 75 70 65 0 Q 55 -50 35 -75 Q 25 -100 0 -110 Z"/><path d="M 0 -110 L 0 -125" opacity="0.85" stroke-width="2.5"/><path d="M -40 -30 L -38 -28" opacity="0.7" stroke-width="2.2"/><path d="M -25 30 L -23 32" opacity="0.7" stroke-width="2.2"/><path d="M 30 -10 L 32 -8" opacity="0.7" stroke-width="2.2"/><path d="M 40 50 L 42 52" opacity="0.7" stroke-width="2.2"/><path d="M 0 70 L 2 72" opacity="0.7" stroke-width="2.2"/><path d="M -45 60 L -43 62" opacity="0.7" stroke-width="2.2"/></g>
+  </g>
+
+  <!-- NG side (flat) -->
+  <g transform="translate(800, 320)">
+    <circle cx="-200" cy="-180" r="22" fill="#C62828"/>
+    <text x="-200" y="-172" font-size="26" font-weight="900" fill="white" text-anchor="middle">×</text>
+    <path d="M 0 -110 Q -25 -100 -35 -75 Q -55 -50 -65 0 Q -75 70 0 110 Q 75 70 65 0 Q 55 -50 35 -75 Q 25 -100 0 -110 Z" fill="#5A4030"/><ellipse cx="-30" cy="30" rx="25" ry="30" fill="#1A1008" opacity="0.6"/><ellipse cx="35" cy="-20" rx="18" ry="22" fill="#1A1008" opacity="0.55"/>
+  </g>
+
+  <!-- Comparison labels -->
+  <g font-size="20" fill="#333">
+    <rect x="60" y="495" width="460" height="80" rx="8" fill="#E8F5E9"/>
+    <text x="80" y="520" font-weight="bold" fill="#2C5F2D">● 皮が暗緑〜黒、ハリあり</text>
+    <text x="80" y="545" font-weight="bold" fill="#2C5F2D">● 軽く押して柔らかい弾力</text>
+    <text x="80" y="568" fill="#666" font-size="17">ヘタが取れていない=新鮮</text>
+
+    <rect x="560" y="495" width="460" height="80" rx="8" fill="#FFEBEE"/>
+    <text x="580" y="520" font-weight="bold" fill="#C62828">× 黒い斑点が大きく目立つ</text>
+    <text x="580" y="545" font-weight="bold" fill="#C62828">× 硬すぎ or ブヨブヨ</text>
+    <text x="580" y="568" fill="#666" font-size="17">ヘタの周りが黒=熟しすぎ</text>
+  </g>
+</svg>

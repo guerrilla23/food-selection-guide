@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 600" font-family="Noto Sans CJK JP, sans-serif">
+  <rect width="1080" height="600" fill="#FFFFFF" rx="20"/>
+
+  <!-- Header -->
+  <text x="60" y="60" font-size="44" font-weight="900" fill="#5D2A6F">ぶどう</text>
+  <line x1="60" y1="75" x2="150" y2="75" stroke="#5D2A6F" stroke-width="4"/>
+  <text x="170" y="68" font-size="22" fill="#666">旬:8〜10月</text>
+
+  <line x1="540" y1="100" x2="540" y2="540" stroke="#DDD" stroke-width="2" stroke-dasharray="6,6"/>
+
+  <!-- OK side (watercolor Pattern A) -->
+  <g transform="translate(280, 320)">
+    <circle cx="-200" cy="-180" r="22" fill="#2C5F2D"/>
+    <text x="-200" y="-172" font-size="26" font-weight="900" fill="white" text-anchor="middle">○</text>
+    <defs>
+      <radialGradient id="wcBodyGrape" cx="35%" cy="25%"><stop offset="0%" stop-color="#C8AED8" stop-opacity="0.95"/><stop offset="40%" stop-color="#8050C8" stop-opacity="0.9"/><stop offset="80%" stop-color="#5D2A6F" stop-opacity="0.85"/><stop offset="100%" stop-color="#3A1A50" stop-opacity="0.65"/></radialGradient>
+      <radialGradient id="wcLeafGrape" cx="50%" cy="20%"><stop offset="0%" stop-color="#9BCB7A" stop-opacity="0.9"/><stop offset="60%" stop-color="#5D8F3D" stop-opacity="0.7"/><stop offset="100%" stop-color="#2C5F2D" stop-opacity="0.5"/></radialGradient>
+      <filter id="wcRoughGrape" x="-10%" y="-10%" width="120%" height="120%">
+        <feTurbulence baseFrequency="0.04" numOctaves="3" seed="137"/>
+        <feDisplacementMap in="SourceGraphic" scale="4"/>
+      </filter>
+      <filter id="wcBlurGrape"><feGaussianBlur stdDeviation="1.5"/></filter>
+    </defs>
+    <g filter="url(#wcBlurGrape)" opacity="0.4"><ellipse cx="0" cy="30" rx="85" ry="105" fill="#7040A0"/></g>
+    <g filter="url(#wcRoughGrape)" opacity="0.8"><path d="M -10 -110 L 0 -130 L 10 -110 Q 5 -100 -5 -100 Z" fill="url(#wcLeafGrape)"/></g>
+    <g filter="url(#wcRoughGrape)"><path d="M 0 -100 m -22 0 a 22 22 0 1 0 44 0 a 22 22 0 1 0 -44 0 Z" fill="url(#wcBodyGrape)"/><path d="M -30 -65 m -22 0 a 22 22 0 1 0 44 0 a 22 22 0 1 0 -44 0 Z" fill="url(#wcBodyGrape)"/><path d="M 30 -65 m -22 0 a 22 22 0 1 0 44 0 a 22 22 0 1 0 -44 0 Z" fill="url(#wcBodyGrape)"/><path d="M -55 -25 m -22 0 a 22 22 0 1 0 44 0 a 22 22 0 1 0 -44 0 Z" fill="url(#wcBodyGrape)"/><path d="M 0 -25 m -22 0 a 22 22 0 1 0 44 0 a 22 22 0 1 0 -44 0 Z" fill="url(#wcBodyGrape)"/><path d="M 55 -25 m -22 0 a 22 22 0 1 0 44 0 a 22 22 0 1 0 -44 0 Z" fill="url(#wcBodyGrape)"/><path d="M -30 15 m -22 0 a 22 22 0 1 0 44 0 a 22 22 0 1 0 -44 0 Z" fill="url(#wcBodyGrape)"/><path d="M 30 15 m -22 0 a 22 22 0 1 0 44 0 a 22 22 0 1 0 -44 0 Z" fill="url(#wcBodyGrape)"/><path d="M 0 55 m -22 0 a 22 22 0 1 0 44 0 a 22 22 0 1 0 -44 0 Z" fill="url(#wcBodyGrape)"/><path d="M -25 90 m -18 0 a 18 18 0 1 0 36 0 a 18 18 0 1 0 -36 0 Z" fill="url(#wcBodyGrape)"/><path d="M 25 90 m -18 0 a 18 18 0 1 0 36 0 a 18 18 0 1 0 -36 0 Z" fill="url(#wcBodyGrape)"/><path d="M 0 120 m -15 0 a 15 15 0 1 0 30 0 a 15 15 0 1 0 -30 0 Z" fill="url(#wcBodyGrape)"/></g>
+    <g stroke="#3D2817" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"><path d="M 0 -100 m -22 0 a 22 22 0 1 0 44 0 a 22 22 0 1 0 -44 0"/><path d="M -30 -65 m -22 0 a 22 22 0 1 0 44 0 a 22 22 0 1 0 -44 0"/><path d="M 30 -65 m -22 0 a 22 22 0 1 0 44 0 a 22 22 0 1 0 -44 0"/><path d="M -55 -25 m -22 0 a 22 22 0 1 0 44 0 a 22 22 0 1 0 -44 0"/><path d="M 0 -25 m -22 0 a 22 22 0 1 0 44 0 a 22 22 0 1 0 -44 0"/><path d="M 55 -25 m -22 0 a 22 22 0 1 0 44 0 a 22 22 0 1 0 -44 0"/><path d="M -30 15 m -22 0 a 22 22 0 1 0 44 0 a 22 22 0 1 0 -44 0"/><path d="M 30 15 m -22 0 a 22 22 0 1 0 44 0 a 22 22 0 1 0 -44 0"/><path d="M 0 55 m -22 0 a 22 22 0 1 0 44 0 a 22 22 0 1 0 -44 0"/><path d="M -25 90 m -18 0 a 18 18 0 1 0 36 0 a 18 18 0 1 0 -36 0"/><path d="M 25 90 m -18 0 a 18 18 0 1 0 36 0 a 18 18 0 1 0 -36 0"/><path d="M 0 120 m -15 0 a 15 15 0 1 0 30 0 a 15 15 0 1 0 -30 0"/><path d="M 0 -100 L 0 -130" opacity="0.85" stroke-width="2.5"/><path d="M -10 -110 L 0 -130 L 10 -110" opacity="0.85" stroke-width="2"/></g>
+  </g>
+
+  <!-- NG side (flat) -->
+  <g transform="translate(800, 320)">
+    <circle cx="-200" cy="-180" r="22" fill="#C62828"/>
+    <text x="-200" y="-172" font-size="26" font-weight="900" fill="white" text-anchor="middle">×</text>
+    <path d="M 0 -100 m -22 0 a 22 22 0 1 0 44 0 a 22 22 0 1 0 -44 0 Z" fill="#604050"/><path d="M -30 -65 m -22 0 a 22 22 0 1 0 44 0 a 22 22 0 1 0 -44 0 Z" fill="#604050"/><path d="M 30 -65 m -22 0 a 22 22 0 1 0 44 0 a 22 22 0 1 0 -44 0 Z" fill="#604050"/><path d="M -55 -25 m -22 0 a 22 22 0 1 0 44 0 a 22 22 0 1 0 -44 0 Z" fill="#604050"/><path d="M 0 -25 m -22 0 a 22 22 0 1 0 44 0 a 22 22 0 1 0 -44 0 Z" fill="#604050"/><path d="M 55 -25 m -22 0 a 22 22 0 1 0 44 0 a 22 22 0 1 0 -44 0 Z" fill="#604050"/><path d="M -30 15 m -22 0 a 22 22 0 1 0 44 0 a 22 22 0 1 0 -44 0 Z" fill="#604050"/><path d="M 30 15 m -22 0 a 22 22 0 1 0 44 0 a 22 22 0 1 0 -44 0 Z" fill="#604050"/><path d="M 0 -100 L 0 -130" stroke="#5D4E37" stroke-width="2" fill="none" opacity="0.7"/><path d="M -55 -25 Q -45 -10 -25 -5" stroke="#5D4E37" stroke-width="1.5" fill="none" opacity="0.5"/>
+  </g>
+
+  <!-- Comparison labels -->
+  <g font-size="20" fill="#333">
+    <rect x="60" y="495" width="460" height="80" rx="8" fill="#E8F5E9"/>
+    <text x="80" y="520" font-weight="bold" fill="#2C5F2D">● 実が密、軸が緑・固</text>
+    <text x="80" y="545" font-weight="bold" fill="#2C5F2D">● 白い粉(ブルーム)あり</text>
+    <text x="80" y="568" fill="#666" font-size="17">ブルーム=甘み・新鮮の証</text>
+
+    <rect x="560" y="495" width="460" height="80" rx="8" fill="#FFEBEE"/>
+    <text x="580" y="520" font-weight="bold" fill="#C62828">× 実が落ちる・しわしわ</text>
+    <text x="580" y="545" font-weight="bold" fill="#C62828">× 軸が茶色・乾燥</text>
+    <text x="580" y="568" fill="#666" font-size="17">触ってボロっと落ちる=古い</text>
+  </g>
+</svg>

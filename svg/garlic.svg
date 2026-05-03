@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 600" font-family="Noto Sans CJK JP, sans-serif">
+  <rect width="1080" height="600" fill="#FFFFFF" rx="20"/>
+
+  <!-- Header -->
+  <text x="60" y="60" font-size="44" font-weight="900" fill="#A07848">ニンニク</text>
+  <line x1="60" y1="75" x2="180" y2="75" stroke="#A07848" stroke-width="4"/>
+  <text x="200" y="68" font-size="22" fill="#666">旬:5〜6月</text>
+
+  <line x1="540" y1="100" x2="540" y2="540" stroke="#DDD" stroke-width="2" stroke-dasharray="6,6"/>
+
+  <!-- OK side (watercolor Pattern A) -->
+  <g transform="translate(280, 320)">
+    <circle cx="-200" cy="-180" r="22" fill="#2C5F2D"/>
+    <text x="-200" y="-172" font-size="26" font-weight="900" fill="white" text-anchor="middle">○</text>
+    <defs>
+      <radialGradient id="wcBodyGarlic" cx="35%" cy="25%"><stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.95"/><stop offset="40%" stop-color="#F5EFE0" stop-opacity="0.85"/><stop offset="80%" stop-color="#E0D5B0" stop-opacity="0.7"/><stop offset="100%" stop-color="#B89870" stop-opacity="0.5"/></radialGradient>
+      <radialGradient id="wcLeafGarlic" cx="50%" cy="20%"><stop offset="0%" stop-color="#9BCB7A" stop-opacity="0.9"/><stop offset="60%" stop-color="#5D8F3D" stop-opacity="0.7"/><stop offset="100%" stop-color="#2C5F2D" stop-opacity="0.5"/></radialGradient>
+      <filter id="wcRoughGarlic" x="-10%" y="-10%" width="120%" height="120%">
+        <feTurbulence baseFrequency="0.04" numOctaves="3" seed="43"/>
+        <feDisplacementMap in="SourceGraphic" scale="4"/>
+      </filter>
+      <filter id="wcBlurGarlic"><feGaussianBlur stdDeviation="1.5"/></filter>
+    </defs>
+    <g filter="url(#wcBlurGarlic)" opacity="0.4"><ellipse cx="0" cy="10" rx="80" ry="90" fill="#E0C088"/></g>
+    
+    <g filter="url(#wcRoughGarlic)"><path d="M -75 -30 Q -82 60 0 95 Q 82 60 75 -30 Q 70 -100 0 -115 Q -70 -100 -75 -30 Z" fill="url(#wcBodyGarlic)"/></g>
+    <g stroke="#3D2817" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"><path d="M -75 -30 Q -82 60 0 95 Q 82 60 75 -30 Q 70 -100 0 -115 Q -70 -100 -75 -30 Z"/><path d="M -8 -115 L 0 -140 L 8 -115" opacity="0.7" stroke-width="2"/><path d="M -55 -85 Q -50 0 -55 90" opacity="0.6" stroke-width="1.4"/><path d="M -25 -100 Q -20 0 -25 95" opacity="0.6" stroke-width="1.4"/><path d="M 0 -115 L 0 95" opacity="0.5" stroke-width="1.4"/><path d="M 25 -100 Q 20 0 25 95" opacity="0.6" stroke-width="1.4"/><path d="M 55 -85 Q 50 0 55 90" opacity="0.6" stroke-width="1.4"/><path d="M -15 95 L -18 115" opacity="0.7" stroke-width="2"/><path d="M 0 98 L 0 120" opacity="0.7" stroke-width="2"/><path d="M 15 95 L 20 115" opacity="0.7" stroke-width="2"/></g>
+  </g>
+
+  <!-- NG side (flat) -->
+  <g transform="translate(800, 320)">
+    <circle cx="-200" cy="-180" r="22" fill="#C62828"/>
+    <text x="-200" y="-172" font-size="26" font-weight="900" fill="white" text-anchor="middle">×</text>
+    <path d="M -75 -30 Q -82 60 0 95 Q 82 60 75 -30 Q 70 -100 0 -115 Q -70 -100 -75 -30 Z" fill="#988050"/><path d="M 0 -115 Q -8 -150 -3 -180" stroke="#6B7A38" stroke-width="3" fill="none" opacity="0.8"/><ellipse cx="-30" cy="50" rx="18" ry="14" fill="#5D5A2A" opacity="0.5"/><path d="M -55 -50 Q 0 -45 55 -55" stroke="#5D4E37" stroke-width="1.5" fill="none" opacity="0.5"/><path d="M -55 30 Q 0 35 55 30" stroke="#5D4E37" stroke-width="1.5" fill="none" opacity="0.5"/>
+  </g>
+
+  <!-- Comparison labels -->
+  <g font-size="20" fill="#333">
+    <rect x="60" y="495" width="460" height="80" rx="8" fill="#E8F5E9"/>
+    <text x="80" y="520" font-weight="bold" fill="#2C5F2D">● 皮がパリッ、ハリ・ツヤあり</text>
+    <text x="80" y="545" font-weight="bold" fill="#2C5F2D">● ずっしり重い、芽が出ない</text>
+    <text x="80" y="568" fill="#666" font-size="17">叩いて固い音=詰まっている</text>
+
+    <rect x="560" y="495" width="460" height="80" rx="8" fill="#FFEBEE"/>
+    <text x="580" y="520" font-weight="bold" fill="#C62828">× 皮がスカスカ、芽が出る</text>
+    <text x="580" y="545" font-weight="bold" fill="#C62828">× 柔らかい、緑のカビ</text>
+    <text x="580" y="568" fill="#666" font-size="17">芽が緑=苦味、皮が黒=傷み</text>
+  </g>
+</svg>

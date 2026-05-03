@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 600" font-family="Noto Sans CJK JP, sans-serif">
+  <rect width="1080" height="600" fill="#FFFFFF" rx="20"/>
+
+  <!-- Header -->
+  <text x="60" y="60" font-size="44" font-weight="900" fill="#E33825">いちご</text>
+  <line x1="60" y1="75" x2="150" y2="75" stroke="#E33825" stroke-width="4"/>
+  <text x="170" y="68" font-size="22" fill="#666">旬:12〜5月</text>
+
+  <line x1="540" y1="100" x2="540" y2="540" stroke="#DDD" stroke-width="2" stroke-dasharray="6,6"/>
+
+  <!-- OK side (watercolor Pattern A) -->
+  <g transform="translate(280, 320)">
+    <circle cx="-200" cy="-180" r="22" fill="#2C5F2D"/>
+    <text x="-200" y="-172" font-size="26" font-weight="900" fill="white" text-anchor="middle">○</text>
+    <defs>
+      <radialGradient id="wcBodyIchigo" cx="35%" cy="25%"><stop offset="0%" stop-color="#FFB0A8" stop-opacity="0.95"/><stop offset="40%" stop-color="#FF6655" stop-opacity="0.9"/><stop offset="80%" stop-color="#E33825" stop-opacity="0.85"/><stop offset="100%" stop-color="#A02818" stop-opacity="0.7"/></radialGradient>
+      <radialGradient id="wcLeafIchigo" cx="50%" cy="20%"><stop offset="0%" stop-color="#9BCB7A" stop-opacity="0.9"/><stop offset="60%" stop-color="#5D8F3D" stop-opacity="0.7"/><stop offset="100%" stop-color="#2C5F2D" stop-opacity="0.5"/></radialGradient>
+      <filter id="wcRoughIchigo" x="-10%" y="-10%" width="120%" height="120%">
+        <feTurbulence baseFrequency="0.04" numOctaves="3" seed="127"/>
+        <feDisplacementMap in="SourceGraphic" scale="4"/>
+      </filter>
+      <filter id="wcBlurIchigo"><feGaussianBlur stdDeviation="1.5"/></filter>
+    </defs>
+    <g filter="url(#wcBlurIchigo)" opacity="0.4"><ellipse cx="0" cy="0" rx="80" ry="80" fill="#FF6655"/></g>
+    <g filter="url(#wcRoughIchigo)" opacity="0.8"><path d="M -25 -85 L -40 -110 L -20 -90 L -10 -115 L 0 -90 L 10 -115 L 20 -90 L 40 -110 L 25 -85 Q 0 -78 -25 -85 Z" fill="url(#wcLeafIchigo)"/></g>
+    <g filter="url(#wcRoughIchigo)"><path d="M -60 -75 Q -85 -50 -75 -10 Q -50 70 0 95 Q 50 70 75 -10 Q 85 -50 60 -75 Q 30 -90 0 -85 Q -30 -90 -60 -75 Z" fill="url(#wcBodyIchigo)"/></g>
+    <g stroke="#3D2817" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"><path d="M -60 -75 Q -85 -50 -75 -10 Q -50 70 0 95 Q 50 70 75 -10 Q 85 -50 60 -75 Q 30 -90 0 -85 Q -30 -90 -60 -75 Z"/><path d="M -25 -85 L -40 -110 L -20 -90 L -10 -115 L 0 -90 L 10 -115 L 20 -90 L 40 -110 L 25 -85" opacity="0.85" stroke-width="2"/><path d="M -50 -40 L -48 -38" opacity="0.7" stroke-width="2"/><path d="M -25 -50 L -23 -48" opacity="0.7" stroke-width="2"/><path d="M 0 -55 L 2 -53" opacity="0.7" stroke-width="2"/><path d="M 25 -50 L 27 -48" opacity="0.7" stroke-width="2"/><path d="M 50 -40 L 52 -38" opacity="0.7" stroke-width="2"/><path d="M -45 0 L -43 2" opacity="0.7" stroke-width="2"/><path d="M -15 -10 L -13 -8" opacity="0.7" stroke-width="2"/><path d="M 15 -5 L 17 -3" opacity="0.7" stroke-width="2"/><path d="M 45 5 L 47 7" opacity="0.7" stroke-width="2"/><path d="M -25 35 L -23 37" opacity="0.7" stroke-width="2"/><path d="M 25 35 L 27 37" opacity="0.7" stroke-width="2"/><path d="M 0 50 L 2 52" opacity="0.7" stroke-width="2"/></g>
+  </g>
+
+  <!-- NG side (flat) -->
+  <g transform="translate(800, 320)">
+    <circle cx="-200" cy="-180" r="22" fill="#C62828"/>
+    <text x="-200" y="-172" font-size="26" font-weight="900" fill="white" text-anchor="middle">×</text>
+    <path d="M -60 -75 Q -85 -50 -75 -10 Q -50 70 0 95 Q 50 70 75 -10 Q 85 -50 60 -75 Q 30 -90 0 -85 Q -30 -90 -60 -75 Z" fill="#883830"/><path d="M -25 -85 L -40 -100 L -20 -90 L -10 -110 L 0 -90 L 10 -110 L 20 -90 L 40 -100 L 25 -85 Q 0 -80 -25 -85 Z" fill="#7A6720"/><ellipse cx="-25" cy="30" rx="25" ry="22" fill="#3D1810" opacity="0.6"/><path d="M -60 -10 Q 0 -5 60 -15" stroke="#5D4E37" stroke-width="1.5" fill="none" opacity="0.55"/>
+  </g>
+
+  <!-- Comparison labels -->
+  <g font-size="20" fill="#333">
+    <rect x="60" y="495" width="460" height="80" rx="8" fill="#E8F5E9"/>
+    <text x="80" y="520" font-weight="bold" fill="#2C5F2D">● 色が鮮やか赤、ヘタ緑</text>
+    <text x="80" y="545" font-weight="bold" fill="#2C5F2D">● ハリ・ツヤあり、果軸固</text>
+    <text x="80" y="568" fill="#666" font-size="17">ヘタが反り返る=完熟</text>
+
+    <rect x="560" y="495" width="460" height="80" rx="8" fill="#FFEBEE"/>
+    <text x="580" y="520" font-weight="bold" fill="#C62828">× 色が暗い・斑点</text>
+    <text x="580" y="545" font-weight="bold" fill="#C62828">× ヘタ茶色、軟らかい</text>
+    <text x="580" y="568" fill="#666" font-size="17">白い部分は未熟=酸っぱい</text>
+  </g>
+</svg>

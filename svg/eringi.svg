@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 600" font-family="Noto Sans CJK JP, sans-serif">
+  <rect width="1080" height="600" fill="#FFFFFF" rx="20"/>
+
+  <!-- Header -->
+  <text x="60" y="60" font-size="44" font-weight="900" fill="#E8D5B0">エリンギ</text>
+  <line x1="60" y1="75" x2="180" y2="75" stroke="#E8D5B0" stroke-width="4"/>
+  <text x="200" y="68" font-size="22" fill="#666">旬:9〜12月</text>
+
+  <line x1="540" y1="100" x2="540" y2="540" stroke="#DDD" stroke-width="2" stroke-dasharray="6,6"/>
+
+  <!-- OK side (watercolor Pattern A) -->
+  <g transform="translate(280, 320)">
+    <circle cx="-200" cy="-180" r="22" fill="#2C5F2D"/>
+    <text x="-200" y="-172" font-size="26" font-weight="900" fill="white" text-anchor="middle">○</text>
+    <defs>
+      <radialGradient id="wcBodyEringi" cx="35%" cy="25%"><stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.95"/><stop offset="40%" stop-color="#F5EFE0" stop-opacity="0.85"/><stop offset="80%" stop-color="#E0D5B0" stop-opacity="0.7"/><stop offset="100%" stop-color="#B89870" stop-opacity="0.5"/></radialGradient>
+      <radialGradient id="wcLeafEringi" cx="50%" cy="20%"><stop offset="0%" stop-color="#9BCB7A" stop-opacity="0.9"/><stop offset="60%" stop-color="#5D8F3D" stop-opacity="0.7"/><stop offset="100%" stop-color="#2C5F2D" stop-opacity="0.5"/></radialGradient>
+      <filter id="wcRoughEringi" x="-10%" y="-10%" width="120%" height="120%">
+        <feTurbulence baseFrequency="0.04" numOctaves="3" seed="101"/>
+        <feDisplacementMap in="SourceGraphic" scale="4"/>
+      </filter>
+      <filter id="wcBlurEringi"><feGaussianBlur stdDeviation="1.5"/></filter>
+    </defs>
+    <g filter="url(#wcBlurEringi)" opacity="0.4"><ellipse cx="0" cy="0" rx="75" ry="110" fill="#F0E5D0"/></g>
+    
+    <g filter="url(#wcRoughEringi)"><path d="M -45 -110 Q -55 -120 -30 -130 Q 0 -135 30 -130 Q 55 -120 45 -110 L 35 -90 Q 40 -50 35 50 Q 30 100 0 110 Q -30 100 -35 50 Q -40 -50 -35 -90 Z" fill="url(#wcBodyEringi)"/></g>
+    <g stroke="#3D2817" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"><path d="M -45 -110 Q -55 -120 -30 -130 Q 0 -135 30 -130 Q 55 -120 45 -110 L 35 -90 Q 40 -50 35 50 Q 30 100 0 110 Q -30 100 -35 50 Q -40 -50 -35 -90 Z"/><path d="M -45 -110 Q 0 -100 45 -110" opacity="0.7" stroke-width="1.6"/><path d="M -20 -90 Q -22 0 -18 80" opacity="0.5" stroke-width="1.4"/><path d="M 0 -90 L 0 100" opacity="0.45" stroke-width="1.4"/><path d="M 20 -90 Q 22 0 18 80" opacity="0.5" stroke-width="1.4"/><path d="M -25 -125 Q 0 -135 25 -125" opacity="0.4" stroke-width="1.2"/></g>
+  </g>
+
+  <!-- NG side (flat) -->
+  <g transform="translate(800, 320)">
+    <circle cx="-200" cy="-180" r="22" fill="#C62828"/>
+    <text x="-200" y="-172" font-size="26" font-weight="900" fill="white" text-anchor="middle">×</text>
+    <path d="M -45 -110 Q -55 -120 -30 -130 Q 0 -135 30 -130 Q 55 -120 45 -110 L 35 -90 Q 40 -50 35 50 Q 30 100 0 110 Q -30 100 -35 50 Q -40 -50 -35 -90 Z" fill="#C8B898"/><ellipse cx="-10" cy="30" rx="18" ry="22" fill="#8B6F47" opacity="0.45"/><path d="M -35 80 Q 0 92 35 80" stroke="#5D4E37" stroke-width="1.5" fill="none" opacity="0.55"/>
+  </g>
+
+  <!-- Comparison labels -->
+  <g font-size="20" fill="#333">
+    <rect x="60" y="495" width="460" height="80" rx="8" fill="#E8F5E9"/>
+    <text x="80" y="520" font-weight="bold" fill="#2C5F2D">● 軸が太く真っ白</text>
+    <text x="80" y="545" font-weight="bold" fill="#2C5F2D">● カサが薄茶で内巻き</text>
+    <text x="80" y="568" fill="#666" font-size="17">軸の弾力=食感重視のキノコ</text>
+
+    <rect x="560" y="495" width="460" height="80" rx="8" fill="#FFEBEE"/>
+    <text x="580" y="520" font-weight="bold" fill="#C62828">× 軸が黄色く変色</text>
+    <text x="580" y="545" font-weight="bold" fill="#C62828">× カサが開ききる</text>
+    <text x="580" y="568" fill="#666" font-size="17">ベタつき・黒ずみ=傷み</text>
+  </g>
+</svg>

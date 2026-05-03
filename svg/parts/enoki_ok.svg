@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-100 -150 200 280" font-family="Noto Sans CJK JP, sans-serif">
+<defs>
+      <radialGradient id="wcBodyEnoki" cx="35%" cy="25%"><stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.95"/><stop offset="40%" stop-color="#F5EFE0" stop-opacity="0.85"/><stop offset="80%" stop-color="#E0D5B0" stop-opacity="0.7"/><stop offset="100%" stop-color="#B89870" stop-opacity="0.5"/></radialGradient>
+      <radialGradient id="wcLeafEnoki" cx="50%" cy="20%"><stop offset="0%" stop-color="#9BCB7A" stop-opacity="0.9"/><stop offset="60%" stop-color="#5D8F3D" stop-opacity="0.7"/><stop offset="100%" stop-color="#2C5F2D" stop-opacity="0.5"/></radialGradient>
+      <filter id="wcRoughEnoki" x="-10%" y="-10%" width="120%" height="120%">
+        <feTurbulence baseFrequency="0.04" numOctaves="3" seed="97"/>
+        <feDisplacementMap in="SourceGraphic" scale="4"/>
+      </filter>
+      <filter id="wcBlurEnoki"><feGaussianBlur stdDeviation="1.5"/></filter>
+    </defs>
+    <g filter="url(#wcBlurEnoki)" opacity="0.4"><ellipse cx="0" cy="30" rx="75" ry="110" fill="#F0E8D0"/></g>
+    
+    <g filter="url(#wcRoughEnoki)"><path d="M -50 -100 L -50 100 Q -45 110 -40 110 L -35 100 L -35 -100 Z" fill="url(#wcBodyEnoki)"/><path d="M -25 -110 L -25 100 Q -20 110 -15 110 L -10 100 L -10 -110 Z" fill="url(#wcBodyEnoki)"/><path d="M 0 -120 L 0 105 Q 5 115 10 115 L 15 105 L 15 -120 Z" fill="url(#wcBodyEnoki)"/><path d="M 25 -110 L 25 100 Q 30 110 35 110 L 40 100 L 40 -110 Z" fill="url(#wcBodyEnoki)"/><path d="M 50 -100 L 50 100 Q 55 110 55 110 L 60 100 L 60 -100 Z" fill="url(#wcBodyEnoki)"/></g>
+    <g stroke="#3D2817" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"><path d="M -50 -100 L -50 100 L -35 100 L -35 -100"/><path d="M -25 -110 L -25 100 L -10 100 L -10 -110"/><path d="M 0 -120 L 0 105 L 15 105 L 15 -120"/><path d="M 25 -110 L 25 100 L 40 100 L 40 -110"/><path d="M 50 -100 L 50 100 L 60 100 L 60 -100"/><path d="M -50 -100 Q -42 -108 -35 -100" opacity="0.85" stroke-width="2"/><path d="M -25 -110 Q -17 -118 -10 -110" opacity="0.85" stroke-width="2"/><path d="M 0 -120 Q 8 -128 15 -120" opacity="0.85" stroke-width="2"/><path d="M 25 -110 Q 33 -118 40 -110" opacity="0.85" stroke-width="2"/><path d="M 50 -100 Q 55 -108 60 -100" opacity="0.85" stroke-width="2"/></g>
+</svg>
