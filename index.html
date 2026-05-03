@@ -1,0 +1,1151 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#7BA05B">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="食材選び">
+  <meta name="format-detection" content="telephone=no">
+  <link rel="manifest" href="manifest.json">
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+  <link rel="icon" href="icons/favicon-32.png" type="image/png">
+  <title>食材選び方</title>
+  <style>
+    /* ============================================================
+       CSS variables — ダークモード対応はこの :root を切り替えるだけ
+       ============================================================ */
+    :root {
+      --bg: #F8F8F5;
+      --fg: #1A1A1A;
+      --muted: #6B6B6B;
+      --card-bg: #FFFFFF;
+      --card-border: #E8E8E0;
+      --header-bg: rgba(248, 248, 245, 0.92);
+      --accent: #7BA05B;
+      --accent-dark: #5C7E40;
+      --ok-bg: #E8F5E9;
+      --ok-fg: #2C5F2D;
+      --ok-border: rgba(44, 95, 45, 0.25);
+      --ng-bg: #FFEBEE;
+      --ng-fg: #C62828;
+      --ng-border: rgba(198, 40, 40, 0.25);
+      --shadow: 0 2px 8px rgba(0, 0, 0, .06);
+      --shadow-lg: 0 8px 24px rgba(0, 0, 0, .08);
+      --radius: 14px;
+      --tap-min: 44px;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #15161A;
+        --fg: #F0F0E8;
+        --muted: #A0A098;
+        --card-bg: #23252B;
+        --card-border: #353841;
+        --header-bg: rgba(21, 22, 26, 0.92);
+        --accent: #8FB868;
+        --accent-dark: #B8D699;
+        --ok-bg: #1F3A22;
+        --ok-fg: #B8E0BA;
+        --ok-border: rgba(184, 224, 186, 0.25);
+        --ng-bg: #3D1B1B;
+        --ng-fg: #F2A6A6;
+        --ng-border: rgba(242, 166, 166, 0.25);
+        --shadow: 0 2px 8px rgba(0, 0, 0, .35);
+        --shadow-lg: 0 8px 24px rgba(0, 0, 0, .5);
+      }
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; }
+    /* `hidden` 属性が常に効くように(クラスの display 指定に負けないよう) */
+    [hidden] { display: none !important; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans",
+                   "Hiragino Kaku Gothic ProN", "Noto Sans CJK JP",
+                   "Yu Gothic", Meiryo, sans-serif;
+      background: var(--bg);
+      color: var(--fg);
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+      -webkit-tap-highlight-color: transparent;
+      overscroll-behavior-y: none;
+    }
+    button { font-family: inherit; cursor: pointer; }
+    a { color: inherit; text-decoration: none; }
+
+    /* ===== List view header ===== */
+    .app-header {
+      position: sticky; top: 0; z-index: 100;
+      background: var(--header-bg);
+      backdrop-filter: saturate(180%) blur(12px);
+      -webkit-backdrop-filter: saturate(180%) blur(12px);
+      border-bottom: 1px solid var(--card-border);
+      padding: 12px 16px;
+      padding-top: calc(env(safe-area-inset-top, 0px) + 12px);
+    }
+    .app-title {
+      font-size: 18px; font-weight: 700; margin: 0 0 8px;
+      color: var(--accent-dark);
+    }
+    .search-row { position: relative; margin-bottom: 8px; }
+    .search-input {
+      width: 100%;
+      height: var(--tap-min);
+      padding: 0 44px 0 44px;
+      font-size: 16px; /* 16px 以上で iOS Safari の自動ズームを抑制 */
+      background: var(--card-bg);
+      border: 1.5px solid var(--card-border);
+      border-radius: var(--radius);
+      color: var(--fg);
+      outline: none;
+      transition: border-color .15s;
+      -webkit-appearance: none;
+    }
+    .search-input:focus { border-color: var(--accent); }
+    .search-icon {
+      position: absolute; left: 14px; top: 50%; transform: translateY(-50%);
+      width: 20px; height: 20px; color: var(--muted); pointer-events: none;
+    }
+    .search-clear {
+      position: absolute; right: 4px; top: 50%; transform: translateY(-50%);
+      width: 36px; height: 36px;
+      border: none; background: transparent;
+      color: var(--muted); font-size: 22px; line-height: 1;
+      display: none; align-items: center; justify-content: center;
+      border-radius: 50%;
+    }
+    .search-input:not(:placeholder-shown) ~ .search-clear { display: flex; }
+
+    /* ===== Category tabs ===== */
+    .cat-tabs {
+      display: flex; gap: 8px;
+      overflow-x: auto; -webkit-overflow-scrolling: touch;
+      scrollbar-width: none; padding: 2px 0;
+    }
+    .cat-tabs::-webkit-scrollbar { display: none; }
+    .cat-tab {
+      flex: 0 0 auto;
+      min-height: var(--tap-min);
+      padding: 0 16px;
+      background: var(--card-bg);
+      color: var(--fg);
+      border: 1.5px solid var(--card-border);
+      border-radius: 999px;
+      font-size: 14px; font-weight: 600;
+      white-space: nowrap;
+      transition: all .15s;
+    }
+    .cat-tab.active {
+      background: var(--accent); color: white; border-color: var(--accent);
+    }
+
+    /* ===== Grid (list) ===== */
+    main { padding: 16px; padding-bottom: calc(env(safe-area-inset-bottom, 0px) + 32px); }
+    .grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+    @media (min-width: 600px) { .grid { grid-template-columns: repeat(3, 1fr); } }
+    @media (min-width: 900px) { .grid { grid-template-columns: repeat(4, 1fr); } }
+
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      display: flex; flex-direction: column;
+      min-height: var(--tap-min);
+      transition: transform .12s, box-shadow .12s;
+    }
+    .card:active { transform: scale(.98); box-shadow: var(--shadow-lg); }
+    .card-img-wrap {
+      aspect-ratio: 1 / 1;
+      background: var(--card-bg);
+      display: flex; align-items: center; justify-content: center;
+      overflow: hidden;
+      padding: 8px;
+    }
+    .card-img-wrap img { width: 100%; height: 100%; object-fit: contain; }
+    .card-body {
+      padding: 10px 12px 12px;
+      border-top: 3px solid var(--theme, var(--card-border));
+    }
+    .card-name {
+      font-size: 15px; font-weight: 700;
+      margin: 0 0 4px;
+      line-height: 1.3;
+      overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+    }
+    .card-tags { display: flex; gap: 4px; flex-wrap: wrap; }
+    .tag {
+      font-size: 11px;
+      padding: 2px 8px;
+      border-radius: 999px;
+      background: var(--card-border);
+      color: var(--muted);
+      font-weight: 600;
+    }
+    .tag.in-season { background: var(--ok-bg); color: var(--ok-fg); }
+    .empty {
+      grid-column: 1 / -1;
+      text-align: center; color: var(--muted);
+      padding: 48px 16px;
+      font-size: 14px;
+    }
+    .loading {
+      grid-column: 1 / -1;
+      text-align: center; color: var(--muted);
+      padding: 32px 16px;
+      font-size: 14px;
+    }
+
+    /* ===== Detail view ===== */
+    .detail-header {
+      position: sticky; top: 0; z-index: 100;
+      background: var(--header-bg);
+      backdrop-filter: saturate(180%) blur(12px);
+      -webkit-backdrop-filter: saturate(180%) blur(12px);
+      border-bottom: 1px solid var(--card-border);
+      display: flex; align-items: center;
+      padding: 4px 8px;
+      padding-top: calc(env(safe-area-inset-top, 0px) + 4px);
+      gap: 4px;
+      min-height: calc(var(--tap-min) + 4px);
+    }
+    .back-btn {
+      flex: 0 0 auto;
+      min-height: var(--tap-min);
+      border: none; background: transparent;
+      color: var(--accent-dark); font-size: 16px; font-weight: 600;
+      display: flex; align-items: center; gap: 2px;
+      padding: 0 12px 0 8px;
+      border-radius: var(--radius);
+    }
+    .back-btn:active { background: var(--card-border); }
+    .detail-title {
+      flex: 1 1 auto;
+      text-align: center;
+      font-size: 17px; font-weight: 700;
+      margin: 0;
+      overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+    }
+    .detail-actions {
+      flex: 0 0 auto;
+      display: flex;
+      min-width: var(--tap-min);
+      justify-content: flex-end;
+    }
+    .icon-btn {
+      width: var(--tap-min); height: var(--tap-min);
+      border: none; background: transparent;
+      color: var(--muted); font-size: 22px;
+      display: flex; align-items: center; justify-content: center;
+      border-radius: 50%;
+    }
+    .icon-btn:active { background: var(--card-border); }
+    .icon-btn[data-favorited="true"] { color: #E8A52B; }
+
+    .detail-body {
+      padding: 16px;
+      padding-bottom: calc(env(safe-area-inset-bottom, 0px) + 80px);
+    }
+    /* ===== Diagram (generated from food data + parts SVGs) =====
+       常に 2 カラムで横並び。スマホ幅でもこの方が画面高さを節約でき、
+       下部の OK/NG 詳細リストがファーストビューに入りやすい。
+       diagram-illust は max-height で 35vh を上限に。 */
+    .diagram-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      margin-bottom: 16px;
+      max-height: 50vh;
+    }
+    @media (min-width: 600px) { .diagram-grid { gap: 12px; } }
+
+    .diagram-block {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      display: flex; flex-direction: column;
+      min-width: 0;  /* grid item の text-overflow が効くようにする */
+    }
+    .diagram-block.ok { border-color: var(--ok-border); }
+    .diagram-block.ng { border-color: var(--ng-border); }
+    .diagram-label {
+      padding: 8px 10px;
+      font-size: 13px; font-weight: 700;
+      display: flex; align-items: center; gap: 6px;
+    }
+    @media (min-width: 600px) {
+      .diagram-label { padding: 10px 14px; font-size: 14px; gap: 8px; }
+    }
+    .diagram-block.ok .diagram-label { background: var(--ok-bg); color: var(--ok-fg); }
+    .diagram-block.ng .diagram-label { background: var(--ng-bg); color: var(--ng-fg); }
+    .diagram-label-text {
+      flex: 1 1 auto;
+      min-width: 0;
+      overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+    }
+    .diagram-badge {
+      display: inline-flex; align-items: center; justify-content: center;
+      width: 22px; height: 22px;
+      border-radius: 50%;
+      color: white;
+      font-size: 13px; font-weight: 900;
+      flex: 0 0 auto;
+    }
+    @media (min-width: 600px) {
+      .diagram-badge { width: 24px; height: 24px; font-size: 14px; }
+    }
+    .diagram-block.ok .diagram-badge { background: var(--ok-fg); }
+    .diagram-block.ng .diagram-badge { background: var(--ng-fg); }
+    .diagram-illust {
+      aspect-ratio: 1 / 1;
+      max-height: 35vh;     /* 縦が伸びすぎないように */
+      display: flex; align-items: center; justify-content: center;
+      padding: 8px;
+      overflow: hidden;
+    }
+    .diagram-illust img { width: 100%; height: 100%; object-fit: contain; }
+    .diagram-keyword {
+      padding: 6px 10px 10px;
+      font-size: 12px;
+      line-height: 1.4;
+      color: var(--muted);
+      text-align: center;
+      border-top: 1px solid var(--card-border);
+    }
+    @media (min-width: 600px) {
+      .diagram-keyword { padding: 8px 14px 12px; font-size: 13px; }
+    }
+
+    .detail-meta { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 16px; }
+    .detail-meta .tag { font-size: 12px; padding: 4px 10px; }
+
+    .points {
+      display: grid; grid-template-columns: 1fr; gap: 12px;
+      margin-bottom: 16px;
+    }
+    @media (min-width: 600px) { .points { grid-template-columns: 1fr 1fr; } }
+    .points-block {
+      border-radius: var(--radius);
+      padding: 14px 16px;
+      border: 1px solid transparent;
+    }
+    .points-block.ok { background: var(--ok-bg); border-color: var(--ok-border); }
+    .points-block.ng { background: var(--ng-bg); border-color: var(--ng-border); }
+    .points-title {
+      font-size: 15px; font-weight: 800; margin: 0 0 8px;
+      display: flex; align-items: center; gap: 6px;
+    }
+    .points-block.ok .points-title { color: var(--ok-fg); }
+    .points-block.ng .points-title { color: var(--ng-fg); }
+    .points ul { margin: 0; padding-left: 18px; }
+    .points li { font-size: 14px; margin-bottom: 4px; line-height: 1.5; }
+
+    .info-section {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: var(--radius);
+      padding: 14px 16px;
+      margin-bottom: 12px;
+      box-shadow: var(--shadow);
+    }
+    .info-title {
+      font-size: 15px; font-weight: 800;
+      color: var(--accent-dark);
+      margin: 0 0 10px;
+      padding-left: 10px;
+      border-left: 3px solid var(--accent);
+      line-height: 1.3;
+    }
+    .info-body { font-size: 14px; margin: 0; }
+    .info-body dt {
+      font-weight: 700; margin-top: 6px; font-size: 13px;
+      color: var(--accent-dark);
+    }
+    .info-body dt:first-child { margin-top: 0; }
+    .info-body dd { margin: 2px 0 6px; font-size: 14px; }
+
+    /* ===== Future feedback FAB (placeholder, hidden by default) ===== */
+    .feedback-fab {
+      position: fixed;
+      right: 16px;
+      bottom: calc(env(safe-area-inset-bottom, 0px) + 16px);
+      width: 56px; height: 56px;
+      border-radius: 50%;
+      background: var(--accent);
+      color: white;
+      border: none;
+      box-shadow: var(--shadow-lg);
+      font-size: 22px;
+      display: flex; align-items: center; justify-content: center;
+      z-index: 90;
+    }
+
+    /* ===== View switching ===== */
+    #view-list, #view-detail { display: none; }
+    body[data-view="list"] #view-list { display: block; }
+    body[data-view="detail"] #view-detail { display: block; }
+
+    /* ===== Beta banner (初回訪問のみ) ===== */
+    .beta-banner {
+      background: #FFF4E5;
+      color: #8A4A0A;
+      padding: 8px 12px;
+      padding-top: calc(env(safe-area-inset-top, 0px) + 8px);
+      display: flex; align-items: center; gap: 8px;
+      font-size: 13px; line-height: 1.4;
+      border-bottom: 1px solid #F0D9B0;
+    }
+    @media (prefers-color-scheme: dark) {
+      .beta-banner {
+        background: #3D2A0F; color: #F2C77A;
+        border-bottom-color: #5C4520;
+      }
+    }
+    .beta-banner-text { flex: 1 1 auto; }
+    .beta-banner-close {
+      flex: 0 0 auto;
+      width: 36px; height: 36px;
+      border: none; background: transparent;
+      font-size: 22px; line-height: 1;
+      color: inherit;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .beta-banner-close:active { background: rgba(0,0,0,0.08); }
+    /* バナー表示中はノッチ用 padding を header から外す(banner が代わりに吸収) */
+    body[data-banner="true"] .app-header,
+    body[data-banner="true"] .detail-header {
+      padding-top: 12px;
+    }
+    body[data-banner="true"] .detail-header { padding-top: 4px; }
+
+    /* ===== Modal (bottom sheet on mobile / centered on tablet+) ===== */
+    .modal {
+      position: fixed; inset: 0;
+      z-index: 1000;
+      display: flex; align-items: flex-end; justify-content: center;
+    }
+    .modal-backdrop {
+      position: absolute; inset: 0;
+      background: rgba(0, 0, 0, 0.45);
+      animation: modalFade .15s ease;
+    }
+    .modal-sheet {
+      position: relative;
+      background: var(--card-bg);
+      color: var(--fg);
+      width: 100%;
+      max-width: 440px;
+      border-radius: var(--radius) var(--radius) 0 0;
+      padding: 20px 16px calc(env(safe-area-inset-bottom, 0px) + 20px);
+      box-shadow: var(--shadow-lg);
+      animation: modalSlide .2s cubic-bezier(0.2, 0.8, 0.2, 1);
+    }
+    @media (min-width: 600px) {
+      .modal { align-items: center; }
+      .modal-sheet { border-radius: var(--radius); padding-bottom: 20px; }
+    }
+    .modal-title { font-size: 17px; font-weight: 700; margin: 0 0 6px; }
+    .modal-desc { font-size: 13px; color: var(--muted); margin: 0 0 16px; }
+    .modal-actions { display: flex; flex-direction: column; gap: 8px; }
+    .modal-btn {
+      width: 100%;
+      min-height: var(--tap-min);
+      padding: 12px 16px;
+      font-size: 15px; font-weight: 600;
+      border: 1.5px solid var(--card-border);
+      border-radius: var(--radius);
+      background: var(--card-bg);
+      color: var(--fg);
+      text-align: center;
+      display: flex; align-items: center; justify-content: center; gap: 8px;
+    }
+    .modal-btn:active { background: var(--card-border); }
+    .modal-btn.primary {
+      background: var(--accent); color: white; border-color: var(--accent);
+    }
+    .modal-btn.cancel {
+      border-color: transparent;
+      background: transparent;
+      color: var(--muted);
+      margin-top: 4px;
+    }
+    @keyframes modalFade { from { opacity: 0; } }
+    @keyframes modalSlide { from { transform: translateY(100%); } }
+
+    /* モーダル内の画面切替 — data-screen 属性で表示するスクリーンを選択 */
+    .modal-screen { display: none; }
+    .modal-sheet[data-screen="menu"] .modal-screen[data-screen="menu"] { display: block; }
+    .modal-sheet[data-screen="form"] .modal-screen[data-screen="form"] { display: block; }
+
+    /* フォーム要素 */
+    .form-fields {
+      display: flex; flex-direction: column;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+    .field { display: flex; flex-direction: column; gap: 4px; }
+    .field label {
+      font-size: 13px; font-weight: 600;
+      color: var(--fg);
+    }
+    .field-optional { color: var(--muted); font-weight: 400; margin-left: 4px; font-size: 12px; }
+    .field-required::after { content: ' *'; color: var(--ng-fg); }
+    .field input,
+    .field textarea {
+      width: 100%;
+      font-family: inherit;
+      font-size: 16px;  /* 16px 以上で iOS Safari の自動ズームを抑制 */
+      background: var(--card-bg);
+      color: var(--fg);
+      border: 1.5px solid var(--card-border);
+      border-radius: var(--radius);
+      padding: 10px 12px;
+      outline: none;
+      -webkit-appearance: none;
+      transition: border-color .15s;
+    }
+    .field input:focus,
+    .field textarea:focus { border-color: var(--accent); }
+    .field textarea {
+      resize: vertical;
+      min-height: 120px;
+      line-height: 1.5;
+    }
+    .modal-btn[disabled] { opacity: 0.5; pointer-events: none; }
+
+    /* ===== Toast ===== */
+    .toast {
+      position: fixed;
+      left: 50%;
+      bottom: calc(env(safe-area-inset-bottom, 0px) + 88px);
+      transform: translate(-50%, 12px);
+      background: var(--fg); color: var(--bg);
+      padding: 10px 18px;
+      border-radius: 999px;
+      font-size: 14px; font-weight: 600;
+      box-shadow: var(--shadow-lg);
+      opacity: 0;
+      transition: opacity .2s, transform .2s;
+      pointer-events: none;
+      z-index: 1100;
+      max-width: calc(100vw - 32px);
+      white-space: nowrap;
+      overflow: hidden; text-overflow: ellipsis;
+    }
+    .toast.show { opacity: 0.95; transform: translate(-50%, 0); }
+  </style>
+</head>
+<body data-view="list">
+
+  <!-- ============== BETA BANNER ============== -->
+  <div class="beta-banner" id="beta-banner" hidden>
+    <span class="beta-banner-text">🚧 ベータ版です。気づいた点は右下の💬からお知らせください</span>
+    <button class="beta-banner-close" id="beta-banner-close" aria-label="バナーを閉じる">×</button>
+  </div>
+
+  <!-- ============== LIST VIEW ============== -->
+  <section id="view-list">
+    <header class="app-header">
+      <h1 class="app-title">食材選び方</h1>
+      <div class="search-row">
+        <svg class="search-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <circle cx="9" cy="9" r="6"/>
+          <path d="M14 14l4 4"/>
+        </svg>
+        <input type="search" id="search" class="search-input"
+               placeholder="食材を検索 (大根 / だいこん / Daikon)"
+               autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+        <button class="search-clear" id="search-clear" aria-label="検索クリア">×</button>
+      </div>
+      <nav class="cat-tabs" id="cat-tabs" aria-label="カテゴリ"></nav>
+    </header>
+    <main>
+      <div id="grid" class="grid">
+        <div class="loading">読み込み中…</div>
+      </div>
+    </main>
+  </section>
+
+  <!-- ============== DETAIL VIEW ============== -->
+  <section id="view-detail">
+    <header class="detail-header">
+      <button class="back-btn" id="back-btn" aria-label="一覧に戻る">
+        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M13 5l-6 6 6 6"/>
+        </svg>
+        一覧
+      </button>
+      <h2 class="detail-title" id="detail-title"></h2>
+      <div class="detail-actions">
+        <button class="icon-btn" id="share-btn" aria-label="共有">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor"
+               stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M10 13V3M10 3l-3 3M10 3l3 3"/>
+            <path d="M4 11v4a2 2 0 002 2h8a2 2 0 002-2v-4"/>
+          </svg>
+        </button>
+        <!-- TODO(phase2): お気に入りボタン。
+             - クリックで App.toggleFavorite(id) を呼ぶ
+             - data-favorited を真偽値で切替して塗り分け
+             - IndexedDB に永続化(下記 Storage モジュールを差し替え)-->
+        <button class="icon-btn" id="fav-btn" aria-label="お気に入り" data-favorited="false" hidden>★</button>
+      </div>
+    </header>
+    <div class="detail-body" id="detail-body"></div>
+  </section>
+
+  <!-- フィードバックFAB → モーダルでフォーム/メール選択 -->
+  <button class="feedback-fab" id="feedback-fab" aria-label="フィードバック">💬</button>
+
+  <!-- ============== FEEDBACK MODAL ============== -->
+  <div class="modal" id="feedback-modal" hidden>
+    <div class="modal-backdrop" data-close></div>
+    <div class="modal-sheet" id="modal-sheet" role="dialog" aria-modal="true" aria-labelledby="modal-title" data-screen="menu">
+
+      <!-- Screen 1: メニュー -->
+      <div class="modal-screen" data-screen="menu">
+        <h2 class="modal-title" id="modal-title">フィードバック</h2>
+        <p class="modal-desc" id="modal-context">気づいた点があれば教えてください</p>
+        <div class="modal-actions">
+          <button class="modal-btn primary" id="fb-form-btn">📝 フォームで送る</button>
+          <button class="modal-btn cancel" data-close>キャンセル</button>
+        </div>
+      </div>
+
+      <!-- Screen 2: 入力フォーム -->
+      <form class="modal-screen" data-screen="form" id="fb-form" novalidate>
+        <h2 class="modal-title">フィードバックを送る</h2>
+        <p class="modal-desc" id="modal-form-context"></p>
+        <div class="form-fields">
+          <div class="field">
+            <label for="fb-nickname">ニックネーム<span class="field-optional">(任意)</span></label>
+            <input type="text" id="fb-nickname" name="nickname"
+                   maxlength="40" autocomplete="off" autocorrect="off">
+          </div>
+          <div class="field">
+            <label for="fb-message" class="field-required">フィードバック内容</label>
+            <textarea id="fb-message" name="message" rows="5" required
+                      maxlength="2000" placeholder="気になった点・直してほしい点・ほしい機能 など"></textarea>
+          </div>
+        </div>
+        <div class="modal-actions">
+          <button class="modal-btn primary" type="submit" id="fb-submit-btn">送信</button>
+          <button class="modal-btn cancel" type="button" id="fb-back-btn">戻る</button>
+        </div>
+      </form>
+
+    </div>
+  </div>
+
+  <!-- ============== TOAST ============== -->
+  <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+  <script>
+  (() => {
+    'use strict';
+
+    // ============================================================
+    //  Feedback / share 設定
+    // ============================================================
+    const FEEDBACK_CONFIG = {
+      // Formspree: アプリ内のフォームから直接 POST(別タブを開かない)
+      formspreeUrl: 'https://formspree.io/f/mlgzgwkk',
+    };
+    const SHARE_TITLE = '食材選び方ガイド';
+
+    // ============================================================
+    //  App state
+    // ============================================================
+    const App = {
+      foods: [],
+      filters: { category: 'all', query: '' },
+      el: {
+        grid: document.getElementById('grid'),
+        catTabs: document.getElementById('cat-tabs'),
+        search: document.getElementById('search'),
+        searchClear: document.getElementById('search-clear'),
+        detailTitle: document.getElementById('detail-title'),
+        detailBody: document.getElementById('detail-body'),
+        backBtn: document.getElementById('back-btn'),
+        favBtn: document.getElementById('fav-btn'),
+      }
+    };
+
+    // ============================================================
+    //  Storage モジュール (Phase 2 で IndexedDB に差し替え可能)
+    //   - favorites の get/set だけ。今は localStorage で十分軽量
+    //   - 同じ API で IndexedDB 実装に置き換えれば移行できる
+    // ============================================================
+    const Storage = {
+      _key: 'food-pwa:favorites',
+      getFavorites() {
+        try { return new Set(JSON.parse(localStorage.getItem(this._key) || '[]')); }
+        catch { return new Set(); }
+      },
+      setFavorites(set) {
+        localStorage.setItem(this._key, JSON.stringify([...set]));
+      },
+    };
+
+    // ============================================================
+    //  Search 正規化
+    //   - NFKC で全角英数→半角
+    //   - カタカナ→ひらがな
+    //   - 空白除去・小文字化
+    //  これにより「ダイコン」「だいこん」「Daikon」「daikon」が同等
+    // ============================================================
+    function normalize(s) {
+      if (!s) return '';
+      return String(s)
+        .normalize('NFKC')
+        .replace(/[ァ-ヶ]/g, c => String.fromCharCode(c.charCodeAt(0) - 0x60))
+        .replace(/[\s　]+/g, '')
+        .toLowerCase();
+    }
+
+    function buildSearchIndex(food) {
+      return [food.name, food.name_kana, food.name_en, food.category_label, food.subcategory]
+        .filter(Boolean)
+        .map(normalize)
+        .join(' ');
+    }
+
+    // ============================================================
+    //  Filtering / season
+    // ============================================================
+    function filteredFoods() {
+      const q = normalize(App.filters.query);
+      return App.foods.filter(f => {
+        if (App.filters.category !== 'all' && f.category !== App.filters.category) return false;
+        if (q && !f._search.includes(q)) return false;
+        return true;
+      });
+    }
+
+    function isInSeason(food) {
+      if (!Array.isArray(food.season) || food.season.length === 0) return false;
+      const m = `${new Date().getMonth() + 1}月`;
+      return food.season.includes(m);
+    }
+
+    // ============================================================
+    //  Helpers
+    // ============================================================
+    function escapeHTML(s) {
+      return String(s ?? '').replace(/[&<>"']/g, c => (
+        { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]
+      ));
+    }
+
+    // ============================================================
+    //  Categories
+    // ============================================================
+    function renderCategories() {
+      const cats = [{ id: 'all', label: 'すべて' }];
+      const seen = new Set();
+      for (const f of App.foods) {
+        if (!seen.has(f.category)) {
+          seen.add(f.category);
+          cats.push({ id: f.category, label: f.category_label || f.category });
+        }
+      }
+      App.el.catTabs.innerHTML = cats.map(c =>
+        `<button class="cat-tab${c.id === App.filters.category ? ' active' : ''}" data-cat="${escapeHTML(c.id)}">${escapeHTML(c.label)}</button>`
+      ).join('');
+    }
+
+    // ============================================================
+    //  List grid render
+    //   - 画像: svg/parts/<id>_ok.svg (食材本体のみのイラスト)
+    //   - 背景: 全カード統一 (テーマ色は card-body 上の細ストライプのみ)
+    //   - タグ: カテゴリ + 旬 (旬は当月該当時にハイライト)
+    // ============================================================
+    function renderGrid() {
+      const list = filteredFoods();
+      if (list.length === 0) {
+        App.el.grid.innerHTML = `<div class="empty">該当する食材がありません</div>`;
+        return;
+      }
+      App.el.grid.innerHTML = list.map(f => {
+        const inSeason = isInSeason(f);
+        // 季節タグの方針:
+        //   当月が旬に含まれる → 「今が旬」(peak併記しない。"今が旬 秋〜冬"のような矛盾を回避)
+        //   それ以外           → 「旬: <season_peak>」(peakは1〜数文字でキュレーターが記述)
+        const seasonText = inSeason ? '今が旬' : `旬: ${f.season_peak || '-'}`;
+        const themeStyle = f.accent_color ? `--theme:${escapeHTML(f.accent_color)}` : '';
+        return `
+          <a class="card" href="#/item/${encodeURIComponent(f.id)}" style="${themeStyle}" aria-label="${escapeHTML(f.name)}">
+            <div class="card-img-wrap">
+              <img src="svg/parts/${encodeURIComponent(f.id)}_ok.svg" alt="" loading="lazy" decoding="async">
+            </div>
+            <div class="card-body">
+              <h3 class="card-name">${escapeHTML(f.name)}</h3>
+              <div class="card-tags">
+                <span class="tag">${escapeHTML(f.category_label || '')}</span>
+                <span class="tag${inSeason ? ' in-season' : ''}">${escapeHTML(seasonText)}</span>
+              </div>
+            </div>
+          </a>`;
+      }).join('');
+    }
+
+    // ============================================================
+    //  Diagram generator (詳細画面用)
+    //   - foods.json の summary_ok / summary_ng (短キーワード) を使用
+    //   - svg/parts/<id>_<side>.svg のイラストを <img> で表示
+    //   - 新食材を増やしても: パーツSVG2個+JSON記入 だけで完結
+    // ============================================================
+    function buildDiagramBlock(food, side) {
+      const isOK = side === 'ok';
+      const labelText = isOK ? `良い${food.name}` : `避けたい${food.name}`;
+      const badge = isOK ? '○' : '×';
+      const summary = isOK ? food.summary_ok : food.summary_ng;
+      const cls = isOK ? 'ok' : 'ng';
+      return `
+        <div class="diagram-block ${cls}">
+          <div class="diagram-label">
+            <span class="diagram-badge">${badge}</span>
+            <span class="diagram-label-text">${escapeHTML(labelText)}</span>
+          </div>
+          <div class="diagram-illust">
+            <img src="svg/parts/${encodeURIComponent(food.id)}_${side}.svg"
+                 alt="${escapeHTML(labelText)}"
+                 loading="lazy" decoding="async">
+          </div>
+          ${summary ? `<div class="diagram-keyword">${escapeHTML(summary)}</div>` : ''}
+        </div>`;
+    }
+
+    function buildDiagram(food) {
+      return `
+        <div class="diagram-grid" role="group" aria-label="OK / NG 比較図解">
+          ${buildDiagramBlock(food, 'ok')}
+          ${buildDiagramBlock(food, 'ng')}
+        </div>`;
+    }
+
+    // ============================================================
+    //  Detail render
+    //   - ヘッダーで食材名と旬を表示済 → 図解は重複を避けて
+    //     パーツSVG + 短キーワード(summary_*)のみ
+    //   - OK/NG のフル文は下部 .points セクションに集約
+    // ============================================================
+    function renderDetail(id) {
+      const food = App.foods.find(f => f.id === id);
+      if (!food) {
+        App.el.detailTitle.textContent = '見つかりません';
+        App.el.detailBody.innerHTML = `<div class="empty">指定された食材が見つかりませんでした。</div>`;
+        return;
+      }
+      App.el.detailTitle.textContent = food.name;
+
+      const seasonTag = isInSeason(food)
+        ? `<span class="tag in-season">今が旬</span>`
+        : `<span class="tag">旬: ${escapeHTML(food.season_peak || '-')}</span>`;
+
+      const okItems = (food.ok_points || []).map(p => `<li>${escapeHTML(p)}</li>`).join('');
+      const ngItems = (food.ng_points || []).map(p => `<li>${escapeHTML(p)}</li>`).join('');
+
+      const storage = food.storage || {};
+      const storageHTML = `
+        <dl class="info-body">
+          ${storage.method ? `<dt>方法</dt><dd>${escapeHTML(storage.method)}</dd>` : ''}
+          ${storage.duration ? `<dt>日持ち</dt><dd>${escapeHTML(storage.duration)}</dd>` : ''}
+          ${storage.tips ? `<dt>コツ</dt><dd>${escapeHTML(storage.tips)}</dd>` : ''}
+        </dl>`;
+
+      App.el.detailBody.innerHTML = `
+        <div class="detail-meta">
+          <span class="tag">${escapeHTML(food.category_label || '')}</span>
+          ${food.subcategory ? `<span class="tag">${escapeHTML(food.subcategory)}</span>` : ''}
+          ${seasonTag}
+        </div>
+        ${buildDiagram(food)}
+        <div class="points">
+          <div class="points-block ok">
+            <h3 class="points-title">○ 良い見分け方</h3>
+            <ul>${okItems}</ul>
+          </div>
+          <div class="points-block ng">
+            <h3 class="points-title">× 避けたい状態</h3>
+            <ul>${ngItems}</ul>
+          </div>
+        </div>
+        ${food.usage_tips ? `<div class="info-section">
+          <h3 class="info-title">使い分け・調理</h3>
+          <p class="info-body">${escapeHTML(food.usage_tips)}</p>
+        </div>` : ''}
+        <div class="info-section">
+          <h3 class="info-title">保存方法</h3>
+          ${storageHTML}
+        </div>
+        ${food.nutrition_highlight ? `<div class="info-section">
+          <h3 class="info-title">栄養ハイライト</h3>
+          <p class="info-body">${escapeHTML(food.nutrition_highlight)}</p>
+        </div>` : ''}`;
+
+      window.scrollTo(0, 0);
+    }
+
+    // ============================================================
+    //  Routing — hashchange ベース
+    //   '#/'              一覧
+    //   '#/item/<id>'     詳細
+    // ============================================================
+    function applyRoute() {
+      const hash = location.hash || '#/';
+      const m = hash.match(/^#\/item\/(.+)$/);
+      if (m) {
+        document.body.dataset.view = 'detail';
+        renderDetail(decodeURIComponent(m[1]));
+      } else {
+        document.body.dataset.view = 'list';
+      }
+    }
+
+    // ============================================================
+    //  Beta banner — 初回訪問のみ表示
+    // ============================================================
+    const BANNER_KEY = 'food-pwa:banner_dismissed';
+    function maybeShowBanner() {
+      if (localStorage.getItem(BANNER_KEY) === 'true') return;
+      const banner = document.getElementById('beta-banner');
+      banner.hidden = false;
+      document.body.dataset.banner = 'true';
+      document.getElementById('beta-banner-close').addEventListener('click', () => {
+        banner.hidden = true;
+        delete document.body.dataset.banner;
+        try { localStorage.setItem(BANNER_KEY, 'true'); } catch {}
+      });
+    }
+
+    // ============================================================
+    //  Toast — 一時通知 (クリップボードコピー時など)
+    // ============================================================
+    let toastTimer = null;
+    function showToast(msg, ms = 2000) {
+      const t = document.getElementById('toast');
+      t.textContent = msg;
+      t.hidden = false;
+      // reflow → transition 起動
+      void t.offsetHeight;
+      t.classList.add('show');
+      clearTimeout(toastTimer);
+      toastTimer = setTimeout(() => {
+        t.classList.remove('show');
+        setTimeout(() => { t.hidden = true; }, 250);
+      }, ms);
+    }
+
+    // ============================================================
+    //  現在のページ文脈 (詳細なら食材情報、一覧ならアプリ全般)
+    // ============================================================
+    function getCurrentContext() {
+      const hash = location.hash || '#/';
+      const m = hash.match(/^#\/item\/(.+)$/);
+      if (m) {
+        const food = App.foods.find(f => f.id === decodeURIComponent(m[1]));
+        if (food) {
+          return {
+            type: 'detail',
+            food,
+            label: `${food.name} (${food.id})`,
+            url: location.href,
+          };
+        }
+      }
+      return {
+        type: 'list',
+        food: null,
+        label: '一覧画面',
+        url: location.origin + location.pathname,
+      };
+    }
+
+    // ============================================================
+    //  Feedback modal — 2画面構成
+    //    Screen 'menu' : 入口(送る/キャンセル)
+    //    Screen 'form' : ニックネーム + 本文 + 送信ボタン
+    //   フォーム内容は Formspree に直接 POST(別タブを開かない)
+    //   自動で URL / 食材ID / 日時 / UA を含める
+    // ============================================================
+    function setModalScreen(name) {
+      document.getElementById('modal-sheet').dataset.screen = name;
+    }
+
+    function openFeedbackModal() {
+      const ctx = getCurrentContext();
+      const modal = document.getElementById('feedback-modal');
+      document.getElementById('modal-context').textContent = `現在のページ: ${ctx.label}`;
+      document.getElementById('modal-form-context').textContent = `現在のページ: ${ctx.label}`;
+      setModalScreen('menu');
+      modal.hidden = false;
+      document.documentElement.style.overflow = 'hidden';
+    }
+
+    function closeFeedbackModal() {
+      document.getElementById('feedback-modal').hidden = true;
+      document.documentElement.style.overflow = '';
+    }
+
+    async function submitFeedback(event) {
+      event.preventDefault();
+      const form = document.getElementById('fb-form');
+      const submitBtn = document.getElementById('fb-submit-btn');
+      const message = form.message.value.trim();
+      if (!message) {
+        form.message.focus();
+        showToast('内容を入力してください', 1800);
+        return;
+      }
+
+      const ctx = getCurrentContext();
+      const payload = {
+        nickname: form.nickname.value.trim(),
+        message,
+        page_url: ctx.url,
+        food_id: ctx.food ? ctx.food.id : '',
+        timestamp: new Date().toISOString(),
+        user_agent: navigator.userAgent,
+      };
+
+      submitBtn.disabled = true;
+      const originalLabel = submitBtn.textContent;
+      submitBtn.textContent = '送信中…';
+
+      try {
+        const res = await fetch(FEEDBACK_CONFIG.formspreeUrl, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+          body: JSON.stringify(payload),
+        });
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        showToast('送信ありがとうございます!', 2500);
+        form.reset();
+        closeFeedbackModal();
+      } catch (err) {
+        console.warn('feedback submit failed', err);
+        showToast('送信に失敗しました。もう一度お試しください', 3000);
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.textContent = originalLabel;
+      }
+    }
+
+    // ============================================================
+    //  Share — Web Share API 優先、未対応はクリップボード + トースト
+    // ============================================================
+    async function sharePage() {
+      const ctx = getCurrentContext();
+      const text = ctx.type === 'detail'
+        ? `${SHARE_TITLE}: ${ctx.food.name}の選び方`
+        : `${SHARE_TITLE} — 買い物中にサッと確認できる選び方PWA`;
+      const data = { title: SHARE_TITLE, text, url: ctx.url };
+
+      if (navigator.share) {
+        try { await navigator.share(data); }
+        catch (err) {
+          if (err.name !== 'AbortError') console.warn('share failed', err);
+        }
+        return;
+      }
+      // フォールバック: URL をクリップボードへコピー
+      try {
+        await navigator.clipboard.writeText(ctx.url);
+        showToast('URLをコピーしました');
+      } catch {
+        showToast('コピーできませんでした', 2500);
+      }
+    }
+
+    // ============================================================
+    //  Event wiring
+    // ============================================================
+    function bind() {
+      App.el.search.addEventListener('input', (e) => {
+        App.filters.query = e.target.value;
+        renderGrid();
+      });
+      App.el.searchClear.addEventListener('click', () => {
+        App.el.search.value = '';
+        App.filters.query = '';
+        App.el.search.focus();
+        renderGrid();
+      });
+      App.el.catTabs.addEventListener('click', (e) => {
+        const btn = e.target.closest('.cat-tab');
+        if (!btn) return;
+        App.filters.category = btn.dataset.cat;
+        App.el.catTabs.querySelectorAll('.cat-tab').forEach(b =>
+          b.classList.toggle('active', b === btn)
+        );
+        renderGrid();
+      });
+      App.el.backBtn.addEventListener('click', () => {
+        if (history.length > 1 && document.referrer) history.back();
+        else location.hash = '#/';
+      });
+      window.addEventListener('hashchange', applyRoute);
+
+      // フィードバック FAB & モーダル
+      document.getElementById('feedback-fab').addEventListener('click', openFeedbackModal);
+      document.getElementById('feedback-modal').addEventListener('click', (e) => {
+        if (e.target.matches('[data-close]')) closeFeedbackModal();
+      });
+      // メニュー → フォーム画面に切替
+      document.getElementById('fb-form-btn').addEventListener('click', () => setModalScreen('form'));
+      // フォーム → メニューに戻る
+      document.getElementById('fb-back-btn').addEventListener('click', () => setModalScreen('menu'));
+      // 送信
+      document.getElementById('fb-form').addEventListener('submit', submitFeedback);
+
+      // 共有ボタン
+      document.getElementById('share-btn').addEventListener('click', sharePage);
+
+      // ESC でモーダルを閉じる
+      window.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+          const modal = document.getElementById('feedback-modal');
+          if (!modal.hidden) closeFeedbackModal();
+        }
+      });
+    }
+
+    // ============================================================
+    //  Bootstrap
+    // ============================================================
+    async function init() {
+      bind();
+      maybeShowBanner();
+      try {
+        const res = await fetch('data/foods.json', { cache: 'no-cache' });
+        const data = await res.json();
+        App.foods = (data.items || []).map(f => ({ ...f, _search: buildSearchIndex(f) }));
+        renderCategories();
+        renderGrid();
+        applyRoute();
+      } catch (err) {
+        App.el.grid.innerHTML = `<div class="empty">データの読み込みに失敗しました: ${escapeHTML(err.message)}</div>`;
+        console.error(err);
+      }
+
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('sw.js').catch(err =>
+            console.warn('SW registration failed:', err)
+          );
+        });
+      }
+    }
+
+    init();
+  })();
+  </script>
+</body>
+</html>

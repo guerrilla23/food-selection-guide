@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-220 -110 440 220" font-family="Noto Sans CJK JP, sans-serif">
+<g transform="rotate(-15)">
+      <!-- Yellowing leaves -->
+      <path d="M -180 -45 L -180 45 Q -150 50 -120 45 L -120 -45 Q -150 -50 -180 -45 Z" fill="#9F8730"/>
+      <!-- Wilted tip -->
+      <path d="M -180 -45 Q -195 -30 -200 -10 L -200 10 Q -195 30 -180 45" fill="#7A6720" opacity="0.8"/>
+      <line x1="-178" y1="-25" x2="-122" y2="-25" stroke="#5D4E0F" stroke-width="1"/>
+      <line x1="-178" y1="0" x2="-122" y2="0" stroke="#5D4E0F" stroke-width="1"/>
+      <line x1="-178" y1="25" x2="-122" y2="25" stroke="#5D4E0F" stroke-width="1"/>
+      
+      <!-- Blurred transition -->
+      <path d="M -120 -45 L -100 -45 L -100 45 L -120 45 Z" fill="#B5B080"/>
+      
+      <!-- White part (thinner, dull) -->
+      <path d="M -100 -38 L 150 -35 Q 170 -35 170 -30 L 170 30 Q 170 35 150 35 L -100 38 Z" fill="#E8E5D2"/>
+      <!-- Wrinkles on white -->
+      <path d="M -90 -25 Q -30 -20 30 -25 Q 90 -20 160 -25" stroke="#A89E7A" stroke-width="1.5" fill="none"/>
+      <path d="M -90 0 Q -30 5 30 0 Q 90 5 160 0" stroke="#A89E7A" stroke-width="1.5" fill="none"/>
+      <path d="M -90 25 Q -30 20 30 25 Q 90 20 160 25" stroke="#A89E7A" stroke-width="1.5" fill="none"/>
+      <!-- Brown spots -->
+      <ellipse cx="30" cy="-15" rx="10" ry="5" fill="#8B6F47" opacity="0.5"/>
+      <ellipse cx="80" cy="15" rx="8" ry="4" fill="#8B6F47" opacity="0.5"/>
+      <!-- Dried/brown root end -->
+      <ellipse cx="170" cy="0" rx="6" ry="35" fill="#A89E7A"/>
+      <ellipse cx="170" cy="0" rx="3" ry="30" fill="#5D4E37"/>
+    </g>
+</svg>

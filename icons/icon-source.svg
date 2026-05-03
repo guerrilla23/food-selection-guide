@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#8FB868"/>
+      <stop offset="1" stop-color="#5C7E40"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="96" fill="url(#bg)"/>
+  <g transform="translate(256 268)">
+    <!-- Leaf body -->
+    <path d="M -120 70 Q -130 -120 0 -170 Q 130 -120 120 70 Q 110 130 0 130 Q -110 130 -120 70 Z" fill="#FAFAF5" stroke="#3F5A2A" stroke-width="6"/>
+    <!-- Midrib -->
+    <path d="M 0 -170 L 0 130" stroke="#3F5A2A" stroke-width="6" fill="none" stroke-linecap="round"/>
+    <!-- Veins -->
+    <path d="M 0 -110 Q -50 -90 -95 -40" stroke="#5C7E40" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <path d="M 0 -50 Q -60 -30 -105 20" stroke="#5C7E40" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <path d="M 0 10 Q -55 30 -85 80" stroke="#5C7E40" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <path d="M 0 -110 Q 50 -90 95 -40" stroke="#5C7E40" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <path d="M 0 -50 Q 60 -30 105 20" stroke="#5C7E40" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <path d="M 0 10 Q 55 30 85 80" stroke="#5C7E40" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <!-- Check mark -->
+    <circle cx="58" cy="78" r="36" fill="#7BA05B" stroke="#3F5A2A" stroke-width="4"/>
+    <path d="M 42 78 L 54 92 L 76 64" stroke="white" stroke-width="8" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</svg>

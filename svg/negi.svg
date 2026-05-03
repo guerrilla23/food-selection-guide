@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 600" font-family="Noto Sans CJK JP, sans-serif">
+  <rect width="1080" height="600" fill="#FFFFFF" rx="20"/>
+  
+  <!-- Header -->
+  <text x="60" y="60" font-size="44" font-weight="900" fill="#2C5F2D">ねぎ(長ねぎ)</text>
+  <line x1="60" y1="75" x2="320" y2="75" stroke="#2C5F2D" stroke-width="4"/>
+  <text x="340" y="68" font-size="22" fill="#666">旬:11月〜2月</text>
+  
+  <line x1="540" y1="100" x2="540" y2="540" stroke="#DDD" stroke-width="2" stroke-dasharray="6,6"/>
+  
+  <!-- OK side -->
+  <g transform="translate(280, 320)">
+    <circle cx="-200" cy="-180" r="22" fill="#2C5F2D"/>
+    <text x="-200" y="-172" font-size="26" font-weight="900" fill="white" text-anchor="middle">○</text>
+    
+    <!-- Long negi (horizontal) - thick, vibrant -->
+    <g transform="rotate(-15)">
+      <!-- Green leaves (top) -->
+      <path d="M -180 -50 L -180 50 Q -150 55 -120 50 L -120 -50 Q -150 -55 -180 -50 Z" fill="#4A7C2E"/>
+      <!-- Multiple leaf layers -->
+      <line x1="-178" y1="-30" x2="-122" y2="-30" stroke="#2C5F2D" stroke-width="1"/>
+      <line x1="-178" y1="0" x2="-122" y2="0" stroke="#2C5F2D" stroke-width="1"/>
+      <line x1="-178" y1="30" x2="-122" y2="30" stroke="#2C5F2D" stroke-width="1"/>
+      
+      <!-- Transition zone (sharp boundary) -->
+      <path d="M -120 -50 L -100 -55 L -100 55 L -120 50 Z" fill="#A8C76E"/>
+      
+      <!-- White part (thick, plump) -->
+      <path d="M -100 -55 L 150 -52 Q 170 -52 170 -45 L 170 45 Q 170 52 150 52 L -100 55 Z" fill="#FAFAF8"/>
+      <!-- Ridges on white -->
+      <path d="M -90 -50 Q 30 -48 160 -45" stroke="#E8E8E0" stroke-width="1" fill="none"/>
+      <path d="M -90 -25 Q 30 -23 160 -20" stroke="#E8E8E0" stroke-width="1" fill="none"/>
+      <path d="M -90 0 Q 30 2 160 5" stroke="#E8E8E0" stroke-width="1" fill="none"/>
+      <path d="M -90 25 Q 30 27 160 30" stroke="#E8E8E0" stroke-width="1" fill="none"/>
+      <!-- Highlight -->
+      <ellipse cx="30" cy="-30" rx="100" ry="6" fill="#FFFFFF" opacity="0.7"/>
+      <!-- Right end (root, clean cut) -->
+      <ellipse cx="170" cy="0" rx="6" ry="45" fill="#F0F0E8"/>
+      <!-- Tiny clean roots -->
+      <line x1="170" y1="-30" x2="180" y2="-32" stroke="#999" stroke-width="1"/>
+      <line x1="170" y1="-15" x2="182" y2="-15" stroke="#999" stroke-width="1"/>
+      <line x1="170" y1="0" x2="183" y2="0" stroke="#999" stroke-width="1"/>
+      <line x1="170" y1="15" x2="182" y2="15" stroke="#999" stroke-width="1"/>
+      <line x1="170" y1="30" x2="180" y2="32" stroke="#999" stroke-width="1"/>
+    </g>
+  </g>
+  
+  <!-- NG side -->
+  <g transform="translate(800, 320)">
+    <circle cx="-200" cy="-180" r="22" fill="#C62828"/>
+    <text x="-200" y="-172" font-size="26" font-weight="900" fill="white" text-anchor="middle">×</text>
+    
+    <g transform="rotate(-15)">
+      <!-- Yellowing leaves -->
+      <path d="M -180 -45 L -180 45 Q -150 50 -120 45 L -120 -45 Q -150 -50 -180 -45 Z" fill="#9F8730"/>
+      <!-- Wilted tip -->
+      <path d="M -180 -45 Q -195 -30 -200 -10 L -200 10 Q -195 30 -180 45" fill="#7A6720" opacity="0.8"/>
+      <line x1="-178" y1="-25" x2="-122" y2="-25" stroke="#5D4E0F" stroke-width="1"/>
+      <line x1="-178" y1="0" x2="-122" y2="0" stroke="#5D4E0F" stroke-width="1"/>
+      <line x1="-178" y1="25" x2="-122" y2="25" stroke="#5D4E0F" stroke-width="1"/>
+      
+      <!-- Blurred transition -->
+      <path d="M -120 -45 L -100 -45 L -100 45 L -120 45 Z" fill="#B5B080"/>
+      
+      <!-- White part (thinner, dull) -->
+      <path d="M -100 -38 L 150 -35 Q 170 -35 170 -30 L 170 30 Q 170 35 150 35 L -100 38 Z" fill="#E8E5D2"/>
+      <!-- Wrinkles on white -->
+      <path d="M -90 -25 Q -30 -20 30 -25 Q 90 -20 160 -25" stroke="#A89E7A" stroke-width="1.5" fill="none"/>
+      <path d="M -90 0 Q -30 5 30 0 Q 90 5 160 0" stroke="#A89E7A" stroke-width="1.5" fill="none"/>
+      <path d="M -90 25 Q -30 20 30 25 Q 90 20 160 25" stroke="#A89E7A" stroke-width="1.5" fill="none"/>
+      <!-- Brown spots -->
+      <ellipse cx="30" cy="-15" rx="10" ry="5" fill="#8B6F47" opacity="0.5"/>
+      <ellipse cx="80" cy="15" rx="8" ry="4" fill="#8B6F47" opacity="0.5"/>
+      <!-- Dried/brown root end -->
+      <ellipse cx="170" cy="0" rx="6" ry="35" fill="#A89E7A"/>
+      <ellipse cx="170" cy="0" rx="3" ry="30" fill="#5D4E37"/>
+    </g>
+  </g>
+  
+  <!-- Comparison labels -->
+  <g font-size="20" fill="#333">
+    <rect x="60" y="495" width="460" height="80" rx="8" fill="#E8F5E9"/>
+    <text x="80" y="520" font-weight="bold" fill="#2C5F2D">● 白い部分が太く詰まっている</text>
+    <text x="80" y="545" font-weight="bold" fill="#2C5F2D">● 緑と白の境目がくっきり、葉先までピン</text>
+    <text x="80" y="568" fill="#666" font-size="17">白=加熱で甘み / 緑=薬味・炒め物</text>
+    
+    <rect x="560" y="495" width="460" height="80" rx="8" fill="#FFEBEE"/>
+    <text x="580" y="520" font-weight="bold" fill="#C62828">× 白い部分が細く空洞感がある</text>
+    <text x="580" y="545" font-weight="bold" fill="#C62828">× 葉が黄色く萎れ、切り口が乾燥</text>
+    <text x="580" y="568" fill="#666" font-size="17">境目がぼやけている=鮮度落ちのサイン</text>
+  </g>
+</svg>

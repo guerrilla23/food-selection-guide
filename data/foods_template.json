@@ -1,0 +1,1578 @@
+{
+  "_README": "後で埋めるための雛形。各項目を data/foods.json の items[] にコピーし、空欄を埋めて使う。id/name/name_kana/name_en/category/category_label までは事前に設定済み。summary_ok/summary_ng は OK/NG キーワードを5〜15文字程度で(例: 'ハリ・重み・葉が鮮やか')。図解SVG は svg/parts/<id>_ok.svg と svg/parts/<id>_ng.svg の2ファイルを用意する。ファイル命名はidに従うのでJSONには書かない。詳細画面の図解は JS の buildDiagram(food) が自動生成する。",
+  "_categories": {
+    "vegetable": "野菜",
+    "fruit": "果物",
+    "mushroom": "きのこ",
+    "fish": "魚介",
+    "meat": "肉類",
+    "egg_dairy_bean": "卵・乳・豆",
+    "game_meat": "ジビエ"
+  },
+  "_field_template": {
+    "id": "string (URL用 英数字)",
+    "name": "表示名(日本語)",
+    "name_kana": "ひらがな(検索用)",
+    "name_en": "英語名(検索用)",
+    "category": "_categoriesのキー",
+    "category_label": "_categoriesの値",
+    "subcategory": "細分類",
+    "color_theme": "#XXXXXX 食材を表す色",
+    "accent_color": "#XXXXXX アクセント色 (一覧カードの細ストライプに使用)",
+    "season": [
+      "X月"
+    ],
+    "season_peak": "春/夏/秋/冬 等",
+    "ok_points": [
+      "4項目程度 (詳細セクションに全文表示)"
+    ],
+    "ng_points": [
+      "4項目程度 (詳細セクションに全文表示)"
+    ],
+    "summary_ok": "短キーワード5〜15文字 (図解キャプションに表示)",
+    "summary_ng": "短キーワード5〜15文字 (図解キャプションに表示)",
+    "storage": {
+      "method": "",
+      "duration": "",
+      "tips": ""
+    },
+    "usage_tips": "部位別の使い分けや調理のコツ",
+    "nutrition_highlight": "栄養面のハイライト",
+    "_files_to_create": [
+      "svg/parts/<id>_ok.svg  (OK食材イラストのみ。タイトル・キャプション無し)",
+      "svg/parts/<id>_ng.svg  (NG食材イラストのみ。タイトル・キャプション無し)"
+    ]
+  },
+  "items": [
+    {
+      "id": "tomato",
+      "name": "トマト",
+      "name_kana": "とまと",
+      "name_en": "Tomato",
+      "category": "vegetable",
+      "category_label": "野菜",
+      "subcategory": "果菜",
+      "color_theme": "",
+      "accent_color": "",
+      "season": [],
+      "season_peak": "",
+      "ok_points": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "ng_points": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "summary_ok": "",
+      "summary_ng": "",
+      "storage": {
+        "method": "",
+        "duration": "",
+        "tips": ""
+      },
+      "usage_tips": "",
+      "nutrition_highlight": ""
+    },
+    {
+      "id": "cucumber",
+      "name": "きゅうり",
+      "name_kana": "きゅうり",
+      "name_en": "Cucumber",
+      "category": "vegetable",
+      "category_label": "野菜",
+      "subcategory": "果菜",
+      "color_theme": "",
+      "accent_color": "",
+      "season": [],
+      "season_peak": "",
+      "ok_points": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "ng_points": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "summary_ok": "",
+      "summary_ng": "",
+      "storage": {
+        "method": "",
+        "duration": "",
+        "tips": ""
+      },
+      "usage_tips": "",
+      "nutrition_highlight": ""
+    },
+    {
+      "id": "potato",
+      "name": "じゃがいも",
+      "name_kana": "じゃがいも",
+      "name_en": "Potato",
+      "category": "vegetable",
+      "category_label": "野菜",
+      "subcategory": "いも類",
+      "color_theme": "",
+      "accent_color": "",
+      "season": [],
+      "season_peak": "",
+      "ok_points": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "ng_points": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "summary_ok": "",
+      "summary_ng": "",
+      "storage": {
+        "method": "",
+        "duration": "",
+        "tips": ""
+      },
+      "usage_tips": "",
+      "nutrition_highlight": ""
+    },
+    {
+      "id": "onion",
+      "name": "玉ねぎ",
+      "name_kana": "たまねぎ",
+      "name_en": "Onion",
+      "category": "vegetable",
+      "category_label": "野菜",
+      "subcategory": "葉物・香味",
+      "color_theme": "",
+      "accent_color": "",
+      "season": [],
+      "season_peak": "",
+      "ok_points": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "ng_points": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "summary_ok": "",
+      "summary_ng": "",
+      "storage": {
+        "method": "",
+        "duration": "",
+        "tips": ""
+      },
+      "usage_tips": "",
+      "nutrition_highlight": ""
+    },
+    {
+      "id": "pumpkin",
+      "name": "かぼちゃ",
+      "name_kana": "かぼちゃ",
+      "name_en": "Pumpkin",
+      "category": "vegetable",
+      "category_label": "野菜",
+      "subcategory": "果菜",
+      "color_theme": "",
+      "accent_color": "",
+      "season": [],
+      "season_peak": "",
+      "ok_points": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "ng_points": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "summary_ok": "",
+      "summary_ng": "",
+      "storage": {
+        "method": "",
+        "duration": "",
+        "tips": ""
+      },
+      "usage_tips": "",
+      "nutrition_highlight": ""
+    },
+    {
+      "id": "garlic",
+      "name": "ニンニク",
+      "name_kana": "にんにく",
+      "name_en": "Garlic",
+      "category": "vegetable",
+      "category_label": "野菜",
+      "subcategory": "葉物・香味",
+      "color_theme": "",
+      "accent_color": "",
+      "season": [],
+      "season_peak": "",
+      "ok_points": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "ng_points": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "summary_ok": "",
+      "summary_ng": "",
+      "storage": {
+        "method": "",
+        "duration": "",
+        "tips": ""
+      },
+      "usage_tips": "",
+      "nutrition_highlight": ""
+    },
+    {
+      "id": "komatsuna",
+      "name": "小松菜",
+      "name_kana": "こまつな",
+      "name_en": "Komatsuna",
+      "category": "vegetable",
+      "category_label": "野菜",
+      "subcategory": "葉物",
+      "color_theme": "",
+      "accent_color": "",
+      "season": [],
+      "season_peak": "",
+      "ok_points": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "ng_points": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "summary_ok": "",
+      "summary_ng": "",
+      "storage": {
+        "method": "",
+        "duration": "",
+        "tips": ""
+      },
+      "usage_tips": "",
+      "nutrition_highlight": ""
+    },
+    {
+      "id": "cabbage",
+      "name": "キャベツ",
+      "name_kana": "きゃべつ",
+      "name_en": "Cabbage",
+      "category": "vegetable",
+      "category_label": "野菜",
+      "subcategory": "葉物",
+      "color_theme": "",
+      "accent_color": "",
+      "season": [],
+      "season_peak": "",
+      "ok_points": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "ng_points": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "summary_ok": "",
+      "summary_ng": "",
+      "storage": {
+        "method": "",
+        "duration": "",
+        "tips": ""
+      },
+      "usage_tips": "",
+      "nutrition_highlight": ""
+    },
+    {
+      "id": "lettuce",
+      "name": "レタス",
+      "name_kana": "れたす",
+      "name_en": "Lettuce",
+      "category": "vegetable",
+      "category_label": "野菜",
+      "subcategory": "葉物",
+      "color_theme": "",
+      "accent_color": "",
+      "season": [],
+      "season_peak": "",
+      "ok_points": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "ng_points": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "summary_ok": "",
+      "summary_ng": "",
+      "storage": {
+        "method": "",
+        "duration": "",
+        "tips": ""
+      },
+      "usage_tips": "",
+      "nutrition_highlight": ""
+    },
+    {
+      "id": "hakusai",
+      "name": "白菜",
+      "name_kana": "はくさい",
+      "name_en": "Napa Cabbage",
+      "category": "vegetable",
+      "category_label": "野菜",
+      "subcategory": "葉物",
+      "color_theme": "",
+      "accent_color": "",
+      "season": [],
+      "season_peak": "",
+      "ok_points": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "ng_points": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "summary_ok": "",
+      "summary_ng": "",
+      "storage": {
+        "method": "",
+        "duration": "",
+        "tips": ""
+      },
+      "usage_tips": "",
+      "nutrition_highlight": ""
+    },
+    {
+      "id": "nasu",
+      "name": "なす",
+      "name_kana": "なす",
+      "name_en": "Eggplant",
+      "category": "vegetable",
+      "category_label": "野菜",
+      "subcategory": "果菜",
+      "color_theme": "",
+      "accent_color": "",
+      "season": [],
+      "season_peak": "",
+      "ok_points": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "ng_points": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "summary_ok": "",
+      "summary_ng": "",
+      "storage": {
+        "method": "",
+        "duration": "",
+        "tips": ""
+      },
+      "usage_tips": "",
+      "nutrition_highlight": ""
+    },
+    {
+      "id": "piman",
+      "name": "ピーマン",
+      "name_kana": "ぴーまん",
+      "name_en": "Green Pepper",
+      "category": "vegetable",
+      "category_label": "野菜",
+      "subcategory": "果菜",
+      "color_theme": "",
+      "accent_color": "",
+      "season": [],
+      "season_peak": "",
+      "ok_points": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "ng_points": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "summary_ok": "",
+      "summary_ng": "",
+      "storage": {
+        "method": "",
+        "duration": "",
+        "tips": ""
+      },
+      "usage_tips": "",
+      "nutrition_highlight": ""
+    },
+    {
+      "id": "broccoli",
+      "name": "ブロッコリー",
+      "name_kana": "ぶろっこりー",
+      "name_en": "Broccoli",
+      "category": "vegetable",
+      "category_label": "野菜",
+      "subcategory": "花菜",
+      "color_theme": "",
+      "accent_color": "",
+      "season": [],
+      "season_peak": "",
+      "ok_points": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "ng_points": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "summary_ok": "",
+      "summary_ng": "",
+      "storage": {
+        "method": "",
+        "duration": "",
+        "tips": ""
+      },
+      "usage_tips": "",
+      "nutrition_highlight": ""
+    },
+    {
+      "id": "ginger",
+      "name": "生姜",
+      "name_kana": "しょうが",
+      "name_en": "Ginger",
+      "category": "vegetable",
+      "category_label": "野菜",
+      "subcategory": "根菜",
+      "color_theme": "",
+      "accent_color": "",
+      "season": [],
+      "season_peak": "",
+      "ok_points": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "ng_points": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "summary_ok": "",
+      "summary_ng": "",
+      "storage": {
+        "method": "",
+        "duration": "",
+        "tips": ""
+      },
+      "usage_tips": "",
+      "nutrition_highlight": ""
+    },
+    {
+      "id": "banana",
+      "name": "バナナ",
+      "name_kana": "ばなな",
+      "name_en": "Banana",
+      "category": "fruit",
+      "category_label": "果物",
+      "subcategory": "",
+      "color_theme": "",
+      "accent_color": "",
+      "season": [],
+      "season_peak": "",
+      "ok_points": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "ng_points": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "summary_ok": "",
+      "summary_ng": "",
+      "storage": {
+        "method": "",
+        "duration": "",
+        "tips": ""
+      },
+      "usage_tips": "",
+      "nutrition_highlight": ""
+    },
+    {
+      "id": "apple",
+      "name": "りんご",
+      "name_kana": "りんご",
+      "name_en": "Apple",
+      "category": "fruit",
+      "category_label": "果物",
+      "subcategory": "",
+      "color_theme": "",
+      "accent_color": "",
+      "season": [],
+      "season_peak": "",
+      "ok_points": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "ng_points": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "summary_ok": "",
+      "summary_ng": "",
+      "storage": {
+        "method": "",
+        "duration": "",
+        "tips": ""
+      },
+      "usage_tips": "",
+      "nutrition_highlight": ""
+    },
+    {
+      "id": "mikan",
+      "name": "みかん",
+      "name_kana": "みかん",
+      "name_en": "Mandarin",
+      "category": "fruit",
+      "category_label": "果物",
+      "subcategory": "柑橘",
+      "color_theme": "",
+      "accent_color": "",
+      "season": [],
+      "season_peak": "",
+      "ok_points": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "ng_points": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "summary_ok": "",
+      "summary_ng": "",
+      "storage": {
+        "method": "",
+        "duration": "",
+        "tips": ""
+      },
+      "usage_tips": "",
+      "nutrition_highlight": ""
+    },
+    {
+      "id": "lemon",
+      "name": "レモン",
+      "name_kana": "れもん",
+      "name_en": "Lemon",
+      "category": "fruit",
+      "category_label": "果物",
+      "subcategory": "柑橘",
+      "color_theme": "",
+      "accent_color": "",
+      "season": [],
+      "season_peak": "",
+      "ok_points": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "ng_points": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "summary_ok": "",
+      "summary_ng": "",
+      "storage": {
+        "method": "",
+        "duration": "",
+        "tips": ""
+      },
+      "usage_tips": "",
+      "nutrition_highlight": ""
+    },
+    {
+      "id": "avocado",
+      "name": "アボカド",
+      "name_kana": "あぼかど",
+      "name_en": "Avocado",
+      "category": "fruit",
+      "category_label": "果物",
+      "subcategory": "",
+      "color_theme": "",
+      "accent_color": "",
+      "season": [],
+      "season_peak": "",
+      "ok_points": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "ng_points": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "summary_ok": "",
+      "summary_ng": "",
+      "storage": {
+        "method": "",
+        "duration": "",
+        "tips": ""
+      },
+      "usage_tips": "",
+      "nutrition_highlight": ""
+    },
+    {
+      "id": "ichigo",
+      "name": "いちご",
+      "name_kana": "いちご",
+      "name_en": "Strawberry",
+      "category": "fruit",
+      "category_label": "果物",
+      "subcategory": "ベリー",
+      "color_theme": "",
+      "accent_color": "",
+      "season": [],
+      "season_peak": "",
+      "ok_points": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "ng_points": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "summary_ok": "",
+      "summary_ng": "",
+      "storage": {
+        "method": "",
+        "duration": "",
+        "tips": ""
+      },
+      "usage_tips": "",
+      "nutrition_highlight": ""
+    },
+    {
+      "id": "kiwi",
+      "name": "キウイ",
+      "name_kana": "きうい",
+      "name_en": "Kiwi",
+      "category": "fruit",
+      "category_label": "果物",
+      "subcategory": "",
+      "color_theme": "",
+      "accent_color": "",
+      "season": [],
+      "season_peak": "",
+      "ok_points": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "ng_points": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "summary_ok": "",
+      "summary_ng": "",
+      "storage": {
+        "method": "",
+        "duration": "",
+        "tips": ""
+      },
+      "usage_tips": "",
+      "nutrition_highlight": ""
+    },
+    {
+      "id": "grape",
+      "name": "ぶどう",
+      "name_kana": "ぶどう",
+      "name_en": "Grape",
+      "category": "fruit",
+      "category_label": "果物",
+      "subcategory": "",
+      "color_theme": "",
+      "accent_color": "",
+      "season": [],
+      "season_peak": "",
+      "ok_points": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "ng_points": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "summary_ok": "",
+      "summary_ng": "",
+      "storage": {
+        "method": "",
+        "duration": "",
+        "tips": ""
+      },
+      "usage_tips": "",
+      "nutrition_highlight": ""
+    },
+    {
+      "id": "peach",
+      "name": "桃",
+      "name_kana": "もも",
+      "name_en": "Peach",
+      "category": "fruit",
+      "category_label": "果物",
+      "subcategory": "",
+      "color_theme": "",
+      "accent_color": "",
+      "season": [],
+      "season_peak": "",
+      "ok_points": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "ng_points": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "summary_ok": "",
+      "summary_ng": "",
+      "storage": {
+        "method": "",
+        "duration": "",
+        "tips": ""
+      },
+      "usage_tips": "",
+      "nutrition_highlight": ""
+    },
+    {
+      "id": "kaki",
+      "name": "柿",
+      "name_kana": "かき",
+      "name_en": "Persimmon",
+      "category": "fruit",
+      "category_label": "果物",
+      "subcategory": "",
+      "color_theme": "",
+      "accent_color": "",
+      "season": [],
+      "season_peak": "",
+      "ok_points": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "ng_points": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "summary_ok": "",
+      "summary_ng": "",
+      "storage": {
+        "method": "",
+        "duration": "",
+        "tips": ""
+      },
+      "usage_tips": "",
+      "nutrition_highlight": ""
+    },
+    {
+      "id": "pear",
+      "name": "梨",
+      "name_kana": "なし",
+      "name_en": "Pear",
+      "category": "fruit",
+      "category_label": "果物",
+      "subcategory": "",
+      "color_theme": "",
+      "accent_color": "",
+      "season": [],
+      "season_peak": "",
+      "ok_points": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "ng_points": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "summary_ok": "",
+      "summary_ng": "",
+      "storage": {
+        "method": "",
+        "duration": "",
+        "tips": ""
+      },
+      "usage_tips": "",
+      "nutrition_highlight": ""
+    },
+    {
+      "id": "shiitake",
+      "name": "椎茸",
+      "name_kana": "しいたけ",
+      "name_en": "Shiitake",
+      "category": "mushroom",
+      "category_label": "きのこ",
+      "subcategory": "",
+      "color_theme": "",
+      "accent_color": "",
+      "season": [],
+      "season_peak": "",
+      "ok_points": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "ng_points": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "summary_ok": "",
+      "summary_ng": "",
+      "storage": {
+        "method": "",
+        "duration": "",
+        "tips": ""
+      },
+      "usage_tips": "",
+      "nutrition_highlight": ""
+    },
+    {
+      "id": "shimeji",
+      "name": "しめじ",
+      "name_kana": "しめじ",
+      "name_en": "Shimeji",
+      "category": "mushroom",
+      "category_label": "きのこ",
+      "subcategory": "",
+      "color_theme": "",
+      "accent_color": "",
+      "season": [],
+      "season_peak": "",
+      "ok_points": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "ng_points": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "summary_ok": "",
+      "summary_ng": "",
+      "storage": {
+        "method": "",
+        "duration": "",
+        "tips": ""
+      },
+      "usage_tips": "",
+      "nutrition_highlight": ""
+    },
+    {
+      "id": "enoki",
+      "name": "エノキ",
+      "name_kana": "えのき",
+      "name_en": "Enoki",
+      "category": "mushroom",
+      "category_label": "きのこ",
+      "subcategory": "",
+      "color_theme": "",
+      "accent_color": "",
+      "season": [],
+      "season_peak": "",
+      "ok_points": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "ng_points": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "summary_ok": "",
+      "summary_ng": "",
+      "storage": {
+        "method": "",
+        "duration": "",
+        "tips": ""
+      },
+      "usage_tips": "",
+      "nutrition_highlight": ""
+    },
+    {
+      "id": "eringi",
+      "name": "エリンギ",
+      "name_kana": "えりんぎ",
+      "name_en": "King Trumpet",
+      "category": "mushroom",
+      "category_label": "きのこ",
+      "subcategory": "",
+      "color_theme": "",
+      "accent_color": "",
+      "season": [],
+      "season_peak": "",
+      "ok_points": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "ng_points": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "summary_ok": "",
+      "summary_ng": "",
+      "storage": {
+        "method": "",
+        "duration": "",
+        "tips": ""
+      },
+      "usage_tips": "",
+      "nutrition_highlight": ""
+    },
+    {
+      "id": "maitake",
+      "name": "舞茸",
+      "name_kana": "まいたけ",
+      "name_en": "Maitake",
+      "category": "mushroom",
+      "category_label": "きのこ",
+      "subcategory": "",
+      "color_theme": "",
+      "accent_color": "",
+      "season": [],
+      "season_peak": "",
+      "ok_points": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "ng_points": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "summary_ok": "",
+      "summary_ng": "",
+      "storage": {
+        "method": "",
+        "duration": "",
+        "tips": ""
+      },
+      "usage_tips": "",
+      "nutrition_highlight": ""
+    },
+    {
+      "id": "salmon",
+      "name": "鮭(切り身)",
+      "name_kana": "さけ きりみ",
+      "name_en": "Salmon Fillet",
+      "category": "fish",
+      "category_label": "魚介",
+      "subcategory": "切り身",
+      "color_theme": "",
+      "accent_color": "",
+      "season": [],
+      "season_peak": "",
+      "ok_points": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "ng_points": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "summary_ok": "",
+      "summary_ng": "",
+      "storage": {
+        "method": "",
+        "duration": "",
+        "tips": ""
+      },
+      "usage_tips": "",
+      "nutrition_highlight": ""
+    },
+    {
+      "id": "saba",
+      "name": "鯖",
+      "name_kana": "さば",
+      "name_en": "Mackerel",
+      "category": "fish",
+      "category_label": "魚介",
+      "subcategory": "青魚",
+      "color_theme": "",
+      "accent_color": "",
+      "season": [],
+      "season_peak": "",
+      "ok_points": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "ng_points": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "summary_ok": "",
+      "summary_ng": "",
+      "storage": {
+        "method": "",
+        "duration": "",
+        "tips": ""
+      },
+      "usage_tips": "",
+      "nutrition_highlight": ""
+    },
+    {
+      "id": "aji",
+      "name": "アジ",
+      "name_kana": "あじ",
+      "name_en": "Horse Mackerel",
+      "category": "fish",
+      "category_label": "魚介",
+      "subcategory": "青魚",
+      "color_theme": "",
+      "accent_color": "",
+      "season": [],
+      "season_peak": "",
+      "ok_points": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "ng_points": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "summary_ok": "",
+      "summary_ng": "",
+      "storage": {
+        "method": "",
+        "duration": "",
+        "tips": ""
+      },
+      "usage_tips": "",
+      "nutrition_highlight": ""
+    },
+    {
+      "id": "ebi",
+      "name": "エビ",
+      "name_kana": "えび",
+      "name_en": "Shrimp",
+      "category": "fish",
+      "category_label": "魚介",
+      "subcategory": "甲殻類",
+      "color_theme": "",
+      "accent_color": "",
+      "season": [],
+      "season_peak": "",
+      "ok_points": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "ng_points": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "summary_ok": "",
+      "summary_ng": "",
+      "storage": {
+        "method": "",
+        "duration": "",
+        "tips": ""
+      },
+      "usage_tips": "",
+      "nutrition_highlight": ""
+    },
+    {
+      "id": "whole_fish",
+      "name": "一尾魚の見方",
+      "name_kana": "いちびざかな",
+      "name_en": "Whole Fish Guide",
+      "category": "fish",
+      "category_label": "魚介",
+      "subcategory": "汎用ガイド",
+      "color_theme": "",
+      "accent_color": "",
+      "season": [],
+      "season_peak": "",
+      "ok_points": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "ng_points": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "summary_ok": "",
+      "summary_ng": "",
+      "storage": {
+        "method": "",
+        "duration": "",
+        "tips": ""
+      },
+      "usage_tips": "",
+      "nutrition_highlight": ""
+    },
+    {
+      "id": "chicken",
+      "name": "鶏肉",
+      "name_kana": "とりにく",
+      "name_en": "Chicken",
+      "category": "meat",
+      "category_label": "肉類",
+      "subcategory": "",
+      "color_theme": "",
+      "accent_color": "",
+      "season": [],
+      "season_peak": "",
+      "ok_points": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "ng_points": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "summary_ok": "",
+      "summary_ng": "",
+      "storage": {
+        "method": "",
+        "duration": "",
+        "tips": ""
+      },
+      "usage_tips": "",
+      "nutrition_highlight": ""
+    },
+    {
+      "id": "pork",
+      "name": "豚肉",
+      "name_kana": "ぶたにく",
+      "name_en": "Pork",
+      "category": "meat",
+      "category_label": "肉類",
+      "subcategory": "",
+      "color_theme": "",
+      "accent_color": "",
+      "season": [],
+      "season_peak": "",
+      "ok_points": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "ng_points": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "summary_ok": "",
+      "summary_ng": "",
+      "storage": {
+        "method": "",
+        "duration": "",
+        "tips": ""
+      },
+      "usage_tips": "",
+      "nutrition_highlight": ""
+    },
+    {
+      "id": "beef",
+      "name": "牛肉",
+      "name_kana": "ぎゅうにく",
+      "name_en": "Beef",
+      "category": "meat",
+      "category_label": "肉類",
+      "subcategory": "",
+      "color_theme": "",
+      "accent_color": "",
+      "season": [],
+      "season_peak": "",
+      "ok_points": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "ng_points": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "summary_ok": "",
+      "summary_ng": "",
+      "storage": {
+        "method": "",
+        "duration": "",
+        "tips": ""
+      },
+      "usage_tips": "",
+      "nutrition_highlight": ""
+    },
+    {
+      "id": "ground_meat",
+      "name": "ひき肉",
+      "name_kana": "ひきにく",
+      "name_en": "Ground Meat",
+      "category": "meat",
+      "category_label": "肉類",
+      "subcategory": "",
+      "color_theme": "",
+      "accent_color": "",
+      "season": [],
+      "season_peak": "",
+      "ok_points": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "ng_points": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "summary_ok": "",
+      "summary_ng": "",
+      "storage": {
+        "method": "",
+        "duration": "",
+        "tips": ""
+      },
+      "usage_tips": "",
+      "nutrition_highlight": ""
+    },
+    {
+      "id": "egg",
+      "name": "卵",
+      "name_kana": "たまご",
+      "name_en": "Egg",
+      "category": "egg_dairy_bean",
+      "category_label": "卵・乳・豆",
+      "subcategory": "卵",
+      "color_theme": "",
+      "accent_color": "",
+      "season": [],
+      "season_peak": "",
+      "ok_points": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "ng_points": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "summary_ok": "",
+      "summary_ng": "",
+      "storage": {
+        "method": "",
+        "duration": "",
+        "tips": ""
+      },
+      "usage_tips": "",
+      "nutrition_highlight": ""
+    },
+    {
+      "id": "tofu",
+      "name": "豆腐",
+      "name_kana": "とうふ",
+      "name_en": "Tofu",
+      "category": "egg_dairy_bean",
+      "category_label": "卵・乳・豆",
+      "subcategory": "豆製品",
+      "color_theme": "",
+      "accent_color": "",
+      "season": [],
+      "season_peak": "",
+      "ok_points": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "ng_points": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "summary_ok": "",
+      "summary_ng": "",
+      "storage": {
+        "method": "",
+        "duration": "",
+        "tips": ""
+      },
+      "usage_tips": "",
+      "nutrition_highlight": ""
+    },
+    {
+      "id": "natto",
+      "name": "納豆",
+      "name_kana": "なっとう",
+      "name_en": "Natto",
+      "category": "egg_dairy_bean",
+      "category_label": "卵・乳・豆",
+      "subcategory": "豆製品",
+      "color_theme": "",
+      "accent_color": "",
+      "season": [],
+      "season_peak": "",
+      "ok_points": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "ng_points": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "summary_ok": "",
+      "summary_ng": "",
+      "storage": {
+        "method": "",
+        "duration": "",
+        "tips": ""
+      },
+      "usage_tips": "",
+      "nutrition_highlight": ""
+    },
+    {
+      "id": "yogurt",
+      "name": "ヨーグルト",
+      "name_kana": "よーぐると",
+      "name_en": "Yogurt",
+      "category": "egg_dairy_bean",
+      "category_label": "卵・乳・豆",
+      "subcategory": "乳製品",
+      "color_theme": "",
+      "accent_color": "",
+      "season": [],
+      "season_peak": "",
+      "ok_points": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "ng_points": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "summary_ok": "",
+      "summary_ng": "",
+      "storage": {
+        "method": "",
+        "duration": "",
+        "tips": ""
+      },
+      "usage_tips": "",
+      "nutrition_highlight": ""
+    },
+    {
+      "id": "venison",
+      "name": "鹿肉",
+      "name_kana": "しかにく",
+      "name_en": "Venison",
+      "category": "game_meat",
+      "category_label": "ジビエ",
+      "subcategory": "",
+      "color_theme": "",
+      "accent_color": "",
+      "season": [],
+      "season_peak": "",
+      "ok_points": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "ng_points": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "summary_ok": "",
+      "summary_ng": "",
+      "storage": {
+        "method": "",
+        "duration": "",
+        "tips": ""
+      },
+      "usage_tips": "",
+      "nutrition_highlight": ""
+    },
+    {
+      "id": "boar",
+      "name": "猪肉",
+      "name_kana": "いのししにく",
+      "name_en": "Wild Boar",
+      "category": "game_meat",
+      "category_label": "ジビエ",
+      "subcategory": "",
+      "color_theme": "",
+      "accent_color": "",
+      "season": [],
+      "season_peak": "",
+      "ok_points": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "ng_points": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "summary_ok": "",
+      "summary_ng": "",
+      "storage": {
+        "method": "",
+        "duration": "",
+        "tips": ""
+      },
+      "usage_tips": "",
+      "nutrition_highlight": ""
+    }
+  ]
+}

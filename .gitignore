@@ -1,0 +1,51 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Linux
+*~
+
+# エディタ / IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*.sublime-project
+*.sublime-workspace
+
+# Node (将来の依存追加に備えて)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json.bak
+
+# Python (extract_parts.py 用)
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# 配布アーカイブ・バックアップ
+*.zip
+*.tar
+*.tar.gz
+*.bak
+*.tmp
+
+# ローカル設定 / シークレット
+.env
+.env.local
+*.local
+
+# OS / ツールが生成するキャッシュ
+.cache/
+.parcel-cache/

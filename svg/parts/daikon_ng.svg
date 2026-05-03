@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-110 -250 220 440" font-family="Noto Sans CJK JP, sans-serif">
+<!-- Wilted yellow leaves -->
+    <g transform="translate(-100, -150)">
+      <path d="M 0 0 Q -10 -40 -5 -70 Q 0 -45 5 -45 Q 10 -70 15 -45 Q 20 -20 10 0 Z" fill="#B8A040"/>
+      <path d="M 30 0 Q 30 -30 40 -60 Q 50 -40 55 -40 Q 60 -65 60 -30 Q 55 -10 40 5 Z" fill="#9F8730"/>
+      <path d="M 60 0 Q 65 -25 75 -55 Q 80 -35 85 -35 Q 90 -60 90 -20 Q 85 -5 75 5 Z" fill="#B8A040"/>
+    </g>
+    
+    <!-- Withered root (greyish, wrinkled) -->
+    <path d="M -50 -150 L 50 -150 Q 60 -150 60 -130 L 55 100 Q 50 130 0 140 Q -50 130 -55 100 L -60 -130 Q -60 -150 -50 -150 Z" fill="#D5D0BC"/>
+    <ellipse cx="0" cy="-150" rx="50" ry="8" fill="#A89E7A"/>
+    <!-- Wrinkles -->
+    <path d="M -40 -50 Q -20 -45 0 -50 Q 20 -45 40 -50" stroke="#8B7355" stroke-width="1.5" fill="none"/>
+    <path d="M -40 0 Q -20 5 0 0 Q 20 5 40 0" stroke="#8B7355" stroke-width="1.5" fill="none"/>
+    <path d="M -40 50 Q -20 55 0 50 Q 20 55 40 50" stroke="#8B7355" stroke-width="1.5" fill="none"/>
+    <!-- Brown spots -->
+    <ellipse cx="-15" cy="-80" rx="5" ry="3" fill="#5D4E37" opacity="0.5"/>
+    <ellipse cx="20" cy="20" rx="6" ry="4" fill="#5D4E37" opacity="0.5"/>
+    <!-- Zigzag hair roots -->
+    <line x1="-30" y1="-50" x2="-38" y2="-46" stroke="#666" stroke-width="1.5"/>
+    <line x1="-30" y1="-20" x2="-25" y2="-14" stroke="#666" stroke-width="1.5"/>
+    <line x1="-30" y1="10" x2="-40" y2="16" stroke="#666" stroke-width="1.5"/>
+    <line x1="-30" y1="40" x2="-22" y2="48" stroke="#666" stroke-width="1.5"/>
+    <line x1="-30" y1="70" x2="-42" y2="76" stroke="#666" stroke-width="1.5"/>
+    <!-- Tip -->
+    <path d="M -55 100 Q 0 150 55 100 Q 30 175 0 180 Q -30 175 -55 100 Z" fill="#C5BFAB"/>
+</svg>

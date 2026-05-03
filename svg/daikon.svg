@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 600" font-family="Noto Sans CJK JP, sans-serif">
+  <defs>
+    <filter id="shadowDaikon" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+  
+  <rect width="1080" height="600" fill="#FFFFFF" rx="20"/>
+  
+  <!-- Header -->
+  <text x="60" y="60" font-size="44" font-weight="900" fill="#7BA05B">大根</text>
+  <line x1="60" y1="75" x2="200" y2="75" stroke="#7BA05B" stroke-width="4"/>
+  <text x="220" y="68" font-size="22" fill="#666">旬:11月〜2月</text>
+  
+  <!-- Divider -->
+  <line x1="540" y1="100" x2="540" y2="540" stroke="#DDD" stroke-width="2" stroke-dasharray="6,6"/>
+  
+  <!-- OK side -->
+  <g transform="translate(280, 320)">
+    <circle cx="-200" cy="-180" r="22" fill="#2C5F2D"/>
+    <text x="-200" y="-172" font-size="26" font-weight="900" fill="white" text-anchor="middle">○</text>
+    
+    <!-- Leaves (vibrant green) -->
+    <g transform="translate(-100, -150)">
+      <path d="M 0 0 Q -25 -50 -15 -90 Q -5 -60 5 -50 Q 15 -90 25 -50 Q 30 -20 10 0 Z" fill="#4A7C2E"/>
+      <path d="M 30 0 Q 20 -45 35 -85 Q 45 -50 55 -45 Q 65 -85 70 -40 Q 70 -10 50 5 Z" fill="#5D8F3D"/>
+      <path d="M 60 0 Q 60 -40 80 -75 Q 88 -45 95 -40 Q 105 -75 105 -30 Q 100 -5 80 5 Z" fill="#4A7C2E"/>
+    </g>
+    
+    <!-- White root (clean, smooth) -->
+    <path d="M -50 -150 L 50 -150 Q 60 -150 60 -130 L 55 100 Q 50 130 0 140 Q -50 130 -55 100 L -60 -130 Q -60 -150 -50 -150 Z" fill="#FAFAF8"/>
+    <ellipse cx="0" cy="-150" rx="50" ry="8" fill="#E8E8E0"/>
+    <!-- Highlight -->
+    <ellipse cx="-25" cy="-30" rx="10" ry="80" fill="#FFFFFF" opacity="0.6"/>
+    <!-- Tiny straight hair roots (aligned) -->
+    <line x1="-30" y1="-50" x2="-32" y2="-46" stroke="#999" stroke-width="1"/>
+    <line x1="-30" y1="-20" x2="-32" y2="-16" stroke="#999" stroke-width="1"/>
+    <line x1="-30" y1="10" x2="-32" y2="14" stroke="#999" stroke-width="1"/>
+    <line x1="-30" y1="40" x2="-32" y2="44" stroke="#999" stroke-width="1"/>
+    <line x1="-30" y1="70" x2="-32" y2="74" stroke="#999" stroke-width="1"/>
+    <!-- Pointy tip -->
+    <path d="M -55 100 Q 0 150 55 100 Q 30 175 0 180 Q -30 175 -55 100 Z" fill="#F0F0E8"/>
+  </g>
+  
+  <!-- NG side -->
+  <g transform="translate(800, 320)">
+    <circle cx="-200" cy="-180" r="22" fill="#C62828"/>
+    <text x="-200" y="-172" font-size="26" font-weight="900" fill="white" text-anchor="middle">×</text>
+    
+    <!-- Wilted yellow leaves -->
+    <g transform="translate(-100, -150)">
+      <path d="M 0 0 Q -10 -40 -5 -70 Q 0 -45 5 -45 Q 10 -70 15 -45 Q 20 -20 10 0 Z" fill="#B8A040"/>
+      <path d="M 30 0 Q 30 -30 40 -60 Q 50 -40 55 -40 Q 60 -65 60 -30 Q 55 -10 40 5 Z" fill="#9F8730"/>
+      <path d="M 60 0 Q 65 -25 75 -55 Q 80 -35 85 -35 Q 90 -60 90 -20 Q 85 -5 75 5 Z" fill="#B8A040"/>
+    </g>
+    
+    <!-- Withered root (greyish, wrinkled) -->
+    <path d="M -50 -150 L 50 -150 Q 60 -150 60 -130 L 55 100 Q 50 130 0 140 Q -50 130 -55 100 L -60 -130 Q -60 -150 -50 -150 Z" fill="#D5D0BC"/>
+    <ellipse cx="0" cy="-150" rx="50" ry="8" fill="#A89E7A"/>
+    <!-- Wrinkles -->
+    <path d="M -40 -50 Q -20 -45 0 -50 Q 20 -45 40 -50" stroke="#8B7355" stroke-width="1.5" fill="none"/>
+    <path d="M -40 0 Q -20 5 0 0 Q 20 5 40 0" stroke="#8B7355" stroke-width="1.5" fill="none"/>
+    <path d="M -40 50 Q -20 55 0 50 Q 20 55 40 50" stroke="#8B7355" stroke-width="1.5" fill="none"/>
+    <!-- Brown spots -->
+    <ellipse cx="-15" cy="-80" rx="5" ry="3" fill="#5D4E37" opacity="0.5"/>
+    <ellipse cx="20" cy="20" rx="6" ry="4" fill="#5D4E37" opacity="0.5"/>
+    <!-- Zigzag hair roots -->
+    <line x1="-30" y1="-50" x2="-38" y2="-46" stroke="#666" stroke-width="1.5"/>
+    <line x1="-30" y1="-20" x2="-25" y2="-14" stroke="#666" stroke-width="1.5"/>
+    <line x1="-30" y1="10" x2="-40" y2="16" stroke="#666" stroke-width="1.5"/>
+    <line x1="-30" y1="40" x2="-22" y2="48" stroke="#666" stroke-width="1.5"/>
+    <line x1="-30" y1="70" x2="-42" y2="76" stroke="#666" stroke-width="1.5"/>
+    <!-- Tip -->
+    <path d="M -55 100 Q 0 150 55 100 Q 30 175 0 180 Q -30 175 -55 100 Z" fill="#C5BFAB"/>
+  </g>
+  
+  <!-- Comparison labels -->
+  <g font-size="20" fill="#333">
+    <rect x="60" y="495" width="460" height="80" rx="8" fill="#E8F5E9"/>
+    <text x="80" y="520" font-weight="bold" fill="#2C5F2D">● 葉が鮮やかな緑、白い部分にハリ</text>
+    <text x="80" y="545" font-weight="bold" fill="#2C5F2D">● ずっしり重く、ひげ根の穴が一直線</text>
+    <text x="80" y="568" fill="#666" font-size="17">部位別:上=甘い・中=煮物・下=辛い</text>
+    
+    <rect x="560" y="495" width="460" height="80" rx="8" fill="#FFEBEE"/>
+    <text x="580" y="520" font-weight="bold" fill="#C62828">× 葉が黄色く萎れている</text>
+    <text x="580" y="545" font-weight="bold" fill="#C62828">× シワ、軽い、ひげ根がジグザグ</text>
+    <text x="580" y="568" fill="#666" font-size="17">表面スポンジ状=水分抜けで美味しくない</text>
+  </g>
+</svg>
