@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-130 -160 260 280" font-family="Noto Sans CJK JP, sans-serif">
+<defs>
+      <radialGradient id="wcBodyTomato" cx="35%" cy="25%"><stop offset="0%" stop-color="#FFB0A8" stop-opacity="0.95"/><stop offset="40%" stop-color="#FF6655" stop-opacity="0.9"/><stop offset="80%" stop-color="#E33825" stop-opacity="0.85"/><stop offset="100%" stop-color="#A02818" stop-opacity="0.7"/></radialGradient>
+      <radialGradient id="wcLeafTomato" cx="50%" cy="20%"><stop offset="0%" stop-color="#9BCB7A" stop-opacity="0.9"/><stop offset="60%" stop-color="#5D8F3D" stop-opacity="0.7"/><stop offset="100%" stop-color="#2C5F2D" stop-opacity="0.5"/></radialGradient>
+      <filter id="wcRoughTomato" x="-10%" y="-10%" width="120%" height="120%">
+        <feTurbulence baseFrequency="0.04" numOctaves="3" seed="11"/>
+        <feDisplacementMap in="SourceGraphic" scale="4"/>
+      </filter>
+      <filter id="wcBlurTomato"><feGaussianBlur stdDeviation="1.5"/></filter>
+    </defs>
+    <g filter="url(#wcBlurTomato)" opacity="0.4"><ellipse cx="0" cy="-10" rx="95" ry="95" fill="#FF8077"/><ellipse cx="0" cy="-110" rx="35" ry="22" fill="#5D8F3D"/></g>
+    <g filter="url(#wcRoughTomato)" opacity="0.8"><path d="M -28 -100 Q -32 -125 -10 -130 Q 0 -110 -8 -95 Z" fill="url(#wcLeafTomato)"/><path d="M -2 -100 Q -5 -135 18 -135 Q 22 -120 12 -95 Z" fill="url(#wcLeafTomato)"/><path d="M 18 -100 Q 22 -125 38 -120 Q 36 -108 28 -95 Z" fill="url(#wcLeafTomato)"/></g>
+    <g filter="url(#wcRoughTomato)"><path d="M -85 0 Q -92 60 0 90 Q 92 60 85 0 Q 80 -85 0 -100 Q -80 -85 -85 0 Z" fill="url(#wcBodyTomato)"/></g>
+    <g stroke="#3D2817" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"><path d="M -85 0 Q -92 60 0 90 Q 92 60 85 0 Q 80 -85 0 -100 Q -80 -85 -85 0 Z"/><path d="M -28 -100 Q -32 -125 -10 -130"/><path d="M -10 -130 Q 0 -110 -8 -95"/><path d="M -2 -100 Q -5 -135 18 -135"/><path d="M 18 -135 Q 22 -120 12 -95"/><path d="M 18 -100 Q 22 -125 38 -120"/><path d="M 38 -120 Q 36 -108 28 -95"/><path d="M 0 -100 L 0 -90" opacity="0.7"/></g>
+</svg>

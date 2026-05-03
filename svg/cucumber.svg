@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 600" font-family="Noto Sans CJK JP, sans-serif">
+  <rect width="1080" height="600" fill="#FFFFFF" rx="20"/>
+
+  <!-- Header -->
+  <text x="60" y="60" font-size="44" font-weight="900" fill="#5D8F3D">きゅうり</text>
+  <line x1="60" y1="75" x2="180" y2="75" stroke="#5D8F3D" stroke-width="4"/>
+  <text x="200" y="68" font-size="22" fill="#666">旬:6〜8月</text>
+
+  <line x1="540" y1="100" x2="540" y2="540" stroke="#DDD" stroke-width="2" stroke-dasharray="6,6"/>
+
+  <!-- OK side (watercolor Pattern A) -->
+  <g transform="translate(280, 320)">
+    <circle cx="-200" cy="-180" r="22" fill="#2C5F2D"/>
+    <text x="-200" y="-172" font-size="26" font-weight="900" fill="white" text-anchor="middle">○</text>
+    <defs>
+      <radialGradient id="wcBodyCucumber" cx="35%" cy="25%"><stop offset="0%" stop-color="#D4E8B5" stop-opacity="0.95"/><stop offset="40%" stop-color="#9BCB7A" stop-opacity="0.9"/><stop offset="80%" stop-color="#5D8F3D" stop-opacity="0.85"/><stop offset="100%" stop-color="#2C5F2D" stop-opacity="0.65"/></radialGradient>
+      <radialGradient id="wcLeafCucumber" cx="50%" cy="20%"><stop offset="0%" stop-color="#9BCB7A" stop-opacity="0.9"/><stop offset="60%" stop-color="#5D8F3D" stop-opacity="0.7"/><stop offset="100%" stop-color="#2C5F2D" stop-opacity="0.5"/></radialGradient>
+      <filter id="wcRoughCucumber" x="-10%" y="-10%" width="120%" height="120%">
+        <feTurbulence baseFrequency="0.04" numOctaves="3" seed="31"/>
+        <feDisplacementMap in="SourceGraphic" scale="4"/>
+      </filter>
+      <filter id="wcBlurCucumber"><feGaussianBlur stdDeviation="1.5"/></filter>
+    </defs>
+    <g filter="url(#wcBlurCucumber)" opacity="0.4"><ellipse cx="0" cy="0" rx="165" ry="30" fill="#9BCB7A"/></g>
+    
+    <g filter="url(#wcRoughCucumber)"><path d="M -150 -8 Q -160 -25 -130 -25 L 130 -22 Q 158 -22 152 -5 L 150 8 Q 155 25 130 25 L -130 22 Q -160 22 -150 -8 Z" fill="url(#wcBodyCucumber)"/></g>
+    <g stroke="#3D2817" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"><path d="M -150 -8 Q -160 -25 -130 -25 L 130 -22 Q 158 -22 152 -5 L 150 8 Q 155 25 130 25 L -130 22 Q -160 22 -150 -8 Z"/><path d="M -100 -22 L -98 -25" opacity="0.8" stroke-width="2.5"/><path d="M -50 -23 L -48 -27" opacity="0.8" stroke-width="2.5"/><path d="M 0 -22 L 2 -26" opacity="0.8" stroke-width="2.5"/><path d="M 50 -22 L 52 -25" opacity="0.8" stroke-width="2.5"/><path d="M 100 -23 L 102 -26" opacity="0.8" stroke-width="2.5"/><path d="M -75 22 L -77 26" opacity="0.8" stroke-width="2.5"/><path d="M -25 23 L -23 27" opacity="0.8" stroke-width="2.5"/><path d="M 25 22 L 27 26" opacity="0.8" stroke-width="2.5"/><path d="M 75 23 L 77 26" opacity="0.8" stroke-width="2.5"/><path d="M -150 -3 L -165 -3" opacity="0.7" stroke-width="2"/></g>
+  </g>
+
+  <!-- NG side (flat) -->
+  <g transform="translate(800, 320)">
+    <circle cx="-200" cy="-180" r="22" fill="#C62828"/>
+    <text x="-200" y="-172" font-size="26" font-weight="900" fill="white" text-anchor="middle">×</text>
+    <path d="M -150 -8 Q -160 -25 -130 -25 L 130 -22 Q 158 -22 152 -5 L 150 8 Q 155 25 130 25 L -130 22 Q -160 22 -150 -8 Z" fill="#A0A858"/><ellipse cx="-30" cy="0" rx="30" ry="12" fill="#C8B040" opacity="0.5"/><ellipse cx="60" cy="0" rx="25" ry="10" fill="#C8B040" opacity="0.5"/><path d="M -120 -8 Q 0 -5 120 -8" stroke="#5D4E37" stroke-width="1.5" fill="none" opacity="0.6"/><path d="M -120 8 Q 0 5 120 8" stroke="#5D4E37" stroke-width="1.5" fill="none" opacity="0.6"/>
+  </g>
+
+  <!-- Comparison labels -->
+  <g font-size="20" fill="#333">
+    <rect x="60" y="495" width="460" height="80" rx="8" fill="#E8F5E9"/>
+    <text x="80" y="520" font-weight="bold" fill="#2C5F2D">● イボがチクチク、皮にハリ</text>
+    <text x="80" y="545" font-weight="bold" fill="#2C5F2D">● 濃い緑、太さが均一</text>
+    <text x="80" y="568" fill="#666" font-size="17">小さくとも太さがしっかり=みずみずしい</text>
+
+    <rect x="560" y="495" width="460" height="80" rx="8" fill="#FFEBEE"/>
+    <text x="580" y="520" font-weight="bold" fill="#C62828">× イボがなく表面ツルツル(古い)</text>
+    <text x="580" y="545" font-weight="bold" fill="#C62828">× 黄色い斑点、軟らかい</text>
+    <text x="580" y="568" fill="#666" font-size="17">曲がりがある=味は変わらない、安い</text>
+  </g>
+</svg>

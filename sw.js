@@ -1,7 +1,15 @@
 // Service Worker — オフライン完全動作のためのキャッシュ戦略
 // 更新時は CACHE_VERSION を上げる
-const CACHE_VERSION = 'v7';
+const CACHE_VERSION = 'v8';
 const CACHE_NAME = `food-pwa-${CACHE_VERSION}`;
+
+// 食材IDの配列(parts SVG をプリキャッシュするため)
+const FOOD_IDS = [
+  'daikon', 'carrot', 'negi',
+  // Phase A
+  'tomato', 'onion', 'egg', 'chicken', 'potato',
+  'cabbage', 'cucumber', 'banana', 'apple',
+];
 
 // アプリシェル + データ + 全アセットをプリキャッシュ
 const PRECACHE_URLS = [
@@ -14,12 +22,10 @@ const PRECACHE_URLS = [
   './icons/apple-touch-icon.png',
   './icons/favicon-32.png',
   // OK/NG パーツSVG (一覧サムネイル + 詳細図解で使用)
-  './svg/parts/daikon_ok.svg',
-  './svg/parts/daikon_ng.svg',
-  './svg/parts/carrot_ok.svg',
-  './svg/parts/carrot_ng.svg',
-  './svg/parts/negi_ok.svg',
-  './svg/parts/negi_ng.svg'
+  ...FOOD_IDS.flatMap((id) => [
+    `./svg/parts/${id}_ok.svg`,
+    `./svg/parts/${id}_ng.svg`,
+  ]),
 ];
 
 self.addEventListener('install', (event) => {

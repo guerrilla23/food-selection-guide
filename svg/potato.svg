@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 600" font-family="Noto Sans CJK JP, sans-serif">
+  <rect width="1080" height="600" fill="#FFFFFF" rx="20"/>
+
+  <!-- Header -->
+  <text x="60" y="60" font-size="44" font-weight="900" fill="#A07848">じゃがいも</text>
+  <line x1="60" y1="75" x2="210" y2="75" stroke="#A07848" stroke-width="4"/>
+  <text x="230" y="68" font-size="22" fill="#666">旬:春・秋</text>
+
+  <line x1="540" y1="100" x2="540" y2="540" stroke="#DDD" stroke-width="2" stroke-dasharray="6,6"/>
+
+  <!-- OK side (watercolor Pattern A) -->
+  <g transform="translate(280, 320)">
+    <circle cx="-200" cy="-180" r="22" fill="#2C5F2D"/>
+    <text x="-200" y="-172" font-size="26" font-weight="900" fill="white" text-anchor="middle">○</text>
+    <defs>
+      <radialGradient id="wcBodyPotato" cx="35%" cy="25%"><stop offset="0%" stop-color="#F8E8C8" stop-opacity="0.95"/><stop offset="40%" stop-color="#E0C088" stop-opacity="0.9"/><stop offset="80%" stop-color="#B89058" stop-opacity="0.85"/><stop offset="100%" stop-color="#7E5A2A" stop-opacity="0.7"/></radialGradient>
+      <radialGradient id="wcLeafPotato" cx="50%" cy="20%"><stop offset="0%" stop-color="#9BCB7A" stop-opacity="0.9"/><stop offset="60%" stop-color="#5D8F3D" stop-opacity="0.7"/><stop offset="100%" stop-color="#2C5F2D" stop-opacity="0.5"/></radialGradient>
+      <filter id="wcRoughPotato" x="-10%" y="-10%" width="120%" height="120%">
+        <feTurbulence baseFrequency="0.04" numOctaves="3" seed="23"/>
+        <feDisplacementMap in="SourceGraphic" scale="4"/>
+      </filter>
+      <filter id="wcBlurPotato"><feGaussianBlur stdDeviation="1.5"/></filter>
+    </defs>
+    <g filter="url(#wcBlurPotato)" opacity="0.4"><ellipse cx="0" cy="0" rx="95" ry="75" fill="#C8A878"/></g>
+    
+    <g filter="url(#wcRoughPotato)"><path d="M -85 -10 Q -95 -55 -50 -75 Q 0 -85 50 -72 Q 90 -55 85 -10 Q 95 50 50 75 Q 0 80 -50 70 Q -95 50 -85 -10 Z" fill="url(#wcBodyPotato)"/></g>
+    <g stroke="#3D2817" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"><path d="M -85 -10 Q -95 -55 -50 -75 Q 0 -85 50 -72 Q 90 -55 85 -10 Q 95 50 50 75 Q 0 80 -50 70 Q -95 50 -85 -10 Z"/><path d="M -30 -20 a 4 4 0 0 1 8 0 a 4 4 0 0 1 -8 0 Z" opacity="0.7" stroke-width="1.5"/><path d="M 20 0 a 4 4 0 0 1 8 0 a 4 4 0 0 1 -8 0 Z" opacity="0.7" stroke-width="1.5"/><path d="M -10 30 a 4 4 0 0 1 8 0 a 4 4 0 0 1 -8 0 Z" opacity="0.7" stroke-width="1.5"/><path d="M 35 -35 a 3 3 0 0 1 6 0 a 3 3 0 0 1 -6 0 Z" opacity="0.6" stroke-width="1.5"/></g>
+  </g>
+
+  <!-- NG side (flat) -->
+  <g transform="translate(800, 320)">
+    <circle cx="-200" cy="-180" r="22" fill="#C62828"/>
+    <text x="-200" y="-172" font-size="26" font-weight="900" fill="white" text-anchor="middle">×</text>
+    <path d="M -85 -10 Q -95 -55 -50 -75 Q 0 -85 50 -72 Q 90 -55 85 -10 Q 95 50 50 75 Q 0 80 -50 70 Q -95 50 -85 -10 Z" fill="#988050"/><ellipse cx="-45" cy="-20" rx="25" ry="20" fill="#7BAB46" opacity="0.55"/><ellipse cx="30" cy="30" rx="18" ry="14" fill="#7BAB46" opacity="0.5"/><path d="M 20 -10 Q 25 -30 30 -55" stroke="#5D8F3D" stroke-width="3" fill="none" opacity="0.85"/><path d="M -10 25 Q -5 45 -3 65" stroke="#5D8F3D" stroke-width="3" fill="none" opacity="0.85"/><path d="M -60 0 Q -20 5 20 0" stroke="#5D4E37" stroke-width="1.5" fill="none" opacity="0.55"/><path d="M -50 40 Q 0 45 50 35" stroke="#5D4E37" stroke-width="1.5" fill="none" opacity="0.55"/>
+  </g>
+
+  <!-- Comparison labels -->
+  <g font-size="20" fill="#333">
+    <rect x="60" y="495" width="460" height="80" rx="8" fill="#E8F5E9"/>
+    <text x="80" y="520" font-weight="bold" fill="#2C5F2D">● 皮にハリ、表面が硬い</text>
+    <text x="80" y="545" font-weight="bold" fill="#2C5F2D">● 緑色がない、芽が出ていない</text>
+    <text x="80" y="568" fill="#666" font-size="17">同じ大きさで重い=でんぷん多い</text>
+
+    <rect x="560" y="495" width="460" height="80" rx="8" fill="#FFEBEE"/>
+    <text x="580" y="520" font-weight="bold" fill="#C62828">× 緑色がかった部分(ソラニン)</text>
+    <text x="580" y="545" font-weight="bold" fill="#C62828">× 芽が出ている、シワがある</text>
+    <text x="580" y="568" fill="#666" font-size="17">緑・芽は必ず厚めに取り除く</text>
+  </g>
+</svg>

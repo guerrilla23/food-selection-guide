@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 600" font-family="Noto Sans CJK JP, sans-serif">
+  <rect width="1080" height="600" fill="#FFFFFF" rx="20"/>
+
+  <!-- Header -->
+  <text x="60" y="60" font-size="44" font-weight="900" fill="#D87878">鶏肉</text>
+  <line x1="60" y1="75" x2="120" y2="75" stroke="#D87878" stroke-width="4"/>
+  <text x="140" y="68" font-size="22" fill="#666">旬:通年</text>
+
+  <line x1="540" y1="100" x2="540" y2="540" stroke="#DDD" stroke-width="2" stroke-dasharray="6,6"/>
+
+  <!-- OK side (watercolor Pattern A) -->
+  <g transform="translate(280, 320)">
+    <circle cx="-200" cy="-180" r="22" fill="#2C5F2D"/>
+    <text x="-200" y="-172" font-size="26" font-weight="900" fill="white" text-anchor="middle">○</text>
+    <defs>
+      <radialGradient id="wcBodyChicken" cx="35%" cy="25%"><stop offset="0%" stop-color="#FCD8D0" stop-opacity="0.95"/><stop offset="40%" stop-color="#F8AAA0" stop-opacity="0.9"/><stop offset="80%" stop-color="#E07770" stop-opacity="0.85"/><stop offset="100%" stop-color="#A0463F" stop-opacity="0.65"/></radialGradient>
+      <radialGradient id="wcLeafChicken" cx="50%" cy="20%"><stop offset="0%" stop-color="#9BCB7A" stop-opacity="0.9"/><stop offset="60%" stop-color="#5D8F3D" stop-opacity="0.7"/><stop offset="100%" stop-color="#2C5F2D" stop-opacity="0.5"/></radialGradient>
+      <filter id="wcRoughChicken" x="-10%" y="-10%" width="120%" height="120%">
+        <feTurbulence baseFrequency="0.04" numOctaves="3" seed="19"/>
+        <feDisplacementMap in="SourceGraphic" scale="4"/>
+      </filter>
+      <filter id="wcBlurChicken"><feGaussianBlur stdDeviation="1.5"/></filter>
+    </defs>
+    <g filter="url(#wcBlurChicken)" opacity="0.4"><ellipse cx="0" cy="0" rx="110" ry="70" fill="#F8AAA0"/></g>
+    
+    <g filter="url(#wcRoughChicken)"><path d="M -90 -45 Q -100 0 -90 50 Q 0 75 90 50 Q 100 0 90 -45 Q 0 -65 -90 -45 Z" fill="url(#wcBodyChicken)"/></g>
+    <g stroke="#3D2817" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"><path d="M -90 -45 Q -100 0 -90 50 Q 0 75 90 50 Q 100 0 90 -45 Q 0 -65 -90 -45 Z"/><path d="M -75 -25 Q 0 -20 75 -25" opacity="0.6" stroke-width="1.5"/><path d="M -78 0 Q 0 5 78 0" opacity="0.6" stroke-width="1.5"/><path d="M -72 25 Q 0 30 72 25" opacity="0.6" stroke-width="1.5"/><path d="M -40 -10 L -38 -8" opacity="0.7" stroke-width="2.5"/><path d="M 30 5 L 32 7" opacity="0.7" stroke-width="2.5"/><path d="M 0 -30 L 2 -28" opacity="0.7" stroke-width="2.5"/></g>
+  </g>
+
+  <!-- NG side (flat) -->
+  <g transform="translate(800, 320)">
+    <circle cx="-200" cy="-180" r="22" fill="#C62828"/>
+    <text x="-200" y="-172" font-size="26" font-weight="900" fill="white" text-anchor="middle">×</text>
+    <path d="M -90 -45 Q -100 0 -90 50 Q 0 75 90 50 Q 100 0 90 -45 Q 0 -65 -90 -45 Z" fill="#A88078"/><ellipse cx="-30" cy="0" rx="25" ry="18" fill="#5D4E37" opacity="0.35"/><ellipse cx="35" cy="15" rx="18" ry="12" fill="#5D4E37" opacity="0.35"/><ellipse cx="0" cy="70" rx="50" ry="8" fill="#A05050" opacity="0.4"/>
+  </g>
+
+  <!-- Comparison labels -->
+  <g font-size="20" fill="#333">
+    <rect x="60" y="495" width="460" height="80" rx="8" fill="#E8F5E9"/>
+    <text x="80" y="520" font-weight="bold" fill="#2C5F2D">● 鮮やかなピンク、ツヤあり</text>
+    <text x="80" y="545" font-weight="bold" fill="#2C5F2D">● 弾力ある、ドリップ少</text>
+    <text x="80" y="568" fill="#666" font-size="17">皮は黄色みかかった白で毛穴くっきり</text>
+
+    <rect x="560" y="495" width="460" height="80" rx="8" fill="#FFEBEE"/>
+    <text x="580" y="520" font-weight="bold" fill="#C62828">× 色がくすむ・グレーがかる</text>
+    <text x="580" y="545" font-weight="bold" fill="#C62828">× ドリップが赤茶色、ベタつく</text>
+    <text x="580" y="568" fill="#666" font-size="17">酸っぱい・アンモニア臭は腐敗</text>
+  </g>
+</svg>

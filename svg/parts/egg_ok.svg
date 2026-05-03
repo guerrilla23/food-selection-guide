@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-100 -140 200 260" font-family="Noto Sans CJK JP, sans-serif">
+<defs>
+      <radialGradient id="wcBodyEgg" cx="35%" cy="25%"><stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.95"/><stop offset="40%" stop-color="#F8F0E0" stop-opacity="0.85"/><stop offset="80%" stop-color="#E8D5B0" stop-opacity="0.7"/><stop offset="100%" stop-color="#B89870" stop-opacity="0.5"/></radialGradient>
+      <radialGradient id="wcLeafEgg" cx="50%" cy="20%"><stop offset="0%" stop-color="#9BCB7A" stop-opacity="0.9"/><stop offset="60%" stop-color="#5D8F3D" stop-opacity="0.7"/><stop offset="100%" stop-color="#2C5F2D" stop-opacity="0.5"/></radialGradient>
+      <filter id="wcRoughEgg" x="-10%" y="-10%" width="120%" height="120%">
+        <feTurbulence baseFrequency="0.04" numOctaves="3" seed="17"/>
+        <feDisplacementMap in="SourceGraphic" scale="4"/>
+      </filter>
+      <filter id="wcBlurEgg"><feGaussianBlur stdDeviation="1.5"/></filter>
+    </defs>
+    <g filter="url(#wcBlurEgg)" opacity="0.4"><ellipse cx="0" cy="0" rx="80" ry="105" fill="#E8D5B0"/></g>
+    
+    <g filter="url(#wcRoughEgg)"><path d="M -55 0 Q -55 -85 0 -100 Q 55 -85 55 0 Q 55 85 0 100 Q -55 85 -55 0 Z" fill="url(#wcBodyEgg)"/></g>
+    <g stroke="#3D2817" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"><path d="M -55 0 Q -55 -85 0 -100 Q 55 -85 55 0 Q 55 85 0 100 Q -55 85 -55 0 Z"/></g>
+</svg>

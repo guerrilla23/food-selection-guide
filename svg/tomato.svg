@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 600" font-family="Noto Sans CJK JP, sans-serif">
+  <rect width="1080" height="600" fill="#FFFFFF" rx="20"/>
+
+  <!-- Header -->
+  <text x="60" y="60" font-size="44" font-weight="900" fill="#D43A2A">トマト</text>
+  <line x1="60" y1="75" x2="150" y2="75" stroke="#D43A2A" stroke-width="4"/>
+  <text x="170" y="68" font-size="22" fill="#666">旬:6〜9月</text>
+
+  <line x1="540" y1="100" x2="540" y2="540" stroke="#DDD" stroke-width="2" stroke-dasharray="6,6"/>
+
+  <!-- OK side (watercolor Pattern A) -->
+  <g transform="translate(280, 320)">
+    <circle cx="-200" cy="-180" r="22" fill="#2C5F2D"/>
+    <text x="-200" y="-172" font-size="26" font-weight="900" fill="white" text-anchor="middle">○</text>
+    <defs>
+      <radialGradient id="wcBodyTomato" cx="35%" cy="25%"><stop offset="0%" stop-color="#FFB0A8" stop-opacity="0.95"/><stop offset="40%" stop-color="#FF6655" stop-opacity="0.9"/><stop offset="80%" stop-color="#E33825" stop-opacity="0.85"/><stop offset="100%" stop-color="#A02818" stop-opacity="0.7"/></radialGradient>
+      <radialGradient id="wcLeafTomato" cx="50%" cy="20%"><stop offset="0%" stop-color="#9BCB7A" stop-opacity="0.9"/><stop offset="60%" stop-color="#5D8F3D" stop-opacity="0.7"/><stop offset="100%" stop-color="#2C5F2D" stop-opacity="0.5"/></radialGradient>
+      <filter id="wcRoughTomato" x="-10%" y="-10%" width="120%" height="120%">
+        <feTurbulence baseFrequency="0.04" numOctaves="3" seed="11"/>
+        <feDisplacementMap in="SourceGraphic" scale="4"/>
+      </filter>
+      <filter id="wcBlurTomato"><feGaussianBlur stdDeviation="1.5"/></filter>
+    </defs>
+    <g filter="url(#wcBlurTomato)" opacity="0.4"><ellipse cx="0" cy="-10" rx="95" ry="95" fill="#FF8077"/><ellipse cx="0" cy="-110" rx="35" ry="22" fill="#5D8F3D"/></g>
+    <g filter="url(#wcRoughTomato)" opacity="0.8"><path d="M -28 -100 Q -32 -125 -10 -130 Q 0 -110 -8 -95 Z" fill="url(#wcLeafTomato)"/><path d="M -2 -100 Q -5 -135 18 -135 Q 22 -120 12 -95 Z" fill="url(#wcLeafTomato)"/><path d="M 18 -100 Q 22 -125 38 -120 Q 36 -108 28 -95 Z" fill="url(#wcLeafTomato)"/></g>
+    <g filter="url(#wcRoughTomato)"><path d="M -85 0 Q -92 60 0 90 Q 92 60 85 0 Q 80 -85 0 -100 Q -80 -85 -85 0 Z" fill="url(#wcBodyTomato)"/></g>
+    <g stroke="#3D2817" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"><path d="M -85 0 Q -92 60 0 90 Q 92 60 85 0 Q 80 -85 0 -100 Q -80 -85 -85 0 Z"/><path d="M -28 -100 Q -32 -125 -10 -130"/><path d="M -10 -130 Q 0 -110 -8 -95"/><path d="M -2 -100 Q -5 -135 18 -135"/><path d="M 18 -135 Q 22 -120 12 -95"/><path d="M 18 -100 Q 22 -125 38 -120"/><path d="M 38 -120 Q 36 -108 28 -95"/><path d="M 0 -100 L 0 -90" opacity="0.7"/></g>
+  </g>
+
+  <!-- NG side (flat) -->
+  <g transform="translate(800, 320)">
+    <circle cx="-200" cy="-180" r="22" fill="#C62828"/>
+    <text x="-200" y="-172" font-size="26" font-weight="900" fill="white" text-anchor="middle">×</text>
+    <path d="M -85 0 Q -92 60 0 90 Q 92 60 85 0 Q 80 -85 0 -100 Q -80 -85 -85 0 Z" fill="#C66B5C"/><path d="M -28 -100 Q -32 -120 -12 -125 Q 0 -110 -10 -97 Z" fill="#8B7740"/><path d="M 0 -100 Q -3 -125 16 -127 Q 20 -115 12 -95 Z" fill="#8B7740"/><path d="M 18 -100 Q 22 -120 34 -118 Q 32 -108 28 -95 Z" fill="#8B7740"/><ellipse cx="-30" cy="20" rx="18" ry="22" fill="#7A4030" opacity="0.45"/><ellipse cx="25" cy="-20" rx="12" ry="15" fill="#7A4030" opacity="0.4"/><path d="M -50 40 Q -20 50 10 35" stroke="#5D4E37" stroke-width="1.5" fill="none" opacity="0.6"/><path d="M 20 50 Q 50 55 65 40" stroke="#5D4E37" stroke-width="1.5" fill="none" opacity="0.6"/>
+  </g>
+
+  <!-- Comparison labels -->
+  <g font-size="20" fill="#333">
+    <rect x="60" y="495" width="460" height="80" rx="8" fill="#E8F5E9"/>
+    <text x="80" y="520" font-weight="bold" fill="#2C5F2D">● 鮮やかな赤、ヘタが緑でピン</text>
+    <text x="80" y="545" font-weight="bold" fill="#2C5F2D">● ハリ・ツヤ、ずっしり重い</text>
+    <text x="80" y="568" fill="#666" font-size="17">完熟は底が黄色がかる(放射状の白い筋)</text>
+
+    <rect x="560" y="495" width="460" height="80" rx="8" fill="#FFEBEE"/>
+    <text x="580" y="520" font-weight="bold" fill="#C62828">× くすんだ赤、ヘタが茶色く萎れ</text>
+    <text x="580" y="545" font-weight="bold" fill="#C62828">× 柔らかい、シワや黒ずみ</text>
+    <text x="580" y="568" fill="#666" font-size="17">青臭い=未熟・甘み少ない</text>
+  </g>
+</svg>

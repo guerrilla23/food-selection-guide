@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-130 -110 260 220" font-family="Noto Sans CJK JP, sans-serif">
+<defs>
+      <radialGradient id="wcBodyPotato" cx="35%" cy="25%"><stop offset="0%" stop-color="#F8E8C8" stop-opacity="0.95"/><stop offset="40%" stop-color="#E0C088" stop-opacity="0.9"/><stop offset="80%" stop-color="#B89058" stop-opacity="0.85"/><stop offset="100%" stop-color="#7E5A2A" stop-opacity="0.7"/></radialGradient>
+      <radialGradient id="wcLeafPotato" cx="50%" cy="20%"><stop offset="0%" stop-color="#9BCB7A" stop-opacity="0.9"/><stop offset="60%" stop-color="#5D8F3D" stop-opacity="0.7"/><stop offset="100%" stop-color="#2C5F2D" stop-opacity="0.5"/></radialGradient>
+      <filter id="wcRoughPotato" x="-10%" y="-10%" width="120%" height="120%">
+        <feTurbulence baseFrequency="0.04" numOctaves="3" seed="23"/>
+        <feDisplacementMap in="SourceGraphic" scale="4"/>
+      </filter>
+      <filter id="wcBlurPotato"><feGaussianBlur stdDeviation="1.5"/></filter>
+    </defs>
+    <g filter="url(#wcBlurPotato)" opacity="0.4"><ellipse cx="0" cy="0" rx="95" ry="75" fill="#C8A878"/></g>
+    
+    <g filter="url(#wcRoughPotato)"><path d="M -85 -10 Q -95 -55 -50 -75 Q 0 -85 50 -72 Q 90 -55 85 -10 Q 95 50 50 75 Q 0 80 -50 70 Q -95 50 -85 -10 Z" fill="url(#wcBodyPotato)"/></g>
+    <g stroke="#3D2817" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"><path d="M -85 -10 Q -95 -55 -50 -75 Q 0 -85 50 -72 Q 90 -55 85 -10 Q 95 50 50 75 Q 0 80 -50 70 Q -95 50 -85 -10 Z"/><path d="M -30 -20 a 4 4 0 0 1 8 0 a 4 4 0 0 1 -8 0 Z" opacity="0.7" stroke-width="1.5"/><path d="M 20 0 a 4 4 0 0 1 8 0 a 4 4 0 0 1 -8 0 Z" opacity="0.7" stroke-width="1.5"/><path d="M -10 30 a 4 4 0 0 1 8 0 a 4 4 0 0 1 -8 0 Z" opacity="0.7" stroke-width="1.5"/><path d="M 35 -35 a 3 3 0 0 1 6 0 a 3 3 0 0 1 -6 0 Z" opacity="0.6" stroke-width="1.5"/></g>
+</svg>

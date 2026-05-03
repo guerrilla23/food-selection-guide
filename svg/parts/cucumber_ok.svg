@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-180 -90 360 180" font-family="Noto Sans CJK JP, sans-serif">
+<defs>
+      <radialGradient id="wcBodyCucumber" cx="35%" cy="25%"><stop offset="0%" stop-color="#D4E8B5" stop-opacity="0.95"/><stop offset="40%" stop-color="#9BCB7A" stop-opacity="0.9"/><stop offset="80%" stop-color="#5D8F3D" stop-opacity="0.85"/><stop offset="100%" stop-color="#2C5F2D" stop-opacity="0.65"/></radialGradient>
+      <radialGradient id="wcLeafCucumber" cx="50%" cy="20%"><stop offset="0%" stop-color="#9BCB7A" stop-opacity="0.9"/><stop offset="60%" stop-color="#5D8F3D" stop-opacity="0.7"/><stop offset="100%" stop-color="#2C5F2D" stop-opacity="0.5"/></radialGradient>
+      <filter id="wcRoughCucumber" x="-10%" y="-10%" width="120%" height="120%">
+        <feTurbulence baseFrequency="0.04" numOctaves="3" seed="31"/>
+        <feDisplacementMap in="SourceGraphic" scale="4"/>
+      </filter>
+      <filter id="wcBlurCucumber"><feGaussianBlur stdDeviation="1.5"/></filter>
+    </defs>
+    <g filter="url(#wcBlurCucumber)" opacity="0.4"><ellipse cx="0" cy="0" rx="165" ry="30" fill="#9BCB7A"/></g>
+    
+    <g filter="url(#wcRoughCucumber)"><path d="M -150 -8 Q -160 -25 -130 -25 L 130 -22 Q 158 -22 152 -5 L 150 8 Q 155 25 130 25 L -130 22 Q -160 22 -150 -8 Z" fill="url(#wcBodyCucumber)"/></g>
+    <g stroke="#3D2817" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"><path d="M -150 -8 Q -160 -25 -130 -25 L 130 -22 Q 158 -22 152 -5 L 150 8 Q 155 25 130 25 L -130 22 Q -160 22 -150 -8 Z"/><path d="M -100 -22 L -98 -25" opacity="0.8" stroke-width="2.5"/><path d="M -50 -23 L -48 -27" opacity="0.8" stroke-width="2.5"/><path d="M 0 -22 L 2 -26" opacity="0.8" stroke-width="2.5"/><path d="M 50 -22 L 52 -25" opacity="0.8" stroke-width="2.5"/><path d="M 100 -23 L 102 -26" opacity="0.8" stroke-width="2.5"/><path d="M -75 22 L -77 26" opacity="0.8" stroke-width="2.5"/><path d="M -25 23 L -23 27" opacity="0.8" stroke-width="2.5"/><path d="M 25 22 L 27 26" opacity="0.8" stroke-width="2.5"/><path d="M 75 23 L 77 26" opacity="0.8" stroke-width="2.5"/><path d="M -150 -3 L -165 -3" opacity="0.7" stroke-width="2"/></g>
+</svg>

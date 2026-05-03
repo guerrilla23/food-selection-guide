@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 600" font-family="Noto Sans CJK JP, sans-serif">
+  <rect width="1080" height="600" fill="#FFFFFF" rx="20"/>
+
+  <!-- Header -->
+  <text x="60" y="60" font-size="44" font-weight="900" fill="#B89048">玉ねぎ</text>
+  <line x1="60" y1="75" x2="150" y2="75" stroke="#B89048" stroke-width="4"/>
+  <text x="170" y="68" font-size="22" fill="#666">旬:春・秋</text>
+
+  <line x1="540" y1="100" x2="540" y2="540" stroke="#DDD" stroke-width="2" stroke-dasharray="6,6"/>
+
+  <!-- OK side (watercolor Pattern A) -->
+  <g transform="translate(280, 320)">
+    <circle cx="-200" cy="-180" r="22" fill="#2C5F2D"/>
+    <text x="-200" y="-172" font-size="26" font-weight="900" fill="white" text-anchor="middle">○</text>
+    <defs>
+      <radialGradient id="wcBodyOnion" cx="35%" cy="25%"><stop offset="0%" stop-color="#F8E8C8" stop-opacity="0.95"/><stop offset="40%" stop-color="#E0C088" stop-opacity="0.9"/><stop offset="80%" stop-color="#B89058" stop-opacity="0.85"/><stop offset="100%" stop-color="#7E5A2A" stop-opacity="0.7"/></radialGradient>
+      <radialGradient id="wcLeafOnion" cx="50%" cy="20%"><stop offset="0%" stop-color="#9BCB7A" stop-opacity="0.9"/><stop offset="60%" stop-color="#5D8F3D" stop-opacity="0.7"/><stop offset="100%" stop-color="#2C5F2D" stop-opacity="0.5"/></radialGradient>
+      <filter id="wcRoughOnion" x="-10%" y="-10%" width="120%" height="120%">
+        <feTurbulence baseFrequency="0.04" numOctaves="3" seed="13"/>
+        <feDisplacementMap in="SourceGraphic" scale="4"/>
+      </filter>
+      <filter id="wcBlurOnion"><feGaussianBlur stdDeviation="1.5"/></filter>
+    </defs>
+    <g filter="url(#wcBlurOnion)" opacity="0.4"><ellipse cx="0" cy="10" rx="100" ry="110" fill="#E0C088"/><ellipse cx="0" cy="-130" rx="25" ry="18" fill="#5D8F3D"/></g>
+    <g filter="url(#wcRoughOnion)" opacity="0.8"><path d="M -8 -130 L -3 -160 L 0 -130 Z" fill="url(#wcLeafOnion)"/><path d="M 0 -130 L 5 -158 L 8 -130 Z" fill="url(#wcLeafOnion)"/></g>
+    <g filter="url(#wcRoughOnion)"><path d="M -85 -50 Q -90 60 0 110 Q 90 60 85 -50 Q 75 -120 0 -130 Q -75 -120 -85 -50 Z" fill="url(#wcBodyOnion)"/></g>
+    <g stroke="#3D2817" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"><path d="M -85 -50 Q -90 60 0 110 Q 90 60 85 -50 Q 75 -120 0 -130 Q -75 -120 -85 -50 Z"/><path d="M -10 -130 L -3 -160 L 3 -160 L 10 -130" opacity="0.7" stroke-width="2"/><path d="M -55 -100 Q -50 0 -55 100" opacity="0.5" stroke-width="1.2"/><path d="M -25 -120 Q -20 0 -25 110" opacity="0.5" stroke-width="1.2"/><path d="M 25 -120 Q 20 0 25 110" opacity="0.5" stroke-width="1.2"/><path d="M 55 -100 Q 50 0 55 100" opacity="0.5" stroke-width="1.2"/><path d="M -20 110 L -25 130" opacity="0.7" stroke-width="2"/><path d="M -8 112 L -10 135" opacity="0.7" stroke-width="2"/><path d="M 5 112 L 5 138" opacity="0.7" stroke-width="2"/><path d="M 18 112 L 22 135" opacity="0.7" stroke-width="2"/><path d="M 30 110 L 38 130" opacity="0.7" stroke-width="2"/></g>
+  </g>
+
+  <!-- NG side (flat) -->
+  <g transform="translate(800, 320)">
+    <circle cx="-200" cy="-180" r="22" fill="#C62828"/>
+    <text x="-200" y="-172" font-size="26" font-weight="900" fill="white" text-anchor="middle">×</text>
+    <path d="M -85 -50 Q -90 60 0 110 Q 90 60 85 -50 Q 75 -120 0 -130 Q -75 -120 -85 -50 Z" fill="#A88858"/><ellipse cx="-30" cy="30" rx="22" ry="28" fill="#5D5A2A" opacity="0.5"/><path d="M -5 -130 Q -10 -170 -5 -200" stroke="#6B7A38" stroke-width="3" fill="none" opacity="0.85"/><path d="M 5 -130 Q 10 -180 8 -210" stroke="#6B7A38" stroke-width="3" fill="none" opacity="0.85"/><path d="M -60 -30 Q -20 -25 20 -35" stroke="#5D4E37" stroke-width="1.5" fill="none" opacity="0.55"/><path d="M -60 30 Q -20 25 20 35" stroke="#5D4E37" stroke-width="1.5" fill="none" opacity="0.55"/>
+  </g>
+
+  <!-- Comparison labels -->
+  <g font-size="20" fill="#333">
+    <rect x="60" y="495" width="460" height="80" rx="8" fill="#E8F5E9"/>
+    <text x="80" y="520" font-weight="bold" fill="#2C5F2D">● 皮がパリッ、ハリ・ツヤあり</text>
+    <text x="80" y="545" font-weight="bold" fill="#2C5F2D">● ずっしり重い、芽が出ていない</text>
+    <text x="80" y="568" fill="#666" font-size="17">頭・お尻が硬く締まる=新鮮</text>
+
+    <rect x="560" y="495" width="460" height="80" rx="8" fill="#FFEBEE"/>
+    <text x="580" y="520" font-weight="bold" fill="#C62828">× 柔らかい、皮がベタつく</text>
+    <text x="580" y="545" font-weight="bold" fill="#C62828">× 芽が出ている、青いカビ</text>
+    <text x="580" y="568" fill="#666" font-size="17">芯が黒い=傷み始め(切ると分かる)</text>
+  </g>
+</svg>
