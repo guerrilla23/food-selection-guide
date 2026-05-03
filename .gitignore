@@ -49,3 +49,6 @@ venv/
 # OS / ツールが生成するキャッシュ
 .cache/
 .parcel-cache/
+
+# プレビュー画像 (commit しない)
+_preview/

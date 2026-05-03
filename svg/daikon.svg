@@ -15,31 +15,67 @@
   <!-- Divider -->
   <line x1="540" y1="100" x2="540" y2="540" stroke="#DDD" stroke-width="2" stroke-dasharray="6,6"/>
   
-  <!-- OK side -->
+  <!-- OK side (Pattern A: watercolor with strong ink lines) -->
   <g transform="translate(280, 320)">
     <circle cx="-200" cy="-180" r="22" fill="#2C5F2D"/>
     <text x="-200" y="-172" font-size="26" font-weight="900" fill="white" text-anchor="middle">○</text>
-    
-    <!-- Leaves (vibrant green) -->
-    <g transform="translate(-100, -150)">
-      <path d="M 0 0 Q -25 -50 -15 -90 Q -5 -60 5 -50 Q 15 -90 25 -50 Q 30 -20 10 0 Z" fill="#4A7C2E"/>
-      <path d="M 30 0 Q 20 -45 35 -85 Q 45 -50 55 -45 Q 65 -85 70 -40 Q 70 -10 50 5 Z" fill="#5D8F3D"/>
-      <path d="M 60 0 Q 60 -40 80 -75 Q 88 -45 95 -40 Q 105 -75 105 -30 Q 100 -5 80 5 Z" fill="#4A7C2E"/>
+
+    <!-- Watercolor defs (food-specific IDs to avoid future conflicts) -->
+    <defs>
+      <radialGradient id="wcBodyDaikon" cx="35%" cy="25%">
+        <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.95"/>
+        <stop offset="40%" stop-color="#F5F2EA" stop-opacity="0.85"/>
+        <stop offset="80%" stop-color="#C8C0AC" stop-opacity="0.7"/>
+        <stop offset="100%" stop-color="#A89E80" stop-opacity="0.5"/>
+      </radialGradient>
+      <radialGradient id="wcLeafDaikon" cx="35%" cy="20%">
+        <stop offset="0%" stop-color="#9BCB7A" stop-opacity="0.9"/>
+        <stop offset="60%" stop-color="#5D8F3D" stop-opacity="0.7"/>
+        <stop offset="100%" stop-color="#2C5F2D" stop-opacity="0.5"/>
+      </radialGradient>
+      <filter id="wcRoughDaikon" x="-10%" y="-10%" width="120%" height="120%">
+        <feTurbulence baseFrequency="0.04" numOctaves="3" seed="5"/>
+        <feDisplacementMap in="SourceGraphic" scale="4"/>
+      </filter>
+      <filter id="wcBlurDaikon">
+        <feGaussianBlur stdDeviation="1.5"/>
+      </filter>
+    </defs>
+
+    <!-- Watercolor bleeds (背景、ぼかし) -->
+    <g filter="url(#wcBlurDaikon)" opacity="0.4">
+      <ellipse cx="0" cy="-180" rx="80" ry="40" fill="#9BCB7A"/>
+      <ellipse cx="-15" cy="-20" rx="80" ry="100" fill="#E8DCC0"/>
+      <ellipse cx="20" cy="120" rx="65" ry="50" fill="#D5C8A8"/>
     </g>
-    
-    <!-- White root (clean, smooth) -->
-    <path d="M -50 -150 L 50 -150 Q 60 -150 60 -130 L 55 100 Q 50 130 0 140 Q -50 130 -55 100 L -60 -130 Q -60 -150 -50 -150 Z" fill="#FAFAF8"/>
-    <ellipse cx="0" cy="-150" rx="50" ry="8" fill="#E8E8E0"/>
-    <!-- Highlight -->
-    <ellipse cx="-25" cy="-30" rx="10" ry="80" fill="#FFFFFF" opacity="0.6"/>
-    <!-- Tiny straight hair roots (aligned) -->
-    <line x1="-30" y1="-50" x2="-32" y2="-46" stroke="#999" stroke-width="1"/>
-    <line x1="-30" y1="-20" x2="-32" y2="-16" stroke="#999" stroke-width="1"/>
-    <line x1="-30" y1="10" x2="-32" y2="14" stroke="#999" stroke-width="1"/>
-    <line x1="-30" y1="40" x2="-32" y2="44" stroke="#999" stroke-width="1"/>
-    <line x1="-30" y1="70" x2="-32" y2="74" stroke="#999" stroke-width="1"/>
-    <!-- Pointy tip -->
-    <path d="M -55 100 Q 0 150 55 100 Q 30 175 0 180 Q -30 175 -55 100 Z" fill="#F0F0E8"/>
+
+    <!-- Watercolor leaves -->
+    <g filter="url(#wcRoughDaikon)" opacity="0.8">
+      <path d="M -50 -135 Q -65 -190 -38 -210 Q -22 -185 -25 -148" fill="url(#wcLeafDaikon)"/>
+      <path d="M -18 -140 Q -12 -205 8 -218 Q 22 -200 16 -150" fill="url(#wcLeafDaikon)"/>
+      <path d="M 22 -140 Q 35 -200 50 -190 Q 55 -175 45 -145" fill="url(#wcLeafDaikon)"/>
+    </g>
+
+    <!-- Watercolor body + tip -->
+    <g filter="url(#wcRoughDaikon)">
+      <path d="M -50 -130 L 50 -130 Q 55 -130 55 -120 L 50 100 Q 45 130 0 140 Q -45 130 -50 100 L -55 -120 Q -55 -130 -50 -130 Z" fill="url(#wcBodyDaikon)"/>
+      <path d="M -50 100 Q 0 150 50 100 Q 25 175 0 180 Q -25 175 -50 100 Z" fill="url(#wcBodyDaikon)" opacity="0.95"/>
+    </g>
+
+    <!-- Strong ink lines (Pattern A: 線はっきり・絵本感) -->
+    <g stroke="#3D2817" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.9">
+      <path d="M -52 -128 Q -54 -132 -50 -130 L 50 -132 Q 56 -125 55 -118 L 50 102 Q 47 130 0 140 Q -45 132 -50 100 L -55 -118 Q -56 -130 -50 -130"/>
+      <path d="M -48 102 Q 0 150 50 100 Q 25 174 2 180 Q -22 174 -48 102"/>
+      <path d="M -50 -135 Q -65 -188 -38 -210"/>
+      <path d="M -38 -210 Q -22 -185 -25 -148"/>
+      <path d="M -18 -140 Q -12 -204 7 -217"/>
+      <path d="M 7 -217 Q 22 -200 16 -150"/>
+      <path d="M 22 -140 Q 35 -200 50 -190"/>
+      <path d="M 50 -190 Q 55 -175 45 -145"/>
+      <path d="M -36 -195 L -30 -150" opacity="0.7"/>
+      <path d="M 5 -205 L 2 -150" opacity="0.7"/>
+      <path d="M 38 -190 L 38 -148" opacity="0.7"/>
+    </g>
   </g>
   
   <!-- NG side -->
