@@ -1,5 +1,5 @@
 {
-  "_README": "後で埋めるための雛形。各項目を data/foods.json の items[] にコピーし、空欄を埋めて使う。id/name/name_kana/name_en/category/category_label までは事前に設定済み。summary_ok/summary_ng は OK/NG キーワードを5〜15文字程度で(例: 'ハリ・重み・葉が鮮やか')。図解SVG は svg/parts/<id>_ok.svg と svg/parts/<id>_ng.svg の2ファイルを用意する。ファイル命名はidに従うのでJSONには書かない。詳細画面の図解は JS の buildDiagram(food) が自動生成する。",
+  "_README": "後で埋めるための雛形。各項目を data/foods.json の items[] にコピーし、空欄を埋めて使う。id/name/name_kana/name_en/category/category_label までは事前に設定済み。★最重要★ key_check (1ポイント絞り込み) と ok_short/ng_short (キーワード化) を必ず記入。シンプルモードではこれらだけで判断できるよう設計。summary_ok/summary_ng は図解キャプション用の中粒度キーワード(5〜15文字)。図解SVG は svg/parts/<id>_ok.svg と svg/parts/<id>_ng.svg を別途用意。詳細画面の図解は JS の buildDiagram(food) が自動生成する。",
   "_categories": {
     "vegetable": "野菜",
     "fruit": "果物",
@@ -23,14 +23,25 @@
       "X月"
     ],
     "season_peak": "春/夏/秋/冬 等",
+    "key_check": {
+      "icon": "👆/👁/🤏 等の動作を表す絵文字",
+      "action": "アクション動詞文 (例: '白い部分を軽く押す')",
+      "judgment": "判定基準 (例: '弾力ある = OK')"
+    },
+    "ok_short": [
+      "★必須★ 部位:キーワード (8文字以内) を4項目程度。例: '葉:緑・ピン'"
+    ],
+    "ng_short": [
+      "★必須★ 部位:キーワード (8文字以内) を4項目程度。例: '葉:黄・萎れ'"
+    ],
     "ok_points": [
-      "4項目程度 (詳細セクションに全文表示)"
+      "詳細モードで全文表示する OK ポイント (4項目)"
     ],
     "ng_points": [
-      "4項目程度 (詳細セクションに全文表示)"
+      "詳細モードで全文表示する NG ポイント (4項目)"
     ],
-    "summary_ok": "短キーワード5〜15文字 (図解キャプションに表示)",
-    "summary_ng": "短キーワード5〜15文字 (図解キャプションに表示)",
+    "summary_ok": "図解キャプション用の中粒度キーワード(5〜15文字)",
+    "summary_ng": "図解キャプション用の中粒度キーワード(5〜15文字)",
     "storage": {
       "method": "",
       "duration": "",
@@ -56,6 +67,23 @@
       "accent_color": "",
       "season": [],
       "season_peak": "",
+      "key_check": {
+        "icon": "",
+        "action": "",
+        "judgment": ""
+      },
+      "ok_short": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "ng_short": [
+        "",
+        "",
+        "",
+        ""
+      ],
       "ok_points": [
         "",
         "",
@@ -90,6 +118,23 @@
       "accent_color": "",
       "season": [],
       "season_peak": "",
+      "key_check": {
+        "icon": "",
+        "action": "",
+        "judgment": ""
+      },
+      "ok_short": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "ng_short": [
+        "",
+        "",
+        "",
+        ""
+      ],
       "ok_points": [
         "",
         "",
@@ -124,6 +169,23 @@
       "accent_color": "",
       "season": [],
       "season_peak": "",
+      "key_check": {
+        "icon": "",
+        "action": "",
+        "judgment": ""
+      },
+      "ok_short": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "ng_short": [
+        "",
+        "",
+        "",
+        ""
+      ],
       "ok_points": [
         "",
         "",
@@ -158,6 +220,23 @@
       "accent_color": "",
       "season": [],
       "season_peak": "",
+      "key_check": {
+        "icon": "",
+        "action": "",
+        "judgment": ""
+      },
+      "ok_short": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "ng_short": [
+        "",
+        "",
+        "",
+        ""
+      ],
       "ok_points": [
         "",
         "",
@@ -192,6 +271,23 @@
       "accent_color": "",
       "season": [],
       "season_peak": "",
+      "key_check": {
+        "icon": "",
+        "action": "",
+        "judgment": ""
+      },
+      "ok_short": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "ng_short": [
+        "",
+        "",
+        "",
+        ""
+      ],
       "ok_points": [
         "",
         "",
@@ -226,6 +322,23 @@
       "accent_color": "",
       "season": [],
       "season_peak": "",
+      "key_check": {
+        "icon": "",
+        "action": "",
+        "judgment": ""
+      },
+      "ok_short": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "ng_short": [
+        "",
+        "",
+        "",
+        ""
+      ],
       "ok_points": [
         "",
         "",
@@ -260,6 +373,23 @@
       "accent_color": "",
       "season": [],
       "season_peak": "",
+      "key_check": {
+        "icon": "",
+        "action": "",
+        "judgment": ""
+      },
+      "ok_short": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "ng_short": [
+        "",
+        "",
+        "",
+        ""
+      ],
       "ok_points": [
         "",
         "",
@@ -294,6 +424,23 @@
       "accent_color": "",
       "season": [],
       "season_peak": "",
+      "key_check": {
+        "icon": "",
+        "action": "",
+        "judgment": ""
+      },
+      "ok_short": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "ng_short": [
+        "",
+        "",
+        "",
+        ""
+      ],
       "ok_points": [
         "",
         "",
@@ -328,6 +475,23 @@
       "accent_color": "",
       "season": [],
       "season_peak": "",
+      "key_check": {
+        "icon": "",
+        "action": "",
+        "judgment": ""
+      },
+      "ok_short": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "ng_short": [
+        "",
+        "",
+        "",
+        ""
+      ],
       "ok_points": [
         "",
         "",
@@ -362,6 +526,23 @@
       "accent_color": "",
       "season": [],
       "season_peak": "",
+      "key_check": {
+        "icon": "",
+        "action": "",
+        "judgment": ""
+      },
+      "ok_short": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "ng_short": [
+        "",
+        "",
+        "",
+        ""
+      ],
       "ok_points": [
         "",
         "",
@@ -396,6 +577,23 @@
       "accent_color": "",
       "season": [],
       "season_peak": "",
+      "key_check": {
+        "icon": "",
+        "action": "",
+        "judgment": ""
+      },
+      "ok_short": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "ng_short": [
+        "",
+        "",
+        "",
+        ""
+      ],
       "ok_points": [
         "",
         "",
@@ -430,6 +628,23 @@
       "accent_color": "",
       "season": [],
       "season_peak": "",
+      "key_check": {
+        "icon": "",
+        "action": "",
+        "judgment": ""
+      },
+      "ok_short": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "ng_short": [
+        "",
+        "",
+        "",
+        ""
+      ],
       "ok_points": [
         "",
         "",
@@ -464,6 +679,23 @@
       "accent_color": "",
       "season": [],
       "season_peak": "",
+      "key_check": {
+        "icon": "",
+        "action": "",
+        "judgment": ""
+      },
+      "ok_short": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "ng_short": [
+        "",
+        "",
+        "",
+        ""
+      ],
       "ok_points": [
         "",
         "",
@@ -498,6 +730,23 @@
       "accent_color": "",
       "season": [],
       "season_peak": "",
+      "key_check": {
+        "icon": "",
+        "action": "",
+        "judgment": ""
+      },
+      "ok_short": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "ng_short": [
+        "",
+        "",
+        "",
+        ""
+      ],
       "ok_points": [
         "",
         "",
@@ -532,6 +781,23 @@
       "accent_color": "",
       "season": [],
       "season_peak": "",
+      "key_check": {
+        "icon": "",
+        "action": "",
+        "judgment": ""
+      },
+      "ok_short": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "ng_short": [
+        "",
+        "",
+        "",
+        ""
+      ],
       "ok_points": [
         "",
         "",
@@ -566,6 +832,23 @@
       "accent_color": "",
       "season": [],
       "season_peak": "",
+      "key_check": {
+        "icon": "",
+        "action": "",
+        "judgment": ""
+      },
+      "ok_short": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "ng_short": [
+        "",
+        "",
+        "",
+        ""
+      ],
       "ok_points": [
         "",
         "",
@@ -600,6 +883,23 @@
       "accent_color": "",
       "season": [],
       "season_peak": "",
+      "key_check": {
+        "icon": "",
+        "action": "",
+        "judgment": ""
+      },
+      "ok_short": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "ng_short": [
+        "",
+        "",
+        "",
+        ""
+      ],
       "ok_points": [
         "",
         "",
@@ -634,6 +934,23 @@
       "accent_color": "",
       "season": [],
       "season_peak": "",
+      "key_check": {
+        "icon": "",
+        "action": "",
+        "judgment": ""
+      },
+      "ok_short": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "ng_short": [
+        "",
+        "",
+        "",
+        ""
+      ],
       "ok_points": [
         "",
         "",
@@ -668,6 +985,23 @@
       "accent_color": "",
       "season": [],
       "season_peak": "",
+      "key_check": {
+        "icon": "",
+        "action": "",
+        "judgment": ""
+      },
+      "ok_short": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "ng_short": [
+        "",
+        "",
+        "",
+        ""
+      ],
       "ok_points": [
         "",
         "",
@@ -702,6 +1036,23 @@
       "accent_color": "",
       "season": [],
       "season_peak": "",
+      "key_check": {
+        "icon": "",
+        "action": "",
+        "judgment": ""
+      },
+      "ok_short": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "ng_short": [
+        "",
+        "",
+        "",
+        ""
+      ],
       "ok_points": [
         "",
         "",
@@ -736,6 +1087,23 @@
       "accent_color": "",
       "season": [],
       "season_peak": "",
+      "key_check": {
+        "icon": "",
+        "action": "",
+        "judgment": ""
+      },
+      "ok_short": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "ng_short": [
+        "",
+        "",
+        "",
+        ""
+      ],
       "ok_points": [
         "",
         "",
@@ -770,6 +1138,23 @@
       "accent_color": "",
       "season": [],
       "season_peak": "",
+      "key_check": {
+        "icon": "",
+        "action": "",
+        "judgment": ""
+      },
+      "ok_short": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "ng_short": [
+        "",
+        "",
+        "",
+        ""
+      ],
       "ok_points": [
         "",
         "",
@@ -804,6 +1189,23 @@
       "accent_color": "",
       "season": [],
       "season_peak": "",
+      "key_check": {
+        "icon": "",
+        "action": "",
+        "judgment": ""
+      },
+      "ok_short": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "ng_short": [
+        "",
+        "",
+        "",
+        ""
+      ],
       "ok_points": [
         "",
         "",
@@ -838,6 +1240,23 @@
       "accent_color": "",
       "season": [],
       "season_peak": "",
+      "key_check": {
+        "icon": "",
+        "action": "",
+        "judgment": ""
+      },
+      "ok_short": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "ng_short": [
+        "",
+        "",
+        "",
+        ""
+      ],
       "ok_points": [
         "",
         "",
@@ -872,6 +1291,23 @@
       "accent_color": "",
       "season": [],
       "season_peak": "",
+      "key_check": {
+        "icon": "",
+        "action": "",
+        "judgment": ""
+      },
+      "ok_short": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "ng_short": [
+        "",
+        "",
+        "",
+        ""
+      ],
       "ok_points": [
         "",
         "",
@@ -906,6 +1342,23 @@
       "accent_color": "",
       "season": [],
       "season_peak": "",
+      "key_check": {
+        "icon": "",
+        "action": "",
+        "judgment": ""
+      },
+      "ok_short": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "ng_short": [
+        "",
+        "",
+        "",
+        ""
+      ],
       "ok_points": [
         "",
         "",
@@ -940,6 +1393,23 @@
       "accent_color": "",
       "season": [],
       "season_peak": "",
+      "key_check": {
+        "icon": "",
+        "action": "",
+        "judgment": ""
+      },
+      "ok_short": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "ng_short": [
+        "",
+        "",
+        "",
+        ""
+      ],
       "ok_points": [
         "",
         "",
@@ -974,6 +1444,23 @@
       "accent_color": "",
       "season": [],
       "season_peak": "",
+      "key_check": {
+        "icon": "",
+        "action": "",
+        "judgment": ""
+      },
+      "ok_short": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "ng_short": [
+        "",
+        "",
+        "",
+        ""
+      ],
       "ok_points": [
         "",
         "",
@@ -1008,6 +1495,23 @@
       "accent_color": "",
       "season": [],
       "season_peak": "",
+      "key_check": {
+        "icon": "",
+        "action": "",
+        "judgment": ""
+      },
+      "ok_short": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "ng_short": [
+        "",
+        "",
+        "",
+        ""
+      ],
       "ok_points": [
         "",
         "",
@@ -1042,6 +1546,23 @@
       "accent_color": "",
       "season": [],
       "season_peak": "",
+      "key_check": {
+        "icon": "",
+        "action": "",
+        "judgment": ""
+      },
+      "ok_short": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "ng_short": [
+        "",
+        "",
+        "",
+        ""
+      ],
       "ok_points": [
         "",
         "",
@@ -1076,6 +1597,23 @@
       "accent_color": "",
       "season": [],
       "season_peak": "",
+      "key_check": {
+        "icon": "",
+        "action": "",
+        "judgment": ""
+      },
+      "ok_short": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "ng_short": [
+        "",
+        "",
+        "",
+        ""
+      ],
       "ok_points": [
         "",
         "",
@@ -1110,6 +1648,23 @@
       "accent_color": "",
       "season": [],
       "season_peak": "",
+      "key_check": {
+        "icon": "",
+        "action": "",
+        "judgment": ""
+      },
+      "ok_short": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "ng_short": [
+        "",
+        "",
+        "",
+        ""
+      ],
       "ok_points": [
         "",
         "",
@@ -1144,6 +1699,23 @@
       "accent_color": "",
       "season": [],
       "season_peak": "",
+      "key_check": {
+        "icon": "",
+        "action": "",
+        "judgment": ""
+      },
+      "ok_short": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "ng_short": [
+        "",
+        "",
+        "",
+        ""
+      ],
       "ok_points": [
         "",
         "",
@@ -1178,6 +1750,23 @@
       "accent_color": "",
       "season": [],
       "season_peak": "",
+      "key_check": {
+        "icon": "",
+        "action": "",
+        "judgment": ""
+      },
+      "ok_short": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "ng_short": [
+        "",
+        "",
+        "",
+        ""
+      ],
       "ok_points": [
         "",
         "",
@@ -1212,6 +1801,23 @@
       "accent_color": "",
       "season": [],
       "season_peak": "",
+      "key_check": {
+        "icon": "",
+        "action": "",
+        "judgment": ""
+      },
+      "ok_short": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "ng_short": [
+        "",
+        "",
+        "",
+        ""
+      ],
       "ok_points": [
         "",
         "",
@@ -1246,6 +1852,23 @@
       "accent_color": "",
       "season": [],
       "season_peak": "",
+      "key_check": {
+        "icon": "",
+        "action": "",
+        "judgment": ""
+      },
+      "ok_short": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "ng_short": [
+        "",
+        "",
+        "",
+        ""
+      ],
       "ok_points": [
         "",
         "",
@@ -1280,6 +1903,23 @@
       "accent_color": "",
       "season": [],
       "season_peak": "",
+      "key_check": {
+        "icon": "",
+        "action": "",
+        "judgment": ""
+      },
+      "ok_short": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "ng_short": [
+        "",
+        "",
+        "",
+        ""
+      ],
       "ok_points": [
         "",
         "",
@@ -1314,6 +1954,23 @@
       "accent_color": "",
       "season": [],
       "season_peak": "",
+      "key_check": {
+        "icon": "",
+        "action": "",
+        "judgment": ""
+      },
+      "ok_short": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "ng_short": [
+        "",
+        "",
+        "",
+        ""
+      ],
       "ok_points": [
         "",
         "",
@@ -1348,6 +2005,23 @@
       "accent_color": "",
       "season": [],
       "season_peak": "",
+      "key_check": {
+        "icon": "",
+        "action": "",
+        "judgment": ""
+      },
+      "ok_short": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "ng_short": [
+        "",
+        "",
+        "",
+        ""
+      ],
       "ok_points": [
         "",
         "",
@@ -1382,6 +2056,23 @@
       "accent_color": "",
       "season": [],
       "season_peak": "",
+      "key_check": {
+        "icon": "",
+        "action": "",
+        "judgment": ""
+      },
+      "ok_short": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "ng_short": [
+        "",
+        "",
+        "",
+        ""
+      ],
       "ok_points": [
         "",
         "",
@@ -1416,6 +2107,23 @@
       "accent_color": "",
       "season": [],
       "season_peak": "",
+      "key_check": {
+        "icon": "",
+        "action": "",
+        "judgment": ""
+      },
+      "ok_short": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "ng_short": [
+        "",
+        "",
+        "",
+        ""
+      ],
       "ok_points": [
         "",
         "",
@@ -1450,6 +2158,23 @@
       "accent_color": "",
       "season": [],
       "season_peak": "",
+      "key_check": {
+        "icon": "",
+        "action": "",
+        "judgment": ""
+      },
+      "ok_short": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "ng_short": [
+        "",
+        "",
+        "",
+        ""
+      ],
       "ok_points": [
         "",
         "",
@@ -1484,6 +2209,23 @@
       "accent_color": "",
       "season": [],
       "season_peak": "",
+      "key_check": {
+        "icon": "",
+        "action": "",
+        "judgment": ""
+      },
+      "ok_short": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "ng_short": [
+        "",
+        "",
+        "",
+        ""
+      ],
       "ok_points": [
         "",
         "",
@@ -1518,6 +2260,23 @@
       "accent_color": "",
       "season": [],
       "season_peak": "",
+      "key_check": {
+        "icon": "",
+        "action": "",
+        "judgment": ""
+      },
+      "ok_short": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "ng_short": [
+        "",
+        "",
+        "",
+        ""
+      ],
       "ok_points": [
         "",
         "",
@@ -1552,6 +2311,23 @@
       "accent_color": "",
       "season": [],
       "season_peak": "",
+      "key_check": {
+        "icon": "",
+        "action": "",
+        "judgment": ""
+      },
+      "ok_short": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "ng_short": [
+        "",
+        "",
+        "",
+        ""
+      ],
       "ok_points": [
         "",
         "",

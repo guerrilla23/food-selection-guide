@@ -321,8 +321,148 @@
       .diagram-keyword { padding: 8px 14px 12px; font-size: 13px; }
     }
 
-    .detail-meta { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 16px; }
+    .detail-meta-row {
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 8px; margin-bottom: 14px;
+    }
+    .detail-meta { display: flex; flex-wrap: wrap; gap: 6px; flex: 1 1 auto; min-width: 0; }
     .detail-meta .tag { font-size: 12px; padding: 4px 10px; }
+
+    /* ===== Mode toggle (simple / detail) ===== */
+    .mode-toggle {
+      display: inline-flex;
+      background: var(--card-border);
+      border-radius: 999px;
+      padding: 2px;
+      flex: 0 0 auto;
+    }
+    .mode-opt {
+      border: none; background: transparent;
+      padding: 6px 14px;
+      border-radius: 999px;
+      font-size: 12px; font-weight: 700;
+      color: var(--muted);
+      min-height: 32px;
+      transition: all .12s;
+    }
+    .mode-opt.active {
+      background: var(--card-bg);
+      color: var(--accent-dark);
+      box-shadow: 0 1px 3px rgba(0,0,0,.15);
+    }
+
+    /* ===== Key check hero (詳細画面トップ — 最重要1ポイント) ===== */
+    .key-check-hero {
+      background: linear-gradient(135deg, var(--ok-bg), var(--card-bg));
+      border: 2px solid var(--ok-fg);
+      border-radius: var(--radius);
+      padding: 18px 16px;
+      margin-bottom: 16px;
+      display: flex; align-items: center; gap: 14px;
+      box-shadow: var(--shadow);
+    }
+    .key-check-icon {
+      font-size: 56px;
+      flex: 0 0 auto;
+      line-height: 1;
+      filter: drop-shadow(0 2px 4px rgba(0,0,0,.1));
+    }
+    .key-check-content { flex: 1 1 auto; min-width: 0; }
+    .key-check-action {
+      font-size: 18px; font-weight: 800;
+      margin: 0 0 8px;
+      color: var(--fg);
+      line-height: 1.3;
+    }
+    .key-check-judgment {
+      font-size: 16px; font-weight: 800;
+      margin: 0;
+      color: var(--ok-fg);
+      display: inline-block;
+      background: var(--card-bg);
+      padding: 6px 12px;
+      border-radius: 999px;
+      border: 1.5px solid var(--ok-fg);
+    }
+    @media (max-width: 380px) {
+      .key-check-icon { font-size: 44px; }
+      .key-check-action { font-size: 16px; }
+      .key-check-judgment { font-size: 14px; }
+    }
+
+    /* ===== Simple-mode 単独イラスト (large, centered) ===== */
+    .simple-illust {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 16px;
+      margin-bottom: 16px;
+      display: flex; align-items: center; justify-content: center;
+      max-height: 40vh;
+      aspect-ratio: 1 / 1;
+      max-width: 360px;
+      margin-left: auto; margin-right: auto;
+    }
+    .simple-illust img { width: 100%; height: 100%; object-fit: contain; }
+
+    /* ===== Key points list (ok_short / ng_short — キーワードタイル) ===== */
+    .key-points {
+      list-style: none; padding: 0; margin: 0 0 16px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+    }
+    @media (min-width: 600px) { .key-points { grid-template-columns: repeat(4, 1fr); } }
+    .key-points li {
+      display: flex; align-items: center; gap: 8px;
+      padding: 14px 12px;
+      border-radius: var(--radius);
+      font-size: 14px; font-weight: 700;
+      min-height: var(--tap-min);
+    }
+    .key-points.ok li { background: var(--ok-bg); color: var(--ok-fg); }
+    .key-points.ng li { background: var(--ng-bg); color: var(--ng-fg); }
+    .kp-badge {
+      flex: 0 0 auto;
+      width: 24px; height: 24px;
+      border-radius: 50%;
+      display: inline-flex; align-items: center; justify-content: center;
+      color: white;
+      font-size: 13px; font-weight: 900;
+    }
+    .key-points.ok .kp-badge { background: var(--ok-fg); }
+    .key-points.ng .kp-badge { background: var(--ng-fg); }
+    .kp-part {
+      font-weight: 800;
+      opacity: 0.75;
+      font-size: 12px;
+    }
+    .kp-keyword { flex: 1 1 auto; font-weight: 800; }
+
+    /* ===== Card key-check line (一覧カード: action + judgment 2行) =====
+       高さ増加を抑えるため margin / line-height をタイトに。 */
+    .card-key-check {
+      margin: 4px 0 2px;
+      padding: 0;
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--accent-dark);
+      line-height: 1.3;
+      overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+    }
+    .card-judgment {
+      margin: 0 0 6px;
+      padding: 0;
+      font-size: 12px;
+      font-weight: 800;
+      color: var(--ok-fg);
+      line-height: 1.3;
+      overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+    }
+    @media (prefers-color-scheme: dark) {
+      .card-key-check { color: var(--accent); }
+    }
 
     .points {
       display: grid; grid-template-columns: 1fr; gap: 12px;
@@ -665,6 +805,7 @@
     const App = {
       foods: [],
       filters: { category: 'all', query: '' },
+      mode: 'simple',  // 'simple' or 'detail' — ロード時に localStorage から復元
       el: {
         grid: document.getElementById('grid'),
         catTabs: document.getElementById('cat-tabs'),
@@ -779,6 +920,13 @@
         //   それ以外           → 「旬: <season_peak>」(peakは1〜数文字でキュレーターが記述)
         const seasonText = inSeason ? '今が旬' : `旬: ${f.season_peak || '-'}`;
         const themeStyle = f.accent_color ? `--theme:${escapeHTML(f.accent_color)}` : '';
+        const kc = f.key_check || {};
+        const actionLine = (kc.icon || kc.action)
+          ? `<p class="card-key-check">${escapeHTML(kc.icon || '')} ${escapeHTML(kc.action || '')}</p>`
+          : '';
+        const judgmentLine = kc.judgment
+          ? `<p class="card-judgment">✅ ${escapeHTML(kc.judgment)}</p>`
+          : '';
         return `
           <a class="card" href="#/item/${encodeURIComponent(f.id)}" style="${themeStyle}" aria-label="${escapeHTML(f.name)}">
             <div class="card-img-wrap">
@@ -786,6 +934,8 @@
             </div>
             <div class="card-body">
               <h3 class="card-name">${escapeHTML(f.name)}</h3>
+              ${actionLine}
+              ${judgmentLine}
               <div class="card-tags">
                 <span class="tag">${escapeHTML(f.category_label || '')}</span>
                 <span class="tag${inSeason ? ' in-season' : ''}">${escapeHTML(seasonText)}</span>
@@ -831,11 +981,54 @@
     }
 
     // ============================================================
-    //  Detail render
-    //   - ヘッダーで食材名と旬を表示済 → 図解は重複を避けて
-    //     パーツSVG + 短キーワード(summary_*)のみ
-    //   - OK/NG のフル文は下部 .points セクションに集約
+    //  Detail render (mode 別に分岐)
+    //   simple モード: key_check hero → OK 図解単独 → ok_short タイル
+    //                 (NG/storage/nutrition 全部非表示)
+    //   detail モード: key_check hero → OK/NG 並列図解 → 全文 OK/NG
+    //                  → 使い分け → 保存方法 → 栄養
     // ============================================================
+    function buildModeToggle() {
+      return `
+        <div class="mode-toggle" role="group" aria-label="表示モード">
+          <button class="mode-opt${App.mode === 'simple' ? ' active' : ''}" data-set-mode="simple">シンプル</button>
+          <button class="mode-opt${App.mode === 'detail' ? ' active' : ''}" data-set-mode="detail">詳細</button>
+        </div>`;
+    }
+
+    function buildKeyCheckHero(food) {
+      const kc = food.key_check;
+      if (!kc || (!kc.action && !kc.judgment)) return '';
+      return `
+        <div class="key-check-hero">
+          <div class="key-check-icon" aria-hidden="true">${escapeHTML(kc.icon || '👆')}</div>
+          <div class="key-check-content">
+            ${kc.action ? `<p class="key-check-action">${escapeHTML(kc.action)}</p>` : ''}
+            ${kc.judgment ? `<p class="key-check-judgment">${escapeHTML(kc.judgment)}</p>` : ''}
+          </div>
+        </div>`;
+    }
+
+    function buildKeyPointsList(items, side) {
+      if (!Array.isArray(items) || items.length === 0) return '';
+      const cls = side === 'ok' ? 'ok' : 'ng';
+      const badge = side === 'ok' ? '✓' : '✕';
+      const lis = items.filter(t => t && t.trim()).map(text => {
+        const idx = String(text).indexOf(':');
+        let part = '', keyword = text;
+        if (idx >= 0) {
+          part = String(text).slice(0, idx);
+          keyword = String(text).slice(idx + 1);
+        }
+        return `
+          <li>
+            <span class="kp-badge">${badge}</span>
+            ${part ? `<span class="kp-part">${escapeHTML(part)}</span>` : ''}
+            <span class="kp-keyword">${escapeHTML(keyword)}</span>
+          </li>`;
+      }).join('');
+      return `<ul class="key-points ${cls}">${lis}</ul>`;
+    }
+
     function renderDetail(id) {
       const food = App.foods.find(f => f.id === id);
       if (!food) {
@@ -849,48 +1042,77 @@
         ? `<span class="tag in-season">今が旬</span>`
         : `<span class="tag">旬: ${escapeHTML(food.season_peak || '-')}</span>`;
 
-      const okItems = (food.ok_points || []).map(p => `<li>${escapeHTML(p)}</li>`).join('');
-      const ngItems = (food.ng_points || []).map(p => `<li>${escapeHTML(p)}</li>`).join('');
-
-      const storage = food.storage || {};
-      const storageHTML = `
-        <dl class="info-body">
-          ${storage.method ? `<dt>方法</dt><dd>${escapeHTML(storage.method)}</dd>` : ''}
-          ${storage.duration ? `<dt>日持ち</dt><dd>${escapeHTML(storage.duration)}</dd>` : ''}
-          ${storage.tips ? `<dt>コツ</dt><dd>${escapeHTML(storage.tips)}</dd>` : ''}
-        </dl>`;
-
-      App.el.detailBody.innerHTML = `
-        <div class="detail-meta">
-          <span class="tag">${escapeHTML(food.category_label || '')}</span>
-          ${food.subcategory ? `<span class="tag">${escapeHTML(food.subcategory)}</span>` : ''}
-          ${seasonTag}
-        </div>
-        ${buildDiagram(food)}
-        <div class="points">
-          <div class="points-block ok">
-            <h3 class="points-title">○ 良い見分け方</h3>
-            <ul>${okItems}</ul>
+      const metaRow = `
+        <div class="detail-meta-row">
+          <div class="detail-meta">
+            <span class="tag">${escapeHTML(food.category_label || '')}</span>
+            ${food.subcategory ? `<span class="tag">${escapeHTML(food.subcategory)}</span>` : ''}
+            ${seasonTag}
           </div>
-          <div class="points-block ng">
-            <h3 class="points-title">× 避けたい状態</h3>
-            <ul>${ngItems}</ul>
-          </div>
-        </div>
-        ${food.usage_tips ? `<div class="info-section">
-          <h3 class="info-title">使い分け・調理</h3>
-          <p class="info-body">${escapeHTML(food.usage_tips)}</p>
-        </div>` : ''}
-        <div class="info-section">
-          <h3 class="info-title">保存方法</h3>
-          ${storageHTML}
-        </div>
-        ${food.nutrition_highlight ? `<div class="info-section">
-          <h3 class="info-title">栄養ハイライト</h3>
-          <p class="info-body">${escapeHTML(food.nutrition_highlight)}</p>
-        </div>` : ''}`;
+          ${buildModeToggle()}
+        </div>`;
 
+      const hero = buildKeyCheckHero(food);
+
+      let body;
+      if (App.mode === 'simple') {
+        // ★ スーパーで片手操作する前提のミニマル表示 ★
+        body = metaRow + hero
+          + `<div class="simple-illust">
+               <img src="svg/parts/${encodeURIComponent(food.id)}_ok.svg" alt="" loading="lazy" decoding="async">
+             </div>`
+          + buildKeyPointsList(food.ok_short, 'ok');
+      } else {
+        // ★ フル情報モード(従来) ★
+        const okItems = (food.ok_points || []).map(p => `<li>${escapeHTML(p)}</li>`).join('');
+        const ngItems = (food.ng_points || []).map(p => `<li>${escapeHTML(p)}</li>`).join('');
+        const storage = food.storage || {};
+        const storageHTML = `
+          <dl class="info-body">
+            ${storage.method ? `<dt>方法</dt><dd>${escapeHTML(storage.method)}</dd>` : ''}
+            ${storage.duration ? `<dt>日持ち</dt><dd>${escapeHTML(storage.duration)}</dd>` : ''}
+            ${storage.tips ? `<dt>コツ</dt><dd>${escapeHTML(storage.tips)}</dd>` : ''}
+          </dl>`;
+        body = metaRow + hero
+          + buildDiagram(food)
+          + `<div class="points">
+              <div class="points-block ok">
+                <h3 class="points-title">○ 良い見分け方</h3>
+                <ul>${okItems}</ul>
+              </div>
+              <div class="points-block ng">
+                <h3 class="points-title">× 避けたい状態</h3>
+                <ul>${ngItems}</ul>
+              </div>
+            </div>`
+          + (food.usage_tips ? `<div class="info-section">
+              <h3 class="info-title">使い分け・調理</h3>
+              <p class="info-body">${escapeHTML(food.usage_tips)}</p>
+            </div>` : '')
+          + `<div class="info-section">
+              <h3 class="info-title">保存方法</h3>
+              ${storageHTML}
+            </div>`
+          + (food.nutrition_highlight ? `<div class="info-section">
+              <h3 class="info-title">栄養ハイライト</h3>
+              <p class="info-body">${escapeHTML(food.nutrition_highlight)}</p>
+            </div>` : '');
+      }
+
+      App.el.detailBody.innerHTML = body;
       window.scrollTo(0, 0);
+    }
+
+    // mode 切替
+    const MODE_KEY = 'food-pwa:mode';
+    function setMode(mode) {
+      if (mode !== 'simple' && mode !== 'detail') return;
+      if (App.mode === mode) return;
+      App.mode = mode;
+      try { localStorage.setItem(MODE_KEY, mode); } catch {}
+      document.body.dataset.mode = mode;
+      // 詳細画面なら再描画
+      if (document.body.dataset.view === 'detail') applyRoute();
     }
 
     // ============================================================
@@ -1093,6 +1315,12 @@
       });
       window.addEventListener('hashchange', applyRoute);
 
+      // モード切替 (動的に再描画される要素なのでイベント委譲)
+      App.el.detailBody.addEventListener('click', (e) => {
+        const btn = e.target.closest('[data-set-mode]');
+        if (btn) setMode(btn.dataset.setMode);
+      });
+
       // フィードバック FAB & モーダル
       document.getElementById('feedback-fab').addEventListener('click', openFeedbackModal);
       document.getElementById('feedback-modal').addEventListener('click', (e) => {
@@ -1121,12 +1349,25 @@
     //  Bootstrap
     // ============================================================
     async function init() {
+      // 表示モードを localStorage から復元(初回はデフォルトの 'simple')
+      try {
+        const saved = localStorage.getItem(MODE_KEY);
+        if (saved === 'simple' || saved === 'detail') App.mode = saved;
+      } catch {}
+      document.body.dataset.mode = App.mode;
+
       bind();
       maybeShowBanner();
       try {
         const res = await fetch('data/foods.json', { cache: 'no-cache' });
         const data = await res.json();
         App.foods = (data.items || []).map(f => ({ ...f, _search: buildSearchIndex(f) }));
+        // 診断: SWが古いデータを返したらコンソールに警告
+        const sample = App.foods[0];
+        if (sample && (!sample.key_check || !sample.ok_short)) {
+          console.warn('[food-pwa] foods.json appears stale (no key_check/ok_short).',
+            'SW may be returning old cached data. Try: DevTools → Application → Service Workers → Unregister, then reload.');
+        }
         renderCategories();
         renderGrid();
         applyRoute();

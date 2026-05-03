@@ -1,6 +1,6 @@
 // Service Worker — オフライン完全動作のためのキャッシュ戦略
 // 更新時は CACHE_VERSION を上げる
-const CACHE_VERSION = 'v4';
+const CACHE_VERSION = 'v7';
 const CACHE_NAME = `food-pwa-${CACHE_VERSION}`;
 
 // アプリシェル + データ + 全アセットをプリキャッシュ
@@ -40,8 +40,9 @@ self.addEventListener('activate', (event) => {
   );
 });
 
-// Cache-first, network-fallback。HTML だけは network-first にしておくと
-// 更新が反映されやすい(オフライン時はキャッシュにフォールバック)。
+// 戦略:
+//  HTML / data/*.json: network-first(更新を即反映、オフライン時はキャッシュ)
+//  その他のアセット   : cache-first(イラスト/アイコン等の不変リソース向け)
 self.addEventListener('fetch', (event) => {
   const req = event.request;
   if (req.method !== 'GET') return;
@@ -49,13 +50,17 @@ self.addEventListener('fetch', (event) => {
   const url = new URL(req.url);
   const isHTML = req.mode === 'navigate' ||
                  (req.headers.get('accept') || '').includes('text/html');
+  // data/*.json は内容が後から更新されうるので必ず最新を取りにいく
+  const isFreshData = url.pathname.includes('/data/') && url.pathname.endsWith('.json');
 
-  if (isHTML) {
+  if (isHTML || isFreshData) {
     event.respondWith(
       fetch(req)
         .then((res) => {
-          const copy = res.clone();
-          caches.open(CACHE_NAME).then((c) => c.put(req, copy));
+          if (res.ok && url.origin === location.origin) {
+            const copy = res.clone();
+            caches.open(CACHE_NAME).then((c) => c.put(req, copy));
+          }
           return res;
         })
         .catch(() => caches.match(req).then((r) => r || caches.match('./index.html')))
@@ -63,6 +68,7 @@ self.addEventListener('fetch', (event) => {
     return;
   }
 
+  // 静的アセット (svg/png/manifest 等): cache-first
   event.respondWith(
     caches.match(req).then((cached) => {
       if (cached) return cached;
