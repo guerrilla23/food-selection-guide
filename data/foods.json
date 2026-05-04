@@ -1257,7 +1257,7 @@
       "id": "banana",
       "name": {
         "ja": "バナナ",
-        "en": ""
+        "en": "Banana"
       },
       "name_kana": "ばなな",
       "name_en": "Banana",
@@ -1288,17 +1288,17 @@
       ],
       "season_peak": {
         "ja": "通年",
-        "en": ""
+        "en": "Year-round"
       },
       "key_check": {
         "icon": "👀",
         "action": {
           "ja": "皮の色を見る",
-          "en": ""
+          "en": "Check the skin color"
         },
         "judgment": {
           "ja": "黄色 + 軸が緑 = OK",
-          "en": ""
+          "en": "Yellow with green stem = OK"
         }
       },
       "ok_short": {
@@ -1308,7 +1308,12 @@
           "斑点:少なめ",
           "ハリ:あり"
         ],
-        "en": []
+        "en": [
+          "Color: Vivid yellow",
+          "Stem: Greenish",
+          "Spots: Few",
+          "Firmness: Yes"
+        ]
       },
       "ng_short": {
         "ja": [
@@ -1317,7 +1322,12 @@
           "感触:柔らかい",
           "皮:破れ"
         ],
-        "en": []
+        "en": [
+          "Black: Widespread",
+          "Stem: Black/Snappable",
+          "Feel: Soft",
+          "Skin: Torn"
+        ]
       },
       "ok_points": {
         "ja": [
@@ -1326,7 +1336,12 @@
           "シュガースポット(茶色い斑点)が少なめ〜出始め",
           "皮にハリがある、形がしっかり"
         ],
-        "en": []
+        "en": [
+          "Vivid yellow color throughout",
+          "Stem (the base of the bunch) is greenish and not broken",
+          "Few or just-emerging sugar spots (small brown speckles)",
+          "Firm skin with solid shape"
+        ]
       },
       "ng_points": {
         "ja": [
@@ -1335,44 +1350,49 @@
           "押すと柔らかすぎる",
           "皮が破れている、汁が出ている"
         ],
-        "en": []
+        "en": [
+          "Large black spots spreading across the skin",
+          "Stem is black, dry, and thin enough to snap",
+          "Too soft when pressed",
+          "Skin is torn, juice leaking out"
+        ]
       },
       "summary_ok": {
         "ja": "黄ピン・軸緑・斑点少",
-        "en": ""
+        "en": "Vivid yellow, green stem, few spots"
       },
       "summary_ng": {
         "ja": "全体黒・軸黒・柔らか",
-        "en": ""
+        "en": "Blackened, dry stem, soft"
       },
       "storage": {
         "method": {
           "ja": "常温で吊るすか房を分けて置く(下面が傷まない)",
-          "en": ""
+          "en": "Hang at room temperature, or separate the hands so the underside doesn't bruise"
         },
         "duration": {
           "ja": "常温:3〜5日、冷蔵で皮黒変だが中身は1週間",
-          "en": ""
+          "en": "Room temp: 3-5 days. Refrigerated: skin darkens but flesh keeps 1 week"
         },
         "tips": {
           "ja": "完熟したら冷蔵で追熟止め。シュガースポット出始めが甘さピーク",
-          "en": ""
+          "en": "Refrigerate to halt ripening once mature. Peak sweetness is when sugar spots just begin to appear"
         }
       },
       "usage_tips": {
         "ja": "完熟前=サラダ・料理、完熟=そのまま・スムージー、過熟=パン・お菓子。皮ごと冷凍も可",
-        "en": ""
+        "en": "Pre-ripe: salads/cooking; ripe: eat as-is or in smoothies; overripe: bread/baking. Can be frozen with the skin on"
       },
       "nutrition_highlight": {
         "ja": "カリウム(高血圧予防)、ビタミンB6、食物繊維。エネルギー補給に最適(GI値中)",
-        "en": ""
+        "en": "Potassium (blood pressure), vitamin B6, dietary fiber. Excellent for energy (medium GI)"
       }
     },
     {
       "id": "apple",
       "name": {
         "ja": "りんご",
-        "en": ""
+        "en": "Apple"
       },
       "name_kana": "りんご",
       "name_en": "Apple",
@@ -1395,17 +1415,17 @@
       ],
       "season_peak": {
         "ja": "秋〜初冬",
-        "en": ""
+        "en": "Autumn–Early winter"
       },
       "key_check": {
         "icon": "👀",
         "action": {
           "ja": "お尻の色を見る",
-          "en": ""
+          "en": "Check the bottom (stem-opposite end) color"
         },
         "judgment": {
           "ja": "黄色みかかる = 完熟",
-          "en": ""
+          "en": "Yellowing = ripe"
         }
       },
       "ok_short": {
@@ -1415,7 +1435,12 @@
           "お尻:黄色",
           "重さ:ずっしり"
         ],
-        "en": []
+        "en": [
+          "Color: Deep/Vivid",
+          "Shine: Yes",
+          "Bottom: Yellowing",
+          "Weight: Heavy"
+        ]
       },
       "ng_short": {
         "ja": [
@@ -1424,7 +1449,12 @@
           "ヘタ:乾き黒い",
           "肌:シワ"
         ],
-        "en": []
+        "en": [
+          "Color: Dull/Spotted",
+          "Feel: Soft",
+          "Stem: Dry/Black",
+          "Skin: Wrinkled"
+        ]
       },
       "ok_points": {
         "ja": [
@@ -1433,7 +1463,12 @@
           "持つとずっしり重い(蜜入りの可能性)",
           "ヘタがしっかり緑色で枯れていない"
         ],
-        "en": []
+        "en": [
+          "Deep, vivid color with shine",
+          "Bottom (calyx end) yellows (sign of ripeness)",
+          "Heavy for its size (possibly contains a \"honey core\")",
+          "Stem is firmly green, not dried out"
+        ]
       },
       "ng_points": {
         "ja": [
@@ -1442,37 +1477,42 @@
           "ヘタが乾燥して黒い・取れている",
           "皮にシワが寄っている"
         ],
-        "en": []
+        "en": [
+          "Dull color, with bruises or impact marks",
+          "Soft when pressed, with a fluffy lightness (mealy = dehydrated)",
+          "Stem is dried out, blackened, or fallen off",
+          "Wrinkles in the skin"
+        ]
       },
       "summary_ok": {
         "ja": "濃赤・ツヤ・尻黄色",
-        "en": ""
+        "en": "Deep color, shiny, yellow bottom"
       },
       "summary_ng": {
         "ja": "くすみ・柔らか・シワ",
-        "en": ""
+        "en": "Dull, soft, wrinkled"
       },
       "storage": {
         "method": {
           "ja": "ポリ袋に入れ冷蔵保存(エチレンガスを抑える)",
-          "en": ""
+          "en": "Bag and refrigerate (suppresses ethylene gas)"
         },
         "duration": {
           "ja": "冷蔵で1ヶ月、常温で2週間",
-          "en": ""
+          "en": "Refrigerated: 1 month / Room temp: 2 weeks"
         },
         "tips": {
           "ja": "他の果物・野菜とは別に(エチレンで傷む)。じゃがいもとは一緒OK(芽止め)",
-          "en": ""
+          "en": "Store separately from other fruits/vegetables (ethylene causes damage). OK with potatoes (delays sprouting)"
         }
       },
       "usage_tips": {
         "ja": "皮ごと食べると栄養UP(ペクチン・ポリフェノール)。蜜入り=完熟の証で甘み強い。切ったら塩水でアク止め",
-        "en": ""
+        "en": "Eat with skin for more nutrients (pectin, polyphenols). Honey core = ripe and very sweet. Soak cut pieces in salt water to prevent browning"
       },
       "nutrition_highlight": {
         "ja": "ペクチン(腸内環境)、ポリフェノール(抗酸化)、ビタミンC。「医者いらず」",
-        "en": ""
+        "en": "Pectin (gut health), polyphenols (antioxidant), vitamin C. As the saying goes, \"An apple a day keeps the doctor away\""
       }
     },
     {
@@ -3157,7 +3197,7 @@
       "id": "mikan",
       "name": {
         "ja": "みかん",
-        "en": ""
+        "en": "Mikan (Satsuma Mandarin)"
       },
       "name_kana": "みかん",
       "name_en": "Mandarin",
@@ -3168,7 +3208,7 @@
       },
       "subcategory": {
         "ja": "柑橘",
-        "en": ""
+        "en": "Citrus"
       },
       "color_theme": "#FFE5C8",
       "accent_color": "#FF8C42",
@@ -3180,17 +3220,17 @@
       ],
       "season_peak": {
         "ja": "冬",
-        "en": ""
+        "en": "Winter"
       },
       "key_check": {
         "icon": "👀",
         "action": {
           "ja": "ヘタの大きさを見る",
-          "en": ""
+          "en": "Look at the stem (calyx) size"
         },
         "judgment": {
           "ja": "小さい・緑 = 甘い",
-          "en": ""
+          "en": "Small and green = sweet"
         }
       },
       "ok_short": {
@@ -3200,7 +3240,12 @@
           "ヘタ:小・緑",
           "重さ:ずっしり"
         ],
-        "en": []
+        "en": [
+          "Color: Deep orange",
+          "Skin: Thin/Tight",
+          "Stem: Small/Green",
+          "Weight: Heavy"
+        ]
       },
       "ng_short": {
         "ja": [
@@ -3209,7 +3254,12 @@
           "ヘタ:大・茶",
           "感触:柔"
         ],
-        "en": []
+        "en": [
+          "Color: Dull",
+          "Skin: Loose",
+          "Stem: Large/Brown",
+          "Feel: Soft"
+        ]
       },
       "ok_points": {
         "ja": [
@@ -3218,7 +3268,12 @@
           "ヘタが小さく、軸が緑色(甘い品種の証)",
           "持つとずっしり重い(果汁多)"
         ],
-        "en": []
+        "en": [
+          "Deep, even orange color throughout",
+          "Thin skin with tightness and shine",
+          "Small stem with a green base (sign of a sweet variety)",
+          "Heavy for its size (lots of juice)"
+        ]
       },
       "ng_points": {
         "ja": [
@@ -3227,44 +3282,49 @@
           "ヘタが大きく茶色く乾燥",
           "押すと柔らかすぎる"
         ],
-        "en": []
+        "en": [
+          "Dull color with dents",
+          "Gap between skin and flesh (called \"puffy skin\")",
+          "Large, brown, dried stem",
+          "Too soft when pressed"
+        ]
       },
       "summary_ok": {
         "ja": "濃橙・薄皮・ヘタ小",
-        "en": ""
+        "en": "Deep orange, thin skin, small stem"
       },
       "summary_ng": {
         "ja": "くすみ・浮皮・ヘタ茶",
-        "en": ""
+        "en": "Dull, puffy skin, brown stem"
       },
       "storage": {
         "method": {
           "ja": "風通しの良い冷暗所、ヘタを下にして",
-          "en": ""
+          "en": "Cool, dark, well-ventilated place, stem-side down"
         },
         "duration": {
           "ja": "常温で1〜2週間",
-          "en": ""
+          "en": "1-2 weeks at room temperature"
         },
         "tips": {
           "ja": "傷んだ1個から広がるので、こまめにチェック。冷蔵すると甘み減",
-          "en": ""
+          "en": "One spoiled fruit affects the others — check often. Refrigeration reduces sweetness"
         }
       },
       "usage_tips": {
         "ja": "白い筋(アルベド)に栄養。皮の内側にも栄養豊富。皮ごと焼くとマーマレード風",
-        "en": ""
+        "en": "The white pith (albedo) and inner skin layer are nutritious. Roasting whole creates a marmalade-like flavor"
       },
       "nutrition_highlight": {
         "ja": "ビタミンC、βクリプトキサンチン(骨・肌)、シネフリン(代謝)",
-        "en": ""
+        "en": "Vitamin C, β-cryptoxanthin (bone/skin health), synephrine (metabolism)"
       }
     },
     {
       "id": "lemon",
       "name": {
         "ja": "レモン",
-        "en": ""
+        "en": "Lemon"
       },
       "name_kana": "れもん",
       "name_en": "Lemon",
@@ -3275,7 +3335,7 @@
       },
       "subcategory": {
         "ja": "柑橘",
-        "en": ""
+        "en": "Citrus"
       },
       "color_theme": "#FFF5C8",
       "accent_color": "#F2C232",
@@ -3289,17 +3349,17 @@
       ],
       "season_peak": {
         "ja": "冬",
-        "en": ""
+        "en": "Winter"
       },
       "key_check": {
         "icon": "🤲",
         "action": {
           "ja": "持って重さ確認",
-          "en": ""
+          "en": "Lift and check the weight"
         },
         "judgment": {
           "ja": "ずっしり = OK",
-          "en": ""
+          "en": "Heavy = OK"
         }
       },
       "ok_short": {
@@ -3309,7 +3369,12 @@
           "重さ:重い",
           "ツヤ:あり"
         ],
-        "en": []
+        "en": [
+          "Color: Deep yellow",
+          "Skin: Tight/Bumpy",
+          "Weight: Heavy",
+          "Shine: Yes"
+        ]
       },
       "ng_short": {
         "ja": [
@@ -3318,7 +3383,12 @@
           "感触:柔",
           "斑点:茶"
         ],
-        "en": []
+        "en": [
+          "Color: Dull",
+          "Skin: Wrinkled",
+          "Feel: Soft",
+          "Spots: Brown"
+        ]
       },
       "ok_points": {
         "ja": [
@@ -3327,7 +3397,12 @@
           "持つとずっしり重い(果汁多)",
           "全体にツヤがある"
         ],
-        "en": []
+        "en": [
+          "Deep, even yellow color",
+          "Tight skin with even fine bumps",
+          "Heavy for its size (lots of juice)",
+          "Glossy throughout"
+        ]
       },
       "ng_points": {
         "ja": [
@@ -3336,44 +3411,49 @@
           "押すと柔らかい(水分抜け)",
           "茶色い斑点や打痕"
         ],
-        "en": []
+        "en": [
+          "Dull or greenish color (unripe)",
+          "Wrinkles in the skin",
+          "Soft when pressed (dehydrated)",
+          "Brown spots or impact marks"
+        ]
       },
       "summary_ok": {
         "ja": "濃黄・ハリ・重い",
-        "en": ""
+        "en": "Deep yellow, tight skin, heavy"
       },
       "summary_ng": {
         "ja": "くすみ・シワ・柔",
-        "en": ""
+        "en": "Dull, wrinkled, soft"
       },
       "storage": {
         "method": {
           "ja": "ポリ袋で冷蔵",
-          "en": ""
+          "en": "Bag and refrigerate"
         },
         "duration": {
           "ja": "冷蔵で2〜3週間",
-          "en": ""
+          "en": "2-3 weeks refrigerated"
         },
         "tips": {
           "ja": "輪切りにして冷凍も可",
-          "en": ""
+          "en": "Can also be sliced and frozen"
         }
       },
       "usage_tips": {
         "ja": "皮にも香りと栄養豊富(無農薬・国産推奨)。塩レモンで保存性UP",
-        "en": ""
+        "en": "Skin is highly fragrant and nutritious (organic recommended). Salt-preserved lemons keep much longer"
       },
       "nutrition_highlight": {
         "ja": "ビタミンC(柑橘で最多)、クエン酸(疲労回復)、ヘスペリジン(血流)",
-        "en": ""
+        "en": "Highest vitamin C among citrus, citric acid (fatigue recovery), hesperidin (circulation)"
       }
     },
     {
       "id": "avocado",
       "name": {
         "ja": "アボカド",
-        "en": ""
+        "en": "Avocado"
       },
       "name_kana": "あぼかど",
       "name_en": "Avocado",
@@ -3404,17 +3484,17 @@
       ],
       "season_peak": {
         "ja": "通年",
-        "en": ""
+        "en": "Year-round"
       },
       "key_check": {
         "icon": "👆",
         "action": {
           "ja": "軽く押す",
-          "en": ""
+          "en": "Press gently"
         },
         "judgment": {
           "ja": "弾力あり = 食べ頃",
-          "en": ""
+          "en": "Slightly springy = ready to eat"
         }
       },
       "ok_short": {
@@ -3424,7 +3504,12 @@
           "ヘタ:付く",
           "形:整う"
         ],
-        "en": []
+        "en": [
+          "Skin: Dark green to black",
+          "Feel: Springy",
+          "Stem: Attached",
+          "Shape: Even"
+        ]
       },
       "ng_short": {
         "ja": [
@@ -3433,7 +3518,12 @@
           "ヘタ:取れる",
           "黒:過熟"
         ],
-        "en": []
+        "en": [
+          "Skin: Bright green (hard)",
+          "Mushy: Overripe",
+          "Stem: Falls off",
+          "Black: Overripe"
+        ]
       },
       "ok_points": {
         "ja": [
@@ -3442,7 +3532,12 @@
           "ヘタが取れていない(新鮮)",
           "形が整いハリがある"
         ],
-        "en": []
+        "en": [
+          "Skin is dark green to black (ripe)",
+          "Slightly springy when pressed lightly (ready to eat)",
+          "Stem is still attached (fresh)",
+          "Even shape with firmness"
+        ]
       },
       "ng_points": {
         "ja": [
@@ -3451,44 +3546,49 @@
           "ヘタが取れて穴が黒い(劣化)",
           "大きな黒い斑点(傷み)"
         ],
-        "en": []
+        "en": [
+          "Black skin with mushy spots (overripe)",
+          "Bright green and hard (unripe)",
+          "Stem fallen off, leaving a black hole (deteriorated)",
+          "Large black spots (damage)"
+        ]
       },
       "summary_ok": {
         "ja": "暗緑〜黒・弾力・整う",
-        "en": ""
+        "en": "Dark green/black, springy, even shape"
       },
       "summary_ng": {
         "ja": "硬(未熟)・ブヨ・黒",
-        "en": ""
+        "en": "Hard (unripe), mushy, blackened"
       },
       "storage": {
         "method": {
           "ja": "未熟は常温(りんごと一緒で早く熟す)、完熟は冷蔵",
-          "en": ""
+          "en": "Unripe at room temp (with apples to ripen faster); ripe in the fridge"
         },
         "duration": {
           "ja": "完熟:冷蔵で2〜3日",
-          "en": ""
+          "en": "Ripe: 2-3 days refrigerated"
         },
         "tips": {
           "ja": "切ってからレモン汁で変色防止。種付きで保存",
-          "en": ""
+          "en": "Lemon juice prevents browning of cut surfaces. Store with the pit"
         }
       },
       "usage_tips": {
         "ja": "切る向きは縦半分→種を取る→皮を剥く。包丁が滑りやすいので種は手で取る",
-        "en": ""
+        "en": "Cut lengthwise → remove pit → peel. The pit is best removed by hand (knives slip)"
       },
       "nutrition_highlight": {
         "ja": "オレイン酸(良質脂質)、ビタミンE、食物繊維。世界一栄養価高い果物",
-        "en": ""
+        "en": "Oleic acid (healthy fat), vitamin E, dietary fiber. One of the most nutritious fruits in the world"
       }
     },
     {
       "id": "ichigo",
       "name": {
         "ja": "いちご",
-        "en": ""
+        "en": "Strawberry"
       },
       "name_kana": "いちご",
       "name_en": "Strawberry",
@@ -3499,7 +3599,7 @@
       },
       "subcategory": {
         "ja": "ベリー",
-        "en": ""
+        "en": "Berry"
       },
       "color_theme": "#FFE5E0",
       "accent_color": "#E33825",
@@ -3513,17 +3613,17 @@
       ],
       "season_peak": {
         "ja": "春",
-        "en": ""
+        "en": "Spring"
       },
       "key_check": {
         "icon": "👀",
         "action": {
           "ja": "ヘタの色を見る",
-          "en": ""
+          "en": "Look at the stem (calyx) color"
         },
         "judgment": {
           "ja": "鮮緑・反る = OK",
-          "en": ""
+          "en": "Bright green and curling back = OK"
         }
       },
       "ok_short": {
@@ -3533,7 +3633,12 @@
           "ハリ:あり",
           "種:浮く"
         ],
-        "en": []
+        "en": [
+          "Color: Vivid red",
+          "Stem: Green/Curling back",
+          "Firmness: Yes",
+          "Seeds: Raised"
+        ]
       },
       "ng_short": {
         "ja": [
@@ -3542,7 +3647,12 @@
           "感触:柔",
           "種:沈"
         ],
-        "en": []
+        "en": [
+          "Color: Dark red",
+          "Stem: Brown/Wilted",
+          "Feel: Soft",
+          "Seeds: Sunken"
+        ]
       },
       "ok_points": {
         "ja": [
@@ -3551,7 +3661,12 @@
           "皮にハリ・ツヤがある",
           "種が表面に浮いて見える(成熟)"
         ],
-        "en": []
+        "en": [
+          "Vivid red color (intensity depends on variety)",
+          "Stem is bright green and curling back (fully ripe)",
+          "Firm skin with shine",
+          "Seeds visibly raised on the surface (mature)"
+        ]
       },
       "ng_points": {
         "ja": [
@@ -3560,44 +3675,49 @@
           "皮が柔らかい(過熟)",
           "種が表面に沈んで凹む"
         ],
-        "en": []
+        "en": [
+          "Dark color with wrinkly patches",
+          "Brown, wilted stem",
+          "Soft skin (overripe)",
+          "Seeds sunken into the surface"
+        ]
       },
       "summary_ok": {
         "ja": "鮮赤・ヘタ反・ハリ",
-        "en": ""
+        "en": "Vivid red, curled stem, firm"
       },
       "summary_ng": {
         "ja": "暗赤・ヘタ茶・柔",
-        "en": ""
+        "en": "Dark red, brown stem, soft"
       },
       "storage": {
         "method": {
           "ja": "ヘタ付きのまま洗わずパックで冷蔵",
-          "en": ""
+          "en": "Store in original pack with stems on, unwashed, refrigerated"
         },
         "duration": {
           "ja": "冷蔵で2〜3日(早めに食べる)",
-          "en": ""
+          "en": "2-3 days refrigerated (eat soon)"
         },
         "tips": {
           "ja": "洗うのは食べる直前。冷凍も可(スムージーに)",
-          "en": ""
+          "en": "Wash just before eating. Freezing OK for smoothies"
         }
       },
       "usage_tips": {
         "ja": "ヘタを取ってから洗うと栄養流出。先端の方が甘い。練乳・砂糖は控えめでも美味",
-        "en": ""
+        "en": "Removing stems before washing causes nutrient loss. The tip is sweetest. Tastes great even with little sugar or condensed milk"
       },
       "nutrition_highlight": {
         "ja": "ビタミンC(7〜8粒で1日分)、葉酸、アントシアニン",
-        "en": ""
+        "en": "Vitamin C (daily allowance in 7-8 berries), folate, anthocyanins"
       }
     },
     {
       "id": "kiwi",
       "name": {
         "ja": "キウイ",
-        "en": ""
+        "en": "Kiwi"
       },
       "name_kana": "きうい",
       "name_en": "Kiwi",
@@ -3623,17 +3743,17 @@
       ],
       "season_peak": {
         "ja": "冬",
-        "en": ""
+        "en": "Winter"
       },
       "key_check": {
         "icon": "👆",
         "action": {
           "ja": "軽く押す",
-          "en": ""
+          "en": "Press gently"
         },
         "judgment": {
           "ja": "わずかに弾力 = OK",
-          "en": ""
+          "en": "Slightly springy = OK"
         }
       },
       "ok_short": {
@@ -3643,7 +3763,12 @@
           "形:整う",
           "ヘタ:乾"
         ],
-        "en": []
+        "en": [
+          "Skin: Even fuzz",
+          "Feel: Springy",
+          "Shape: Even",
+          "Stem: Dry"
+        ]
       },
       "ng_short": {
         "ja": [
@@ -3652,7 +3777,12 @@
           "形:歪",
           "皮:傷"
         ],
-        "en": []
+        "en": [
+          "Skin: Mold",
+          "Feel: Mushy",
+          "Shape: Misshapen",
+          "Skin: Damaged"
+        ]
       },
       "ok_points": {
         "ja": [
@@ -3661,7 +3791,12 @@
           "形が整い、傷がない",
           "ヘタ部分が乾燥している"
         ],
-        "en": []
+        "en": [
+          "Even, fine fuzz on the skin",
+          "Slight give when pressed (ready to eat)",
+          "Even shape, no damage",
+          "Stem area is dry"
+        ]
       },
       "ng_points": {
         "ja": [
@@ -3670,44 +3805,49 @@
           "硬すぎる(未熟・酸っぱい)",
           "皮に大きな傷や凹み"
         ],
-        "en": []
+        "en": [
+          "Fuzz fallen off, mold growing",
+          "Mushy when pressed (overripe or rotting)",
+          "Too hard (unripe and sour)",
+          "Large cuts or dents in the skin"
+        ]
       },
       "summary_ok": {
         "ja": "毛均一・軽弾力",
-        "en": ""
+        "en": "Even fuzz, slightly springy"
       },
       "summary_ng": {
         "ja": "カビ・ブヨ・傷",
-        "en": ""
+        "en": "Mold, mushy, damaged"
       },
       "storage": {
         "method": {
           "ja": "未熟は常温で追熟、完熟は冷蔵",
-          "en": ""
+          "en": "Unripe at room temperature to ripen; ripe in the refrigerator"
         },
         "duration": {
           "ja": "冷蔵で1〜2週間",
-          "en": ""
+          "en": "1-2 weeks refrigerated"
         },
         "tips": {
           "ja": "りんごと一緒で追熟早い。逆に硬くしたいなら離す",
-          "en": ""
+          "en": "Ripens faster with apples. Keep separate to slow ripening"
         }
       },
       "usage_tips": {
         "ja": "皮も食べられる(スプーンですくうのが一般的)。タンパク質分解酵素で肉柔らかく",
-        "en": ""
+        "en": "The skin is edible (though scooping with a spoon is more common). Its protein-digesting enzyme tenderizes meat"
       },
       "nutrition_highlight": {
         "ja": "ビタミンC・E、食物繊維、アクチニジン(消化促進)",
-        "en": ""
+        "en": "Vitamins C and E, dietary fiber, actinidin (aids digestion)"
       }
     },
     {
       "id": "grape",
       "name": {
         "ja": "ぶどう",
-        "en": ""
+        "en": "Grape"
       },
       "name_kana": "ぶどう",
       "name_en": "Grape",
@@ -3729,17 +3869,17 @@
       ],
       "season_peak": {
         "ja": "秋",
-        "en": ""
+        "en": "Autumn"
       },
       "key_check": {
         "icon": "👀",
         "action": {
           "ja": "白い粉(ブルーム)を確認",
-          "en": ""
+          "en": "Check for the white powder (\"bloom\")"
         },
         "judgment": {
           "ja": "粉あり = 新鮮",
-          "en": ""
+          "en": "Bloom present = fresh"
         }
       },
       "ok_short": {
@@ -3749,7 +3889,12 @@
           "軸:緑・固",
           "色:深"
         ],
-        "en": []
+        "en": [
+          "Bloom: Yes",
+          "Berries: Dense/Firm",
+          "Stem: Green/Firm",
+          "Color: Deep"
+        ]
       },
       "ng_short": {
         "ja": [
@@ -3758,7 +3903,12 @@
           "軸:茶・乾",
           "色:薄"
         ],
-        "en": []
+        "en": [
+          "Bloom: None",
+          "Berries: Falling",
+          "Stem: Brown/Dry",
+          "Color: Pale"
+        ]
       },
       "ok_points": {
         "ja": [
@@ -3767,7 +3917,12 @@
           "軸が緑色で硬く生き生き",
           "色が深く均一"
         ],
-        "en": []
+        "en": [
+          "White powder (\"bloom\") is present (sign of freshness and natural protection)",
+          "Berries are dense and firm",
+          "Stem is green, firm, and lively",
+          "Deep, even color throughout"
+        ]
       },
       "ng_points": {
         "ja": [
@@ -3776,44 +3931,49 @@
           "軸が茶色く乾燥",
           "色がムラ、薄い部分がある"
         ],
-        "en": []
+        "en": [
+          "Bloom worn off, skin is too shiny",
+          "Berries fall off when touched",
+          "Stem is brown and dried out",
+          "Uneven color with pale areas"
+        ]
       },
       "summary_ok": {
         "ja": "粉・実密・軸緑",
-        "en": ""
+        "en": "Bloom, dense berries, green stem"
       },
       "summary_ng": {
         "ja": "粉なし・落・軸茶",
-        "en": ""
+        "en": "No bloom, falling berries, brown stem"
       },
       "storage": {
         "method": {
           "ja": "洗わずポリ袋で冷蔵",
-          "en": ""
+          "en": "Bag and refrigerate without washing"
         },
         "duration": {
           "ja": "冷蔵で3〜5日",
-          "en": ""
+          "en": "3-5 days refrigerated"
         },
         "tips": {
           "ja": "粒を1つずつ軸を残してハサミで切ると傷みにくい",
-          "en": ""
+          "en": "Cut individual berries from the stem with scissors (leaving tiny stems) to keep them fresh longer"
         }
       },
       "usage_tips": {
         "ja": "皮にもポリフェノール豊富。皮ごと食べる品種(シャインマスカット等)が増えている",
-        "en": ""
+        "en": "Skin is rich in polyphenols. Edible-skin varieties like Shine Muscat are increasingly popular"
       },
       "nutrition_highlight": {
         "ja": "ポリフェノール(抗酸化)、ブドウ糖(即エネルギー)、カリウム",
-        "en": ""
+        "en": "Polyphenols (antioxidant), glucose (instant energy), potassium"
       }
     },
     {
       "id": "peach",
       "name": {
         "ja": "桃",
-        "en": ""
+        "en": "Peach"
       },
       "name_kana": "もも",
       "name_en": "Peach",
@@ -3836,17 +3996,17 @@
       ],
       "season_peak": {
         "ja": "夏",
-        "en": ""
+        "en": "Summer"
       },
       "key_check": {
         "icon": "👃",
         "action": {
           "ja": "香りを嗅ぐ",
-          "en": ""
+          "en": "Sniff for aroma"
         },
         "judgment": {
           "ja": "甘い香り = 食べ頃",
-          "en": ""
+          "en": "Sweet aroma = ready to eat"
         }
       },
       "ok_short": {
@@ -3856,7 +4016,12 @@
           "ハリ:あり",
           "うぶ毛:均"
         ],
-        "en": []
+        "en": [
+          "Aroma: Sweet",
+          "Color: Even",
+          "Firmness: Yes",
+          "Fuzz: Even"
+        ]
       },
       "ng_short": {
         "ja": [
@@ -3865,7 +4030,12 @@
           "感触:硬orブヨ",
           "打痕:あり"
         ],
-        "en": []
+        "en": [
+          "Aroma: None",
+          "Color: Uneven",
+          "Feel: Hard or mushy",
+          "Bruises: Yes"
+        ]
       },
       "ok_points": {
         "ja": [
@@ -3874,7 +4044,12 @@
           "うぶ毛(白い細毛)が均一に生える",
           "ヘタ周辺に白い果汁の跡(完熟)"
         ],
-        "en": []
+        "en": [
+          "Sweet aroma fills the air (ready to eat)",
+          "Even color with firmness",
+          "Fine white fuzz spread evenly across the surface",
+          "White juice marks around the stem (fully ripe)"
+        ]
       },
       "ng_points": {
         "ja": [
@@ -3883,44 +4058,49 @@
           "硬すぎ(未熟)or ブヨブヨ(過熟)",
           "黒い斑点や腐敗"
         ],
-        "en": []
+        "en": [
+          "No aroma (unripe)",
+          "Uneven color, with bruises",
+          "Too hard (unripe) or mushy (overripe)",
+          "Black spots or signs of rot"
+        ]
       },
       "summary_ok": {
         "ja": "甘香・色均・ハリ",
-        "en": ""
+        "en": "Sweet aroma, even color, firm"
       },
       "summary_ng": {
         "ja": "無香・ムラ・打痕",
-        "en": ""
+        "en": "No aroma, uneven, bruised"
       },
       "storage": {
         "method": {
           "ja": "常温で食べ頃まで追熟、完熟は冷蔵で短時間",
-          "en": ""
+          "en": "Ripen at room temperature; refrigerate ripe ones briefly"
         },
         "duration": {
           "ja": "常温:2〜3日、冷蔵で短期(風味落ちる)",
-          "en": ""
+          "en": "Room temp: 2-3 days. Brief refrigeration only (flavor declines)"
         },
         "tips": {
           "ja": "食べる2〜3時間前に冷蔵で適温に",
-          "en": ""
+          "en": "Refrigerate 2-3 hours before eating for the best temperature"
         }
       },
       "usage_tips": {
         "ja": "皮ごと食べると栄養UP。皮を剥く時は熱湯30秒→冷水でツルッと",
-        "en": ""
+        "en": "Eat with the skin for more nutrients. To peel: dip in hot water for 30 seconds, then ice water — the skin slides right off"
       },
       "nutrition_highlight": {
         "ja": "ペクチン(腸内環境)、カリウム、カテキン(抗酸化)",
-        "en": ""
+        "en": "Pectin (gut health), potassium, catechins (antioxidant)"
       }
     },
     {
       "id": "kaki",
       "name": {
         "ja": "柿",
-        "en": ""
+        "en": "Kaki (Japanese Persimmon)"
       },
       "name_kana": "かき",
       "name_en": "Persimmon",
@@ -3942,17 +4122,17 @@
       ],
       "season_peak": {
         "ja": "秋",
-        "en": ""
+        "en": "Autumn"
       },
       "key_check": {
         "icon": "👀",
         "action": {
           "ja": "ヘタを見る",
-          "en": ""
+          "en": "Look at the calyx (top leaves)"
         },
         "judgment": {
           "ja": "ぴったり張付 = 甘",
-          "en": ""
+          "en": "Tightly attached = sweet"
         }
       },
       "ok_short": {
@@ -3962,7 +4142,12 @@
           "ヘタ:張・緑",
           "重さ:ずっしり"
         ],
-        "en": []
+        "en": [
+          "Color: Deep orange",
+          "Firmness: Yes",
+          "Calyx: Tight/Green",
+          "Weight: Heavy"
+        ]
       },
       "ng_short": {
         "ja": [
@@ -3971,7 +4156,12 @@
           "ヘタ:浮",
           "斑点:黒"
         ],
-        "en": []
+        "en": [
+          "Color: Dull",
+          "Feel: Mushy",
+          "Calyx: Lifting",
+          "Spots: Black"
+        ]
       },
       "ok_points": {
         "ja": [
@@ -3980,7 +4170,12 @@
           "ヘタが緑で実にぴったり張り付く(甘柿)",
           "持つとずっしり重い"
         ],
-        "en": []
+        "en": [
+          "Deep, even orange color",
+          "Tight skin with shine",
+          "Green calyx tightly attached to the fruit (sign of sweet variety)",
+          "Heavy for its size"
+        ]
       },
       "ng_points": {
         "ja": [
@@ -3989,44 +4184,49 @@
           "ヘタと実の間に隙間(渋柿の可能性)",
           "黒い斑点や打痕"
         ],
-        "en": []
+        "en": [
+          "Dull color with darkened patches",
+          "Too soft, mushy feel",
+          "Gap between calyx and fruit (possibly an astringent variety)",
+          "Black spots or bruises"
+        ]
       },
       "summary_ok": {
         "ja": "濃橙・ハリ・ヘタ張",
-        "en": ""
+        "en": "Deep orange, firm, tight calyx"
       },
       "summary_ng": {
         "ja": "くすみ・ブヨ・隙間",
-        "en": ""
+        "en": "Dull, mushy, gapped calyx"
       },
       "storage": {
         "method": {
           "ja": "ヘタを下にしてポリ袋で冷蔵",
-          "en": ""
+          "en": "Store stem-down in a bag, refrigerated"
         },
         "duration": {
           "ja": "冷蔵で1〜2週間",
-          "en": ""
+          "en": "1-2 weeks refrigerated"
         },
         "tips": {
           "ja": "渋柿は焼酎で渋抜き or ヘタにアルコール塗布で1週間",
-          "en": ""
+          "en": "Astringent varieties: deastringe with shochu (Japanese spirit), or apply alcohol to the calyx for 1 week"
         }
       },
       "usage_tips": {
         "ja": "完熟前=シャキッ、完熟=トロ。皮にも栄養。種の周りにアセトアルデヒドで二日酔い対策にも",
-        "en": ""
+        "en": "Pre-ripe: crunchy texture. Ripe: jam-like. The skin is also nutritious. Acetaldehyde near the seeds is said to help with hangovers"
       },
       "nutrition_highlight": {
         "ja": "ビタミンC(みかんの2倍)、βクリプトキサンチン、タンニン。「医者いらず」",
-        "en": ""
+        "en": "Vitamin C (2× a mikan), β-cryptoxanthin, tannins. As they say, \"A persimmon a day keeps the doctor away\""
       }
     },
     {
       "id": "pear",
       "name": {
         "ja": "梨",
-        "en": ""
+        "en": "Asian Pear (Nashi)"
       },
       "name_kana": "なし",
       "name_en": "Pear",
@@ -4048,17 +4248,17 @@
       ],
       "season_peak": {
         "ja": "秋",
-        "en": ""
+        "en": "Autumn"
       },
       "key_check": {
         "icon": "🤲",
         "action": {
           "ja": "持って重さ確認",
-          "en": ""
+          "en": "Lift and check the weight"
         },
         "judgment": {
           "ja": "ずっしり = OK",
-          "en": ""
+          "en": "Heavy = OK"
         }
       },
       "ok_short": {
@@ -4068,7 +4268,12 @@
           "重さ:ずっしり",
           "尻:ゴワゴワ"
         ],
-        "en": []
+        "en": [
+          "Skin: Tight/Glossy",
+          "Shape: Even/Round",
+          "Weight: Heavy",
+          "Bottom: Rough"
+        ]
       },
       "ng_short": {
         "ja": [
@@ -4077,7 +4282,12 @@
           "軽い",
           "斑点:茶"
         ],
-        "en": []
+        "en": [
+          "Skin: Wrinkled/Brown",
+          "Feel: Soft",
+          "Light",
+          "Spots: Brown"
+        ]
       },
       "ok_points": {
         "ja": [
@@ -4086,7 +4296,12 @@
           "ずっしり重く果汁多い",
           "お尻(花落ち)がゴワゴワ=糖度高"
         ],
-        "en": []
+        "en": [
+          "Tight, glossy skin",
+          "Even, round shape with no damage",
+          "Heavy with lots of juice",
+          "Rough texture at the bottom (calyx end) = high sugar content"
+        ]
       },
       "ng_points": {
         "ja": [
@@ -4095,37 +4310,42 @@
           "持って軽い",
           "打痕や腐敗"
         ],
-        "en": []
+        "en": [
+          "Wrinkles or brown spots on the skin",
+          "Soft when pressed (overripe or dehydrated)",
+          "Light weight",
+          "Bruises or signs of rot"
+        ]
       },
       "summary_ok": {
         "ja": "ハリ・丸・重い",
-        "en": ""
+        "en": "Firm, round, heavy"
       },
       "summary_ng": {
         "ja": "シワ・柔・軽",
-        "en": ""
+        "en": "Wrinkled, soft, light"
       },
       "storage": {
         "method": {
           "ja": "ポリ袋で冷蔵",
-          "en": ""
+          "en": "Bag and refrigerate"
         },
         "duration": {
           "ja": "冷蔵で1週間程度",
-          "en": ""
+          "en": "About 1 week refrigerated"
         },
         "tips": {
           "ja": "切ったらレモン汁で変色防止",
-          "en": ""
+          "en": "Lemon juice prevents browning of cut surfaces"
         }
       },
       "usage_tips": {
         "ja": "皮にも栄養。冷やしすぎると風味落ちる。コンポート・サラダで生かす食感",
-        "en": ""
+        "en": "The skin is also nutritious. Over-chilling reduces flavor. The crisp texture shines in compotes and salads"
       },
       "nutrition_highlight": {
         "ja": "アスパラギン酸(疲労回復)、カリウム、食物繊維、ソルビトール(便通)",
-        "en": ""
+        "en": "Aspartic acid (fatigue recovery), potassium, dietary fiber, sorbitol (digestion)"
       }
     },
     {
