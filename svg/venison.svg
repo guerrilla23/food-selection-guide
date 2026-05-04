@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 600" font-family="Noto Sans CJK JP, sans-serif">
+  <rect width="1080" height="600" fill="#FFFFFF" rx="20"/>
+
+  <!-- Header -->
+  <text x="60" y="60" font-size="44" font-weight="900" fill="#7A1810">鹿肉</text>
+  <line x1="60" y1="75" x2="120" y2="75" stroke="#7A1810" stroke-width="4"/>
+  <text x="140" y="68" font-size="22" fill="#666">旬:11〜2月(狩猟期)</text>
+
+  <line x1="540" y1="100" x2="540" y2="540" stroke="#DDD" stroke-width="2" stroke-dasharray="6,6"/>
+
+  <!-- OK side (watercolor Pattern A) -->
+  <g transform="translate(280, 320)">
+    <circle cx="-200" cy="-180" r="22" fill="#2C5F2D"/>
+    <text x="-200" y="-172" font-size="26" font-weight="900" fill="white" text-anchor="middle">○</text>
+    <defs>
+      <radialGradient id="wcBodyVenison" cx="35%" cy="25%"><stop offset="0%" stop-color="#E0A090" stop-opacity="0.95"/><stop offset="40%" stop-color="#C04030" stop-opacity="0.9"/><stop offset="80%" stop-color="#7A1810" stop-opacity="0.85"/><stop offset="100%" stop-color="#3A0808" stop-opacity="0.65"/></radialGradient>
+      <radialGradient id="wcLeafVenison" cx="50%" cy="20%"><stop offset="0%" stop-color="#9BCB7A" stop-opacity="0.9"/><stop offset="60%" stop-color="#5D8F3D" stop-opacity="0.7"/><stop offset="100%" stop-color="#2C5F2D" stop-opacity="0.5"/></radialGradient>
+      <filter id="wcRoughVenison" x="-10%" y="-10%" width="120%" height="120%">
+        <feTurbulence baseFrequency="0.04" numOctaves="3" seed="223"/>
+        <feDisplacementMap in="SourceGraphic" scale="4"/>
+      </filter>
+      <filter id="wcBlurVenison"><feGaussianBlur stdDeviation="1.5"/></filter>
+    </defs>
+    <g filter="url(#wcBlurVenison)" opacity="0.4"><ellipse cx="0" cy="0" rx="110" ry="70" fill="#C04030"/></g>
+    
+    <g filter="url(#wcRoughVenison)"><path d="M -90 -45 Q -100 0 -90 50 Q 0 75 90 50 Q 100 0 90 -45 Q 0 -65 -90 -45 Z" fill="url(#wcBodyVenison)"/></g>
+    <g stroke="#3D2817" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"><path d="M -90 -45 Q -100 0 -90 50 Q 0 75 90 50 Q 100 0 90 -45 Q 0 -65 -90 -45 Z"/><path d="M -78 -30 Q 0 -25 78 -30" opacity="0.6" stroke-width="1.3"/><path d="M -82 -10 Q 0 -5 82 -10" opacity="0.6" stroke-width="1.3"/><path d="M -80 10 Q 0 15 80 10" opacity="0.6" stroke-width="1.3"/><path d="M -75 30 Q 0 35 75 30" opacity="0.6" stroke-width="1.3"/><path d="M -70 50 Q 0 55 70 50" opacity="0.6" stroke-width="1.3"/><path d="M -50 -20 L -45 30" opacity="0.4" stroke-width="1"/><path d="M 0 -25 L 5 35" opacity="0.4" stroke-width="1"/><path d="M 50 -20 L 45 30" opacity="0.4" stroke-width="1"/></g>
+  </g>
+
+  <!-- NG side (flat) -->
+  <g transform="translate(800, 320)">
+    <circle cx="-200" cy="-180" r="22" fill="#C62828"/>
+    <text x="-200" y="-172" font-size="26" font-weight="900" fill="white" text-anchor="middle">×</text>
+    <path d="M -90 -45 Q -100 0 -90 50 Q 0 75 90 50 Q 100 0 90 -45 Q 0 -65 -90 -45 Z" fill="#5A3030"/><ellipse cx="-25" cy="0" rx="30" ry="22" fill="#3D2010" opacity="0.55"/><ellipse cx="30" cy="20" rx="18" ry="14" fill="#3D2010" opacity="0.5"/><ellipse cx="0" cy="70" rx="60" ry="8" fill="#601810" opacity="0.65"/>
+  </g>
+
+  <!-- Comparison labels -->
+  <g font-size="20" fill="#333">
+    <rect x="60" y="495" width="460" height="80" rx="8" fill="#E8F5E9"/>
+    <text x="80" y="520" font-weight="bold" fill="#2C5F2D">● 色が深い赤、繊維が細かい</text>
+    <text x="80" y="545" font-weight="bold" fill="#2C5F2D">● 脂が極めて少ない(赤身)</text>
+    <text x="80" y="568" fill="#666" font-size="17">血抜きの良いものはドリップ少なく無臭</text>
+
+    <rect x="560" y="495" width="460" height="80" rx="8" fill="#FFEBEE"/>
+    <text x="580" y="520" font-weight="bold" fill="#C62828">× 色が茶色く変色</text>
+    <text x="580" y="545" font-weight="bold" fill="#C62828">× 強い獣臭、ドリップ多</text>
+    <text x="580" y="568" fill="#666" font-size="17">血抜き不十分=臭み強・処理要注意</text>
+  </g>
+</svg>
