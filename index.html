@@ -328,27 +328,70 @@
     .detail-meta { display: flex; flex-wrap: wrap; gap: 6px; flex: 1 1 auto; min-width: 0; }
     .detail-meta .tag { font-size: 12px; padding: 4px 10px; }
 
-    /* ===== Mode toggle (simple / detail) ===== */
+    /* ===== Mode toggle (simple / detail) — full-width segmented control =====
+       売場での片手操作前提の大きめタップターゲット。
+       選択中ハイライトはスライドアニメーションで表示。 */
     .mode-toggle {
-      display: inline-flex;
+      position: relative;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+      width: 100%;
       background: var(--card-border);
-      border-radius: 999px;
-      padding: 2px;
-      flex: 0 0 auto;
+      border-radius: 14px;
+      padding: 4px;
+      margin: 0 0 14px;
+      isolation: isolate;
+    }
+    /* スライディングハイライト (擬似要素) */
+    .mode-toggle::before {
+      content: '';
+      position: absolute;
+      top: 4px;
+      bottom: 4px;
+      left: 4px;
+      width: calc(50% - 4px);
+      background: var(--accent);
+      border-radius: 11px;
+      box-shadow: 0 2px 6px rgba(0,0,0,.15);
+      transition: transform .25s cubic-bezier(0.4, 0, 0.2, 1);
+      z-index: 0;
+    }
+    body[data-mode="detail"] .mode-toggle::before {
+      transform: translateX(100%);
     }
     .mode-opt {
+      position: relative;
+      z-index: 1;
       border: none; background: transparent;
-      padding: 6px 14px;
-      border-radius: 999px;
-      font-size: 12px; font-weight: 700;
+      padding: 10px 8px;
+      min-height: 60px;
+      border-radius: 11px;
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      gap: 2px;
+      cursor: pointer;
+      transition: color .25s;
       color: var(--muted);
-      min-height: 32px;
-      transition: all .12s;
     }
     .mode-opt.active {
-      background: var(--card-bg);
-      color: var(--accent-dark);
-      box-shadow: 0 1px 3px rgba(0,0,0,.15);
+      color: white;
+    }
+    .mode-opt-main {
+      font-size: 16px; font-weight: 800;
+      line-height: 1.2;
+      letter-spacing: 0.02em;
+    }
+    .mode-opt-sub {
+      font-size: 11px;
+      font-weight: 600;
+      opacity: 0.85;
+      line-height: 1.2;
+    }
+    .mode-opt:not(.active) .mode-opt-sub { opacity: 0.65; }
+    .mode-opt:active { transform: scale(0.97); }
+    @media (prefers-color-scheme: dark) {
+      .mode-toggle::before { box-shadow: 0 2px 6px rgba(0,0,0,.4); }
     }
 
     /* ===== Key check hero (詳細画面トップ — 最重要1ポイント) ===== */
@@ -988,10 +1031,20 @@
     //                  → 使い分け → 保存方法 → 栄養
     // ============================================================
     function buildModeToggle() {
+      // 大きめのセグメントコントロール (売場での片手操作前提)
+      // スライドハイライトは body[data-mode] と CSS::before の transform 連動
       return `
         <div class="mode-toggle" role="group" aria-label="表示モード">
-          <button class="mode-opt${App.mode === 'simple' ? ' active' : ''}" data-set-mode="simple">シンプル</button>
-          <button class="mode-opt${App.mode === 'detail' ? ' active' : ''}" data-set-mode="detail">詳細</button>
+          <button class="mode-opt${App.mode === 'simple' ? ' active' : ''}" data-set-mode="simple"
+                  aria-pressed="${App.mode === 'simple'}">
+            <span class="mode-opt-main">シンプル</span>
+            <span class="mode-opt-sub">売場で素早くチェック</span>
+          </button>
+          <button class="mode-opt${App.mode === 'detail' ? ' active' : ''}" data-set-mode="detail"
+                  aria-pressed="${App.mode === 'detail'}">
+            <span class="mode-opt-main">詳細</span>
+            <span class="mode-opt-sub">じっくり読む</span>
+          </button>
         </div>`;
     }
 
@@ -1049,15 +1102,16 @@
             ${food.subcategory ? `<span class="tag">${escapeHTML(food.subcategory)}</span>` : ''}
             ${seasonTag}
           </div>
-          ${buildModeToggle()}
         </div>`;
 
+      // モードトグルは独立行で配置 (メタ行の下、ヒーローの上)
+      const modeToggleRow = buildModeToggle();
       const hero = buildKeyCheckHero(food);
 
       let body;
       if (App.mode === 'simple') {
         // ★ スーパーで片手操作する前提のミニマル表示 ★
-        body = metaRow + hero
+        body = metaRow + modeToggleRow + hero
           + `<div class="simple-illust">
                <img src="svg/parts/${encodeURIComponent(food.id)}_ok.svg" alt="" loading="lazy" decoding="async">
              </div>`
@@ -1073,7 +1127,7 @@
             ${storage.duration ? `<dt>日持ち</dt><dd>${escapeHTML(storage.duration)}</dd>` : ''}
             ${storage.tips ? `<dt>コツ</dt><dd>${escapeHTML(storage.tips)}</dd>` : ''}
           </dl>`;
-        body = metaRow + hero
+        body = metaRow + modeToggleRow + hero
           + buildDiagram(food)
           + `<div class="points">
               <div class="points-block ok">
@@ -1110,8 +1164,11 @@
       if (App.mode === mode) return;
       App.mode = mode;
       try { localStorage.setItem(MODE_KEY, mode); } catch {}
+      // body[data-mode] を先に切替 → CSS のスライドアニメーションが先行発火
       document.body.dataset.mode = mode;
-      // 詳細画面なら再描画
+      // 軽いハプティクス (対応機種のみ、エラー無視)
+      try { navigator.vibrate && navigator.vibrate(10); } catch {}
+      // 詳細画面ならコンテンツ再描画 (スライドアニメは body class 経由で先行)
       if (document.body.dataset.view === 'detail') applyRoute();
     }
 
