@@ -1,6 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="-120 -110 240 220" font-family="Noto Sans CJK JP, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-130 -120 260 240" font-family="Noto Sans CJK JP, sans-serif">
 <defs>
-      <radialGradient id="wcBodyNatto" cx="35%" cy="25%"><stop offset="0%" stop-color="#D8B888" stop-opacity="0.95"/><stop offset="40%" stop-color="#A07848" stop-opacity="0.9"/><stop offset="80%" stop-color="#5D4E20" stop-opacity="0.85"/><stop offset="100%" stop-color="#3D3018" stop-opacity="0.65"/></radialGradient>
+      <radialGradient id="wcBodyNatto" cx="35%" cy="25%"><stop offset="0%" stop-color="#F8DDB0" stop-opacity="0.95"/><stop offset="40%" stop-color="#E8C49A" stop-opacity="0.92"/><stop offset="80%" stop-color="#C19A6B" stop-opacity="0.85"/><stop offset="100%" stop-color="#8B6F47" stop-opacity="0.55"/></radialGradient>
       <radialGradient id="wcLeafNatto" cx="50%" cy="20%"><stop offset="0%" stop-color="#9BCB7A" stop-opacity="0.9"/><stop offset="60%" stop-color="#5D8F3D" stop-opacity="0.7"/><stop offset="100%" stop-color="#2C5F2D" stop-opacity="0.5"/></radialGradient>
       <filter id="wcRoughNatto" x="-10%" y="-10%" width="120%" height="120%">
         <feTurbulence baseFrequency="0.04" numOctaves="3" seed="163"/>
@@ -8,8 +8,42 @@
       </filter>
       <filter id="wcBlurNatto"><feGaussianBlur stdDeviation="1.5"/></filter>
     </defs>
-    <g filter="url(#wcBlurNatto)" opacity="0.4"><ellipse cx="0" cy="15" rx="110" ry="85" fill="#8B6428"/></g>
+    <g filter="url(#wcBlurNatto)" opacity="0.4"><ellipse cx="0" cy="20" rx="125" ry="85" fill="#D8B888"/></g>
     
-    <g filter="url(#wcRoughNatto)"><path d="M -82 65 m -14 0 a 14 11 0 1 0 28 0 a 14 11 0 1 0 -28 0 Z" fill="url(#wcBodyNatto)"/><path d="M -52 70 m -15 0 a 15 12 0 1 0 30 0 a 15 12 0 1 0 -30 0 Z" fill="url(#wcBodyNatto)"/><path d="M -18 67 m -14 0 a 14 11 0 1 0 28 0 a 14 11 0 1 0 -28 0 Z" fill="url(#wcBodyNatto)"/><path d="M 18 70 m -15 0 a 15 12 0 1 0 30 0 a 15 12 0 1 0 -30 0 Z" fill="url(#wcBodyNatto)"/><path d="M 52 65 m -14 0 a 14 11 0 1 0 28 0 a 14 11 0 1 0 -28 0 Z" fill="url(#wcBodyNatto)"/><path d="M 80 60 m -13 0 a 13 10 0 1 0 26 0 a 13 10 0 1 0 -26 0 Z" fill="url(#wcBodyNatto)"/><path d="M -68 35 m -13 0 a 13 10 0 1 0 26 0 a 13 10 0 1 0 -26 0 Z" fill="url(#wcBodyNatto)"/><path d="M -38 38 m -14 0 a 14 11 0 1 0 28 0 a 14 11 0 1 0 -28 0 Z" fill="url(#wcBodyNatto)"/><path d="M -8 35 m -13 0 a 13 10 0 1 0 26 0 a 13 10 0 1 0 -26 0 Z" fill="url(#wcBodyNatto)"/><path d="M 22 38 m -14 0 a 14 11 0 1 0 28 0 a 14 11 0 1 0 -28 0 Z" fill="url(#wcBodyNatto)"/><path d="M 55 32 m -13 0 a 13 10 0 1 0 26 0 a 13 10 0 1 0 -26 0 Z" fill="url(#wcBodyNatto)"/><path d="M -50 5 m -13 0 a 13 10 0 1 0 26 0 a 13 10 0 1 0 -26 0 Z" fill="url(#wcBodyNatto)"/><path d="M -22 8 m -14 0 a 14 11 0 1 0 28 0 a 14 11 0 1 0 -28 0 Z" fill="url(#wcBodyNatto)"/><path d="M 8 5 m -13 0 a 13 10 0 1 0 26 0 a 13 10 0 1 0 -26 0 Z" fill="url(#wcBodyNatto)"/><path d="M 38 8 m -13 0 a 13 10 0 1 0 26 0 a 13 10 0 1 0 -26 0 Z" fill="url(#wcBodyNatto)"/><path d="M -30 -22 m -12 0 a 12 9 0 1 0 24 0 a 12 9 0 1 0 -24 0 Z" fill="url(#wcBodyNatto)"/><path d="M 0 -25 m -13 0 a 13 10 0 1 0 26 0 a 13 10 0 1 0 -26 0 Z" fill="url(#wcBodyNatto)"/><path d="M 28 -20 m -12 0 a 12 9 0 1 0 24 0 a 12 9 0 1 0 -24 0 Z" fill="url(#wcBodyNatto)"/><path d="M -8 -50 m -11 0 a 11 9 0 1 0 22 0 a 11 9 0 1 0 -22 0 Z" fill="url(#wcBodyNatto)"/><path d="M 18 -48 m -11 0 a 11 9 0 1 0 22 0 a 11 9 0 1 0 -22 0 Z" fill="url(#wcBodyNatto)"/></g>
-    <g stroke="#3D2817" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"><path d="M -82 65 m -14 0 a 14 11 0 1 0 28 0 a 14 11 0 1 0 -28 0"/><path d="M -52 70 m -15 0 a 15 12 0 1 0 30 0 a 15 12 0 1 0 -30 0"/><path d="M -18 67 m -14 0 a 14 11 0 1 0 28 0 a 14 11 0 1 0 -28 0"/><path d="M 18 70 m -15 0 a 15 12 0 1 0 30 0 a 15 12 0 1 0 -30 0"/><path d="M 52 65 m -14 0 a 14 11 0 1 0 28 0 a 14 11 0 1 0 -28 0"/><path d="M 80 60 m -13 0 a 13 10 0 1 0 26 0 a 13 10 0 1 0 -26 0"/><path d="M -68 35 m -13 0 a 13 10 0 1 0 26 0 a 13 10 0 1 0 -26 0"/><path d="M -38 38 m -14 0 a 14 11 0 1 0 28 0 a 14 11 0 1 0 -28 0"/><path d="M -8 35 m -13 0 a 13 10 0 1 0 26 0 a 13 10 0 1 0 -26 0"/><path d="M 22 38 m -14 0 a 14 11 0 1 0 28 0 a 14 11 0 1 0 -28 0"/><path d="M 55 32 m -13 0 a 13 10 0 1 0 26 0 a 13 10 0 1 0 -26 0"/><path d="M -50 5 m -13 0 a 13 10 0 1 0 26 0 a 13 10 0 1 0 -26 0"/><path d="M -22 8 m -14 0 a 14 11 0 1 0 28 0 a 14 11 0 1 0 -28 0"/><path d="M 8 5 m -13 0 a 13 10 0 1 0 26 0 a 13 10 0 1 0 -26 0"/><path d="M 38 8 m -13 0 a 13 10 0 1 0 26 0 a 13 10 0 1 0 -26 0"/><path d="M -30 -22 m -12 0 a 12 9 0 1 0 24 0 a 12 9 0 1 0 -24 0"/><path d="M 0 -25 m -13 0 a 13 10 0 1 0 26 0 a 13 10 0 1 0 -26 0"/><path d="M 28 -20 m -12 0 a 12 9 0 1 0 24 0 a 12 9 0 1 0 -24 0"/><path d="M -8 -50 m -11 0 a 11 9 0 1 0 22 0 a 11 9 0 1 0 -22 0"/><path d="M 18 -48 m -11 0 a 11 9 0 1 0 22 0 a 11 9 0 1 0 -22 0"/><path d="M -10 -55 Q -25 -85 -50 -100" opacity="0.55" stroke-width="1.2"/><path d="M 5 -55 Q 0 -90 15 -110" opacity="0.55" stroke-width="1.2"/><path d="M 20 -50 Q 45 -75 70 -90" opacity="0.55" stroke-width="1.2"/><path d="M -65 -10 Q -45 -30 -25 -22" opacity="0.5" stroke-width="1"/><path d="M 5 -25 Q 25 -38 35 -22" opacity="0.5" stroke-width="1"/><path d="M -22 8 Q -12 -10 5 5" opacity="0.45" stroke-width="1"/><path d="M 8 5 Q 22 -8 38 8" opacity="0.45" stroke-width="1"/><path d="M -38 38 Q -22 25 -8 35" opacity="0.45" stroke-width="1"/><path d="M 22 38 Q 38 25 55 32" opacity="0.45" stroke-width="1"/><path d="M -52 70 Q -38 55 -18 67" opacity="0.45" stroke-width="1"/><path d="M 18 70 Q 35 55 52 65" opacity="0.45" stroke-width="1"/><path d="M -82 60 Q 0 30 80 55" opacity="0.4" stroke-width="1.1"/></g>
+    <g filter="url(#wcRoughNatto)"><path d="M -85 65 m -16 0 a 16 13 0 1 0 32 0 a 16 13 0 1 0 -32 0 Z" fill="url(#wcBodyNatto)"/><path d="M -50 72 m -17 0 a 17 13 0 1 0 34 0 a 17 13 0 1 0 -34 0 Z" fill="url(#wcBodyNatto)"/><path d="M -12 68 m -16 0 a 16 13 0 1 0 32 0 a 16 13 0 1 0 -32 0 Z" fill="url(#wcBodyNatto)"/><path d="M 25 72 m -17 0 a 17 13 0 1 0 34 0 a 17 13 0 1 0 -34 0 Z" fill="url(#wcBodyNatto)"/><path d="M 60 65 m -16 0 a 16 13 0 1 0 32 0 a 16 13 0 1 0 -32 0 Z" fill="url(#wcBodyNatto)"/><path d="M -65 35 m -15 0 a 15 12 0 1 0 30 0 a 15 12 0 1 0 -30 0 Z" fill="url(#wcBodyNatto)"/><path d="M -28 40 m -16 0 a 16 13 0 1 0 32 0 a 16 13 0 1 0 -32 0 Z" fill="url(#wcBodyNatto)"/><path d="M 8 36 m -15 0 a 15 12 0 1 0 30 0 a 15 12 0 1 0 -30 0 Z" fill="url(#wcBodyNatto)"/><path d="M 42 38 m -15 0 a 15 12 0 1 0 30 0 a 15 12 0 1 0 -30 0 Z" fill="url(#wcBodyNatto)"/><path d="M -42 5 m -14 0 a 14 11 0 1 0 28 0 a 14 11 0 1 0 -28 0 Z" fill="url(#wcBodyNatto)"/><path d="M -8 8 m -15 0 a 15 12 0 1 0 30 0 a 15 12 0 1 0 -30 0 Z" fill="url(#wcBodyNatto)"/><path d="M 25 4 m -14 0 a 14 11 0 1 0 28 0 a 14 11 0 1 0 -28 0 Z" fill="url(#wcBodyNatto)"/><path d="M -18 -25 m -13 0 a 13 10 0 1 0 26 0 a 13 10 0 1 0 -26 0 Z" fill="url(#wcBodyNatto)"/><path d="M 14 -28 m -13 0 a 13 10 0 1 0 26 0 a 13 10 0 1 0 -26 0 Z" fill="url(#wcBodyNatto)"/><path d="M -2 -52 m -11 0 a 11 9 0 1 0 22 0 a 11 9 0 1 0 -22 0 Z" fill="url(#wcBodyNatto)"/></g>
+    
+                <!-- 粒のハイライト (各粒に小さな白い艶) -->
+                <g fill="#FFF5DC" opacity="0.7">
+                    <ellipse cx="-89" cy="60" rx="5" ry="3"/>
+                    <ellipse cx="-54" cy="67" rx="6" ry="3.5"/>
+                    <ellipse cx="-16" cy="63" rx="5" ry="3"/>
+                    <ellipse cx="21" cy="67" rx="6" ry="3.5"/>
+                    <ellipse cx="56" cy="60" rx="5" ry="3"/>
+                    <ellipse cx="-69" cy="30" rx="5" ry="3"/>
+                    <ellipse cx="-32" cy="35" rx="5" ry="3"/>
+                    <ellipse cx="4" cy="31" rx="5" ry="3"/>
+                    <ellipse cx="38" cy="33" rx="5" ry="3"/>
+                    <ellipse cx="-46" cy="0" rx="4" ry="2.5"/>
+                    <ellipse cx="-12" cy="3" rx="5" ry="3"/>
+                    <ellipse cx="21" cy="-1" rx="4" ry="2.5"/>
+                    <ellipse cx="-22" cy="-30" rx="4" ry="2.5"/>
+                    <ellipse cx="10" cy="-33" rx="4" ry="2.5"/>
+                    <ellipse cx="-6" cy="-56" rx="3.5" ry="2"/>
+                </g>
+                <!-- 糸引き (白〜半透明の細曲線) -->
+                <g stroke="#FFF5E0" stroke-width="1.5" fill="none" opacity="0.85" stroke-linecap="round">
+                    <path d="M -2 -55 Q -15 -85 -40 -105"/>
+                    <path d="M 14 -55 Q 30 -90 60 -110"/>
+                    <path d="M -18 -32 Q 0 -65 25 -55"/>
+                    <path d="M -8 8 Q 5 -10 25 4"/>
+                    <path d="M -28 40 Q -10 22 8 36"/>
+                    <path d="M -50 72 Q -30 50 -12 68"/>
+                </g>
+                <!-- 糸引きの輝く中心線 (より細く明るく) -->
+                <g stroke="#FFFFFF" stroke-width="0.8" fill="none" opacity="0.6" stroke-linecap="round">
+                    <path d="M -2 -55 Q -15 -85 -40 -105"/>
+                    <path d="M 14 -55 Q 30 -90 60 -110"/>
+                </g>
+            
+    <g stroke="#3D2817" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"><path d="M -85 65 m -16 0 a 16 13 0 1 0 32 0 a 16 13 0 1 0 -32 0" opacity="0.85" stroke-width="2"/><path d="M -50 72 m -17 0 a 17 13 0 1 0 34 0 a 17 13 0 1 0 -34 0" opacity="0.85" stroke-width="2"/><path d="M -12 68 m -16 0 a 16 13 0 1 0 32 0 a 16 13 0 1 0 -32 0" opacity="0.85" stroke-width="2"/><path d="M 25 72 m -17 0 a 17 13 0 1 0 34 0 a 17 13 0 1 0 -34 0" opacity="0.85" stroke-width="2"/><path d="M 60 65 m -16 0 a 16 13 0 1 0 32 0 a 16 13 0 1 0 -32 0" opacity="0.85" stroke-width="2"/><path d="M -65 35 m -15 0 a 15 12 0 1 0 30 0 a 15 12 0 1 0 -30 0" opacity="0.85" stroke-width="2"/><path d="M -28 40 m -16 0 a 16 13 0 1 0 32 0 a 16 13 0 1 0 -32 0" opacity="0.85" stroke-width="2"/><path d="M 8 36 m -15 0 a 15 12 0 1 0 30 0 a 15 12 0 1 0 -30 0" opacity="0.85" stroke-width="2"/><path d="M 42 38 m -15 0 a 15 12 0 1 0 30 0 a 15 12 0 1 0 -30 0" opacity="0.85" stroke-width="2"/><path d="M -42 5 m -14 0 a 14 11 0 1 0 28 0 a 14 11 0 1 0 -28 0" opacity="0.85" stroke-width="2"/><path d="M -8 8 m -15 0 a 15 12 0 1 0 30 0 a 15 12 0 1 0 -30 0" opacity="0.85" stroke-width="2"/><path d="M 25 4 m -14 0 a 14 11 0 1 0 28 0 a 14 11 0 1 0 -28 0" opacity="0.85" stroke-width="2"/><path d="M -18 -25 m -13 0 a 13 10 0 1 0 26 0 a 13 10 0 1 0 -26 0" opacity="0.85" stroke-width="2"/><path d="M 14 -28 m -13 0 a 13 10 0 1 0 26 0 a 13 10 0 1 0 -26 0" opacity="0.85" stroke-width="2"/><path d="M -2 -52 m -11 0 a 11 9 0 1 0 22 0 a 11 9 0 1 0 -22 0" opacity="0.85" stroke-width="2"/></g>
 </svg>

@@ -137,6 +137,7 @@ DETAIL_TEMPLATE = '''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 6
     {ok_bleeds}
     {ok_leaves}
     {ok_body}
+    {ok_extra}
     {ok_ink}
   </g>
 
@@ -187,6 +188,9 @@ def build_detail_svg(spec):
     ok_body = render_body(suffix, [
         (p, None) if isinstance(p, str) else p for p in body_paths
     ])
+    # extra_svg: 任意のカスタム塗り SVG を body と ink の間に挿入
+    # 多色レイヤーが必要な食材 (例: 白菜の断面層、納豆のハイライト) で使用
+    ok_extra = ok.get('extra_svg', '')
     ok_ink = render_ink(ok.get('ink', []))
 
     # NG 側
@@ -228,6 +232,7 @@ def build_detail_svg(spec):
         ok_bleeds=ok_bleeds,
         ok_leaves=ok_leaves,
         ok_body=ok_body,
+        ok_extra=ok_extra,
         ok_ink=ok_ink,
         ng_content=ng_content,
         ok_caption_1=spec['ok_caption_1'],
@@ -700,20 +705,34 @@ FOODS = {
             'bleeds': [
                 (10, 0, 140, 75, '#FFE066'),
             ],
-            # 軸 (緑のヘタ): 「軸が緑 = OK」 の判定ポイントを視覚化
+            # 軸 (緑のヘタ): 大きく明確な緑のヘタ
+            # key_check「黄色+軸が緑=OK」と整合 — バナナ本体の1/8程度
             'leaves': [
-                # ヘタ部 (ステム):上向きに伸びる小さな緑塊
-                'M -98 -38 Q -115 -65 -100 -90 Q -82 -78 -88 -42 Z',
+                # 大きめの緑ヘタ + その上の細い茎
+                'M -103 -45 Q -125 -75 -105 -100 Q -85 -90 -88 -50 Z',
             ],
             # 三日月型のバナナ本体:
             # 上弧(背)はぐっと持ち上がり、下弧(腹)は浅く戻る → 明確なC字
             'body_paths': [
                 'M -98 -38 Q -55 -88 30 -85 Q 95 -75 115 -25 Q 122 -2 105 10 Q 55 -5 -10 -5 Q -75 -8 -95 -22 Q -110 -32 -98 -38 Z',
             ],
+            # extra_svg: ヘタの濃い緑のディテール (より緑感を強調)
+            'extra_svg': '''
+                <!-- ヘタの濃緑コア (より緑色を強調) -->
+                <g fill="#5D8F3D" opacity="0.8">
+                    <path d="M -103 -45 Q -120 -68 -105 -90 Q -90 -82 -94 -55 Z"/>
+                </g>
+                <!-- ヘタの根元 (バナナとの接続部) -->
+                <g fill="#7BAB46" opacity="0.85">
+                    <ellipse cx="-95" cy="-42" rx="10" ry="4"/>
+                </g>
+            ''',
             'ink': [
                 ('M -98 -38 Q -55 -88 30 -85 Q 95 -75 115 -25 Q 122 -2 105 10 Q 55 -5 -10 -5 Q -75 -8 -95 -22 Q -110 -32 -98 -38 Z',),
                 # 緑ヘタの outline
-                ('M -98 -38 Q -115 -65 -100 -90 Q -82 -78 -88 -42 Z', 0.9, 2.2),
+                ('M -103 -45 Q -125 -75 -105 -100 Q -85 -90 -88 -50 Z', 0.9, 2.2),
+                # ヘタの中央線 (茎の縦筋)
+                ('M -100 -50 Q -107 -75 -100 -95', 0.7, 1.5),
                 # 縦リッジ (バナナの稜線、長手方向)
                 ('M -75 -65 Q -10 -75 60 -75', 0.55, 1.4),
                 ('M -75 -25 Q -10 -38 70 -38', 0.5, 1.3),
