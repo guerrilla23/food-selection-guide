@@ -6,7 +6,7 @@
       "id": "daikon",
       "name": {
         "ja": "大根",
-        "en": ""
+        "en": "Daikon Radish"
       },
       "name_kana": "だいこん",
       "name_en": "Daikon",
@@ -17,7 +17,7 @@
       },
       "subcategory": {
         "ja": "根菜",
-        "en": ""
+        "en": "Root vegetable"
       },
       "color_theme": "#F5F5F0",
       "accent_color": "#7BA05B",
@@ -29,7 +29,7 @@
       ],
       "season_peak": {
         "ja": "冬",
-        "en": ""
+        "en": "Winter"
       },
       "ok_points": {
         "ja": [
@@ -38,7 +38,12 @@
           "ずっしりと重く、傷や黒ずみがない",
           "ひげ根の穴が一直線に並んでいる(まっすぐ育った証)"
         ],
-        "en": []
+        "en": [
+          "Vibrant green, fresh leaves",
+          "Tight, glossy white body",
+          "Heavy with no bruises or dark spots",
+          "Hair root holes aligned in a straight line (sign of straight growth)"
+        ]
       },
       "ng_points": {
         "ja": [
@@ -47,39 +52,44 @@
           "持って軽い(水分が抜けている)",
           "ひげ根の穴がジグザグ(育ちが悪い)"
         ],
-        "en": []
+        "en": [
+          "Yellow, wilted leaves",
+          "Wrinkled or spongy surface",
+          "Light weight (water has escaped)",
+          "Hair root holes in zigzag pattern (poor growth)"
+        ]
       },
       "storage": {
         "method": {
           "ja": "葉と根を切り分けて別々に保存",
-          "en": ""
+          "en": "Cut and store leaves and root separately"
         },
         "duration": {
           "ja": "葉:2〜3日 / 根:2週間程度",
-          "en": ""
+          "en": "Leaves: 2-3 days / Root: about 2 weeks"
         },
         "tips": {
           "ja": "新聞紙で包んで野菜室。立てて保存すると長持ち",
-          "en": ""
+          "en": "Wrap in newspaper and refrigerate. Storing upright keeps it fresh longer"
         }
       },
       "summary_ok": {
         "ja": "ハリ・重み・葉が鮮やか",
-        "en": ""
+        "en": "Firm, heavy, vibrant leaves"
       },
       "summary_ng": {
         "ja": "シワ・軽い・葉が黄ばむ",
-        "en": ""
+        "en": "Wrinkled, light, yellow leaves"
       },
       "key_check": {
         "icon": "👆",
         "action": {
           "ja": "白い部分を軽く押す",
-          "en": ""
+          "en": "Gently press the white part"
         },
         "judgment": {
           "ja": "弾力ある = OK",
-          "en": ""
+          "en": "Springy = OK"
         }
       },
       "ok_short": {
@@ -89,7 +99,12 @@
           "重さ:ずっしり",
           "穴:一直線"
         ],
-        "en": []
+        "en": [
+          "Leaves: Green/Firm",
+          "Skin: Tight/Glossy",
+          "Weight: Heavy",
+          "Holes: Aligned"
+        ]
       },
       "ng_short": {
         "ja": [
@@ -98,22 +113,27 @@
           "重さ:軽い",
           "穴:ジグザグ"
         ],
-        "en": []
+        "en": [
+          "Leaves: Yellow/Wilted",
+          "Skin: Wrinkled",
+          "Weight: Light",
+          "Holes: Zigzag"
+        ]
       },
       "usage_tips": {
         "ja": "上部=甘い(サラダ・大根おろし)、中央=バランス(煮物)、下部=辛い(漬物・薬味)",
-        "en": ""
+        "en": "Top = sweet (salads, grated radish); middle = balanced (simmered dishes); bottom = spicy (pickles, condiments)"
       },
       "nutrition_highlight": {
         "ja": "ビタミンC、消化酵素(ジアスターゼ)、葉部分はβ-カロテン豊富",
-        "en": ""
+        "en": "Vitamin C and digestive enzymes (diastase). Leaves are rich in β-carotene"
       }
     },
     {
       "id": "carrot",
       "name": {
         "ja": "人参",
-        "en": ""
+        "en": "Carrot"
       },
       "name_kana": "にんじん",
       "name_en": "Carrot",
@@ -124,7 +144,7 @@
       },
       "subcategory": {
         "ja": "根菜",
-        "en": ""
+        "en": "Root vegetable"
       },
       "color_theme": "#FF8C42",
       "accent_color": "#D45F1A",
@@ -137,7 +157,7 @@
       ],
       "season_peak": {
         "ja": "秋〜冬",
-        "en": ""
+        "en": "Autumn–Winter"
       },
       "ok_points": {
         "ja": [
@@ -146,7 +166,12 @@
           "首(葉の付け根)の切り口が小さい(柔らかい証)",
           "ひげ根が少なくまっすぐ"
         ],
-        "en": []
+        "en": [
+          "Vivid, even orange color throughout",
+          "Smooth surface with firmness",
+          "Small top stem cut (sign of tender carrot)",
+          "Few hair roots, straight shape"
+        ]
       },
       "ng_points": {
         "ja": [
@@ -155,39 +180,44 @@
           "首の切り口が大きく黒ずんでいる",
           "ひげ根が多くゴツゴツしている"
         ],
-        "en": []
+        "en": [
+          "Dull color or visible spots",
+          "Wrinkles or soft areas on the surface",
+          "Large, blackened top cut",
+          "Many rough hair roots"
+        ]
       },
       "storage": {
         "method": {
           "ja": "葉を切り落とし、新聞紙やキッチンペーパーで包む",
-          "en": ""
+          "en": "Cut off greens, wrap in newspaper or paper towel"
         },
         "duration": {
           "ja": "冷蔵庫で2〜3週間",
-          "en": ""
+          "en": "2-3 weeks in the refrigerator"
         },
         "tips": {
           "ja": "湿気を嫌うので水分は拭き取る。立てて保存",
-          "en": ""
+          "en": "Dislikes humidity. Wipe off moisture and store upright"
         }
       },
       "summary_ok": {
         "ja": "鮮やかオレンジ・滑らか・首切口が小",
-        "en": ""
+        "en": "Vivid orange, smooth, small top cut"
       },
       "summary_ng": {
         "ja": "色がくすむ・斑点・切口が大",
-        "en": ""
+        "en": "Dull color, spots, large cut"
       },
       "key_check": {
         "icon": "👁",
         "action": {
           "ja": "首の切り口を見る",
-          "en": ""
+          "en": "Look at the top stem cut"
         },
         "judgment": {
           "ja": "500円玉より小 = OK",
-          "en": ""
+          "en": "Smaller than a quarter coin = OK"
         }
       },
       "ok_short": {
@@ -197,7 +227,12 @@
           "首:小さい",
           "ヒゲ:少なめ"
         ],
-        "en": []
+        "en": [
+          "Color: Vivid orange",
+          "Skin: Smooth",
+          "Top cut: Small",
+          "Roots: Few"
+        ]
       },
       "ng_short": {
         "ja": [
@@ -206,22 +241,27 @@
           "首:大・黒ずみ",
           "ヒゲ:多い"
         ],
-        "en": []
+        "en": [
+          "Color: Dull",
+          "Skin: Wrinkled/Spotted",
+          "Top cut: Large/Dark",
+          "Roots: Many"
+        ]
       },
       "usage_tips": {
         "ja": "皮の近くに栄養が多いので、皮ごと使うかピーラーで薄く剥く",
-        "en": ""
+        "en": "Most nutrients are near the skin. Use with skin on or peel thinly"
       },
       "nutrition_highlight": {
         "ja": "β-カロテン(ビタミンA)が圧倒的に豊富。油と一緒に摂ると吸収UP",
-        "en": ""
+        "en": "Exceptionally rich in β-carotene (vitamin A). Absorption improves when eaten with oil"
       }
     },
     {
       "id": "negi",
       "name": {
         "ja": "ねぎ(長ねぎ)",
-        "en": ""
+        "en": "Negi (Japanese Long Onion)"
       },
       "name_kana": "ねぎ ながねぎ",
       "name_en": "Long Onion",
@@ -232,7 +272,7 @@
       },
       "subcategory": {
         "ja": "葉物・香味",
-        "en": ""
+        "en": "Leafy / Aromatic"
       },
       "color_theme": "#E8F5E9",
       "accent_color": "#2C5F2D",
@@ -244,7 +284,7 @@
       ],
       "season_peak": {
         "ja": "冬",
-        "en": ""
+        "en": "Winter"
       },
       "ok_points": {
         "ja": [
@@ -253,7 +293,12 @@
           "葉先までピンとハリがある",
           "持つとずっしり重い"
         ],
-        "en": []
+        "en": [
+          "White part is thick and tightly packed",
+          "Sharp boundary between green and white",
+          "Leaves firm all the way to the tip",
+          "Feels heavy when held"
+        ]
       },
       "ng_points": {
         "ja": [
@@ -262,39 +307,44 @@
           "葉先が萎れている",
           "切り口が乾燥して茶色"
         ],
-        "en": []
+        "en": [
+          "White part is thin with a hollow feel",
+          "Green leaves are yellowing",
+          "Leaf tips are wilted",
+          "Cut end is dry and brown"
+        ]
       },
       "storage": {
         "method": {
           "ja": "緑と白を切り分け、白は新聞紙で包んで冷蔵 / 緑は密閉容器",
-          "en": ""
+          "en": "Separate green and white parts. Wrap white in newspaper for refrigerator; store green in airtight container"
         },
         "duration": {
           "ja": "白:1週間程度 / 緑:3〜4日",
-          "en": ""
+          "en": "White: about 1 week / Green: 3-4 days"
         },
         "tips": {
           "ja": "土付きはそのまま冷暗所で2週間以上もつ。冷凍保存も可",
-          "en": ""
+          "en": "Negi with soil keeps 2+ weeks in a cool, dark place. Freezing also works"
         }
       },
       "summary_ok": {
         "ja": "白が太い・境目くっきり・葉先までハリ",
-        "en": ""
+        "en": "Thick white, sharp boundary, firm leaves"
       },
       "summary_ng": {
         "ja": "白が細い・葉が黄ばむ・切口が乾燥",
-        "en": ""
+        "en": "Thin white, yellowing, dry cut"
       },
       "key_check": {
         "icon": "🤏",
         "action": {
           "ja": "白い部分を握る",
-          "en": ""
+          "en": "Squeeze the white part"
         },
         "judgment": {
           "ja": "ぎっしり感 = OK",
-          "en": ""
+          "en": "Tightly packed = OK"
         }
       },
       "ok_short": {
@@ -304,7 +354,12 @@
           "葉:ピン",
           "重さ:ずっしり"
         ],
-        "en": []
+        "en": [
+          "White: Thick",
+          "Boundary: Sharp",
+          "Leaves: Firm",
+          "Weight: Heavy"
+        ]
       },
       "ng_short": {
         "ja": [
@@ -313,22 +368,27 @@
           "葉先:萎れ",
           "切口:乾燥"
         ],
-        "en": []
+        "en": [
+          "White: Thin/Hollow",
+          "Leaves: Yellowed",
+          "Tip: Wilted",
+          "Cut end: Dry"
+        ]
       },
       "usage_tips": {
         "ja": "白い部分=加熱で甘み(鍋・煮物) / 緑の部分=薬味・炒め物",
-        "en": ""
+        "en": "White = sweetens when heated (hot pots, simmered dishes); green = condiment, stir-fry"
       },
       "nutrition_highlight": {
         "ja": "アリシン(疲労回復・抗菌)、緑部分はβ-カロテン・ビタミンC",
-        "en": ""
+        "en": "Allicin (fatigue recovery, antibacterial). Green parts have β-carotene and vitamin C"
       }
     },
     {
       "id": "tomato",
       "name": {
         "ja": "トマト",
-        "en": ""
+        "en": "Tomato"
       },
       "name_kana": "とまと",
       "name_en": "Tomato",
@@ -339,7 +399,7 @@
       },
       "subcategory": {
         "ja": "果菜",
-        "en": ""
+        "en": "Fruit vegetable"
       },
       "color_theme": "#FFE5E0",
       "accent_color": "#D43A2A",
@@ -351,17 +411,17 @@
       ],
       "season_peak": {
         "ja": "夏",
-        "en": ""
+        "en": "Summer"
       },
       "key_check": {
         "icon": "👀",
         "action": {
           "ja": "ヘタを見る",
-          "en": ""
+          "en": "Look at the stem (calyx)"
         },
         "judgment": {
           "ja": "緑がピン = OK",
-          "en": ""
+          "en": "Green and firm = OK"
         }
       },
       "ok_short": {
@@ -371,7 +431,12 @@
           "肌:ハリ・ツヤ",
           "重さ:ずっしり"
         ],
-        "en": []
+        "en": [
+          "Color: Vivid red",
+          "Stem: Green/Firm",
+          "Skin: Tight/Glossy",
+          "Weight: Heavy"
+        ]
       },
       "ng_short": {
         "ja": [
@@ -380,7 +445,12 @@
           "肌:シワ・黒ずみ",
           "感触:柔らかい"
         ],
-        "en": []
+        "en": [
+          "Color: Dull",
+          "Stem: Brown/Wilted",
+          "Skin: Wrinkled/Dark",
+          "Feel: Soft"
+        ]
       },
       "ok_points": {
         "ja": [
@@ -389,7 +459,12 @@
           "皮にハリとツヤがあり、傷がない",
           "持つとずっしり重く、お尻に放射状の白い筋(完熟マーク)がある"
         ],
-        "en": []
+        "en": [
+          "Evenly vivid red throughout",
+          "Calyx is bright green and stands firm",
+          "Tight, glossy skin with no blemishes",
+          "Feels heavy; star-shaped white lines on the bottom (ripeness mark)"
+        ]
       },
       "ng_points": {
         "ja": [
@@ -398,44 +473,49 @@
           "皮にシワや黒ずみ、軟化した部分がある",
           "持って軽い、押すとブヨブヨ凹む"
         ],
-        "en": []
+        "en": [
+          "Dull or partly unripe green color",
+          "Calyx is brown, wilted, or dark at the base",
+          "Wrinkles, dark spots, or softened areas",
+          "Light weight; mushy when pressed"
+        ]
       },
       "summary_ok": {
         "ja": "鮮赤・ヘタ緑・ハリ",
-        "en": ""
+        "en": "Vivid red, green stem, firm"
       },
       "summary_ng": {
         "ja": "くすみ・ヘタ枯れ・柔らか",
-        "en": ""
+        "en": "Dull, dry stem, soft"
       },
       "storage": {
         "method": {
           "ja": "完熟は冷蔵、未熟は常温で追熟",
-          "en": ""
+          "en": "Refrigerate when ripe; ripen unripe ones at room temperature"
         },
         "duration": {
           "ja": "完熟:3〜4日 / 未熟:2〜3日(常温)",
-          "en": ""
+          "en": "Ripe: 3-4 days / Unripe: 2-3 days at room temp"
         },
         "tips": {
           "ja": "ヘタを下にして保存すると傷みにくい。冷凍で長期保存も可",
-          "en": ""
+          "en": "Storing stem-side down prevents bruising. Freezes well for long-term storage"
         }
       },
       "usage_tips": {
         "ja": "皮ごと加熱で旨味UP(リコピンの吸収率も向上)。サラダは完熟、煮込みは少し硬めが扱いやすい",
-        "en": ""
+        "en": "Cooking with skin on boosts umami and lycopene absorption. Ripe ones for salads; firmer ones hold up better in cooking"
       },
       "nutrition_highlight": {
         "ja": "リコピン(抗酸化)、ビタミンC、カリウム。加熱+油でリコピン吸収率2〜3倍",
-        "en": ""
+        "en": "Lycopene (antioxidant), vitamin C, potassium. Heating with oil increases lycopene absorption 2-3×"
       }
     },
     {
       "id": "onion",
       "name": {
         "ja": "玉ねぎ",
-        "en": ""
+        "en": "Onion"
       },
       "name_kana": "たまねぎ",
       "name_en": "Onion",
@@ -446,7 +526,7 @@
       },
       "subcategory": {
         "ja": "葉物・香味",
-        "en": ""
+        "en": "Leafy / Aromatic"
       },
       "color_theme": "#F5E8D0",
       "accent_color": "#B89048",
@@ -459,17 +539,17 @@
       ],
       "season_peak": {
         "ja": "春・秋",
-        "en": ""
+        "en": "Spring & Autumn"
       },
       "key_check": {
         "icon": "🤲",
         "action": {
           "ja": "頭とお尻を握る",
-          "en": ""
+          "en": "Squeeze the top and bottom"
         },
         "judgment": {
           "ja": "硬く締まる = OK",
-          "en": ""
+          "en": "Hard and tight = OK"
         }
       },
       "ok_short": {
@@ -479,7 +559,12 @@
           "重さ:ずっしり",
           "芽:出ていない"
         ],
-        "en": []
+        "en": [
+          "Skin: Crisp",
+          "Top: Hard/Tight",
+          "Weight: Heavy",
+          "Sprouts: None"
+        ]
       },
       "ng_short": {
         "ja": [
@@ -488,7 +573,12 @@
           "中央:芽が出る",
           "底:カビ"
         ],
-        "en": []
+        "en": [
+          "Skin: Sticky",
+          "Top: Soft",
+          "Center: Sprouting",
+          "Bottom: Mold"
+        ]
       },
       "ok_points": {
         "ja": [
@@ -497,7 +587,12 @@
           "ずっしり重く、形が左右対称",
           "芽が出ていない、青いカビがない"
         ],
-        "en": []
+        "en": [
+          "Skin is crisp and dry, with shine and firmness",
+          "Top (sprout end) and bottom (root end) are hard and tight",
+          "Heavy weight with symmetrical shape",
+          "No sprouts emerging, no blue mold"
+        ]
       },
       "ng_points": {
         "ja": [
@@ -506,37 +601,42 @@
           "押すと柔らかく、形が崩れている",
           "底に青いカビや黒い斑点がある"
         ],
-        "en": []
+        "en": [
+          "Sticky or moist skin",
+          "Green sprouts emerging from top or center",
+          "Soft when pressed, shape collapsing",
+          "Blue mold or black spots on the bottom"
+        ]
       },
       "summary_ok": {
         "ja": "皮パリ・締まる・芽なし",
-        "en": ""
+        "en": "Crisp skin, tight, no sprouts"
       },
       "summary_ng": {
         "ja": "湿り・芽が伸びる・カビ",
-        "en": ""
+        "en": "Moist, sprouting, mold"
       },
       "storage": {
         "method": {
           "ja": "風通しの良い冷暗所。湿気を嫌う",
-          "en": ""
+          "en": "Cool, dry, well-ventilated area. Avoid humidity"
         },
         "duration": {
           "ja": "常温で1〜2ヶ月、新玉ねぎは冷蔵で1週間",
-          "en": ""
+          "en": "1-2 months at room temp; new onions 1 week in the fridge"
         },
         "tips": {
           "ja": "ネットに入れて吊るすと長持ち。冷蔵庫の野菜室は避ける(湿気で腐りやすい)",
-          "en": ""
+          "en": "Hang in a mesh bag to last longer. Avoid the vegetable drawer (humidity causes rot)"
         }
       },
       "usage_tips": {
         "ja": "切って空気に触れると辛み成分が活性化。生食は薄切り→水にさらす(ただし栄養も流れる)。加熱で甘み倍増",
-        "en": ""
+        "en": "Cutting activates pungent compounds. For raw use, slice thin and rinse (also washes away nutrients). Heating brings out sweetness"
       },
       "nutrition_highlight": {
         "ja": "アリシン(血液サラサラ・疲労回復)、ケルセチン(抗酸化)。皮の近くに栄養豊富",
-        "en": ""
+        "en": "Allicin (blood circulation, fatigue recovery), quercetin (antioxidant). Most nutrients are near the skin"
       }
     },
     {
@@ -773,7 +873,7 @@
       "id": "potato",
       "name": {
         "ja": "じゃがいも",
-        "en": ""
+        "en": "Potato"
       },
       "name_kana": "じゃがいも",
       "name_en": "Potato",
@@ -784,7 +884,7 @@
       },
       "subcategory": {
         "ja": "いも類",
-        "en": ""
+        "en": "Tuber"
       },
       "color_theme": "#F0E0C5",
       "accent_color": "#A07848",
@@ -797,17 +897,17 @@
       ],
       "season_peak": {
         "ja": "春・秋",
-        "en": ""
+        "en": "Spring & Autumn"
       },
       "key_check": {
         "icon": "👀",
         "action": {
           "ja": "皮の色と芽を見る",
-          "en": ""
+          "en": "Check the skin and eyes"
         },
         "judgment": {
           "ja": "緑なし + 芽なし = OK",
-          "en": ""
+          "en": "No green, no sprouts = OK"
         }
       },
       "ok_short": {
@@ -817,7 +917,12 @@
           "芽:出ていない",
           "重さ:ずっしり"
         ],
-        "en": []
+        "en": [
+          "Skin: Tight/Glossy",
+          "Color: Brown/Tan",
+          "Sprouts: None",
+          "Weight: Heavy"
+        ]
       },
       "ng_short": {
         "ja": [
@@ -826,7 +931,12 @@
           "肌:シワ・柔らか",
           "黒:斑点あり"
         ],
-        "en": []
+        "en": [
+          "Green: Skin/Flesh",
+          "Sprouts: Long",
+          "Skin: Wrinkled/Soft",
+          "Spots: Dark"
+        ]
       },
       "ok_points": {
         "ja": [
@@ -835,7 +945,12 @@
           "芽が出ていない、または非常に小さい",
           "同じ大きさで持って重い(でんぷん多くホクホク)"
         ],
-        "en": []
+        "en": [
+          "Tight skin and a firm surface",
+          "No green-tinted areas (solanine warning)",
+          "No sprouts, or only very small ones",
+          "Heavy for its size (high starch, fluffy texture)"
+        ]
       },
       "ng_points": {
         "ja": [
@@ -844,44 +959,49 @@
           "シワが寄っている、押すと柔らかい",
           "黒い斑点や腐敗臭がある"
         ],
-        "en": []
+        "en": [
+          "Skin or flesh tinted green (solanine = bitter, harmful)",
+          "Long sprouts with green areas around them",
+          "Wrinkles or softness when pressed",
+          "Dark spots or rotten smell"
+        ]
       },
       "summary_ok": {
         "ja": "皮ハリ・緑なし・重い",
-        "en": ""
+        "en": "Tight skin, no green, heavy"
       },
       "summary_ng": {
         "ja": "緑・芽伸び・シワ",
-        "en": ""
+        "en": "Green, sprouting, wrinkled"
       },
       "storage": {
         "method": {
           "ja": "風通しの良い冷暗所(光を避ける)、常温保存",
-          "en": ""
+          "en": "Cool, dark, well-ventilated place at room temperature (avoid light)"
         },
         "duration": {
           "ja": "常温で1〜2ヶ月。新じゃがは2週間",
-          "en": ""
+          "en": "1-2 months at room temp; new potatoes 2 weeks"
         },
         "tips": {
           "ja": "りんごと一緒に置くと芽が出にくい(エチレンガス効果)。冷蔵庫NG(でんぷんが糖化)",
-          "en": ""
+          "en": "Storing with apples slows sprouting (ethylene effect). Do NOT refrigerate (starch turns to sugar)"
         }
       },
       "usage_tips": {
         "ja": "緑・芽は厚めに取り除く(ソラニン除去)。男爵=ホクホク(コロッケ)、メークイン=煮崩れにくい(煮物)",
-        "en": ""
+        "en": "Cut away green and sprouted parts thickly (solanine removal). Danshaku = fluffy (croquettes); May Queen = firm (stews)"
       },
       "nutrition_highlight": {
         "ja": "ビタミンC(加熱に強い、でんぷんが守る)、カリウム(むくみ予防)、食物繊維",
-        "en": ""
+        "en": "Vitamin C (heat-stable, protected by starch), potassium (anti-edema), dietary fiber"
       }
     },
     {
       "id": "cabbage",
       "name": {
         "ja": "キャベツ",
-        "en": ""
+        "en": "Cabbage"
       },
       "name_kana": "きゃべつ",
       "name_en": "Cabbage",
@@ -892,7 +1012,7 @@
       },
       "subcategory": {
         "ja": "葉物",
-        "en": ""
+        "en": "Leafy vegetable"
       },
       "color_theme": "#E0F0D0",
       "accent_color": "#5D9F3D",
@@ -907,17 +1027,17 @@
       ],
       "season_peak": {
         "ja": "春・冬",
-        "en": ""
+        "en": "Spring & Winter"
       },
       "key_check": {
         "icon": "🤲",
         "action": {
           "ja": "持ち上げて重さ確認",
-          "en": ""
+          "en": "Lift and check the weight"
         },
         "judgment": {
           "ja": "ずっしり = OK",
-          "en": ""
+          "en": "Heavy = OK"
         }
       },
       "ok_short": {
@@ -927,7 +1047,12 @@
           "切口:白い",
           "葉:詰まる"
         ],
-        "en": []
+        "en": [
+          "Weight: Heavy",
+          "Outer leaves: Green/Firm",
+          "Cut end: White",
+          "Leaves: Tight"
+        ]
       },
       "ng_short": {
         "ja": [
@@ -936,7 +1061,12 @@
           "切口:茶色",
           "葉:離れる"
         ],
-        "en": []
+        "en": [
+          "Weight: Light/Hollow",
+          "Outer leaves: Yellow/Wilted",
+          "Cut end: Brown",
+          "Leaves: Loose"
+        ]
       },
       "ok_points": {
         "ja": [
@@ -945,7 +1075,12 @@
           "切り口が白くみずみずしい(変色していない)",
           "葉と葉の間が締まっていて、隙間が少ない"
         ],
-        "en": []
+        "en": [
+          "Heavy for its size (leaves are tightly packed)",
+          "Outer leaves are vivid green and firm",
+          "Cut end is white and fresh (no discoloration)",
+          "Leaves are tightly packed with little gap between them"
+        ]
       },
       "ng_points": {
         "ja": [
@@ -954,44 +1089,49 @@
           "切り口が茶色く乾燥またはベタつく",
           "葉が外側に開いて隙間が大きい"
         ],
-        "en": []
+        "en": [
+          "Light weight (hollow inside)",
+          "Outer leaves are yellow, wilted, or darkened",
+          "Cut end is brown, dry, or sticky",
+          "Leaves spread outward with large gaps"
+        ]
       },
       "summary_ok": {
         "ja": "重い・緑ピン・切口白",
-        "en": ""
+        "en": "Heavy, firm green, white cut"
       },
       "summary_ng": {
         "ja": "軽い・黄ばむ・切口茶",
-        "en": ""
+        "en": "Light, yellowed, brown cut"
       },
       "storage": {
         "method": {
           "ja": "外葉1枚は付けたまま、芯をくり抜き濡れキッチンペーパーを詰めて冷蔵",
-          "en": ""
+          "en": "Keep one outer leaf on, scoop out core and pack with damp paper towel. Refrigerate"
         },
         "duration": {
           "ja": "丸ごと:2週間、カット:3〜4日",
-          "en": ""
+          "en": "Whole: 2 weeks / Cut: 3-4 days"
         },
         "tips": {
           "ja": "カット品は切り口にラップ。冷凍はざく切り→塩もみ後OK",
-          "en": ""
+          "en": "Cover cut surface with plastic wrap. Freezing OK after blanching and salting"
         }
       },
       "usage_tips": {
         "ja": "春キャベツ=軟らかい(生・サラダ)、冬キャベツ=硬く詰まる(炒め・煮込み)。芯にも栄養豊富",
-        "en": ""
+        "en": "Spring cabbage = soft (raw, salads); winter cabbage = dense (stir-fry, stews). The core is also nutritious"
       },
       "nutrition_highlight": {
         "ja": "ビタミンC・K、キャベジン(胃粘膜保護)。生食でビタミンC効率良く",
-        "en": ""
+        "en": "Vitamin C and K, cabagin (stomach lining protection). Eaten raw for best vitamin C absorption"
       }
     },
     {
       "id": "cucumber",
       "name": {
         "ja": "きゅうり",
-        "en": ""
+        "en": "Cucumber"
       },
       "name_kana": "きゅうり",
       "name_en": "Cucumber",
@@ -1002,7 +1142,7 @@
       },
       "subcategory": {
         "ja": "果菜",
-        "en": ""
+        "en": "Fruit vegetable"
       },
       "color_theme": "#E5F0D5",
       "accent_color": "#5D8F3D",
@@ -1013,17 +1153,17 @@
       ],
       "season_peak": {
         "ja": "夏",
-        "en": ""
+        "en": "Summer"
       },
       "key_check": {
         "icon": "👆",
         "action": {
           "ja": "イボを軽く触る",
-          "en": ""
+          "en": "Touch the bumps lightly"
         },
         "judgment": {
           "ja": "チクチクする = OK",
-          "en": ""
+          "en": "Prickly = OK (fresh)"
         }
       },
       "ok_short": {
@@ -1033,7 +1173,12 @@
           "太さ:均一",
           "ハリ:あり"
         ],
-        "en": []
+        "en": [
+          "Bumps: Prickly",
+          "Color: Deep green",
+          "Thickness: Even",
+          "Firmness: Yes"
+        ]
       },
       "ng_short": {
         "ja": [
@@ -1042,7 +1187,12 @@
           "太さ:不均一",
           "感触:柔らかい"
         ],
-        "en": []
+        "en": [
+          "Bumps: None (old)",
+          "Color: Yellowish",
+          "Thickness: Uneven",
+          "Feel: Soft"
+        ]
       },
       "ok_points": {
         "ja": [
@@ -1051,7 +1201,12 @@
           "太さが端から端まで均一",
           "持つとピンと張った硬さがある"
         ],
-        "en": []
+        "en": [
+          "Bumps (called \"ibo\") are sharp and prickly (sign of freshness)",
+          "Deep green color with shine",
+          "Even thickness from end to end",
+          "Firm and taut when held"
+        ]
       },
       "ng_points": {
         "ja": [
@@ -1060,37 +1215,42 @@
           "太さが不均一、しなる",
           "両端が柔らかい、ぶよぶよ"
         ],
-        "en": []
+        "en": [
+          "Smooth surface with no bumps (old)",
+          "Yellowish or with white spots",
+          "Uneven thickness, bends easily",
+          "Soft, mushy ends"
+        ]
       },
       "summary_ok": {
         "ja": "イボあり・濃緑・ハリ",
-        "en": ""
+        "en": "Prickly bumps, deep green, firm"
       },
       "summary_ng": {
         "ja": "イボなし・黄ばみ・しなる",
-        "en": ""
+        "en": "Smooth, yellowed, soft"
       },
       "storage": {
         "method": {
           "ja": "1本ずつキッチンペーパーで包み、ヘタを上にして立てて冷蔵",
-          "en": ""
+          "en": "Wrap each in paper towel, store upright (stem up) in the refrigerator"
         },
         "duration": {
           "ja": "冷蔵で4〜5日",
-          "en": ""
+          "en": "4-5 days refrigerated"
         },
         "tips": {
           "ja": "低温に弱い(10℃以下で傷む)。野菜室がベスト。水気は厳禁",
-          "en": ""
+          "en": "Sensitive to cold (damage below 10°C). Vegetable drawer is best. Keep dry"
         }
       },
       "usage_tips": {
         "ja": "曲がっていても味は同じ(安く買えるチャンス)。塩で板ずり→アク抜き+色鮮やか。皮の近くに栄養",
-        "en": ""
+        "en": "Curved ones taste the same (often cheaper). Salt-roll for color and to remove bitterness. Most nutrients near the skin"
       },
       "nutrition_highlight": {
         "ja": "95%が水分。カリウム(利尿)、ビタミンK。低カロリーで夏の水分補給に最適",
-        "en": ""
+        "en": "95% water. Potassium (diuretic), vitamin K. Low calorie, perfect for summer hydration"
       }
     },
     {
@@ -1319,7 +1479,7 @@
       "id": "garlic",
       "name": {
         "ja": "ニンニク",
-        "en": ""
+        "en": "Garlic"
       },
       "name_kana": "にんにく",
       "name_en": "Garlic",
@@ -1330,7 +1490,7 @@
       },
       "subcategory": {
         "ja": "葉物・香味",
-        "en": ""
+        "en": "Leafy / Aromatic"
       },
       "color_theme": "#F0E0C5",
       "accent_color": "#A07848",
@@ -1341,17 +1501,17 @@
       ],
       "season_peak": {
         "ja": "初夏",
-        "en": ""
+        "en": "Early summer"
       },
       "key_check": {
         "icon": "🤲",
         "action": {
           "ja": "握って固さ確認",
-          "en": ""
+          "en": "Squeeze to check firmness"
         },
         "judgment": {
           "ja": "硬く詰まる = OK",
-          "en": ""
+          "en": "Hard and packed = OK"
         }
       },
       "ok_short": {
@@ -1361,7 +1521,12 @@
           "重さ:重い",
           "芽:なし"
         ],
-        "en": []
+        "en": [
+          "Skin: Crisp",
+          "Shape: Even",
+          "Weight: Heavy",
+          "Sprouts: None"
+        ]
       },
       "ng_short": {
         "ja": [
@@ -1370,7 +1535,12 @@
           "芽:伸び",
           "底:カビ"
         ],
-        "en": []
+        "en": [
+          "Skin: Loose",
+          "Inside: Hollow",
+          "Sprouts: Growing",
+          "Bottom: Mold"
+        ]
       },
       "ok_points": {
         "ja": [
@@ -1379,7 +1549,12 @@
           "芽が出ていない、緑色の芽が見えない",
           "形が整っていて、片方が極端に小さくない"
         ],
-        "en": []
+        "en": [
+          "Skin is crisp and dry, firm and shiny",
+          "Bulb is hard with cloves tightly packed",
+          "No green sprouts emerging",
+          "Even shape, no extremely small cloves"
+        ]
       },
       "ng_points": {
         "ja": [
@@ -1388,44 +1563,49 @@
           "緑の芽が外に出ている",
           "底に青カビや黒い斑点がある"
         ],
-        "en": []
+        "en": [
+          "Skin is loose or starting to peel",
+          "Hollow inside, feels light",
+          "Green sprouts visible from outside",
+          "Blue mold or black spots on the bottom"
+        ]
       },
       "summary_ok": {
         "ja": "皮パリ・固い・芽なし",
-        "en": ""
+        "en": "Crisp skin, hard, no sprouts"
       },
       "summary_ng": {
         "ja": "スカスカ・芽伸び・カビ",
-        "en": ""
+        "en": "Hollow, sprouting, moldy"
       },
       "storage": {
         "method": {
           "ja": "風通しの良い冷暗所、湿気を避ける",
-          "en": ""
+          "en": "Cool, dark, well-ventilated area. Avoid humidity"
         },
         "duration": {
           "ja": "常温で1〜2ヶ月",
-          "en": ""
+          "en": "1-2 months at room temperature"
         },
         "tips": {
           "ja": "ネットや新聞紙に包んで吊るすと長持ち",
-          "en": ""
+          "en": "Hanging in a mesh bag or wrapping in newspaper extends life"
         }
       },
       "usage_tips": {
         "ja": "切ってから空気に触れさせると香り強くなる。芽は苦味の原因なので除去推奨",
-        "en": ""
+        "en": "Cutting and exposing to air activates aroma. Sprouts cause bitterness, so remove them"
       },
       "nutrition_highlight": {
         "ja": "アリシン(免疫力UP)、ビタミンB1。疲労回復・風邪予防の定番",
-        "en": ""
+        "en": "Allicin (immune boost), vitamin B1. Classic for fatigue recovery and cold prevention"
       }
     },
     {
       "id": "komatsuna",
       "name": {
         "ja": "小松菜",
-        "en": ""
+        "en": "Komatsuna (Japanese Mustard Spinach)"
       },
       "name_kana": "こまつな",
       "name_en": "Komatsuna",
@@ -1436,7 +1616,7 @@
       },
       "subcategory": {
         "ja": "葉物",
-        "en": ""
+        "en": "Leafy vegetable"
       },
       "color_theme": "#E0F0D0",
       "accent_color": "#5D8F3D",
@@ -1448,17 +1628,17 @@
       ],
       "season_peak": {
         "ja": "冬",
-        "en": ""
+        "en": "Winter"
       },
       "key_check": {
         "icon": "👀",
         "action": {
           "ja": "葉先を見る",
-          "en": ""
+          "en": "Look at the leaf tips"
         },
         "judgment": {
           "ja": "ピンと張る = OK",
-          "en": ""
+          "en": "Firm = OK"
         }
       },
       "ok_short": {
@@ -1468,7 +1648,12 @@
           "切口:白",
           "ツヤ:あり"
         ],
-        "en": []
+        "en": [
+          "Leaves: Deep green",
+          "Stems: Firm",
+          "Cut end: White",
+          "Shine: Yes"
+        ]
       },
       "ng_short": {
         "ja": [
@@ -1477,7 +1662,12 @@
           "切口:茶色",
           "斑点:黒"
         ],
-        "en": []
+        "en": [
+          "Leaves: Yellowed",
+          "Stems: Wilted",
+          "Cut end: Brown",
+          "Spots: Black"
+        ]
       },
       "ok_points": {
         "ja": [
@@ -1486,7 +1676,12 @@
           "葉や茎にハリ・ツヤがある",
           "全体的にみずみずしい"
         ],
-        "en": []
+        "en": [
+          "Vibrant deep green leaves, firm to the very tip",
+          "Stem base is solid with white cut surface",
+          "Leaves and stems are firm and shiny",
+          "Overall fresh and crisp"
+        ]
       },
       "ng_points": {
         "ja": [
@@ -1495,44 +1690,49 @@
           "黒い斑点や穴がある(虫食い・病気)",
           "全体的に元気がなく、しんなり"
         ],
-        "en": []
+        "en": [
+          "Yellowed, wilted leaves",
+          "Stem cut is brown, dry, or sticky",
+          "Black spots or holes (insect or disease damage)",
+          "Whole vegetable looks limp"
+        ]
       },
       "summary_ok": {
         "ja": "葉ピン・茎硬・切口白",
-        "en": ""
+        "en": "Firm leaves, solid stem, white cut"
       },
       "summary_ng": {
         "ja": "葉黄ばみ・萎れ・斑点",
-        "en": ""
+        "en": "Yellowed, wilted, spots"
       },
       "storage": {
         "method": {
           "ja": "湿らせた新聞紙で包み立てて冷蔵",
-          "en": ""
+          "en": "Wrap in damp newspaper, store upright in the refrigerator"
         },
         "duration": {
           "ja": "冷蔵で3〜4日",
-          "en": ""
+          "en": "3-4 days refrigerated"
         },
         "tips": {
           "ja": "冷凍保存可: 茹でて水気を絞って小分け",
-          "en": ""
+          "en": "Freezes well: blanch, drain, and portion into small bags"
         }
       },
       "usage_tips": {
         "ja": "アクが少なく下茹で不要(ホウレンソウより手軽)。生でもサラダで使える",
-        "en": ""
+        "en": "Low in bitterness, no need to blanch (easier than spinach). Even works raw in salads"
       },
       "nutrition_highlight": {
         "ja": "カルシウム・鉄分が豊富。ホウレンソウより多い。ビタミンK・C・βカロテン",
-        "en": ""
+        "en": "Rich in calcium and iron (more than spinach). Also vitamin K, C, and β-carotene"
       }
     },
     {
       "id": "lettuce",
       "name": {
         "ja": "レタス",
-        "en": ""
+        "en": "Lettuce"
       },
       "name_kana": "れたす",
       "name_en": "Lettuce",
@@ -1543,7 +1743,7 @@
       },
       "subcategory": {
         "ja": "葉物",
-        "en": ""
+        "en": "Leafy vegetable"
       },
       "color_theme": "#E5F0CC",
       "accent_color": "#7BAB46",
@@ -1557,17 +1757,17 @@
       ],
       "season_peak": {
         "ja": "春〜秋",
-        "en": ""
+        "en": "Spring–Autumn"
       },
       "key_check": {
         "icon": "🤲",
         "action": {
           "ja": "持ち上げる",
-          "en": ""
+          "en": "Lift it up"
         },
         "judgment": {
           "ja": "軽くフワッ = OK",
-          "en": ""
+          "en": "Light and airy = OK"
         }
       },
       "ok_short": {
@@ -1577,7 +1777,12 @@
           "巻き:緩い",
           "芯:白・小"
         ],
-        "en": []
+        "en": [
+          "Weight: Light/Airy",
+          "Leaves: Vivid green",
+          "Pack: Loose",
+          "Core: White/Small"
+        ]
       },
       "ng_short": {
         "ja": [
@@ -1586,7 +1791,12 @@
           "芯:赤い",
           "切口:茶"
         ],
-        "en": []
+        "en": [
+          "Weight: Too heavy",
+          "Leaves: Browning",
+          "Core: Reddish",
+          "Cut end: Brown"
+        ]
       },
       "ok_points": {
         "ja": [
@@ -1595,7 +1805,12 @@
           "芯の切り口が白く10円玉程度のサイズ",
           "葉の重なりが緩く、隙間がある"
         ],
-        "en": []
+        "en": [
+          "Light to lift (loose pack with air)",
+          "Leaf tips are vivid green and firm",
+          "Core cut surface is white and about coin-sized",
+          "Loose layered leaves with gaps"
+        ]
       },
       "ng_points": {
         "ja": [
@@ -1604,44 +1819,49 @@
           "芯の切り口が赤い・赤茶(古い)",
           "葉が黒ずんでいる、ベタつく"
         ],
-        "en": []
+        "en": [
+          "Too heavy (overgrown = bitter)",
+          "Brown or wilted leaf tips",
+          "Reddish or rusty core (old)",
+          "Darkening of leaves, sticky feel"
+        ]
       },
       "summary_ok": {
         "ja": "軽い・緑・芯白",
-        "en": ""
+        "en": "Light, green tips, white core"
       },
       "summary_ng": {
         "ja": "重い・茶・芯赤",
-        "en": ""
+        "en": "Heavy, browning, red core"
       },
       "storage": {
         "method": {
           "ja": "芯をくり抜いて湿らせたペーパーを詰めポリ袋で冷蔵",
-          "en": ""
+          "en": "Hollow out the core and pack with damp paper towel; bag and refrigerate"
         },
         "duration": {
           "ja": "冷蔵で1週間",
-          "en": ""
+          "en": "1 week refrigerated"
         },
         "tips": {
           "ja": "金属で切ると変色するので手でちぎる",
-          "en": ""
+          "en": "Tear by hand instead of cutting with metal (prevents discoloration)"
         }
       },
       "usage_tips": {
         "ja": "サラダはちぎる→冷水にさらす→水切り。加熱はサッと(食感命)",
-        "en": ""
+        "en": "For salads, tear → soak in cold water → drain. Heat briefly only (texture is the appeal)"
       },
       "nutrition_highlight": {
         "ja": "水分豊富、カリウム・葉酸・βカロテン。低カロリーで満腹感",
-        "en": ""
+        "en": "High water content, potassium, folate, β-carotene. Low calorie with good satiety"
       }
     },
     {
       "id": "hakusai",
       "name": {
         "ja": "白菜",
-        "en": ""
+        "en": "Napa Cabbage"
       },
       "name_kana": "はくさい",
       "name_en": "Napa Cabbage",
@@ -1652,7 +1872,7 @@
       },
       "subcategory": {
         "ja": "葉物",
-        "en": ""
+        "en": "Leafy vegetable"
       },
       "color_theme": "#E5F0D0",
       "accent_color": "#7BAB46",
@@ -1664,17 +1884,17 @@
       ],
       "season_peak": {
         "ja": "冬",
-        "en": ""
+        "en": "Winter"
       },
       "key_check": {
         "icon": "🤲",
         "action": {
           "ja": "持って重さ確認",
-          "en": ""
+          "en": "Lift and check the weight"
         },
         "judgment": {
           "ja": "ずっしり = OK",
-          "en": ""
+          "en": "Heavy = OK"
         }
       },
       "ok_short": {
@@ -1684,7 +1904,12 @@
           "切口:白",
           "葉:詰まる"
         ],
-        "en": []
+        "en": [
+          "Weight: Heavy",
+          "Tips: Crisp",
+          "Cut: White",
+          "Leaves: Tight"
+        ]
       },
       "ng_short": {
         "ja": [
@@ -1693,7 +1918,12 @@
           "切口:黒",
           "葉:離れ"
         ],
-        "en": []
+        "en": [
+          "Weight: Light",
+          "Tips: Wilted",
+          "Cut: Black",
+          "Leaves: Loose"
+        ]
       },
       "ok_points": {
         "ja": [
@@ -1702,7 +1932,12 @@
           "切り口が白くツヤあり",
           "葉と葉の間がしっかり詰まっている"
         ],
-        "en": []
+        "en": [
+          "Heavier than other heads of similar size (densely packed leaves)",
+          "Outer leaves are vivid green with crisp tips",
+          "Cut end is white and glossy",
+          "Leaves are tightly packed together"
+        ]
       },
       "ng_points": {
         "ja": [
@@ -1711,44 +1946,49 @@
           "切り口が黒く変色、ベタつく",
           "葉が外側に開いてバラバラ"
         ],
-        "en": []
+        "en": [
+          "Light weight (hollow inside)",
+          "Wilted, yellowed leaf tips",
+          "Cut end is darkened or sticky",
+          "Leaves opening outward, falling apart"
+        ]
       },
       "summary_ok": {
         "ja": "重い・葉ピン・切口白",
-        "en": ""
+        "en": "Heavy, crisp tips, white cut"
       },
       "summary_ng": {
         "ja": "軽い・萎れ・切口黒",
-        "en": ""
+        "en": "Light, wilted, black cut"
       },
       "storage": {
         "method": {
           "ja": "丸ごとは新聞紙で包み冷暗所、カットはラップで冷蔵",
-          "en": ""
+          "en": "Whole: wrap in newspaper, cool dark place. Cut: wrap with plastic, refrigerate"
         },
         "duration": {
           "ja": "丸ごと:2〜3週間 / カット:3〜5日",
-          "en": ""
+          "en": "Whole: 2-3 weeks / Cut: 3-5 days"
         },
         "tips": {
           "ja": "黒い斑点はゴマ症で味は問題なし。カット品は切り口にラップ密着",
-          "en": ""
+          "en": "Black specks are \"goma-sho\" (harmless taste). Press plastic wrap firmly on cut surfaces"
         }
       },
       "usage_tips": {
         "ja": "外葉=炒め物・煮物、内葉=サラダ・浅漬け、芯=スープでだし",
-        "en": ""
+        "en": "Outer leaves: stir-fry/stew; inner leaves: salads/light pickles; core: makes great soup stock"
       },
       "nutrition_highlight": {
         "ja": "ビタミンC、カリウム、食物繊維。鍋で煮込むと吸収UP",
-        "en": ""
+        "en": "Vitamin C, potassium, dietary fiber. Absorbs flavors well in hot pots"
       }
     },
     {
       "id": "nasu",
       "name": {
         "ja": "なす",
-        "en": ""
+        "en": "Eggplant"
       },
       "name_kana": "なす",
       "name_en": "Eggplant",
@@ -1759,7 +1999,7 @@
       },
       "subcategory": {
         "ja": "果菜",
-        "en": ""
+        "en": "Fruit vegetable"
       },
       "color_theme": "#E0D0E8",
       "accent_color": "#5D2A6F",
@@ -1771,17 +2011,17 @@
       ],
       "season_peak": {
         "ja": "夏",
-        "en": ""
+        "en": "Summer"
       },
       "key_check": {
         "icon": "👆",
         "action": {
           "ja": "ヘタを触る",
-          "en": ""
+          "en": "Touch the calyx (stem cap)"
         },
         "judgment": {
           "ja": "トゲがチクチク = OK",
-          "en": ""
+          "en": "Sharp prickles = OK"
         }
       },
       "ok_short": {
@@ -1791,7 +2031,12 @@
           "肌:ハリ",
           "重さ:ある"
         ],
-        "en": []
+        "en": [
+          "Color: Deep purple/Glossy",
+          "Calyx: Sharp prickles",
+          "Skin: Tight",
+          "Weight: Solid"
+        ]
       },
       "ng_short": {
         "ja": [
@@ -1800,7 +2045,12 @@
           "肌:シワ",
           "感触:柔"
         ],
-        "en": []
+        "en": [
+          "Color: Faded",
+          "Calyx: Wilted",
+          "Skin: Wrinkled",
+          "Feel: Soft"
+        ]
       },
       "ok_points": {
         "ja": [
@@ -1809,7 +2059,12 @@
           "皮にハリがあり押すと跳ね返る",
           "持つとずっしり重く形が整う"
         ],
-        "en": []
+        "en": [
+          "Deep purple color with glossy shine",
+          "Calyx (green cap) has sharp, prickly thorns",
+          "Skin is tight; bounces back when pressed",
+          "Heavy for its size with even shape"
+        ]
       },
       "ng_points": {
         "ja": [
@@ -1818,44 +2073,49 @@
           "皮にシワができ柔らかい",
           "持って軽い、変色した部分がある"
         ],
-        "en": []
+        "en": [
+          "Faded or brownish color",
+          "Calyx is dry with prickles fallen off",
+          "Wrinkles in the skin, soft to the touch",
+          "Light weight; discolored areas"
+        ]
       },
       "summary_ok": {
         "ja": "濃紫・ツヤ・トゲ鋭",
-        "en": ""
+        "en": "Deep purple, glossy, sharp prickles"
       },
       "summary_ng": {
         "ja": "ぼやけ・シワ・柔",
-        "en": ""
+        "en": "Faded, wrinkled, soft"
       },
       "storage": {
         "method": {
           "ja": "1本ずつラップで包み冷蔵庫の野菜室",
-          "en": ""
+          "en": "Wrap each in plastic and store in the vegetable drawer"
         },
         "duration": {
           "ja": "冷蔵で4〜5日",
-          "en": ""
+          "en": "4-5 days refrigerated"
         },
         "tips": {
           "ja": "低温に弱い(10℃以下で傷み)。常温保存も可だが日持ち短",
-          "en": ""
+          "en": "Sensitive to cold (damage below 10°C). Room temp OK but shorter shelf life"
         }
       },
       "usage_tips": {
         "ja": "切ったら水にさらしてアク抜き。皮ごと油で炒めるとアントシアニン効率UP",
-        "en": ""
+        "en": "Soak cut pieces in water to remove bitterness. Cooking with skin in oil maximizes anthocyanin absorption"
       },
       "nutrition_highlight": {
         "ja": "ナスニン(抗酸化)、カリウム、食物繊維。皮の紫色に栄養豊富",
-        "en": ""
+        "en": "Nasunin (antioxidant, in the purple skin), potassium, dietary fiber"
       }
     },
     {
       "id": "piman",
       "name": {
         "ja": "ピーマン",
-        "en": ""
+        "en": "Green Bell Pepper"
       },
       "name_kana": "ぴーまん",
       "name_en": "Green Pepper",
@@ -1866,7 +2126,7 @@
       },
       "subcategory": {
         "ja": "果菜",
-        "en": ""
+        "en": "Fruit vegetable"
       },
       "color_theme": "#E5F0D5",
       "accent_color": "#5D8F3D",
@@ -1878,17 +2138,17 @@
       ],
       "season_peak": {
         "ja": "夏",
-        "en": ""
+        "en": "Summer"
       },
       "key_check": {
         "icon": "👀",
         "action": {
           "ja": "色とハリを見る",
-          "en": ""
+          "en": "Check color and firmness"
         },
         "judgment": {
           "ja": "濃緑・凹まず = OK",
-          "en": ""
+          "en": "Deep green, no give = OK"
         }
       },
       "ok_short": {
@@ -1898,7 +2158,12 @@
           "肌:ハリ・ツヤ",
           "肉:厚い"
         ],
-        "en": []
+        "en": [
+          "Color: Deep green",
+          "Calyx: Green/Firm",
+          "Skin: Tight/Glossy",
+          "Flesh: Thick"
+        ]
       },
       "ng_short": {
         "ja": [
@@ -1907,7 +2172,12 @@
           "肌:シワ",
           "肉:薄"
         ],
-        "en": []
+        "en": [
+          "Color: Faded",
+          "Calyx: Brown",
+          "Skin: Wrinkled",
+          "Flesh: Thin"
+        ]
       },
       "ok_points": {
         "ja": [
@@ -1916,7 +2186,12 @@
           "皮にハリがあり、押すと凹まない",
           "肉厚でしっかりした重み"
         ],
-        "en": []
+        "en": [
+          "Deep, even green color",
+          "Vibrant green calyx with fresh cut",
+          "Tight, glossy skin; no give when pressed",
+          "Thick flesh with solid weight"
+        ]
       },
       "ng_points": {
         "ja": [
@@ -1925,44 +2200,49 @@
           "シワが寄り、柔らかい",
           "肉薄で軽く、押すと凹む"
         ],
-        "en": []
+        "en": [
+          "Faded color, slightly brownish",
+          "Dry, brown calyx",
+          "Wrinkles, softening",
+          "Thin flesh, light weight; gives way when pressed"
+        ]
       },
       "summary_ok": {
         "ja": "濃緑・ハリ・肉厚",
-        "en": ""
+        "en": "Deep green, firm, thick flesh"
       },
       "summary_ng": {
         "ja": "ぼやけ・シワ・薄",
-        "en": ""
+        "en": "Faded, wrinkled, thin"
       },
       "storage": {
         "method": {
           "ja": "ポリ袋に入れ野菜室",
-          "en": ""
+          "en": "Bag and store in vegetable drawer"
         },
         "duration": {
           "ja": "冷蔵で1週間",
-          "en": ""
+          "en": "1 week refrigerated"
         },
         "tips": {
           "ja": "1個ずつキッチンペーパーで包むとより長持ち",
-          "en": ""
+          "en": "Wrap each in paper towel for longer shelf life"
         }
       },
       "usage_tips": {
         "ja": "苦味が苦手なら縦切り(繊維沿い)で柔らげる。種・ワタにも栄養あり",
-        "en": ""
+        "en": "For less bitterness, cut along the fibers (vertical). Seeds and white parts are also nutritious"
       },
       "nutrition_highlight": {
         "ja": "ビタミンC(加熱に強い)、βカロテン、食物繊維",
-        "en": ""
+        "en": "Vitamin C (heat-stable), β-carotene, dietary fiber"
       }
     },
     {
       "id": "broccoli",
       "name": {
         "ja": "ブロッコリー",
-        "en": ""
+        "en": "Broccoli"
       },
       "name_kana": "ぶろっこりー",
       "name_en": "Broccoli",
@@ -1973,7 +2253,7 @@
       },
       "subcategory": {
         "ja": "花菜",
-        "en": ""
+        "en": "Flower vegetable"
       },
       "color_theme": "#D0E0BC",
       "accent_color": "#2C5F2D",
@@ -1986,17 +2266,17 @@
       ],
       "season_peak": {
         "ja": "冬",
-        "en": ""
+        "en": "Winter"
       },
       "key_check": {
         "icon": "👀",
         "action": {
           "ja": "つぼみの色を見る",
-          "en": ""
+          "en": "Check the floret color"
         },
         "judgment": {
           "ja": "濃緑・密 = OK",
-          "en": ""
+          "en": "Deep green, dense = OK"
         }
       },
       "ok_short": {
@@ -2006,7 +2286,12 @@
           "重い:ずっしり",
           "色:紫がかる"
         ],
-        "en": []
+        "en": [
+          "Florets: Dense/Deep green",
+          "Stem: Fresh cut",
+          "Weight: Heavy",
+          "Color: Purplish"
+        ]
       },
       "ng_short": {
         "ja": [
@@ -2015,7 +2300,12 @@
           "切口:茶",
           "色:くすみ"
         ],
-        "en": []
+        "en": [
+          "Florets: Yellow/Open",
+          "Stem: Hollow",
+          "Cut: Brown",
+          "Color: Dull"
+        ]
       },
       "ok_points": {
         "ja": [
@@ -2024,7 +2314,12 @@
           "持つとずっしり重く、形がコンパクト",
           "紫がかる=甘み・栄養豊富(寒さで色付く)"
         ],
-        "en": []
+        "en": [
+          "Florets are dense and deep green",
+          "Stem cut is fresh and white",
+          "Heavy and compact in shape",
+          "Slight purple tint = sweet, nutritious (cold-induced color)"
+        ]
       },
       "ng_points": {
         "ja": [
@@ -2033,44 +2328,49 @@
           "切り口が茶色、ベタつく",
           "全体的に色がくすむ"
         ],
-        "en": []
+        "en": [
+          "Florets are yellowing and opening (going to flower)",
+          "Stem is hollow inside (su-bori)",
+          "Cut end is brown or sticky",
+          "Overall dull color"
+        ]
       },
       "summary_ok": {
         "ja": "濃緑密・切口白・重い",
-        "en": ""
+        "en": "Dense green, white cut, heavy"
       },
       "summary_ng": {
         "ja": "黄花咲き・空洞・茶",
-        "en": ""
+        "en": "Yellow florets, hollow, brown"
       },
       "storage": {
         "method": {
           "ja": "茎を下にしてラップで包み冷蔵",
-          "en": ""
+          "en": "Stem-down, wrap with plastic and refrigerate"
         },
         "duration": {
           "ja": "冷蔵で3〜4日",
-          "en": ""
+          "en": "3-4 days refrigerated"
         },
         "tips": {
           "ja": "茹でて小房に分け冷凍で1ヶ月",
-          "en": ""
+          "en": "Boiled and frozen in florets keeps 1 month"
         }
       },
       "usage_tips": {
         "ja": "茎にも栄養豊富。皮を厚めに剥いて使う。茹でるなら塩入り、レンジ加熱が栄養保持◎",
-        "en": ""
+        "en": "Stems are also nutritious; peel thickly. For boiling, use salted water; microwaving preserves more nutrients"
       },
       "nutrition_highlight": {
         "ja": "ビタミンC(レモンの2倍)、スルフォラファン(解毒)、食物繊維",
-        "en": ""
+        "en": "Vitamin C (2× lemon), sulforaphane (detox), dietary fiber"
       }
     },
     {
       "id": "ginger",
       "name": {
         "ja": "生姜",
-        "en": ""
+        "en": "Ginger"
       },
       "name_kana": "しょうが",
       "name_en": "Ginger",
@@ -2081,7 +2381,7 @@
       },
       "subcategory": {
         "ja": "根菜",
-        "en": ""
+        "en": "Root vegetable"
       },
       "color_theme": "#F0E0C5",
       "accent_color": "#A07848",
@@ -2092,17 +2392,17 @@
       ],
       "season_peak": {
         "ja": "夏(新生姜)",
-        "en": ""
+        "en": "Summer (new ginger)"
       },
       "key_check": {
         "icon": "👀",
         "action": {
           "ja": "皮のハリを見る",
-          "en": ""
+          "en": "Check the skin firmness"
         },
         "judgment": {
           "ja": "ハリ・ツヤ = OK",
-          "en": ""
+          "en": "Tight, glossy = OK"
         }
       },
       "ok_short": {
@@ -2112,7 +2412,12 @@
           "色:鮮黄",
           "香:強"
         ],
-        "en": []
+        "en": [
+          "Skin: Thin/Glossy",
+          "Flesh: Hard/Firm",
+          "Color: Vivid yellow",
+          "Aroma: Strong"
+        ]
       },
       "ng_short": {
         "ja": [
@@ -2121,7 +2426,12 @@
           "色:くすみ",
           "斑点:黒"
         ],
-        "en": []
+        "en": [
+          "Skin: Wrinkled/Dry",
+          "Flesh: Soft",
+          "Color: Dull",
+          "Spots: Black"
+        ]
       },
       "ok_points": {
         "ja": [
@@ -2130,7 +2440,12 @@
           "全体が鮮やかな黄〜橙色",
           "香りが強い"
         ],
-        "en": []
+        "en": [
+          "Skin is thin with shine",
+          "Flesh is plump and firm",
+          "Vivid yellow to orange color throughout",
+          "Strong aroma"
+        ]
       },
       "ng_points": {
         "ja": [
@@ -2139,44 +2454,49 @@
           "色がくすみ、黒い斑点",
           "断面に空洞や繊維質が目立つ"
         ],
-        "en": []
+        "en": [
+          "Skin is wrinkled and dry",
+          "Soft when pressed",
+          "Dull color with black spots",
+          "Hollow or fibrous cut surface"
+        ]
       },
       "summary_ok": {
         "ja": "ハリ・ツヤ・香り強",
-        "en": ""
+        "en": "Firm, glossy, strong aroma"
       },
       "summary_ng": {
         "ja": "シワ・柔・斑点",
-        "en": ""
+        "en": "Wrinkled, soft, spotted"
       },
       "storage": {
         "method": {
           "ja": "湿らせた新聞紙で包み冷暗所か冷蔵",
-          "en": ""
+          "en": "Wrap in damp newspaper, cool dark place or refrigerate"
         },
         "duration": {
           "ja": "常温で1週間、冷蔵で3週間",
-          "en": ""
+          "en": "1 week at room temp; 3 weeks refrigerated"
         },
         "tips": {
           "ja": "冷凍はすりおろし or 薄切りで小分け、便利",
-          "en": ""
+          "en": "Freeze grated or thinly sliced for convenience"
         }
       },
       "usage_tips": {
         "ja": "皮の近くに香り成分。皮ごと使うか薄く剥く。すりおろしは肉・魚の臭み消しに",
-        "en": ""
+        "en": "Aroma is strongest near the skin. Use unpeeled or peel thinly. Grated ginger removes meat/fish odors"
       },
       "nutrition_highlight": {
         "ja": "ジンゲロール(殺菌・抗炎症)、ショウガオール(温熱効果)。冷え性対策",
-        "en": ""
+        "en": "Gingerol (antibacterial, anti-inflammatory), shogaol (warming effect). Great for cold sensitivity"
       }
     },
     {
       "id": "pumpkin",
       "name": {
         "ja": "かぼちゃ",
-        "en": ""
+        "en": "Kabocha Squash"
       },
       "name_kana": "かぼちゃ",
       "name_en": "Pumpkin",
@@ -2187,7 +2507,7 @@
       },
       "subcategory": {
         "ja": "果菜",
-        "en": ""
+        "en": "Fruit vegetable"
       },
       "color_theme": "#D0E0BC",
       "accent_color": "#2C5F2D",
@@ -2199,17 +2519,17 @@
       ],
       "season_peak": {
         "ja": "夏〜秋",
-        "en": ""
+        "en": "Summer–Autumn"
       },
       "key_check": {
         "icon": "👀",
         "action": {
           "ja": "ヘタを見る",
-          "en": ""
+          "en": "Look at the stem"
         },
         "judgment": {
           "ja": "コルク状 = OK",
-          "en": ""
+          "en": "Cork-like, dry = OK"
         }
       },
       "ok_short": {
@@ -2219,7 +2539,12 @@
           "切口:橙・濃",
           "重さ:ずっしり"
         ],
-        "en": []
+        "en": [
+          "Stem: Thick/Corky",
+          "Skin: Hard/Bumpy",
+          "Cut: Deep orange",
+          "Weight: Heavy"
+        ]
       },
       "ng_short": {
         "ja": [
@@ -2228,7 +2553,12 @@
           "切口:薄橙",
           "種:空洞"
         ],
-        "en": []
+        "en": [
+          "Stem: Green/Wet",
+          "Skin: Soft",
+          "Cut: Pale orange",
+          "Seeds: Hollow"
+        ]
       },
       "ok_points": {
         "ja": [
@@ -2237,7 +2567,12 @@
           "切り口が濃いオレンジ色",
           "種がしっかり詰まっている"
         ],
-        "en": []
+        "en": [
+          "Stem is thick and dried like cork",
+          "Skin is hard with bumpy texture",
+          "Cut surface shows deep orange",
+          "Seeds are densely packed"
+        ]
       },
       "ng_points": {
         "ja": [
@@ -2246,37 +2581,42 @@
           "切り口が薄いオレンジ色",
           "種の周りに空洞=水っぽい"
         ],
-        "en": []
+        "en": [
+          "Stem is green and wet (picked too early)",
+          "Soft skin with bruises",
+          "Pale orange cut surface",
+          "Hollow space around seeds (watery)"
+        ]
       },
       "summary_ok": {
         "ja": "ヘタ太・橙濃・重い",
-        "en": ""
+        "en": "Thick stem, deep orange, heavy"
       },
       "summary_ng": {
         "ja": "ヘタ青・薄橙・空洞",
-        "en": ""
+        "en": "Green stem, pale, hollow"
       },
       "storage": {
         "method": {
           "ja": "丸ごとは冷暗所、カットは種・ワタ除去後ラップで冷蔵",
-          "en": ""
+          "en": "Whole: cool dark place. Cut: remove seeds and pith, wrap and refrigerate"
         },
         "duration": {
           "ja": "丸ごと:2〜3ヶ月 / カット:5〜7日",
-          "en": ""
+          "en": "Whole: 2-3 months / Cut: 5-7 days"
         },
         "tips": {
           "ja": "カットすると傷みが早い。冷凍保存は加熱後がおすすめ",
-          "en": ""
+          "en": "Cut quickly deteriorates. Cooking before freezing works best for long-term storage"
         }
       },
       "usage_tips": {
         "ja": "皮にも栄養。皮ごと煮ると煮崩れにくい。電子レンジ加熱で固い皮も楽に切れる",
-        "en": ""
+        "en": "Skin is also nutritious. Cooking with skin prevents falling apart. Microwaving softens hard skin for cutting"
       },
       "nutrition_highlight": {
         "ja": "βカロテン(抗酸化・粘膜保護)、ビタミンE、食物繊維。冬至に食べる風習",
-        "en": ""
+        "en": "β-carotene (antioxidant, mucous membranes), vitamin E, dietary fiber. Traditional winter solstice food"
       }
     },
     {
