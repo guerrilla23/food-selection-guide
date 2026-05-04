@@ -1,6 +1,6 @@
 // Service Worker — オフライン完全動作のためのキャッシュ戦略
 // 更新時は CACHE_VERSION を上げる
-const CACHE_VERSION = 'v20';
+const CACHE_VERSION = 'v21';
 const CACHE_NAME = `food-pwa-${CACHE_VERSION}`;
 
 // 食材IDの配列(parts SVG をプリキャッシュするため)
