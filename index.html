@@ -930,16 +930,16 @@
       // Lang toggle
       lang_aria:           { ja: '言語切替', en: 'Language' },
       // Season
-      season_now:          { ja: '今が旬', en: 'In season' },
+      season_now:          { ja: '今が旬', en: 'In Season' },
       season_label_short:  { ja: '旬', en: 'Season' },
       season_label_colon:  { ja: '旬:', en: 'Season:' },
       // Detail sections
       good_signs_title:    { ja: '○ 良い見分け方', en: '○ Good signs' },
-      bad_signs_title:     { ja: '× 避けたい状態', en: '× Avoid these' },
+      bad_signs_title:     { ja: '× 避けたい状態', en: '× Avoid signs' },
       good_diagram_label:  { ja: '良い', en: 'Good' },
       bad_diagram_label:   { ja: '避けたい', en: 'Avoid' },
       diagram_aria:        { ja: 'OK / NG 比較図解', en: 'OK / NG diagram' },
-      usage_title:         { ja: '使い分け・調理', en: 'Usage & Cooking' },
+      usage_title:         { ja: '使い分け・調理', en: 'Usage' },
       storage_title:       { ja: '保存方法', en: 'Storage' },
       storage_method:      { ja: '方法', en: 'Method' },
       storage_duration:    { ja: '日持ち', en: 'Duration' },
@@ -976,10 +976,67 @@
       category_mushroom:   { ja: 'きのこ', en: 'Mushroom' },
       category_fish:       { ja: '魚介', en: 'Seafood' },
       category_meat:       { ja: '肉類', en: 'Meat' },
-      category_egg_dairy_bean: { ja: '卵・乳・豆', en: 'Egg/Dairy/Legume' },
-      category_game_meat:  { ja: 'ジビエ', en: 'Game Meat' },
+      category_egg_dairy_bean: { ja: '卵・乳・豆', en: 'Egg, Dairy & Legume' },
+      category_game_meat:  { ja: 'ジビエ', en: 'Game' },
       // SEO
       meta_description:    { ja: '買い物中にサッと食材の選び方を確認できる選び方ガイド', en: 'Pocket guide for selecting fresh foods at the store' },
+    };
+
+    /**
+     * CONTENT_DICT: foods.json の en フィールドが空の時に使う ja→en 翻訳辞書。
+     * カテゴリ・サブカテゴリ・季節など複数食材で共有される値の自動翻訳に使用。
+     * tf() がこの辞書を経由するため、call site で個別フォールバックを書かなくてよい。
+     * 食材データの英訳がステップ3で完了した後も、辞書にない値は ja にフォールバック。
+     */
+    const CONTENT_DICT = {
+      // Categories
+      '野菜':           'Vegetable',
+      '果物':           'Fruit',
+      'きのこ':         'Mushroom',
+      '魚介':           'Seafood',
+      '肉類':           'Meat',
+      '卵・乳・豆':     'Egg, Dairy & Legume',
+      'ジビエ':         'Game',
+      // Subcategories
+      '根菜':           'Root vegetable',
+      '葉物':           'Leafy vegetable',
+      '葉物・香味':     'Leafy / Aromatic',
+      '果菜':           'Fruit vegetable',
+      '花菜':           'Flower vegetable',
+      'いも類':         'Tuber',
+      'ベリー':         'Berry',
+      '柑橘':           'Citrus',
+      '青魚':           'Blue-backed fish',
+      '切り身':         'Fillet',
+      '甲殻類':         'Crustacean',
+      '汎用ガイド':     'General guide',
+      '卵':             'Egg',
+      '豆製品':         'Soy product',
+      '乳製品':         'Dairy',
+      // Seasons (basic)
+      '春':             'Spring',
+      '夏':             'Summer',
+      '秋':             'Autumn',
+      '冬':             'Winter',
+      '通年':           'Year-round',
+      // Seasons (combined)
+      '春・秋':         'Spring & Autumn',
+      '春・夏':         'Spring & Summer',
+      '春・冬':         'Spring & Winter',
+      '春〜秋':         'Spring–Autumn',
+      '春〜夏':         'Spring–Summer',
+      '夏・秋':         'Summer & Autumn',
+      '夏〜秋':         'Summer–Autumn',
+      '秋・冬':         'Autumn & Winter',
+      '秋〜冬':         'Autumn–Winter',
+      '秋〜初冬':       'Autumn–Early winter',
+      '初夏':           'Early summer',
+      '春先と秋':       'Early spring & Autumn',
+      // Seasons (annotated)
+      '冬(狩猟期)':     'Winter (hunting season)',
+      '冬(脂のった旬)': 'Winter (peak fat)',
+      '夏(新生姜)':     'Summer (new ginger)',
+      '魚種により':     'Varies by species',
     };
 
     function detectInitialLang() {
@@ -998,13 +1055,22 @@
       return entry[App.lang] || entry.ja || key;
     }
 
-    /** データフィールドの解決 ({ja, en} 形式 → 現在言語の文字列) */
+    /** データフィールドの解決 ({ja, en} 形式 → 現在言語の文字列)
+     *  EN モードで en が空の場合、CONTENT_DICT の ja→en マッピングを試行。
+     *  そこにもなければ ja にフォールバック。
+     */
     function tf(field) {
       if (field == null) return '';
       if (typeof field === 'string') return field;  // legacy plain string
       if (typeof field === 'object') {
         const v = field[App.lang];
         if (v) return v;
+        // EN モードで en が空 → CONTENT_DICT で ja→en の自動翻訳を試行
+        if (App.lang === 'en' && field.ja) {
+          const auto = CONTENT_DICT[field.ja];
+          if (auto) return auto;
+        }
+        // それでもなければ ja → en の順でフォールバック
         return field.ja || field.en || '';
       }
       return String(field);
