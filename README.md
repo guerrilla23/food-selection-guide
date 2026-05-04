@@ -140,3 +140,30 @@ food_pwa_sample/
 - 買い物リスト機能
 - 写真撮影 → AI判定(Claude API使用)
 - 狩猟記録アプリとのデータ連携(ジビエ部位の鮮度判定)
+
+## プライバシーとアクセス解析
+
+本アプリでは、利用状況の把握とUX改善のためアクセス解析として
+**Google Analytics 4** を使用しています。
+
+### 計測内容
+- ページビュー(各画面の閲覧)
+- カスタムイベント `view_food` (食材詳細閲覧、food_id / food_name / food_category を含む)
+- 自動収集される基本データ(デバイス種別、ブラウザ、地域など)
+
+### プライバシー配慮
+- IPアドレスの匿名化を有効化 (`anonymize_ip: true`)
+- 個人を特定する情報は収集していません
+- 入力フォーム(フィードバック)の内容はGAに送信されません
+
+### 計測ID
+`G-F4RXTG870N`
+
+### Cookie同意
+ベータ版のため Cookie consent banner は未実装。
+正式リリース時に実装予定です。
+
+### 計測を無効化したい場合
+- ブラウザ拡張機能 (uBlock Origin / Privacy Badger 等)
+- ブラウザの「サイトトラッキング防止」設定 (Safari / Firefox)
+- Google Analytics オプトアウトアドオン

@@ -1,6 +1,6 @@
 // Service Worker — オフライン完全動作のためのキャッシュ戦略
 // 更新時は CACHE_VERSION を上げる
-const CACHE_VERSION = 'v14';
+const CACHE_VERSION = 'v15';
 const CACHE_NAME = `food-pwa-${CACHE_VERSION}`;
 
 // 食材IDの配列(parts SVG をプリキャッシュするため)
@@ -72,6 +72,11 @@ self.addEventListener('fetch', (event) => {
   if (req.method !== 'GET') return;
 
   const url = new URL(req.url);
+
+  // 外部ドメイン (Google Analytics, googletagmanager.com 等) はSWを介さず
+  // ブラウザにそのまま処理させる(キャッシュもしない)
+  if (url.origin !== location.origin) return;
+
   const isHTML = req.mode === 'navigate' ||
                  (req.headers.get('accept') || '').includes('text/html');
   // data/*.json は内容が後から更新されうるので必ず最新を取りにいく

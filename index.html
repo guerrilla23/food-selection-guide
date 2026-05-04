@@ -12,6 +12,19 @@
   <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
   <link rel="icon" href="icons/favicon-32.png" type="image/png">
   <title>食材選び方</title>
+
+  <!-- Google Analytics 4 (gtag.js) -->
+  <!-- ベータ版のため Cookie consent banner は未実装。正式リリース時に実装予定。 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-F4RXTG870N"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-F4RXTG870N', {
+      anonymize_ip: true,           // IP匿名化 (プライバシー配慮)
+      send_page_view: false,         // SPAなので applyRoute() で手動送信
+    });
+  </script>
   <style>
     /* ============================================================
        CSS variables — ダークモード対応はこの :root を切り替えるだけ
@@ -1155,6 +1168,16 @@
 
       App.el.detailBody.innerHTML = body;
       window.scrollTo(0, 0);
+
+      // GA4: 食材詳細閲覧をカスタムイベントで記録
+      // 食材IDごとの閲覧数を Engagement レポートで分析可能
+      if (typeof gtag === 'function') {
+        gtag('event', 'view_food', {
+          food_id: food.id,
+          food_name: food.name,
+          food_category: food.category,
+        });
+      }
     }
 
     // mode 切替
@@ -1185,6 +1208,15 @@
         renderDetail(decodeURIComponent(m[1]));
       } else {
         document.body.dataset.view = 'list';
+      }
+      // GA4: SPA ナビゲーション時の page_view 送信
+      // hashchange でビューが切替わるため、初回 config 以外は手動送信が必要
+      if (typeof gtag === 'function') {
+        gtag('event', 'page_view', {
+          page_path: location.pathname + location.hash,
+          page_title: document.title,
+          page_location: location.href,
+        });
       }
     }
 
