@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 600" font-family="Noto Sans CJK JP, sans-serif">
+  <rect width="1080" height="600" fill="#FFFFFF" rx="20"/>
+
+  <!-- Header -->
+  <text x="60" y="60" font-size="44" font-weight="900" fill="#A07848">納豆</text>
+  <line x1="60" y1="75" x2="120" y2="75" stroke="#A07848" stroke-width="4"/>
+  <text x="140" y="68" font-size="22" fill="#666">旬:通年</text>
+
+  <line x1="540" y1="100" x2="540" y2="540" stroke="#DDD" stroke-width="2" stroke-dasharray="6,6"/>
+
+  <!-- OK side (watercolor Pattern A) -->
+  <g transform="translate(280, 320)">
+    <circle cx="-200" cy="-180" r="22" fill="#2C5F2D"/>
+    <text x="-200" y="-172" font-size="26" font-weight="900" fill="white" text-anchor="middle">○</text>
+    <defs>
+      <radialGradient id="wcBodyNatto" cx="35%" cy="25%"><stop offset="0%" stop-color="#D8B888" stop-opacity="0.95"/><stop offset="40%" stop-color="#A07848" stop-opacity="0.9"/><stop offset="80%" stop-color="#5D4E20" stop-opacity="0.85"/><stop offset="100%" stop-color="#3D3018" stop-opacity="0.65"/></radialGradient>
+      <radialGradient id="wcLeafNatto" cx="50%" cy="20%"><stop offset="0%" stop-color="#9BCB7A" stop-opacity="0.9"/><stop offset="60%" stop-color="#5D8F3D" stop-opacity="0.7"/><stop offset="100%" stop-color="#2C5F2D" stop-opacity="0.5"/></radialGradient>
+      <filter id="wcRoughNatto" x="-10%" y="-10%" width="120%" height="120%">
+        <feTurbulence baseFrequency="0.04" numOctaves="3" seed="163"/>
+        <feDisplacementMap in="SourceGraphic" scale="4"/>
+      </filter>
+      <filter id="wcBlurNatto"><feGaussianBlur stdDeviation="1.5"/></filter>
+    </defs>
+    <g filter="url(#wcBlurNatto)" opacity="0.4"><ellipse cx="0" cy="10" rx="105" ry="75" fill="#A07848"/></g>
+    
+    <g filter="url(#wcRoughNatto)"><path d="M -75 50 m -15 0 a 15 12 0 1 0 30 0 a 15 12 0 1 0 -30 0 Z" fill="url(#wcBodyNatto)"/><path d="M -40 55 m -15 0 a 15 12 0 1 0 30 0 a 15 12 0 1 0 -30 0 Z" fill="url(#wcBodyNatto)"/><path d="M -5 50 m -15 0 a 15 12 0 1 0 30 0 a 15 12 0 1 0 -30 0 Z" fill="url(#wcBodyNatto)"/><path d="M 30 55 m -15 0 a 15 12 0 1 0 30 0 a 15 12 0 1 0 -30 0 Z" fill="url(#wcBodyNatto)"/><path d="M 65 50 m -15 0 a 15 12 0 1 0 30 0 a 15 12 0 1 0 -30 0 Z" fill="url(#wcBodyNatto)"/><path d="M -55 20 m -15 0 a 15 12 0 1 0 30 0 a 15 12 0 1 0 -30 0 Z" fill="url(#wcBodyNatto)"/><path d="M -22 25 m -15 0 a 15 12 0 1 0 30 0 a 15 12 0 1 0 -30 0 Z" fill="url(#wcBodyNatto)"/><path d="M 12 20 m -15 0 a 15 12 0 1 0 30 0 a 15 12 0 1 0 -30 0 Z" fill="url(#wcBodyNatto)"/><path d="M 45 25 m -15 0 a 15 12 0 1 0 30 0 a 15 12 0 1 0 -30 0 Z" fill="url(#wcBodyNatto)"/><path d="M -35 -10 m -15 0 a 15 12 0 1 0 30 0 a 15 12 0 1 0 -30 0 Z" fill="url(#wcBodyNatto)"/><path d="M -3 -5 m -15 0 a 15 12 0 1 0 30 0 a 15 12 0 1 0 -30 0 Z" fill="url(#wcBodyNatto)"/><path d="M 28 -10 m -15 0 a 15 12 0 1 0 30 0 a 15 12 0 1 0 -30 0 Z" fill="url(#wcBodyNatto)"/><path d="M -15 -35 m -15 0 a 15 12 0 1 0 30 0 a 15 12 0 1 0 -30 0 Z" fill="url(#wcBodyNatto)"/><path d="M 15 -35 m -15 0 a 15 12 0 1 0 30 0 a 15 12 0 1 0 -30 0 Z" fill="url(#wcBodyNatto)"/></g>
+    <g stroke="#3D2817" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"><path d="M -75 50 m -15 0 a 15 12 0 1 0 30 0 a 15 12 0 1 0 -30 0"/><path d="M -40 55 m -15 0 a 15 12 0 1 0 30 0 a 15 12 0 1 0 -30 0"/><path d="M -5 50 m -15 0 a 15 12 0 1 0 30 0 a 15 12 0 1 0 -30 0"/><path d="M 30 55 m -15 0 a 15 12 0 1 0 30 0 a 15 12 0 1 0 -30 0"/><path d="M 65 50 m -15 0 a 15 12 0 1 0 30 0 a 15 12 0 1 0 -30 0"/><path d="M -55 20 m -15 0 a 15 12 0 1 0 30 0 a 15 12 0 1 0 -30 0"/><path d="M -22 25 m -15 0 a 15 12 0 1 0 30 0 a 15 12 0 1 0 -30 0"/><path d="M 12 20 m -15 0 a 15 12 0 1 0 30 0 a 15 12 0 1 0 -30 0"/><path d="M 45 25 m -15 0 a 15 12 0 1 0 30 0 a 15 12 0 1 0 -30 0"/><path d="M -35 -10 m -15 0 a 15 12 0 1 0 30 0 a 15 12 0 1 0 -30 0"/><path d="M -3 -5 m -15 0 a 15 12 0 1 0 30 0 a 15 12 0 1 0 -30 0"/><path d="M 28 -10 m -15 0 a 15 12 0 1 0 30 0 a 15 12 0 1 0 -30 0"/><path d="M -15 -35 m -15 0 a 15 12 0 1 0 30 0 a 15 12 0 1 0 -30 0"/><path d="M 15 -35 m -15 0 a 15 12 0 1 0 30 0 a 15 12 0 1 0 -30 0"/><path d="M -30 -50 Q -10 -65 10 -55 Q 30 -45 50 -55" opacity="0.7" stroke-width="1.4"/><path d="M 0 -55 Q 25 -75 45 -68" opacity="0.6" stroke-width="1.3"/></g>
+  </g>
+
+  <!-- NG side (flat) -->
+  <g transform="translate(800, 320)">
+    <circle cx="-200" cy="-180" r="22" fill="#C62828"/>
+    <text x="-200" y="-172" font-size="26" font-weight="900" fill="white" text-anchor="middle">×</text>
+    <path d="M -75 50 m -15 0 a 15 12 0 1 0 30 0 a 15 12 0 1 0 -30 0 Z" fill="#988050"/><path d="M -40 55 m -15 0 a 15 12 0 1 0 30 0 a 15 12 0 1 0 -30 0 Z" fill="#988050"/><path d="M -5 50 m -15 0 a 15 12 0 1 0 30 0 a 15 12 0 1 0 -30 0 Z" fill="#988050"/><path d="M 30 55 m -15 0 a 15 12 0 1 0 30 0 a 15 12 0 1 0 -30 0 Z" fill="#988050"/><path d="M 65 50 m -15 0 a 15 12 0 1 0 30 0 a 15 12 0 1 0 -30 0 Z" fill="#988050"/><path d="M -55 20 m -15 0 a 15 12 0 1 0 30 0 a 15 12 0 1 0 -30 0 Z" fill="#988050"/><path d="M -22 25 m -15 0 a 15 12 0 1 0 30 0 a 15 12 0 1 0 -30 0 Z" fill="#988050"/><path d="M 12 20 m -15 0 a 15 12 0 1 0 30 0 a 15 12 0 1 0 -30 0 Z" fill="#988050"/><path d="M 45 25 m -15 0 a 15 12 0 1 0 30 0 a 15 12 0 1 0 -30 0 Z" fill="#988050"/><path d="M -35 -10 m -15 0 a 15 12 0 1 0 30 0 a 15 12 0 1 0 -30 0 Z" fill="#988050"/><path d="M -3 -5 m -15 0 a 15 12 0 1 0 30 0 a 15 12 0 1 0 -30 0 Z" fill="#988050"/><path d="M 28 -10 m -15 0 a 15 12 0 1 0 30 0 a 15 12 0 1 0 -30 0 Z" fill="#988050"/><ellipse cx="-50" cy="0" rx="22" ry="12" fill="#3D3018" opacity="0.6"/><ellipse cx="30" cy="-10" rx="18" ry="10" fill="#3D3018" opacity="0.55"/>
+  </g>
+
+  <!-- Comparison labels -->
+  <g font-size="20" fill="#333">
+    <rect x="60" y="495" width="460" height="80" rx="8" fill="#E8F5E9"/>
+    <text x="80" y="520" font-weight="bold" fill="#2C5F2D">● 豆が均一、ふっくら</text>
+    <text x="80" y="545" font-weight="bold" fill="#2C5F2D">● 糸引き(粘り)が強い</text>
+    <text x="80" y="568" fill="#666" font-size="17">匂いは独特だが新鮮な発酵臭</text>
+
+    <rect x="560" y="495" width="460" height="80" rx="8" fill="#FFEBEE"/>
+    <text x="580" y="520" font-weight="bold" fill="#C62828">× 豆が乾燥・粒揃わず</text>
+    <text x="580" y="545" font-weight="bold" fill="#C62828">× 糸引きが弱い・ない</text>
+    <text x="580" y="568" fill="#666" font-size="17">異臭(アンモニア強)=傷み</text>
+  </g>
+</svg>

@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 600" font-family="Noto Sans CJK JP, sans-serif">
+  <rect width="1080" height="600" fill="#FFFFFF" rx="20"/>
+
+  <!-- Header -->
+  <text x="60" y="60" font-size="44" font-weight="900" fill="#C8A878">ヨーグルト</text>
+  <line x1="60" y1="75" x2="210" y2="75" stroke="#C8A878" stroke-width="4"/>
+  <text x="230" y="68" font-size="22" fill="#666">旬:通年</text>
+
+  <line x1="540" y1="100" x2="540" y2="540" stroke="#DDD" stroke-width="2" stroke-dasharray="6,6"/>
+
+  <!-- OK side (watercolor Pattern A) -->
+  <g transform="translate(280, 320)">
+    <circle cx="-200" cy="-180" r="22" fill="#2C5F2D"/>
+    <text x="-200" y="-172" font-size="26" font-weight="900" fill="white" text-anchor="middle">○</text>
+    <defs>
+      <radialGradient id="wcBodyYogurt" cx="35%" cy="25%"><stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.95"/><stop offset="40%" stop-color="#FAF5E8" stop-opacity="0.9"/><stop offset="80%" stop-color="#E8DCC0" stop-opacity="0.7"/><stop offset="100%" stop-color="#B89870" stop-opacity="0.4"/></radialGradient>
+      <radialGradient id="wcLeafYogurt" cx="50%" cy="20%"><stop offset="0%" stop-color="#9BCB7A" stop-opacity="0.9"/><stop offset="60%" stop-color="#5D8F3D" stop-opacity="0.7"/><stop offset="100%" stop-color="#2C5F2D" stop-opacity="0.5"/></radialGradient>
+      <filter id="wcRoughYogurt" x="-10%" y="-10%" width="120%" height="120%">
+        <feTurbulence baseFrequency="0.04" numOctaves="3" seed="211"/>
+        <feDisplacementMap in="SourceGraphic" scale="4"/>
+      </filter>
+      <filter id="wcBlurYogurt"><feGaussianBlur stdDeviation="1.5"/></filter>
+    </defs>
+    <g filter="url(#wcBlurYogurt)" opacity="0.4"><ellipse cx="0" cy="0" rx="80" ry="110" fill="#F8F0E0"/></g>
+    
+    <g filter="url(#wcRoughYogurt)"><path d="M -75 -100 Q -78 -110 -65 -110 L 65 -110 Q 78 -110 75 -100 L 78 100 Q 80 115 60 115 L -60 115 Q -80 115 -78 100 Z" fill="url(#wcBodyYogurt)"/></g>
+    <g stroke="#3D2817" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"><path d="M -75 -100 Q -78 -110 -65 -110 L 65 -110 Q 78 -110 75 -100 L 78 100 Q 80 115 60 115 L -60 115 Q -80 115 -78 100 Z"/><path d="M -75 -90 L 75 -90" opacity="0.7" stroke-width="1.6"/><path d="M -65 -75 Q 0 -78 65 -75" opacity="0.5" stroke-width="1.4"/><path d="M -60 -50 Q 0 -53 60 -50" opacity="0.4" stroke-width="1.2"/><path d="M -55 -10 L 55 -10 L 55 50 L -55 50 Z" opacity="0.45" stroke-width="1.4"/></g>
+  </g>
+
+  <!-- NG side (flat) -->
+  <g transform="translate(800, 320)">
+    <circle cx="-200" cy="-180" r="22" fill="#C62828"/>
+    <text x="-200" y="-172" font-size="26" font-weight="900" fill="white" text-anchor="middle">×</text>
+    <path d="M -75 -100 Q -78 -110 -65 -110 L 65 -110 Q 78 -110 75 -100 L 78 100 Q 80 115 60 115 L -60 115 Q -80 115 -78 100 Z" fill="#C8B898"/><path d="M -70 -85 Q -30 -75 0 -85 Q 30 -95 70 -83" stroke="#C8B040" stroke-width="3" fill="none" opacity="0.7"/><ellipse cx="-25" cy="30" rx="18" ry="14" fill="#A88830" opacity="0.5"/><ellipse cx="25" cy="60" rx="14" ry="10" fill="#A88830" opacity="0.45"/>
+  </g>
+
+  <!-- Comparison labels -->
+  <g font-size="20" fill="#333">
+    <rect x="60" y="495" width="460" height="80" rx="8" fill="#E8F5E9"/>
+    <text x="80" y="520" font-weight="bold" fill="#2C5F2D">● 表面が滑らか、白色</text>
+    <text x="80" y="545" font-weight="bold" fill="#2C5F2D">● 容器が膨らんでいない</text>
+    <text x="80" y="568" fill="#666" font-size="17">蓋を開けて酸味の良い香り</text>
+
+    <rect x="560" y="495" width="460" height="80" rx="8" fill="#FFEBEE"/>
+    <text x="580" y="520" font-weight="bold" fill="#C62828">× 表面に黄色い液(ホエイ)分離大</text>
+    <text x="580" y="545" font-weight="bold" fill="#C62828">× 容器が膨らむ(発酵過剰)</text>
+    <text x="580" y="568" fill="#666" font-size="17">カビ・異臭=即廃棄</text>
+  </g>
+</svg>

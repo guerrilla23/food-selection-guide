@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 600" font-family="Noto Sans CJK JP, sans-serif">
+  <rect width="1080" height="600" fill="#FFFFFF" rx="20"/>
+
+  <!-- Header -->
+  <text x="60" y="60" font-size="44" font-weight="900" fill="#506068">鯖</text>
+  <line x1="60" y1="75" x2="90" y2="75" stroke="#506068" stroke-width="4"/>
+  <text x="110" y="68" font-size="22" fill="#666">旬:10〜2月</text>
+
+  <line x1="540" y1="100" x2="540" y2="540" stroke="#DDD" stroke-width="2" stroke-dasharray="6,6"/>
+
+  <!-- OK side (watercolor Pattern A) -->
+  <g transform="translate(280, 320)">
+    <circle cx="-200" cy="-180" r="22" fill="#2C5F2D"/>
+    <text x="-200" y="-172" font-size="26" font-weight="900" fill="white" text-anchor="middle">○</text>
+    <defs>
+      <radialGradient id="wcBodySaba" cx="35%" cy="25%"><stop offset="0%" stop-color="#F8F8FA" stop-opacity="0.95"/><stop offset="40%" stop-color="#D0D8DC" stop-opacity="0.9"/><stop offset="80%" stop-color="#90A0A8" stop-opacity="0.85"/><stop offset="100%" stop-color="#506068" stop-opacity="0.65"/></radialGradient>
+      <radialGradient id="wcLeafSaba" cx="50%" cy="20%"><stop offset="0%" stop-color="#9BCB7A" stop-opacity="0.9"/><stop offset="60%" stop-color="#5D8F3D" stop-opacity="0.7"/><stop offset="100%" stop-color="#2C5F2D" stop-opacity="0.5"/></radialGradient>
+      <filter id="wcRoughSaba" x="-10%" y="-10%" width="120%" height="120%">
+        <feTurbulence baseFrequency="0.04" numOctaves="3" seed="191"/>
+        <feDisplacementMap in="SourceGraphic" scale="4"/>
+      </filter>
+      <filter id="wcBlurSaba"><feGaussianBlur stdDeviation="1.5"/></filter>
+    </defs>
+    <g filter="url(#wcBlurSaba)" opacity="0.4"><ellipse cx="0" cy="0" rx="145" ry="55" fill="#90A0A8"/></g>
+    
+    <g filter="url(#wcRoughSaba)"><path d="M -130 0 Q -125 -45 -50 -50 Q 60 -50 110 -28 L 130 -22 Q 145 -10 145 0 Q 145 10 130 22 L 110 28 Q 60 50 -50 50 Q -125 45 -130 0 Z" fill="url(#wcBodySaba)"/><path d="M 130 -22 L 155 -45 L 150 0 L 155 45 L 130 22 Z" fill="url(#wcBodySaba)"/></g>
+    <g stroke="#3D2817" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"><path d="M -130 0 Q -125 -45 -50 -50 Q 60 -50 110 -28 L 130 -22 Q 145 -10 145 0 Q 145 10 130 22 L 110 28 Q 60 50 -50 50 Q -125 45 -130 0 Z"/><path d="M 130 -22 L 155 -45 L 150 0 L 155 45 L 130 22"/><path d="M -110 -15 m -5 0 a 5 5 0 1 0 10 0 a 5 5 0 1 0 -10 0 Z" opacity="0.95" stroke-width="2.2"/><path d="M -130 0 Q -135 5 -125 12" opacity="0.85" stroke-width="1.8"/><path d="M -80 -38 Q -50 -45 -20 -38" opacity="0.75" stroke-width="2"/><path d="M 0 -42 Q 30 -48 60 -40" opacity="0.75" stroke-width="2"/><path d="M -60 -28 Q -30 -35 -10 -28" opacity="0.6" stroke-width="1.6"/><path d="M 20 -32 Q 50 -38 80 -30" opacity="0.6" stroke-width="1.6"/><path d="M -100 5 Q 0 8 110 5" opacity="0.5" stroke-width="1.4"/><path d="M -90 -30 Q -85 0 -88 30" opacity="0.6" stroke-width="1.6"/></g>
+  </g>
+
+  <!-- NG side (flat) -->
+  <g transform="translate(800, 320)">
+    <circle cx="-200" cy="-180" r="22" fill="#C62828"/>
+    <text x="-200" y="-172" font-size="26" font-weight="900" fill="white" text-anchor="middle">×</text>
+    <path d="M -130 0 Q -125 -45 -50 -50 Q 60 -50 110 -28 L 130 -22 Q 145 -10 145 0 Q 145 10 130 22 L 110 28 Q 60 50 -50 50 Q -125 45 -130 0 Z" fill="#787878"/><path d="M 130 -22 L 155 -45 L 150 0 L 155 45 L 130 22 Z" fill="#787878"/><ellipse cx="-110" cy="-15" rx="5" ry="5" fill="#C8C0B0" opacity="0.85"/><ellipse cx="-90" cy="0" rx="8" ry="18" fill="#7A4828" opacity="0.55"/><ellipse cx="0" cy="0" rx="50" ry="25" fill="#5D4E37" opacity="0.35"/>
+  </g>
+
+  <!-- Comparison labels -->
+  <g font-size="20" fill="#333">
+    <rect x="60" y="495" width="460" height="80" rx="8" fill="#E8F5E9"/>
+    <text x="80" y="520" font-weight="bold" fill="#2C5F2D">● 目が黒く澄む、エラ赤</text>
+    <text x="80" y="545" font-weight="bold" fill="#2C5F2D">● 銀色の輝き、青波紋くっきり</text>
+    <text x="80" y="568" fill="#666" font-size="17">腹がしっかり、押すと弾力</text>
+
+    <rect x="560" y="495" width="460" height="80" rx="8" fill="#FFEBEE"/>
+    <text x="580" y="520" font-weight="bold" fill="#C62828">× 目が白く濁る、エラ茶色</text>
+    <text x="580" y="545" font-weight="bold" fill="#C62828">× 体表のヌメリ多、臭い</text>
+    <text x="580" y="568" fill="#666" font-size="17">腹が柔らか・破れ=傷み</text>
+  </g>
+</svg>

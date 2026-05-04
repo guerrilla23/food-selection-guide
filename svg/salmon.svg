@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 600" font-family="Noto Sans CJK JP, sans-serif">
+  <rect width="1080" height="600" fill="#FFFFFF" rx="20"/>
+
+  <!-- Header -->
+  <text x="60" y="60" font-size="44" font-weight="900" fill="#E07050">鮭(切り身)</text>
+  <line x1="60" y1="75" x2="240" y2="75" stroke="#E07050" stroke-width="4"/>
+  <text x="260" y="68" font-size="22" fill="#666">旬:9〜11月(秋鮭)</text>
+
+  <line x1="540" y1="100" x2="540" y2="540" stroke="#DDD" stroke-width="2" stroke-dasharray="6,6"/>
+
+  <!-- OK side (watercolor Pattern A) -->
+  <g transform="translate(280, 320)">
+    <circle cx="-200" cy="-180" r="22" fill="#2C5F2D"/>
+    <text x="-200" y="-172" font-size="26" font-weight="900" fill="white" text-anchor="middle">○</text>
+    <defs>
+      <radialGradient id="wcBodySalmon" cx="35%" cy="25%"><stop offset="0%" stop-color="#FFD8C0" stop-opacity="0.95"/><stop offset="40%" stop-color="#FFA070" stop-opacity="0.9"/><stop offset="80%" stop-color="#E07050" stop-opacity="0.85"/><stop offset="100%" stop-color="#A04030" stop-opacity="0.65"/></radialGradient>
+      <radialGradient id="wcLeafSalmon" cx="50%" cy="20%"><stop offset="0%" stop-color="#9BCB7A" stop-opacity="0.9"/><stop offset="60%" stop-color="#5D8F3D" stop-opacity="0.7"/><stop offset="100%" stop-color="#2C5F2D" stop-opacity="0.5"/></radialGradient>
+      <filter id="wcRoughSalmon" x="-10%" y="-10%" width="120%" height="120%">
+        <feTurbulence baseFrequency="0.04" numOctaves="3" seed="181"/>
+        <feDisplacementMap in="SourceGraphic" scale="4"/>
+      </filter>
+      <filter id="wcBlurSalmon"><feGaussianBlur stdDeviation="1.5"/></filter>
+    </defs>
+    <g filter="url(#wcBlurSalmon)" opacity="0.4"><ellipse cx="0" cy="0" rx="125" ry="70" fill="#FFA070"/></g>
+    
+    <g filter="url(#wcRoughSalmon)"><path d="M -120 -50 Q -130 -10 -120 30 Q -100 55 -50 60 L 100 55 Q 130 50 125 0 Q 120 -50 80 -55 Q 0 -60 -120 -50 Z" fill="url(#wcBodySalmon)"/></g>
+    <g stroke="#3D2817" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"><path d="M -120 -50 Q -130 -10 -120 30 Q -100 55 -50 60 L 100 55 Q 130 50 125 0 Q 120 -50 80 -55 Q 0 -60 -120 -50 Z"/><path d="M -100 -30 Q 0 -20 100 -30" opacity="0.75" stroke-width="2.2"/><path d="M -100 -5 Q 0 0 100 -5" opacity="0.75" stroke-width="2.2"/><path d="M -100 25 Q 0 30 100 25" opacity="0.75" stroke-width="2.2"/><path d="M -110 50 Q 0 58 105 52" opacity="0.7" stroke-width="2"/></g>
+  </g>
+
+  <!-- NG side (flat) -->
+  <g transform="translate(800, 320)">
+    <circle cx="-200" cy="-180" r="22" fill="#C62828"/>
+    <text x="-200" y="-172" font-size="26" font-weight="900" fill="white" text-anchor="middle">×</text>
+    <path d="M -120 -50 Q -130 -10 -120 30 Q -100 55 -50 60 L 100 55 Q 130 50 125 0 Q 120 -50 80 -55 Q 0 -60 -120 -50 Z" fill="#A06848"/><ellipse cx="-50" cy="0" rx="30" ry="22" fill="#5D4E37" opacity="0.55"/><ellipse cx="40" cy="10" rx="22" ry="18" fill="#5D4E37" opacity="0.5"/><ellipse cx="0" cy="70" rx="70" ry="8" fill="#A03828" opacity="0.5"/>
+  </g>
+
+  <!-- Comparison labels -->
+  <g font-size="20" fill="#333">
+    <rect x="60" y="495" width="460" height="80" rx="8" fill="#E8F5E9"/>
+    <text x="80" y="520" font-weight="bold" fill="#2C5F2D">● オレンジ色が鮮やか</text>
+    <text x="80" y="545" font-weight="bold" fill="#2C5F2D">● 脂(白いライン)がくっきり</text>
+    <text x="80" y="568" fill="#666" font-size="17">皮目に銀色の艶=新鮮</text>
+
+    <rect x="560" y="495" width="460" height="80" rx="8" fill="#FFEBEE"/>
+    <text x="580" y="520" font-weight="bold" fill="#C62828">× 色が褐色、くすむ</text>
+    <text x="580" y="545" font-weight="bold" fill="#C62828">× 白いラインが不明瞭</text>
+    <text x="580" y="568" fill="#666" font-size="17">ドリップ多+表面ヌメ=傷み</text>
+  </g>
+</svg>

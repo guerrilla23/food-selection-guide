@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-130 -110 260 220" font-family="Noto Sans CJK JP, sans-serif">
+<defs>
+      <radialGradient id="wcBodyBeef" cx="35%" cy="25%"><stop offset="0%" stop-color="#F8B8A8" stop-opacity="0.95"/><stop offset="40%" stop-color="#D87060" stop-opacity="0.9"/><stop offset="80%" stop-color="#A03020" stop-opacity="0.85"/><stop offset="100%" stop-color="#601810" stop-opacity="0.65"/></radialGradient>
+      <radialGradient id="wcLeafBeef" cx="50%" cy="20%"><stop offset="0%" stop-color="#9BCB7A" stop-opacity="0.9"/><stop offset="60%" stop-color="#5D8F3D" stop-opacity="0.7"/><stop offset="100%" stop-color="#2C5F2D" stop-opacity="0.5"/></radialGradient>
+      <filter id="wcRoughBeef" x="-10%" y="-10%" width="120%" height="120%">
+        <feTurbulence baseFrequency="0.04" numOctaves="3" seed="173"/>
+        <feDisplacementMap in="SourceGraphic" scale="4"/>
+      </filter>
+      <filter id="wcBlurBeef"><feGaussianBlur stdDeviation="1.5"/></filter>
+    </defs>
+    <g filter="url(#wcBlurBeef)" opacity="0.4"><ellipse cx="0" cy="0" rx="110" ry="70" fill="#D87060"/></g>
+    
+    <g filter="url(#wcRoughBeef)"><path d="M -90 -45 Q -100 0 -90 50 Q 0 75 90 50 Q 100 0 90 -45 Q 0 -65 -90 -45 Z" fill="url(#wcBodyBeef)"/></g>
+    <g stroke="#3D2817" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"><path d="M -90 -45 Q -100 0 -90 50 Q 0 75 90 50 Q 100 0 90 -45 Q 0 -65 -90 -45 Z"/><path d="M -75 -30 Q 0 -25 75 -30" opacity="0.65" stroke-width="1.5"/><path d="M -78 -5 Q 0 0 78 -5" opacity="0.65" stroke-width="1.5"/><path d="M -72 20 Q 0 25 72 20" opacity="0.65" stroke-width="1.5"/><path d="M -65 45 Q 0 50 65 45" opacity="0.65" stroke-width="1.5"/><path d="M -55 -18 Q -25 -12 5 -22" opacity="0.75" stroke-width="2.2"/><path d="M -10 -3 Q 20 5 50 -5" opacity="0.75" stroke-width="2.2"/><path d="M 25 18 Q 50 22 70 12" opacity="0.75" stroke-width="2.2"/><path d="M -45 32 Q -15 38 15 30" opacity="0.75" stroke-width="2.2"/><path d="M 30 45 Q 50 50 65 42" opacity="0.7" stroke-width="2"/></g>
+</svg>
