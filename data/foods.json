@@ -643,7 +643,7 @@
       "id": "egg",
       "name": {
         "ja": "卵",
-        "en": ""
+        "en": "Egg"
       },
       "name_kana": "たまご",
       "name_en": "Egg",
@@ -654,7 +654,7 @@
       },
       "subcategory": {
         "ja": "卵",
-        "en": ""
+        "en": "Egg"
       },
       "color_theme": "#FFF4E0",
       "accent_color": "#C8A878",
@@ -674,17 +674,17 @@
       ],
       "season_peak": {
         "ja": "通年",
-        "en": ""
+        "en": "Year-round"
       },
       "key_check": {
         "icon": "👀",
         "action": {
           "ja": "殻を確認",
-          "en": ""
+          "en": "Check the shell"
         },
         "judgment": {
           "ja": "ヒビなし = OK",
-          "en": ""
+          "en": "No cracks = OK"
         }
       },
       "ok_short": {
@@ -694,7 +694,12 @@
           "汚れ:なし",
           "賞味期限:余裕"
         ],
-        "en": []
+        "en": [
+          "Shell: No cracks",
+          "Surface: Smooth",
+          "Cleanliness: Good",
+          "Best by: Plenty"
+        ]
       },
       "ng_short": {
         "ja": [
@@ -703,7 +708,12 @@
           "音:カチャ",
           "鮮度:期限間近"
         ],
-        "en": []
+        "en": [
+          "Shell: Cracked",
+          "Surface: Stained",
+          "Sound: Sloshing",
+          "Freshness: Marginal"
+        ]
       },
       "ok_points": {
         "ja": [
@@ -712,7 +722,12 @@
           "汚れ(糞・血・羽毛)が付いていない",
           "持って振っても音がしない(中身がしっかり詰まっている)"
         ],
-        "en": []
+        "en": [
+          "No cracks, chips, or holes in the shell",
+          "Surface is smooth without rough patches",
+          "No droppings, blood, or feathers attached",
+          "No sound when shaken (contents firmly intact)"
+        ]
       },
       "ng_points": {
         "ja": [
@@ -721,37 +736,42 @@
           "振るとカチャカチャ音がする(中で黄身が崩れている)",
           "賞味期限が間近、または保管温度が不適切"
         ],
-        "en": []
+        "en": [
+          "Cracks, chips, or holes in the shell",
+          "Droppings or blood attached",
+          "Sloshing sound when shaken (yolk has broken inside)",
+          "Best-by date approaching, or improper storage temperature"
+        ]
       },
       "summary_ok": {
         "ja": "ヒビなし・滑らか・無臭",
-        "en": ""
+        "en": "No cracks, smooth, odorless"
       },
       "summary_ng": {
         "ja": "ヒビあり・汚れ・古い",
-        "en": ""
+        "en": "Cracked, stained, old"
       },
       "storage": {
         "method": {
           "ja": "尖った方を下に向けて冷蔵保存。ドアポケットは避ける(温度変化大)",
-          "en": ""
+          "en": "Refrigerate pointed-end down. Avoid the door pocket (temperature fluctuations)"
         },
         "duration": {
           "ja": "冷蔵で2〜3週間(賞味期限+調理用にもう少し)",
-          "en": ""
+          "en": "2-3 weeks refrigerated (best-by date plus a few days for cooked use)"
         },
         "tips": {
           "ja": "生食は賞味期限内、加熱なら期限後数日もOK。割って黄身が盛り上がる=新鮮",
-          "en": ""
+          "en": "Raw consumption only within best-by date; cooked is OK a few days after. Fresh yolk stands tall when cracked"
         }
       },
       "usage_tips": {
         "ja": "生食=新鮮なもの限定。半熟・温泉卵は中心まで65〜70℃で安全。冷蔵庫から出して常温に戻すと割れにくい",
-        "en": ""
+        "en": "Raw eggs only when very fresh. For half-cooked or onsen tamago, heat to 65-70°C through the center. Bringing to room temperature prevents cracking"
       },
       "nutrition_highlight": {
         "ja": "完全栄養食(ビタミンC以外ほぼ全栄養素)。良質なタンパク質、コリン(脳)、ビタミンD",
-        "en": ""
+        "en": "Nearly complete nutrition (all essentials except vitamin C). High-quality protein, choline (brain), vitamin D"
       }
     },
     {
@@ -2663,7 +2683,7 @@
       "id": "shiitake",
       "name": {
         "ja": "椎茸",
-        "en": ""
+        "en": "Shiitake Mushroom"
       },
       "name_kana": "しいたけ",
       "name_en": "Shiitake",
@@ -2688,17 +2708,17 @@
       ],
       "season_peak": {
         "ja": "春・秋",
-        "en": ""
+        "en": "Spring & Autumn"
       },
       "key_check": {
         "icon": "👀",
         "action": {
           "ja": "カサの裏を見る",
-          "en": ""
+          "en": "Look under the cap (gills)"
         },
         "judgment": {
           "ja": "ヒダ白 = OK",
-          "en": ""
+          "en": "White gills = OK"
         }
       },
       "ok_short": {
@@ -2708,7 +2728,12 @@
           "肉:厚",
           "軸:太・固"
         ],
-        "en": []
+        "en": [
+          "Cap: Curled inward",
+          "Gills: White",
+          "Flesh: Thick",
+          "Stem: Thick/Firm"
+        ]
       },
       "ng_short": {
         "ja": [
@@ -2717,7 +2742,12 @@
           "肉:薄",
           "湿気:多"
         ],
-        "en": []
+        "en": [
+          "Cap: Opened up",
+          "Gills: Brown",
+          "Flesh: Thin",
+          "Moisture: Excess"
+        ]
       },
       "ok_points": {
         "ja": [
@@ -2726,7 +2756,12 @@
           "軸が太く硬い(旨味豊富)",
           "全体に湿り気はあるがベタつかない"
         ],
-        "en": []
+        "en": [
+          "Cap is curled inward (sign of thick flesh)",
+          "Gills underneath are white and even",
+          "Stem is thick and firm (rich in umami)",
+          "Slightly moist throughout but not sticky"
+        ]
       },
       "ng_points": {
         "ja": [
@@ -2735,44 +2770,49 @@
           "肉が薄く軽い",
           "ベタつき、変色"
         ],
-        "en": []
+        "en": [
+          "Cap is fully opened (already released spores)",
+          "Gills darkened, moist",
+          "Thin flesh, light weight",
+          "Sticky, discolored"
+        ]
       },
       "summary_ok": {
         "ja": "内巻き・ヒダ白・肉厚",
-        "en": ""
+        "en": "Curled cap, white gills, thick"
       },
       "summary_ng": {
         "ja": "開く・ヒダ茶・薄",
-        "en": ""
+        "en": "Open cap, brown gills, thin"
       },
       "storage": {
         "method": {
           "ja": "キッチンペーパーで包みポリ袋で冷蔵",
-          "en": ""
+          "en": "Wrap in paper towel, bag, refrigerate"
         },
         "duration": {
           "ja": "冷蔵で4〜5日 / 干して天日干しなら1ヶ月",
-          "en": ""
+          "en": "4-5 days refrigerated / 1 month sun-dried"
         },
         "tips": {
           "ja": "天日干しでビタミンD増。生干し30分でも効果あり",
-          "en": ""
+          "en": "Sun-drying boosts vitamin D. Even 30 minutes of light drying helps"
         }
       },
       "usage_tips": {
         "ja": "石づき(根元)は固いので除去。軸も使える。乾椎茸は水戻しで旨味UP",
-        "en": ""
+        "en": "The tough stem base (ishizuki) should be cut off; the rest of the stem is edible. Dried shiitake gain umami when rehydrated"
       },
       "nutrition_highlight": {
         "ja": "ビタミンD(骨)、エリタデニン(コレステロール抑制)、食物繊維",
-        "en": ""
+        "en": "Vitamin D (bone health), eritadenine (cholesterol-lowering), dietary fiber"
       }
     },
     {
       "id": "shimeji",
       "name": {
         "ja": "しめじ",
-        "en": ""
+        "en": "Shimeji Mushroom"
       },
       "name_kana": "しめじ",
       "name_en": "Shimeji",
@@ -2794,17 +2834,17 @@
       ],
       "season_peak": {
         "ja": "秋",
-        "en": ""
+        "en": "Autumn"
       },
       "key_check": {
         "icon": "👀",
         "action": {
           "ja": "株のまとまりを見る",
-          "en": ""
+          "en": "Check the cluster's compactness"
         },
         "judgment": {
           "ja": "ハリ・密 = OK",
-          "en": ""
+          "en": "Firm and dense = OK"
         }
       },
       "ok_short": {
@@ -2814,7 +2854,12 @@
           "軸:白",
           "色:均一"
         ],
-        "en": []
+        "en": [
+          "Cluster: Dense/Firm",
+          "Caps: Tight",
+          "Stems: White",
+          "Color: Even"
+        ]
       },
       "ng_short": {
         "ja": [
@@ -2823,7 +2868,12 @@
           "軸:茶",
           "湿:多"
         ],
-        "en": []
+        "en": [
+          "Cluster: Falling apart",
+          "Caps: Opened up",
+          "Stems: Brown",
+          "Moisture: Excess"
+        ]
       },
       "ok_points": {
         "ja": [
@@ -2832,7 +2882,12 @@
           "軸が真っ白でしっかり",
           "全体の色が均一"
         ],
-        "en": []
+        "en": [
+          "Cluster holds together with firmness",
+          "Caps are small and curled inward",
+          "Stems are pure white and firm",
+          "Even color throughout"
+        ]
       },
       "ng_points": {
         "ja": [
@@ -2841,44 +2896,49 @@
           "軸がベタつく・茶色",
           "湿気が多く、変色"
         ],
-        "en": []
+        "en": [
+          "Cluster falling apart",
+          "Caps fully opened",
+          "Stems are sticky or brown",
+          "Excess moisture, discolored"
+        ]
       },
       "summary_ok": {
         "ja": "株まとまり・ハリ・白",
-        "en": ""
+        "en": "Compact cluster, firm, white"
       },
       "summary_ng": {
         "ja": "バラけ・開く・茶",
-        "en": ""
+        "en": "Falling apart, opened, brown"
       },
       "storage": {
         "method": {
           "ja": "石づきを切らず、キッチンペーパーで包み冷蔵",
-          "en": ""
+          "en": "Don't cut off the base; wrap in paper towel and refrigerate"
         },
         "duration": {
           "ja": "冷蔵で4〜5日",
-          "en": ""
+          "en": "4-5 days refrigerated"
         },
         "tips": {
           "ja": "冷凍可: 小房に分けジップ袋で。旨味UP",
-          "en": ""
+          "en": "Freezes well: separate into small clusters and bag. Boosts umami"
         }
       },
       "usage_tips": {
         "ja": "「香りまつたけ味しめじ」と言われるほど旨味豊富。汁物・炒め物・炊き込みに",
-        "en": ""
+        "en": "Old saying: 'Matsutake for aroma, shimeji for taste.' Excellent in soups, stir-fries, and rice dishes"
       },
       "nutrition_highlight": {
         "ja": "オルニチン(肝機能)、βグルカン(免疫)、ビタミンB群",
-        "en": ""
+        "en": "Ornithine (liver function), β-glucan (immunity), B vitamins"
       }
     },
     {
       "id": "enoki",
       "name": {
         "ja": "エノキ",
-        "en": ""
+        "en": "Enoki Mushroom"
       },
       "name_kana": "えのき",
       "name_en": "Enoki",
@@ -2901,17 +2961,17 @@
       ],
       "season_peak": {
         "ja": "冬",
-        "en": ""
+        "en": "Winter"
       },
       "key_check": {
         "icon": "👀",
         "action": {
           "ja": "軸の色を見る",
-          "en": ""
+          "en": "Check the stem color"
         },
         "judgment": {
           "ja": "真っ白 = OK",
-          "en": ""
+          "en": "Pure white = OK"
         }
       },
       "ok_short": {
@@ -2921,7 +2981,12 @@
           "株:固",
           "袋:乾"
         ],
-        "en": []
+        "en": [
+          "Stems: Pure white",
+          "Caps: Small/Even",
+          "Cluster: Firm",
+          "Bag: Dry"
+        ]
       },
       "ng_short": {
         "ja": [
@@ -2930,7 +2995,12 @@
           "株:崩",
           "袋:水滴"
         ],
-        "en": []
+        "en": [
+          "Stems: Yellowing",
+          "Caps: Opened up",
+          "Cluster: Loose",
+          "Bag: Wet"
+        ]
       },
       "ok_points": {
         "ja": [
@@ -2939,7 +3009,12 @@
           "株のお尻がしっかり詰まっている",
           "袋の中が乾燥している"
         ],
-        "en": []
+        "en": [
+          "Stems are pure white and firm",
+          "Caps are small and roundly even",
+          "Cluster base is densely packed",
+          "Bag interior is dry"
+        ]
       },
       "ng_points": {
         "ja": [
@@ -2948,44 +3023,49 @@
           "株が崩れバラける",
           "袋に水滴(古い・劣化)"
         ],
-        "en": []
+        "en": [
+          "Stems yellowing",
+          "Caps open and darker",
+          "Cluster has fallen apart",
+          "Water droplets in the bag (deteriorated)"
+        ]
       },
       "summary_ok": {
         "ja": "白・カサ整う・乾",
-        "en": ""
+        "en": "White stems, even caps, dry"
       },
       "summary_ng": {
         "ja": "黄・開・水滴",
-        "en": ""
+        "en": "Yellowed, open caps, wet"
       },
       "storage": {
         "method": {
           "ja": "袋ごと、または小分けで冷蔵",
-          "en": ""
+          "en": "Store in original bag or portioned, refrigerated"
         },
         "duration": {
           "ja": "冷蔵で4〜5日",
-          "en": ""
+          "en": "4-5 days refrigerated"
         },
         "tips": {
           "ja": "冷凍で旨味UP+1ヶ月。石づき側を切らずに袋へ",
-          "en": ""
+          "en": "Freezing boosts umami and extends life to 1 month. Don't cut off the base before bagging"
         }
       },
       "usage_tips": {
         "ja": "石づきを切って小房に分ける。鍋・汁物・ナムルに。食感命なので加熱は短く",
-        "en": ""
+        "en": "Cut off the base, separate into small clusters. Great in hot pots, soups, and namul. Texture is the appeal — cook briefly"
       },
       "nutrition_highlight": {
         "ja": "GABA(リラックス)、エノキタケリノール酸(脂肪抑制)、食物繊維",
-        "en": ""
+        "en": "GABA (relaxation), enoki linoleic acid (fat suppression), dietary fiber"
       }
     },
     {
       "id": "eringi",
       "name": {
         "ja": "エリンギ",
-        "en": ""
+        "en": "Eringi (King Trumpet Mushroom)"
       },
       "name_kana": "えりんぎ",
       "name_en": "King Trumpet",
@@ -3008,17 +3088,17 @@
       ],
       "season_peak": {
         "ja": "秋〜初冬",
-        "en": ""
+        "en": "Autumn–Early winter"
       },
       "key_check": {
         "icon": "👀",
         "action": {
           "ja": "軸の太さを見る",
-          "en": ""
+          "en": "Check the stem thickness"
         },
         "judgment": {
           "ja": "太く真白 = OK",
-          "en": ""
+          "en": "Thick and pure white = OK"
         }
       },
       "ok_short": {
@@ -3028,7 +3108,12 @@
           "肌:乾",
           "ハリ:あり"
         ],
-        "en": []
+        "en": [
+          "Stem: Thick/White",
+          "Cap: Light brown",
+          "Surface: Dry",
+          "Firmness: Yes"
+        ]
       },
       "ng_short": {
         "ja": [
@@ -3037,7 +3122,12 @@
           "肌:ベタ",
           "斑点:黒"
         ],
-        "en": []
+        "en": [
+          "Stem: Thin/Yellow",
+          "Cap: Wide open",
+          "Surface: Sticky",
+          "Spots: Black"
+        ]
       },
       "ok_points": {
         "ja": [
@@ -3046,7 +3136,12 @@
           "表面が乾燥していてベタつかない",
           "全体に弾力がある"
         ],
-        "en": []
+        "en": [
+          "Stem is thick and pure white with firmness",
+          "Cap is light brown and curled inward",
+          "Surface is dry, not sticky",
+          "Springy throughout"
+        ]
       },
       "ng_points": {
         "ja": [
@@ -3055,44 +3150,49 @@
           "表面がベタつく",
           "黒い斑点や変色"
         ],
-        "en": []
+        "en": [
+          "Stem is thin and yellowing",
+          "Cap is fully opened wide",
+          "Surface is sticky",
+          "Black spots or discoloration"
+        ]
       },
       "summary_ok": {
         "ja": "軸太・白・乾燥",
-        "en": ""
+        "en": "Thick stem, white, dry"
       },
       "summary_ng": {
         "ja": "細・黄・ベタ",
-        "en": ""
+        "en": "Thin, yellow, sticky"
       },
       "storage": {
         "method": {
           "ja": "キッチンペーパーで包みポリ袋で冷蔵",
-          "en": ""
+          "en": "Wrap in paper towel, bag, refrigerate"
         },
         "duration": {
           "ja": "冷蔵で1週間",
-          "en": ""
+          "en": "1 week refrigerated"
         },
         "tips": {
           "ja": "冷凍可: スライスしてジップ袋。料理にすぐ使える",
-          "en": ""
+          "en": "Freezes well: slice and bag for ready-to-use convenience"
         }
       },
       "usage_tips": {
         "ja": "アワビのような食感が魅力。縦に裂くと繊維沿いで歯ごたえUP。グリル・バター焼きに",
-        "en": ""
+        "en": "Has an abalone-like texture. Tearing along the fibers (lengthwise) enhances chewiness. Excellent grilled or in butter sauté"
       },
       "nutrition_highlight": {
         "ja": "ビタミンD、βグルカン、食物繊維。低カロリーでダイエット向き",
-        "en": ""
+        "en": "Vitamin D, β-glucan, dietary fiber. Low calorie, diet-friendly"
       }
     },
     {
       "id": "maitake",
       "name": {
         "ja": "舞茸",
-        "en": ""
+        "en": "Maitake (Hen of the Woods)"
       },
       "name_kana": "まいたけ",
       "name_en": "Maitake",
@@ -3113,17 +3213,17 @@
       ],
       "season_peak": {
         "ja": "秋",
-        "en": ""
+        "en": "Autumn"
       },
       "key_check": {
         "icon": "👀",
         "action": {
           "ja": "株の色を見る",
-          "en": ""
+          "en": "Check the cluster's color"
         },
         "judgment": {
           "ja": "深茶・肉厚 = OK",
-          "en": ""
+          "en": "Deep brown and meaty = OK"
         }
       },
       "ok_short": {
@@ -3133,7 +3233,12 @@
           "肉:厚",
           "香:強"
         ],
-        "en": []
+        "en": [
+          "Cluster: Firm/Dense",
+          "Color: Deep brown",
+          "Flesh: Thick",
+          "Aroma: Strong"
+        ]
       },
       "ng_short": {
         "ja": [
@@ -3142,7 +3247,12 @@
           "肉:薄",
           "湿:多"
         ],
-        "en": []
+        "en": [
+          "Cluster: Falling apart",
+          "Color: Dull",
+          "Flesh: Thin",
+          "Moisture: Excess"
+        ]
       },
       "ok_points": {
         "ja": [
@@ -3151,7 +3261,12 @@
           "カサ(花びら状)が肉厚",
           "香りが強く、芳ばしい"
         ],
-        "en": []
+        "en": [
+          "Cluster is firmly bound with density",
+          "Deep, even brown color",
+          "Caps (petal-like) are thick",
+          "Strong, fragrant aroma"
+        ]
       },
       "ng_points": {
         "ja": [
@@ -3160,37 +3275,42 @@
           "カサが薄く、軽い",
           "湿気が多く、ベタつく"
         ],
-        "en": []
+        "en": [
+          "Cluster falling apart",
+          "Dull color, partially blackened",
+          "Caps are thin and light",
+          "Excess moisture, sticky"
+        ]
       },
       "summary_ok": {
         "ja": "株固・濃茶・肉厚",
-        "en": ""
+        "en": "Firm cluster, deep brown, meaty"
       },
       "summary_ng": {
         "ja": "バラけ・くすみ・湿",
-        "en": ""
+        "en": "Falling apart, dull, moist"
       },
       "storage": {
         "method": {
           "ja": "キッチンペーパーで包みポリ袋で冷蔵",
-          "en": ""
+          "en": "Wrap in paper towel, bag, refrigerate"
         },
         "duration": {
           "ja": "冷蔵で4〜5日",
-          "en": ""
+          "en": "4-5 days refrigerated"
         },
         "tips": {
           "ja": "冷凍で旨味増。手で割いて小分け",
-          "en": ""
+          "en": "Freezing enhances umami. Tear by hand into small clusters before bagging"
         }
       },
       "usage_tips": {
         "ja": "天ぷら・炊き込みご飯・ホイル焼きで香り活きる。タンパク質分解酵素ありで肉も柔らかく",
-        "en": ""
+        "en": "Aroma shines in tempura, takikomi rice (mixed rice), and foil-baked dishes. Contains a protein-digesting enzyme that tenderizes meat"
       },
       "nutrition_highlight": {
         "ja": "βグルカン(免疫力UP)、ビタミンD、ナイアシン。「舞い踊るほど嬉しい」が名前の由来",
-        "en": ""
+        "en": "β-glucan (immune boost), vitamin D, niacin. Name means 'mushroom of dancing joy'"
       }
     },
     {
@@ -4352,7 +4472,7 @@
       "id": "tofu",
       "name": {
         "ja": "豆腐",
-        "en": ""
+        "en": "Tofu"
       },
       "name_kana": "とうふ",
       "name_en": "Tofu",
@@ -4363,7 +4483,7 @@
       },
       "subcategory": {
         "ja": "豆製品",
-        "en": ""
+        "en": "Soy product"
       },
       "color_theme": "#FFF8E8",
       "accent_color": "#C8A878",
@@ -4383,17 +4503,17 @@
       ],
       "season_peak": {
         "ja": "通年",
-        "en": ""
+        "en": "Year-round"
       },
       "key_check": {
         "icon": "👀",
         "action": {
           "ja": "水と表面を見る",
-          "en": ""
+          "en": "Check the water and surface"
         },
         "judgment": {
           "ja": "透明・無臭 = OK",
-          "en": ""
+          "en": "Clear water, odorless = OK"
         }
       },
       "ok_short": {
@@ -4403,7 +4523,12 @@
           "色:乳白",
           "無臭"
         ],
-        "en": []
+        "en": [
+          "Shape: Even",
+          "Water: Clear",
+          "Color: Milky white",
+          "Odor: None"
+        ]
       },
       "ng_short": {
         "ja": [
@@ -4412,7 +4537,12 @@
           "色:黄",
           "酸臭"
         ],
-        "en": []
+        "en": [
+          "Shape: Crumbling",
+          "Water: Cloudy",
+          "Color: Yellowed",
+          "Odor: Sour"
+        ]
       },
       "ok_points": {
         "ja": [
@@ -4421,7 +4551,12 @@
           "色が乳白色で均一",
           "押すと弾力がある(絹は柔らかく、木綿はしっかり)"
         ],
-        "en": []
+        "en": [
+          "Even shape with sharp corners",
+          "Water is clear and odorless",
+          "Even milky white color throughout",
+          "Springy when pressed (silken: soft; cotton: firm)"
+        ]
       },
       "ng_points": {
         "ja": [
@@ -4430,44 +4565,49 @@
           "黄色っぽく変色",
           "酸っぱい臭い、表面のヌメリ"
         ],
-        "en": []
+        "en": [
+          "Crumbling, falling apart shape",
+          "Cloudy water, slimy feel",
+          "Yellowing color",
+          "Sour smell, slimy surface"
+        ]
       },
       "summary_ok": {
         "ja": "形整・水透明・無臭",
-        "en": ""
+        "en": "Even shape, clear water, odorless"
       },
       "summary_ng": {
         "ja": "崩・水濁・酸臭",
-        "en": ""
+        "en": "Crumbling, cloudy, sour"
       },
       "storage": {
         "method": {
           "ja": "パックの水ごと冷蔵、開封後は新しい水に",
-          "en": ""
+          "en": "Refrigerate in original water; replace water daily once opened"
         },
         "duration": {
           "ja": "未開封:賞味期限内 / 開封:1〜2日",
-          "en": ""
+          "en": "Unopened: until best-by date / Opened: 1-2 days"
         },
         "tips": {
           "ja": "毎日水を替える。冷凍可だがスポンジ状になる",
-          "en": ""
+          "en": "Replace water daily. Freezing OK but turns spongy"
         }
       },
       "usage_tips": {
         "ja": "絹=つるん滑らか(冷奴・スープ)、木綿=しっかり(炒り豆腐・麻婆)。湯通しで水分抜く",
-        "en": ""
+        "en": "Silken: smooth (cold tofu, soup); cotton: firm (sautéed, mapo tofu). Press to remove water before frying"
       },
       "nutrition_highlight": {
         "ja": "良質な植物性タンパク質、大豆イソフラボン、カルシウム、鉄分",
-        "en": ""
+        "en": "High-quality plant protein, soy isoflavones, calcium, iron"
       }
     },
     {
       "id": "natto",
       "name": {
         "ja": "納豆",
-        "en": ""
+        "en": "Natto (Fermented Soybeans)"
       },
       "name_kana": "なっとう",
       "name_en": "Natto",
@@ -4478,7 +4618,7 @@
       },
       "subcategory": {
         "ja": "豆製品",
-        "en": ""
+        "en": "Soy product"
       },
       "color_theme": "#F0E0C5",
       "accent_color": "#A07848",
@@ -4498,17 +4638,17 @@
       ],
       "season_peak": {
         "ja": "通年",
-        "en": ""
+        "en": "Year-round"
       },
       "key_check": {
         "icon": "🥄",
         "action": {
           "ja": "混ぜて糸を見る",
-          "en": ""
+          "en": "Stir and check the threads"
         },
         "judgment": {
           "ja": "強い糸引き = OK",
-          "en": ""
+          "en": "Strong stickiness = OK"
         }
       },
       "ok_short": {
@@ -4518,7 +4658,12 @@
           "色:茶均一",
           "発酵臭:良"
         ],
-        "en": []
+        "en": [
+          "Threads: Strong/Sticky",
+          "Beans: Even",
+          "Color: Even brown",
+          "Odor: Healthy ferment"
+        ]
       },
       "ng_short": {
         "ja": [
@@ -4527,7 +4672,12 @@
           "色:黒・カビ",
           "アンモニア臭"
         ],
-        "en": []
+        "en": [
+          "Threads: Weak",
+          "Beans: Dried",
+          "Color: Black/Mold",
+          "Odor: Strong ammonia"
+        ]
       },
       "ok_points": {
         "ja": [
@@ -4536,7 +4686,12 @@
           "色が均一な茶〜濃茶色",
           "独特の発酵臭(アンモニア臭ではない)"
         ],
-        "en": []
+        "en": [
+          "Strong stretchy threads (the iconic natto stickiness)",
+          "Beans are evenly sized and plump",
+          "Even brown to dark-brown color throughout",
+          "Distinctive but pleasant fermentation aroma (not ammonia)"
+        ]
       },
       "ng_points": {
         "ja": [
@@ -4545,37 +4700,42 @@
           "黒く変色、白い斑点(カビ)",
           "強烈なアンモニア臭"
         ],
-        "en": []
+        "en": [
+          "Threads are weak or absent",
+          "Beans are dried out and rough",
+          "Discolored black, with white mold spots",
+          "Strong ammonia smell"
+        ]
       },
       "summary_ok": {
         "ja": "糸強・粒揃・茶均一",
-        "en": ""
+        "en": "Strong threads, plump beans, even color"
       },
       "summary_ng": {
         "ja": "糸弱・乾・カビ",
-        "en": ""
+        "en": "Weak threads, dried, moldy"
       },
       "storage": {
         "method": {
           "ja": "冷蔵保存(発酵を遅らせる)",
-          "en": ""
+          "en": "Refrigerate to slow fermentation"
         },
         "duration": {
           "ja": "賞味期限内、開封後は早めに",
-          "en": ""
+          "en": "Within best-by date; consume soon after opening"
         },
         "tips": {
           "ja": "冷凍可で1ヶ月。室温に出すと発酵進み苦み出る",
-          "en": ""
+          "en": "Freezing keeps 1 month. Leaving at room temp accelerates fermentation, causing bitterness"
         }
       },
       "usage_tips": {
         "ja": "ご飯に乗せる前にしっかり混ぜて糸を引かせる。生卵・薬味で味調整",
-        "en": ""
+        "en": "Stir well before serving over rice to draw out the threads. Adjust flavor with raw egg or condiments"
       },
       "nutrition_highlight": {
         "ja": "ナットウキナーゼ(血液サラサラ)、ビタミンK2(骨)、大豆イソフラボン、食物繊維",
-        "en": ""
+        "en": "Nattokinase (improves circulation), vitamin K2 (bone health), soy isoflavones, dietary fiber"
       }
     },
     {
@@ -5478,7 +5638,7 @@
       "id": "yogurt",
       "name": {
         "ja": "ヨーグルト",
-        "en": ""
+        "en": "Yogurt"
       },
       "name_kana": "よーぐると",
       "name_en": "Yogurt",
@@ -5489,7 +5649,7 @@
       },
       "subcategory": {
         "ja": "乳製品",
-        "en": ""
+        "en": "Dairy"
       },
       "color_theme": "#FFF8E8",
       "accent_color": "#C8A878",
@@ -5509,17 +5669,17 @@
       ],
       "season_peak": {
         "ja": "通年",
-        "en": ""
+        "en": "Year-round"
       },
       "key_check": {
         "icon": "👀",
         "action": {
           "ja": "容器と表面を見る",
-          "en": ""
+          "en": "Check the container and surface"
         },
         "judgment": {
           "ja": "膨らみなし = OK",
-          "en": ""
+          "en": "No bulging = OK"
         }
       },
       "ok_short": {
@@ -5529,7 +5689,12 @@
           "色:乳白",
           "酸味:良"
         ],
-        "en": []
+        "en": [
+          "Container: Flat",
+          "Surface: Smooth",
+          "Color: Milky white",
+          "Acidity: Pleasant"
+        ]
       },
       "ng_short": {
         "ja": [
@@ -5538,7 +5703,12 @@
           "色:黄",
           "カビ"
         ],
-        "en": []
+        "en": [
+          "Container: Bulging",
+          "Surface: Heavy whey",
+          "Color: Yellow",
+          "Mold"
+        ]
       },
       "ok_points": {
         "ja": [
@@ -5547,7 +5717,12 @@
           "色が乳白色〜淡クリーム",
           "蓋を開けて爽やかな酸味の香り"
         ],
-        "en": []
+        "en": [
+          "Container is flat, not bulging",
+          "Surface is smooth and even",
+          "Milky white to pale cream color",
+          "Refreshing tartness when opened"
+        ]
       },
       "ng_points": {
         "ja": [
@@ -5556,44 +5731,49 @@
           "色が黄ばむ・茶色がかる",
           "カビ・異臭(腐敗)"
         ],
-        "en": []
+        "en": [
+          "Container is swollen (over-fermentation)",
+          "Large amount of yellow whey separation on top",
+          "Yellowing or browning",
+          "Mold or off-smell (rotting)"
+        ]
       },
       "summary_ok": {
         "ja": "平坦・滑か・乳白",
-        "en": ""
+        "en": "Flat container, smooth, milky white"
       },
       "summary_ng": {
         "ja": "膨・分離・カビ",
-        "en": ""
+        "en": "Bulging, separated, mold"
       },
       "storage": {
         "method": {
           "ja": "10℃以下の冷蔵庫、ドアポケット避ける",
-          "en": ""
+          "en": "Refrigerator at 10°C or below. Avoid the door pocket"
         },
         "duration": {
           "ja": "賞味期限内、開封後は早めに(2〜3日)",
-          "en": ""
+          "en": "Within best-by date; 2-3 days after opening"
         },
         "tips": {
           "ja": "凍らせるとフローズン風に。少量のホエイ分離は正常",
-          "en": ""
+          "en": "Can freeze for a frozen-yogurt feel. Slight whey separation is normal"
         }
       },
       "usage_tips": {
         "ja": "そのままはちみつや果物と。料理にも(肉柔らかく、コク出し)",
-        "en": ""
+        "en": "Eat with honey or fruit. Also great in cooking (tenderizes meat, adds richness)"
       },
       "nutrition_highlight": {
         "ja": "乳酸菌(腸内環境)、カルシウム、タンパク質、ビタミンB2",
-        "en": ""
+        "en": "Lactic acid bacteria (gut health), calcium, protein, vitamin B2"
       }
     },
     {
       "id": "venison",
       "name": {
         "ja": "鹿肉",
-        "en": ""
+        "en": "Venison"
       },
       "name_kana": "しかにく",
       "name_en": "Venison",
@@ -5617,17 +5797,17 @@
       ],
       "season_peak": {
         "ja": "冬(狩猟期)",
-        "en": ""
+        "en": "Winter (hunting season)"
       },
       "key_check": {
         "icon": "👀",
         "action": {
           "ja": "色と臭いを確認",
-          "en": ""
+          "en": "Check the color and smell"
         },
         "judgment": {
           "ja": "深い赤・無臭 = OK",
-          "en": ""
+          "en": "Deep red, odorless = OK"
         }
       },
       "ok_short": {
@@ -5637,7 +5817,12 @@
           "脂:極少",
           "ドリップ:少"
         ],
-        "en": []
+        "en": [
+          "Color: Deep red",
+          "Fibers: Fine",
+          "Fat: Very minimal",
+          "Drip: Minimal"
+        ]
       },
       "ng_short": {
         "ja": [
@@ -5646,7 +5831,12 @@
           "獣臭強",
           "ドリップ多"
         ],
-        "en": []
+        "en": [
+          "Color: Brown to black",
+          "Stickiness",
+          "Strong gamey smell",
+          "Drip: Heavy"
+        ]
       },
       "ok_points": {
         "ja": [
@@ -5655,7 +5845,12 @@
           "脂肪が非常に少ない(赤身肉)",
           "血抜きが良い個体は無臭〜微かな鉄分の香り、ドリップ少"
         ],
-        "en": []
+        "en": [
+          "Deep, rich red color (high in hemoglobin)",
+          "Fine, dense muscle fibers",
+          "Very minimal fat (lean meat)",
+          "Properly bled animals: little drip and a clean iron-like smell"
+        ]
       },
       "ng_points": {
         "ja": [
@@ -5664,44 +5859,49 @@
           "強い獣臭(血抜き不十分・処理が悪い)",
           "ドリップが多く赤茶色"
         ],
-        "en": []
+        "en": [
+          "Brownish or black discoloration (old/oxidized)",
+          "Sticky surface, slimy feel",
+          "Strong gamey smell (poor bleeding/processing)",
+          "Heavy reddish-brown drip"
+        ]
       },
       "summary_ok": {
         "ja": "深紅・繊維細・無臭",
-        "en": ""
+        "en": "Deep red, fine fibers, odorless"
       },
       "summary_ng": {
         "ja": "茶〜黒・ベタ・獣臭",
-        "en": ""
+        "en": "Brown/black, sticky, gamey"
       },
       "storage": {
         "method": {
           "ja": "信頼できる業者から購入後、すぐに冷凍。真空パックが理想",
-          "en": ""
+          "en": "Buy from a trusted butcher and freeze immediately. Vacuum-pack ideal"
         },
         "duration": {
           "ja": "冷凍で2〜3ヶ月、解凍後は早めに使い切る",
-          "en": ""
+          "en": "2-3 months frozen. Use thawed meat quickly"
         },
         "tips": {
           "ja": "解凍は冷蔵庫でじっくり(8〜12時間)。急速解凍はドリップ流出の原因",
-          "en": ""
+          "en": "Thaw slowly in the refrigerator (8-12 hours). Quick thawing causes drip loss"
         }
       },
       "usage_tips": {
         "ja": "脂が極めて少ないため加熱しすぎに注意(レアまたは煮込みが基本)。下味に赤ワイン・日本酒・ハーブで臭み軽減。初心者はステーキ(ロース)・煮込み(スネ・モモ)から",
-        "en": ""
+        "en": "Very lean — avoid overcooking (rare or slow-stewed is best). Marinate in red wine, sake, or herbs to soften gameyness. Beginners: try loin steaks or shank stews"
       },
       "nutrition_highlight": {
         "ja": "高タンパク・低脂質・低カロリー。ヘム鉄(吸収率良い)・亜鉛・ビタミンB12が豊富。「赤身肉の女王」と呼ばれる栄養価",
-        "en": ""
+        "en": "High protein, low fat, low calorie. Heme iron (well-absorbed), zinc, vitamin B12. Known as the 'queen of red meats'"
       }
     },
     {
       "id": "boar",
       "name": {
         "ja": "猪肉",
-        "en": ""
+        "en": "Wild Boar"
       },
       "name_kana": "いのししにく",
       "name_en": "Wild Boar",
@@ -5724,17 +5924,17 @@
       ],
       "season_peak": {
         "ja": "冬(脂のった旬)",
-        "en": ""
+        "en": "Winter (peak fat)"
       },
       "key_check": {
         "icon": "👀",
         "action": {
           "ja": "脂と肉の境を見る",
-          "en": ""
+          "en": "Look at the fat-meat boundary"
         },
         "judgment": {
           "ja": "脂が白くくっきり = OK",
-          "en": ""
+          "en": "Crisp white fat = OK"
         }
       },
       "ok_short": {
@@ -5744,7 +5944,12 @@
           "弾力:あり",
           "獣臭:少"
         ],
-        "en": []
+        "en": [
+          "Color: Bright pink-red",
+          "Fat: White/Distinct",
+          "Springiness: Yes",
+          "Gamey: Mild"
+        ]
       },
       "ng_short": {
         "ja": [
@@ -5753,7 +5958,12 @@
           "感触:軟",
           "獣臭:強"
         ],
-        "en": []
+        "en": [
+          "Color: Dark red",
+          "Fat: Yellowing",
+          "Feel: Soft",
+          "Gamey: Strong"
+        ]
       },
       "ok_points": {
         "ja": [
@@ -5762,7 +5972,12 @@
           "弾力があり、押すと跳ね返る",
           "獣臭は少なく、脂は甘い香り(冬の脂のった個体)"
         ],
-        "en": []
+        "en": [
+          "Vivid pink to red meat color",
+          "Pure white fat with a clear boundary from the meat",
+          "Springy, bounces back when pressed",
+          "Mild gamey scent; sweet aroma in winter (peak-fat) animals"
+        ]
       },
       "ng_points": {
         "ja": [
@@ -5771,37 +5986,42 @@
           "押すと柔らかすぎる、繊維が緩む",
           "強い獣臭(処理の悪さ・古さの兆候)"
         ],
-        "en": []
+        "en": [
+          "Dark red color, with discoloration",
+          "Yellowed, sticky fat",
+          "Too soft, fibers loosening",
+          "Strong gamey smell (sign of poor processing or age)"
+        ]
       },
       "summary_ok": {
         "ja": "鮮ピンク・脂白・弾力",
-        "en": ""
+        "en": "Pink-red, white fat, springy"
       },
       "summary_ng": {
         "ja": "暗赤・脂黄・軟・獣臭",
-        "en": ""
+        "en": "Dark, yellow fat, soft, gamey"
       },
       "storage": {
         "method": {
           "ja": "冷凍が基本(豚肉と同じく寄生虫対策で生食 NG)",
-          "en": ""
+          "en": "Freeze (raw consumption is unsafe — same as pork, parasites possible)"
         },
         "duration": {
           "ja": "冷凍で2〜3ヶ月",
-          "en": ""
+          "en": "2-3 months frozen"
         },
         "tips": {
           "ja": "解凍は冷蔵庫でゆっくり。中心まで完全加熱(75℃以上1分以上)が必須",
-          "en": ""
+          "en": "Thaw slowly in the refrigerator. Cook completely (75°C / 167°F or higher for 1+ minutes through the center)"
         }
       },
       "usage_tips": {
         "ja": "脂に旨味が凝縮、煮込みで真価発揮。定番=牡丹鍋(味噌仕立て)、薄切りはしゃぶしゃぶ・焼肉、ロースはステーキ。初心者は牡丹鍋から(脂と味噌で食べやすい)",
-        "en": ""
+        "en": "Fat carries the umami; truly shines in stews. Classic dish: botan-nabe (miso-based hot pot). Thin slices for shabu-shabu or yakiniku; loin for steaks. Beginners: start with botan-nabe (miso and fat make it approachable)"
       },
       "nutrition_highlight": {
         "ja": "ビタミンB群(B1・B2・B12)豊富で疲労回復・代謝促進。亜鉛・鉄分も多い。脂は不飽和脂肪酸が多く豚肉より融点低い",
-        "en": ""
+        "en": "Rich in B vitamins (B1, B2, B12) for fatigue recovery and metabolism. Plenty of zinc and iron. Fat is high in unsaturated fatty acids — lower melting point than pork"
       }
     }
   ]
