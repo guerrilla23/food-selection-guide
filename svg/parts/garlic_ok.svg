@@ -1,6 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="-110 -160 220 280" font-family="Noto Sans CJK JP, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-120 -150 240 290" font-family="Noto Sans CJK JP, sans-serif">
 <defs>
-      <radialGradient id="wcBodyGarlic" cx="35%" cy="25%"><stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.95"/><stop offset="40%" stop-color="#F5EFE0" stop-opacity="0.85"/><stop offset="80%" stop-color="#E0D5B0" stop-opacity="0.7"/><stop offset="100%" stop-color="#B89870" stop-opacity="0.5"/></radialGradient>
+      <radialGradient id="wcBodyGarlic" cx="35%" cy="25%"><stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.95"/><stop offset="40%" stop-color="#F5EFE8" stop-opacity="0.9"/><stop offset="80%" stop-color="#D8C8C8" stop-opacity="0.75"/><stop offset="100%" stop-color="#A088A0" stop-opacity="0.5"/></radialGradient>
       <radialGradient id="wcLeafGarlic" cx="50%" cy="20%"><stop offset="0%" stop-color="#9BCB7A" stop-opacity="0.9"/><stop offset="60%" stop-color="#5D8F3D" stop-opacity="0.7"/><stop offset="100%" stop-color="#2C5F2D" stop-opacity="0.5"/></radialGradient>
       <filter id="wcRoughGarlic" x="-10%" y="-10%" width="120%" height="120%">
         <feTurbulence baseFrequency="0.04" numOctaves="3" seed="43"/>
@@ -8,8 +8,8 @@
       </filter>
       <filter id="wcBlurGarlic"><feGaussianBlur stdDeviation="1.5"/></filter>
     </defs>
-    <g filter="url(#wcBlurGarlic)" opacity="0.4"><ellipse cx="0" cy="10" rx="80" ry="90" fill="#E0C088"/></g>
+    <g filter="url(#wcBlurGarlic)" opacity="0.4"><ellipse cx="0" cy="10" rx="100" ry="105" fill="#E8DCD8"/></g>
     
-    <g filter="url(#wcRoughGarlic)"><path d="M -75 -30 Q -82 60 0 95 Q 82 60 75 -30 Q 70 -100 0 -115 Q -70 -100 -75 -30 Z" fill="url(#wcBodyGarlic)"/></g>
-    <g stroke="#3D2817" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"><path d="M -75 -30 Q -82 60 0 95 Q 82 60 75 -30 Q 70 -100 0 -115 Q -70 -100 -75 -30 Z"/><path d="M -8 -115 L 0 -140 L 8 -115" opacity="0.7" stroke-width="2"/><path d="M -55 -85 Q -50 0 -55 90" opacity="0.6" stroke-width="1.4"/><path d="M -25 -100 Q -20 0 -25 95" opacity="0.6" stroke-width="1.4"/><path d="M 0 -115 L 0 95" opacity="0.5" stroke-width="1.4"/><path d="M 25 -100 Q 20 0 25 95" opacity="0.6" stroke-width="1.4"/><path d="M 55 -85 Q 50 0 55 90" opacity="0.6" stroke-width="1.4"/><path d="M -15 95 L -18 115" opacity="0.7" stroke-width="2"/><path d="M 0 98 L 0 120" opacity="0.7" stroke-width="2"/><path d="M 15 95 L 20 115" opacity="0.7" stroke-width="2"/></g>
+    <g filter="url(#wcRoughGarlic)"><path d="M -90 0 Q -100 70 0 110 Q 100 70 90 0 Q 88 -65 40 -85 Q 0 -98 -40 -85 Q -88 -65 -90 0 Z" fill="url(#wcBodyGarlic)"/></g>
+    <g stroke="#3D2817" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"><path d="M -90 0 Q -100 70 0 110 Q 100 70 90 0 Q 88 -65 40 -85 Q 0 -98 -40 -85 Q -88 -65 -90 0 Z"/><path d="M -10 -98 L -8 -130" opacity="0.85" stroke-width="2.2"/><path d="M 0 -98 L 0 -135" opacity="0.85" stroke-width="2.2"/><path d="M 10 -98 L 8 -130" opacity="0.85" stroke-width="2.2"/><path d="M -68 -50 Q -78 0 -55 95" opacity="0.7" stroke-width="1.6"/><path d="M -38 -75 Q -45 0 -32 105" opacity="0.7" stroke-width="1.6"/><path d="M -10 -90 Q -12 0 -10 110" opacity="0.7" stroke-width="1.6"/><path d="M 18 -90 Q 18 0 16 110" opacity="0.7" stroke-width="1.6"/><path d="M 45 -75 Q 50 0 38 105" opacity="0.7" stroke-width="1.6"/><path d="M 70 -50 Q 80 0 60 95" opacity="0.7" stroke-width="1.6"/><path d="M -25 110 L -32 130" opacity="0.75" stroke-width="1.8"/><path d="M -10 113 L -12 135" opacity="0.75" stroke-width="1.8"/><path d="M 5 113 L 6 138" opacity="0.75" stroke-width="1.8"/><path d="M 20 110 L 25 132" opacity="0.75" stroke-width="1.8"/><path d="M 35 107 L 42 128" opacity="0.75" stroke-width="1.8"/></g>
 </svg>
