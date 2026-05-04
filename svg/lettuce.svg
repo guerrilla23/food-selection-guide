@@ -24,6 +24,7 @@
     <g filter="url(#wcBlurLettuce)" opacity="0.4"><ellipse cx="0" cy="0" rx="130" ry="110" fill="#9BCB7A"/></g>
     
     <g filter="url(#wcRoughLettuce)"><path d="M 0 -110 Q -120 -100 -120 -10 Q -125 90 0 110 Q 125 90 120 -10 Q 120 -100 0 -110 Z" fill="url(#wcBodyLettuce)"/></g>
+    
     <g stroke="#3D2817" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"><path d="M 0 -110 Q -120 -100 -120 -10 Q -125 90 0 110 Q 125 90 120 -10 Q 120 -100 0 -110 Z"/><path d="M -100 -50 Q -85 -65 -70 -45" opacity="0.7" stroke-width="1.6"/><path d="M -65 -90 Q -45 -100 -25 -85" opacity="0.7" stroke-width="1.6"/><path d="M 5 -100 Q 25 -110 50 -95" opacity="0.7" stroke-width="1.6"/><path d="M 70 -75 Q 90 -85 105 -55" opacity="0.7" stroke-width="1.6"/><path d="M -85 0 Q -60 10 -35 -5" opacity="0.5" stroke-width="1.4"/><path d="M -25 30 Q 0 40 30 25" opacity="0.5" stroke-width="1.4"/><path d="M 40 50 Q 65 65 90 50" opacity="0.5" stroke-width="1.4"/><path d="M 0 -110 L 0 50" opacity="0.4" stroke-width="1.2"/></g>
   </g>
 

@@ -24,6 +24,7 @@
     <g filter="url(#wcBlurPumpkin)" opacity="0.4"><ellipse cx="0" cy="0" rx="120" ry="95" fill="#5D8F3D"/></g>
     
     <g filter="url(#wcRoughPumpkin)"><path d="M -110 0 Q -115 70 0 95 Q 115 70 110 0 Q 100 -75 0 -85 Q -100 -75 -110 0 Z" fill="url(#wcBodyPumpkin)"/></g>
+    
     <g stroke="#3D2817" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"><path d="M -110 0 Q -115 70 0 95 Q 115 70 110 0 Q 100 -75 0 -85 Q -100 -75 -110 0 Z"/><path d="M -8 -85 L -10 -120 L 10 -118 L 8 -85" opacity="0.85" stroke-width="2.5"/><path d="M -90 -50 Q -85 30 -85 75" opacity="0.65" stroke-width="1.6"/><path d="M -55 -75 Q -50 30 -50 90" opacity="0.65" stroke-width="1.6"/><path d="M -20 -85 Q -15 30 -18 95" opacity="0.65" stroke-width="1.6"/><path d="M 20 -85 Q 15 30 18 95" opacity="0.65" stroke-width="1.6"/><path d="M 55 -75 Q 50 30 50 90" opacity="0.65" stroke-width="1.6"/><path d="M 90 -50 Q 85 30 85 75" opacity="0.65" stroke-width="1.6"/></g>
   </g>
 

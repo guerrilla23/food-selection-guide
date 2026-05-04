@@ -24,6 +24,7 @@
     <g filter="url(#wcBlurEringi)" opacity="0.4"><ellipse cx="0" cy="0" rx="75" ry="110" fill="#F0E5D0"/></g>
     
     <g filter="url(#wcRoughEringi)"><path d="M -45 -110 Q -55 -120 -30 -130 Q 0 -135 30 -130 Q 55 -120 45 -110 L 35 -90 Q 40 -50 35 50 Q 30 100 0 110 Q -30 100 -35 50 Q -40 -50 -35 -90 Z" fill="url(#wcBodyEringi)"/></g>
+    
     <g stroke="#3D2817" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"><path d="M -45 -110 Q -55 -120 -30 -130 Q 0 -135 30 -130 Q 55 -120 45 -110 L 35 -90 Q 40 -50 35 50 Q 30 100 0 110 Q -30 100 -35 50 Q -40 -50 -35 -90 Z"/><path d="M -45 -110 Q 0 -100 45 -110" opacity="0.7" stroke-width="1.6"/><path d="M -20 -90 Q -22 0 -18 80" opacity="0.5" stroke-width="1.4"/><path d="M 0 -90 L 0 100" opacity="0.45" stroke-width="1.4"/><path d="M 20 -90 Q 22 0 18 80" opacity="0.5" stroke-width="1.4"/><path d="M -25 -125 Q 0 -135 25 -125" opacity="0.4" stroke-width="1.2"/></g>
   </g>
 

@@ -11,5 +11,6 @@
     <g filter="url(#wcBlurAvocado)" opacity="0.4"><ellipse cx="0" cy="10" rx="80" ry="115" fill="#5D8F3D"/></g>
     
     <g filter="url(#wcRoughAvocado)"><path d="M 0 -110 Q -25 -100 -35 -75 Q -55 -50 -65 0 Q -75 70 0 110 Q 75 70 65 0 Q 55 -50 35 -75 Q 25 -100 0 -110 Z" fill="url(#wcBodyAvocado)"/></g>
+    
     <g stroke="#3D2817" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"><path d="M 0 -110 Q -25 -100 -35 -75 Q -55 -50 -65 0 Q -75 70 0 110 Q 75 70 65 0 Q 55 -50 35 -75 Q 25 -100 0 -110 Z"/><path d="M 0 -110 L 0 -125" opacity="0.85" stroke-width="2.5"/><path d="M -40 -30 L -38 -28" opacity="0.7" stroke-width="2.2"/><path d="M -25 30 L -23 32" opacity="0.7" stroke-width="2.2"/><path d="M 30 -10 L 32 -8" opacity="0.7" stroke-width="2.2"/><path d="M 40 50 L 42 52" opacity="0.7" stroke-width="2.2"/><path d="M 0 70 L 2 72" opacity="0.7" stroke-width="2.2"/><path d="M -45 60 L -43 62" opacity="0.7" stroke-width="2.2"/></g>
 </svg>

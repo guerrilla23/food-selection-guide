@@ -11,5 +11,6 @@
     <g filter="url(#wcBlurKiwi)" opacity="0.4"><ellipse cx="0" cy="0" rx="95" ry="65" fill="#A07848"/></g>
     
     <g filter="url(#wcRoughKiwi)"><path d="M -85 0 Q -95 -55 0 -70 Q 95 -55 85 0 Q 95 55 0 70 Q -95 55 -85 0 Z" fill="url(#wcBodyKiwi)"/></g>
+    
     <g stroke="#3D2817" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"><path d="M -85 0 Q -95 -55 0 -70 Q 95 -55 85 0 Q 95 55 0 70 Q -95 55 -85 0 Z"/><path d="M -50 -40 L -45 -35" opacity="0.55" stroke-width="1.4"/><path d="M -20 -50 L -15 -45" opacity="0.55" stroke-width="1.4"/><path d="M 20 -50 L 25 -45" opacity="0.55" stroke-width="1.4"/><path d="M 50 -40 L 55 -35" opacity="0.55" stroke-width="1.4"/><path d="M -55 30 L -50 35" opacity="0.55" stroke-width="1.4"/><path d="M -15 45 L -10 50" opacity="0.55" stroke-width="1.4"/><path d="M 25 40 L 30 45" opacity="0.55" stroke-width="1.4"/><path d="M 55 25 L 60 30" opacity="0.55" stroke-width="1.4"/></g>
 </svg>

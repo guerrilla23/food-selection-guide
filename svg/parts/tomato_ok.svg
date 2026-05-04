@@ -11,5 +11,6 @@
     <g filter="url(#wcBlurTomato)" opacity="0.4"><ellipse cx="0" cy="-10" rx="95" ry="95" fill="#FF8077"/><ellipse cx="0" cy="-110" rx="35" ry="22" fill="#5D8F3D"/></g>
     <g filter="url(#wcRoughTomato)" opacity="0.8"><path d="M -28 -100 Q -32 -125 -10 -130 Q 0 -110 -8 -95 Z" fill="url(#wcLeafTomato)"/><path d="M -2 -100 Q -5 -135 18 -135 Q 22 -120 12 -95 Z" fill="url(#wcLeafTomato)"/><path d="M 18 -100 Q 22 -125 38 -120 Q 36 -108 28 -95 Z" fill="url(#wcLeafTomato)"/></g>
     <g filter="url(#wcRoughTomato)"><path d="M -85 0 Q -92 60 0 90 Q 92 60 85 0 Q 80 -85 0 -100 Q -80 -85 -85 0 Z" fill="url(#wcBodyTomato)"/></g>
+    
     <g stroke="#3D2817" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"><path d="M -85 0 Q -92 60 0 90 Q 92 60 85 0 Q 80 -85 0 -100 Q -80 -85 -85 0 Z"/><path d="M -28 -100 Q -32 -125 -10 -130"/><path d="M -10 -130 Q 0 -110 -8 -95"/><path d="M -2 -100 Q -5 -135 18 -135"/><path d="M 18 -135 Q 22 -120 12 -95"/><path d="M 18 -100 Q 22 -125 38 -120"/><path d="M 38 -120 Q 36 -108 28 -95"/><path d="M 0 -100 L 0 -90" opacity="0.7"/></g>
 </svg>

@@ -24,6 +24,7 @@
     <g filter="url(#wcBlurNasu)" opacity="0.4"><ellipse cx="0" cy="10" rx="70" ry="110" fill="#7040A0"/><ellipse cx="0" cy="-110" rx="35" ry="22" fill="#5D8F3D"/></g>
     <g filter="url(#wcRoughNasu)" opacity="0.8"><path d="M -25 -100 L -30 -130 L -10 -120 L 0 -135 L 10 -120 L 30 -130 L 25 -100 Q 0 -90 -25 -100 Z" fill="url(#wcLeafNasu)"/></g>
     <g filter="url(#wcRoughNasu)"><path d="M -55 -50 Q -65 80 0 110 Q 65 80 55 -50 Q 50 -100 0 -100 Q -50 -100 -55 -50 Z" fill="url(#wcBodyNasu)"/></g>
+    
     <g stroke="#3D2817" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"><path d="M -55 -50 Q -65 80 0 110 Q 65 80 55 -50 Q 50 -100 0 -100 Q -50 -100 -55 -50 Z"/><path d="M -25 -100 L -30 -130 L -10 -120 L 0 -135 L 10 -120 L 30 -130 L 25 -100" opacity="0.85" stroke-width="2.5"/><path d="M 0 -135 L -3 -150" opacity="0.85" stroke-width="2.5"/><path d="M -25 -30 Q -28 30 -20 80" opacity="0.5" stroke-width="1.4"/></g>
   </g>
 

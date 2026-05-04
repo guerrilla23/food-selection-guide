@@ -24,6 +24,7 @@
     <g filter="url(#wcBlurSaba)" opacity="0.4"><ellipse cx="0" cy="0" rx="145" ry="55" fill="#90A0A8"/></g>
     
     <g filter="url(#wcRoughSaba)"><path d="M -130 0 Q -125 -45 -50 -50 Q 60 -50 110 -28 L 130 -22 Q 145 -10 145 0 Q 145 10 130 22 L 110 28 Q 60 50 -50 50 Q -125 45 -130 0 Z" fill="url(#wcBodySaba)"/><path d="M 130 -22 L 155 -45 L 150 0 L 155 45 L 130 22 Z" fill="url(#wcBodySaba)"/></g>
+    
     <g stroke="#3D2817" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"><path d="M -130 0 Q -125 -45 -50 -50 Q 60 -50 110 -28 L 130 -22 Q 145 -10 145 0 Q 145 10 130 22 L 110 28 Q 60 50 -50 50 Q -125 45 -130 0 Z"/><path d="M 130 -22 L 155 -45 L 150 0 L 155 45 L 130 22"/><path d="M -110 -15 m -5 0 a 5 5 0 1 0 10 0 a 5 5 0 1 0 -10 0 Z" opacity="0.95" stroke-width="2.2"/><path d="M -130 0 Q -135 5 -125 12" opacity="0.85" stroke-width="1.8"/><path d="M -80 -38 Q -50 -45 -20 -38" opacity="0.75" stroke-width="2"/><path d="M 0 -42 Q 30 -48 60 -40" opacity="0.75" stroke-width="2"/><path d="M -60 -28 Q -30 -35 -10 -28" opacity="0.6" stroke-width="1.6"/><path d="M 20 -32 Q 50 -38 80 -30" opacity="0.6" stroke-width="1.6"/><path d="M -100 5 Q 0 8 110 5" opacity="0.5" stroke-width="1.4"/><path d="M -90 -30 Q -85 0 -88 30" opacity="0.6" stroke-width="1.6"/></g>
   </g>
 

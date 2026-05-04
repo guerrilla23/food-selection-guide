@@ -11,5 +11,6 @@
     <g filter="url(#wcBlurEgg)" opacity="0.4"><ellipse cx="0" cy="0" rx="80" ry="105" fill="#E8D5B0"/></g>
     
     <g filter="url(#wcRoughEgg)"><path d="M -55 0 Q -55 -85 0 -100 Q 55 -85 55 0 Q 55 85 0 100 Q -55 85 -55 0 Z" fill="url(#wcBodyEgg)"/></g>
+    
     <g stroke="#3D2817" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"><path d="M -55 0 Q -55 -85 0 -100 Q 55 -85 55 0 Q 55 85 0 100 Q -55 85 -55 0 Z"/></g>
 </svg>

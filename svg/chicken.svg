@@ -24,6 +24,7 @@
     <g filter="url(#wcBlurChicken)" opacity="0.4"><ellipse cx="0" cy="0" rx="110" ry="70" fill="#F8AAA0"/></g>
     
     <g filter="url(#wcRoughChicken)"><path d="M -90 -45 Q -100 0 -90 50 Q 0 75 90 50 Q 100 0 90 -45 Q 0 -65 -90 -45 Z" fill="url(#wcBodyChicken)"/></g>
+    
     <g stroke="#3D2817" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"><path d="M -90 -45 Q -100 0 -90 50 Q 0 75 90 50 Q 100 0 90 -45 Q 0 -65 -90 -45 Z"/><path d="M -75 -25 Q 0 -20 75 -25" opacity="0.6" stroke-width="1.5"/><path d="M -78 0 Q 0 5 78 0" opacity="0.6" stroke-width="1.5"/><path d="M -72 25 Q 0 30 72 25" opacity="0.6" stroke-width="1.5"/><path d="M -40 -10 L -38 -8" opacity="0.7" stroke-width="2.5"/><path d="M 30 5 L 32 7" opacity="0.7" stroke-width="2.5"/><path d="M 0 -30 L 2 -28" opacity="0.7" stroke-width="2.5"/></g>
   </g>
 

@@ -24,6 +24,7 @@
     <g filter="url(#wcBlurShimeji)" opacity="0.4"><ellipse cx="0" cy="0" rx="110" ry="110" fill="#C8B89A"/></g>
     
     <g filter="url(#wcRoughShimeji)"><path d="M -70 -50 Q -85 -90 -45 -100 Q -10 -90 -25 -50 Z" fill="url(#wcBodyShimeji)"/><path d="M -20 -55 Q -30 -100 10 -110 Q 45 -100 30 -55 Z" fill="url(#wcBodyShimeji)"/><path d="M 20 -50 Q 10 -95 50 -100 Q 80 -90 65 -45 Z" fill="url(#wcBodyShimeji)"/><path d="M -55 -50 L -55 70 Q -50 80 -45 80 L -40 70 L -40 -50 Z" fill="url(#wcBodyShimeji)"/><path d="M -10 -55 L -10 80 Q -5 90 0 90 L 5 80 L 5 -55 Z" fill="url(#wcBodyShimeji)"/><path d="M 35 -45 L 35 75 Q 40 85 45 85 L 50 75 L 50 -45 Z" fill="url(#wcBodyShimeji)"/></g>
+    
     <g stroke="#3D2817" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"><path d="M -70 -50 Q -85 -90 -45 -100 Q -10 -90 -25 -50 Z"/><path d="M -20 -55 Q -30 -100 10 -110 Q 45 -100 30 -55 Z"/><path d="M 20 -50 Q 10 -95 50 -100 Q 80 -90 65 -45 Z"/><path d="M -55 -50 L -55 70 L -40 70 L -40 -50"/><path d="M -10 -55 L -10 80 L 5 80 L 5 -55"/><path d="M 35 -45 L 35 75 L 50 75 L 50 -45"/><path d="M -65 -55 Q -45 -45 -25 -55" opacity="0.4" stroke-width="1.2"/><path d="M -15 -60 Q 5 -50 25 -60" opacity="0.4" stroke-width="1.2"/><path d="M 25 -50 Q 45 -40 65 -50" opacity="0.4" stroke-width="1.2"/></g>
   </g>
 

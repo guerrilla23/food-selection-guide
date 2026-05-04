@@ -11,5 +11,6 @@
     <g filter="url(#wcBlurBeef)" opacity="0.4"><ellipse cx="0" cy="0" rx="110" ry="70" fill="#D87060"/></g>
     
     <g filter="url(#wcRoughBeef)"><path d="M -90 -45 Q -100 0 -90 50 Q 0 75 90 50 Q 100 0 90 -45 Q 0 -65 -90 -45 Z" fill="url(#wcBodyBeef)"/></g>
+    
     <g stroke="#3D2817" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"><path d="M -90 -45 Q -100 0 -90 50 Q 0 75 90 50 Q 100 0 90 -45 Q 0 -65 -90 -45 Z"/><path d="M -75 -30 Q 0 -25 75 -30" opacity="0.65" stroke-width="1.5"/><path d="M -78 -5 Q 0 0 78 -5" opacity="0.65" stroke-width="1.5"/><path d="M -72 20 Q 0 25 72 20" opacity="0.65" stroke-width="1.5"/><path d="M -65 45 Q 0 50 65 45" opacity="0.65" stroke-width="1.5"/><path d="M -55 -18 Q -25 -12 5 -22" opacity="0.75" stroke-width="2.2"/><path d="M -10 -3 Q 20 5 50 -5" opacity="0.75" stroke-width="2.2"/><path d="M 25 18 Q 50 22 70 12" opacity="0.75" stroke-width="2.2"/><path d="M -45 32 Q -15 38 15 30" opacity="0.75" stroke-width="2.2"/><path d="M 30 45 Q 50 50 65 42" opacity="0.7" stroke-width="2"/></g>
 </svg>

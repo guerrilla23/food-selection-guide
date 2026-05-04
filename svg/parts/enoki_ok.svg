@@ -11,5 +11,6 @@
     <g filter="url(#wcBlurEnoki)" opacity="0.4"><ellipse cx="0" cy="30" rx="75" ry="110" fill="#F0E8D0"/></g>
     
     <g filter="url(#wcRoughEnoki)"><path d="M -50 -100 L -50 100 Q -45 110 -40 110 L -35 100 L -35 -100 Z" fill="url(#wcBodyEnoki)"/><path d="M -25 -110 L -25 100 Q -20 110 -15 110 L -10 100 L -10 -110 Z" fill="url(#wcBodyEnoki)"/><path d="M 0 -120 L 0 105 Q 5 115 10 115 L 15 105 L 15 -120 Z" fill="url(#wcBodyEnoki)"/><path d="M 25 -110 L 25 100 Q 30 110 35 110 L 40 100 L 40 -110 Z" fill="url(#wcBodyEnoki)"/><path d="M 50 -100 L 50 100 Q 55 110 55 110 L 60 100 L 60 -100 Z" fill="url(#wcBodyEnoki)"/></g>
+    
     <g stroke="#3D2817" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"><path d="M -50 -100 L -50 100 L -35 100 L -35 -100"/><path d="M -25 -110 L -25 100 L -10 100 L -10 -110"/><path d="M 0 -120 L 0 105 L 15 105 L 15 -120"/><path d="M 25 -110 L 25 100 L 40 100 L 40 -110"/><path d="M 50 -100 L 50 100 L 60 100 L 60 -100"/><path d="M -50 -100 Q -42 -108 -35 -100" opacity="0.85" stroke-width="2"/><path d="M -25 -110 Q -17 -118 -10 -110" opacity="0.85" stroke-width="2"/><path d="M 0 -120 Q 8 -128 15 -120" opacity="0.85" stroke-width="2"/><path d="M 25 -110 Q 33 -118 40 -110" opacity="0.85" stroke-width="2"/><path d="M 50 -100 Q 55 -108 60 -100" opacity="0.85" stroke-width="2"/></g>
 </svg>

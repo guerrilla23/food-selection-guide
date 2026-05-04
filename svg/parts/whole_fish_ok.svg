@@ -11,5 +11,6 @@
     <g filter="url(#wcBlurWhole_fish)" opacity="0.4"><ellipse cx="0" cy="0" rx="145" ry="60" fill="#A0B0B8"/></g>
     
     <g filter="url(#wcRoughWhole_fish)"><path d="M -130 0 Q -125 -50 -50 -55 Q 60 -55 110 -32 L 130 -25 Q 145 -12 145 0 Q 145 12 130 25 L 110 32 Q 60 55 -50 55 Q -125 50 -130 0 Z" fill="url(#wcBodyWhole_fish)"/><path d="M 130 -25 L 158 -50 L 152 0 L 158 50 L 130 25 Z" fill="url(#wcBodyWhole_fish)"/></g>
+    
     <g stroke="#3D2817" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"><path d="M -130 0 Q -125 -50 -50 -55 Q 60 -55 110 -32 L 130 -25 Q 145 -12 145 0 Q 145 12 130 25 L 110 32 Q 60 55 -50 55 Q -125 50 -130 0 Z"/><path d="M 130 -25 L 158 -50 L 152 0 L 158 50 L 130 25"/><path d="M -110 -18 m -7 0 a 7 7 0 1 0 14 0 a 7 7 0 1 0 -14 0 Z" opacity="0.95" stroke-width="2.5"/><path d="M -90 -35 Q -85 0 -88 35" opacity="0.85" stroke-width="2.5"/><path d="M -130 0 Q -135 8 -123 15" opacity="0.85" stroke-width="1.8"/><path d="M -100 5 Q 0 8 110 5" opacity="0.55" stroke-width="1.4"/><path d="M -50 -30 Q -20 -25 10 -30" opacity="0.5" stroke-width="1.3"/><path d="M 20 -30 Q 50 -25 80 -30" opacity="0.5" stroke-width="1.3"/><path d="M -80 35 Q 0 40 90 35" opacity="0.5" stroke-width="1.4"/></g>
 </svg>

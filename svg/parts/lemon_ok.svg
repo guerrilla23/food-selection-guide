@@ -11,5 +11,6 @@
     <g filter="url(#wcBlurLemon)" opacity="0.4"><ellipse cx="0" cy="0" rx="80" ry="110" fill="#FFE066"/></g>
     
     <g filter="url(#wcRoughLemon)"><path d="M 0 -110 Q -10 -110 -25 -100 Q -65 -80 -65 0 Q -65 80 -25 100 Q -10 110 0 110 Q 10 110 25 100 Q 65 80 65 0 Q 65 -80 25 -100 Q 10 -110 0 -110 Z" fill="url(#wcBodyLemon)"/></g>
+    
     <g stroke="#3D2817" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"><path d="M 0 -110 Q -10 -110 -25 -100 Q -65 -80 -65 0 Q -65 80 -25 100 Q -10 110 0 110 Q 10 110 25 100 Q 65 80 65 0 Q 65 -80 25 -100 Q 10 -110 0 -110 Z"/><path d="M 0 -110 L 0 -130" opacity="0.85" stroke-width="2.5"/><path d="M 0 110 L 0 122" opacity="0.85" stroke-width="2.5"/><path d="M -50 -40 Q -35 -45 -40 -20" opacity="0.4" stroke-width="1.2"/><path d="M 50 30 Q 35 35 40 60" opacity="0.4" stroke-width="1.2"/></g>
 </svg>

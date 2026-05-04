@@ -24,6 +24,7 @@
     <g filter="url(#wcBlurKaki)" opacity="0.4"><ellipse cx="0" cy="5" rx="100" ry="80" fill="#FFB07A"/></g>
     <g filter="url(#wcRoughKaki)" opacity="0.8"><path d="M -45 -75 L -55 -100 L -25 -85 L -10 -105 L 0 -85 L 10 -105 L 25 -85 L 55 -100 L 45 -75 Q 0 -65 -45 -75 Z" fill="url(#wcLeafKaki)"/></g>
     <g filter="url(#wcRoughKaki)"><path d="M -90 -10 Q -95 60 0 85 Q 95 60 90 -10 Q 85 -75 0 -80 Q -85 -75 -90 -10 Z" fill="url(#wcBodyKaki)"/></g>
+    
     <g stroke="#3D2817" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"><path d="M -90 -10 Q -95 60 0 85 Q 95 60 90 -10 Q 85 -75 0 -80 Q -85 -75 -90 -10 Z"/><path d="M -45 -75 L -55 -100 L -25 -85 L -10 -105 L 0 -85 L 10 -105 L 25 -85 L 55 -100 L 45 -75" opacity="0.85" stroke-width="2.5"/><path d="M 0 -105 L 0 -118" opacity="0.85" stroke-width="2.5"/><path d="M -25 80 Q 0 85 25 80" opacity="0.5" stroke-width="1.4"/></g>
   </g>
 

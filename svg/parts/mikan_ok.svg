@@ -11,5 +11,6 @@
     <g filter="url(#wcBlurMikan)" opacity="0.4"><ellipse cx="0" cy="0" rx="90" ry="75" fill="#FFB07A"/></g>
     <g filter="url(#wcRoughMikan)" opacity="0.8"><path d="M 5 -85 Q 18 -100 25 -85 Q 18 -78 8 -83 Z" fill="url(#wcLeafMikan)"/></g>
     <g filter="url(#wcRoughMikan)"><path d="M -80 -10 Q -85 60 0 80 Q 85 60 80 -10 Q 75 -75 0 -85 Q -75 -75 -80 -10 Z" fill="url(#wcBodyMikan)"/></g>
+    
     <g stroke="#3D2817" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"><path d="M -80 -10 Q -85 60 0 80 Q 85 60 80 -10 Q 75 -75 0 -85 Q -75 -75 -80 -10 Z"/><path d="M 0 -85 L -2 -100" opacity="0.85" stroke-width="2"/><path d="M 5 -85 Q 18 -100 25 -85 Q 18 -78 8 -83" opacity="0.85" stroke-width="2"/><path d="M -15 -80 Q 0 -78 15 -80" opacity="0.5" stroke-width="1.4"/><path d="M -15 75 Q 0 78 15 75" opacity="0.5" stroke-width="1.4"/><path d="M -65 -45 Q -45 -50 -50 -25" opacity="0.4" stroke-width="1.2"/><path d="M 65 -45 Q 45 -50 50 -25" opacity="0.4" stroke-width="1.2"/></g>
 </svg>
