@@ -98,10 +98,42 @@
       padding: 12px 16px;
       padding-top: calc(env(safe-area-inset-top, 0px) + 12px);
     }
-    .app-title {
-      font-size: 18px; font-weight: 700; margin: 0 0 8px;
-      color: var(--accent-dark);
+    .app-title-row {
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 8px; margin-bottom: 8px;
     }
+    .app-title {
+      font-size: 18px; font-weight: 700; margin: 0;
+      color: var(--accent-dark);
+      flex: 1 1 auto;
+    }
+
+    /* ===== Language toggle (JA / EN) — 小さめのピル ===== */
+    .lang-toggle {
+      display: inline-flex;
+      background: var(--card-border);
+      border-radius: 999px;
+      padding: 2px;
+      flex: 0 0 auto;
+    }
+    .lang-opt {
+      border: none; background: transparent;
+      padding: 6px 12px;
+      min-height: 32px;
+      min-width: 36px;
+      border-radius: 999px;
+      font-size: 11px; font-weight: 800;
+      color: var(--muted);
+      cursor: pointer;
+      transition: all .15s;
+      letter-spacing: 0.05em;
+    }
+    .lang-opt.active {
+      background: var(--accent);
+      color: white;
+      box-shadow: 0 1px 3px rgba(0,0,0,.15);
+    }
+    .lang-opt:active { transform: scale(0.95); }
     .search-row { position: relative; margin-bottom: 8px; }
     .search-input {
       width: 100%;
@@ -748,7 +780,13 @@
   <!-- ============== LIST VIEW ============== -->
   <section id="view-list">
     <header class="app-header">
-      <h1 class="app-title">食材選び方</h1>
+      <div class="app-title-row">
+        <h1 class="app-title">食材選び方</h1>
+        <div class="lang-toggle" role="group" aria-label="Language">
+          <button class="lang-opt" data-set-lang="ja" aria-pressed="true">JA</button>
+          <button class="lang-opt" data-set-lang="en" aria-pressed="false">EN</button>
+        </div>
+      </div>
       <div class="search-row">
         <svg class="search-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
           <circle cx="9" cy="9" r="6"/>
@@ -779,6 +817,10 @@
       </button>
       <h2 class="detail-title" id="detail-title"></h2>
       <div class="detail-actions">
+        <div class="lang-toggle" role="group" aria-label="Language">
+          <button class="lang-opt" data-set-lang="ja" aria-pressed="true">JA</button>
+          <button class="lang-opt" data-set-lang="en" aria-pressed="false">EN</button>
+        </div>
         <button class="icon-btn" id="share-btn" aria-label="共有">
           <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor"
                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -853,7 +895,135 @@
       // Formspree: アプリ内のフォームから直接 POST(別タブを開かない)
       formspreeUrl: 'https://formspree.io/f/mlgzgwkk',
     };
-    const SHARE_TITLE = '食材選び方ガイド';
+
+    // ============================================================
+    //  i18n: 言語辞書 (UI 文字列) と ヘルパー
+    //   - データ (foods.json) は {ja, en} 形式 → tf() / tfArr() で解決
+    //   - UI 文字列はここの UI_DICT で管理 → t() で解決
+    //   - 言語非対応 (en が空) は ja にフォールバック
+    // ============================================================
+    const I18N_KEY = 'food-pwa:lang';
+    const UI_DICT = {
+      // App
+      app_title:           { ja: '食材選び方', en: 'Food Selection Guide' },
+      page_title:          { ja: '食材選び方', en: 'Food Selection Guide' },
+      // Search
+      search_placeholder:  { ja: '食材を検索 (大根 / だいこん / Daikon)', en: 'Search food (daikon, radish...)' },
+      search_clear:        { ja: '検索クリア', en: 'Clear search' },
+      // Empty / loading
+      empty_no_results:    { ja: '該当する食材がありません', en: 'No matching foods' },
+      loading:             { ja: '読み込み中…', en: 'Loading...' },
+      loading_diagram:     { ja: '図解を読み込み中…', en: 'Loading diagram...' },
+      // Detail header
+      back_to_list:        { ja: '一覧', en: 'List' },
+      back_aria:           { ja: '一覧に戻る', en: 'Back to list' },
+      share_aria:          { ja: '共有', en: 'Share' },
+      favorite_aria:       { ja: 'お気に入り', en: 'Favorite' },
+      not_found:           { ja: '見つかりません', en: 'Not found' },
+      not_found_msg:       { ja: '指定された食材が見つかりませんでした。', en: 'The food was not found.' },
+      // Mode toggle
+      mode_simple:         { ja: 'シンプル', en: 'Simple' },
+      mode_simple_desc:    { ja: '売場で素早くチェック', en: 'Quick check at store' },
+      mode_detail:         { ja: '詳細', en: 'Detail' },
+      mode_detail_desc:    { ja: 'じっくり読む', en: 'Read carefully' },
+      mode_aria:           { ja: '表示モード', en: 'Display mode' },
+      // Lang toggle
+      lang_aria:           { ja: '言語切替', en: 'Language' },
+      // Season
+      season_now:          { ja: '今が旬', en: 'In season' },
+      season_label_short:  { ja: '旬', en: 'Season' },
+      season_label_colon:  { ja: '旬:', en: 'Season:' },
+      // Detail sections
+      good_signs_title:    { ja: '○ 良い見分け方', en: '○ Good signs' },
+      bad_signs_title:     { ja: '× 避けたい状態', en: '× Avoid these' },
+      good_diagram_label:  { ja: '良い', en: 'Good' },
+      bad_diagram_label:   { ja: '避けたい', en: 'Avoid' },
+      diagram_aria:        { ja: 'OK / NG 比較図解', en: 'OK / NG diagram' },
+      usage_title:         { ja: '使い分け・調理', en: 'Usage & Cooking' },
+      storage_title:       { ja: '保存方法', en: 'Storage' },
+      storage_method:      { ja: '方法', en: 'Method' },
+      storage_duration:    { ja: '日持ち', en: 'Duration' },
+      storage_tips:        { ja: 'コツ', en: 'Tips' },
+      nutrition_title:     { ja: '栄養ハイライト', en: 'Nutrition' },
+      // Beta banner
+      beta_banner:         { ja: '🚧 ベータ版です。気づいた点は右下の💬からお知らせください', en: '🚧 Beta version. Share feedback via the 💬 button.' },
+      beta_close_aria:     { ja: 'バナーを閉じる', en: 'Close banner' },
+      // Feedback FAB / modal
+      feedback_fab_aria:   { ja: 'フィードバック', en: 'Feedback' },
+      feedback_title:      { ja: 'フィードバック', en: 'Feedback' },
+      feedback_subtitle:   { ja: '気づいた点があれば教えてください', en: 'Share your thoughts' },
+      feedback_form_btn:   { ja: '📝 フォームで送る', en: '📝 Send via form' },
+      feedback_cancel:     { ja: 'キャンセル', en: 'Cancel' },
+      feedback_form_title: { ja: 'フィードバックを送る', en: 'Send Feedback' },
+      feedback_nickname:   { ja: 'ニックネーム', en: 'Nickname' },
+      feedback_optional:   { ja: '(任意)', en: '(optional)' },
+      feedback_message:    { ja: 'フィードバック内容', en: 'Your feedback' },
+      feedback_message_placeholder: { ja: '気になった点・直してほしい点・ほしい機能 など', en: 'Bugs, improvements, feature requests...' },
+      feedback_submit:     { ja: '送信', en: 'Send' },
+      feedback_back:       { ja: '戻る', en: 'Back' },
+      feedback_sending:    { ja: '送信中…', en: 'Sending...' },
+      feedback_success:    { ja: '送信ありがとうございます!', en: 'Thanks for your feedback!' },
+      feedback_failed:     { ja: '送信に失敗しました。もう一度お試しください', en: 'Send failed. Please try again.' },
+      feedback_empty:      { ja: '内容を入力してください', en: 'Please enter your message' },
+      feedback_current_page: { ja: '現在のページ', en: 'Current page' },
+      // Toast
+      toast_url_copied:    { ja: 'URLをコピーしました', en: 'URL copied' },
+      toast_copy_failed:   { ja: 'コピーできませんでした', en: 'Copy failed' },
+      // Categories (foods.json の category_label を補完するフォールバック)
+      category_all:        { ja: 'すべて', en: 'All' },
+      category_vegetable:  { ja: '野菜', en: 'Vegetable' },
+      category_fruit:      { ja: '果物', en: 'Fruit' },
+      category_mushroom:   { ja: 'きのこ', en: 'Mushroom' },
+      category_fish:       { ja: '魚介', en: 'Seafood' },
+      category_meat:       { ja: '肉類', en: 'Meat' },
+      category_egg_dairy_bean: { ja: '卵・乳・豆', en: 'Egg/Dairy/Legume' },
+      category_game_meat:  { ja: 'ジビエ', en: 'Game Meat' },
+      // SEO
+      meta_description:    { ja: '買い物中にサッと食材の選び方を確認できる選び方ガイド', en: 'Pocket guide for selecting fresh foods at the store' },
+    };
+
+    function detectInitialLang() {
+      try {
+        const saved = localStorage.getItem(I18N_KEY);
+        if (saved === 'ja' || saved === 'en') return saved;
+      } catch {}
+      const nav = (navigator.language || 'ja').toLowerCase();
+      return nav.startsWith('ja') ? 'ja' : 'en';
+    }
+
+    /** UI 文字列の解決 (keyから現在言語の文字列を取得) */
+    function t(key) {
+      const entry = UI_DICT[key];
+      if (!entry) return key;
+      return entry[App.lang] || entry.ja || key;
+    }
+
+    /** データフィールドの解決 ({ja, en} 形式 → 現在言語の文字列) */
+    function tf(field) {
+      if (field == null) return '';
+      if (typeof field === 'string') return field;  // legacy plain string
+      if (typeof field === 'object') {
+        const v = field[App.lang];
+        if (v) return v;
+        return field.ja || field.en || '';
+      }
+      return String(field);
+    }
+
+    /** データフィールド (配列) の解決 */
+    function tfArr(field) {
+      if (!field) return [];
+      if (Array.isArray(field)) return field;  // legacy plain array
+      if (typeof field === 'object') {
+        const arr = field[App.lang];
+        if (Array.isArray(arr) && arr.length > 0) return arr;
+        if (Array.isArray(field.ja) && field.ja.length > 0) return field.ja;
+        if (Array.isArray(field.en) && field.en.length > 0) return field.en;
+      }
+      return [];
+    }
+
+    const SHARE_TITLE = '食材選び方ガイド';  // 互換維持(t('app_title') でも可)
 
     // ============================================================
     //  App state
@@ -862,6 +1032,7 @@
       foods: [],
       filters: { category: 'all', query: '' },
       mode: 'simple',  // 'simple' or 'detail' — ロード時に localStorage から復元
+      lang: 'ja',      // 'ja' or 'en' — init() で detectInitialLang() から復元
       el: {
         grid: document.getElementById('grid'),
         catTabs: document.getElementById('cat-tabs'),
@@ -907,10 +1078,19 @@
     }
 
     function buildSearchIndex(food) {
-      return [food.name, food.name_kana, food.name_en, food.category_label, food.subcategory]
-        .filter(Boolean)
-        .map(normalize)
-        .join(' ');
+      // i18n: name / category_label / subcategory は {ja, en} 形式なので
+      // 両言語の値を全て含めることで言語切替時にも検索ヒットする
+      const parts = [food.name_kana, food.name_en];
+      const pushBoth = (field) => {
+        if (!field) return;
+        if (typeof field === 'string') { parts.push(field); return; }
+        if (field.ja) parts.push(field.ja);
+        if (field.en) parts.push(field.en);
+      };
+      pushBoth(food.name);
+      pushBoth(food.category_label);
+      pushBoth(food.subcategory);
+      return parts.filter(Boolean).map(normalize).join(' ');
     }
 
     // ============================================================
@@ -944,12 +1124,16 @@
     //  Categories
     // ============================================================
     function renderCategories() {
-      const cats = [{ id: 'all', label: 'すべて' }];
+      // 'all' は UI 辞書から、各カテゴリは food.category_label の現在言語を使用
+      // データに翻訳がない場合は UI 辞書 (category_<id>) にフォールバック
+      const cats = [{ id: 'all', label: t('category_all') }];
       const seen = new Set();
       for (const f of App.foods) {
         if (!seen.has(f.category)) {
           seen.add(f.category);
-          cats.push({ id: f.category, label: f.category_label || f.category });
+          const dataLabel = tf(f.category_label);
+          const fallback = t('category_' + f.category);
+          cats.push({ id: f.category, label: dataLabel || fallback || f.category });
         }
       }
       App.el.catTabs.innerHTML = cats.map(c =>
@@ -966,34 +1150,37 @@
     function renderGrid() {
       const list = filteredFoods();
       if (list.length === 0) {
-        App.el.grid.innerHTML = `<div class="empty">該当する食材がありません</div>`;
+        App.el.grid.innerHTML = `<div class="empty">${escapeHTML(t('empty_no_results'))}</div>`;
         return;
       }
       App.el.grid.innerHTML = list.map(f => {
         const inSeason = isInSeason(f);
-        // 季節タグの方針:
-        //   当月が旬に含まれる → 「今が旬」(peak併記しない。"今が旬 秋〜冬"のような矛盾を回避)
-        //   それ以外           → 「旬: <season_peak>」(peakは1〜数文字でキュレーターが記述)
-        const seasonText = inSeason ? '今が旬' : `旬: ${f.season_peak || '-'}`;
+        const peak = tf(f.season_peak);
+        // 季節タグ: 当月旬 → 「今が旬」、それ以外 → 「旬: <peak>」
+        const seasonText = inSeason ? t('season_now') : `${t('season_label_colon')} ${peak || '-'}`;
         const themeStyle = f.accent_color ? `--theme:${escapeHTML(f.accent_color)}` : '';
         const kc = f.key_check || {};
-        const actionLine = (kc.icon || kc.action)
-          ? `<p class="card-key-check">${escapeHTML(kc.icon || '')} ${escapeHTML(kc.action || '')}</p>`
+        const action = tf(kc.action);
+        const judgment = tf(kc.judgment);
+        const name = tf(f.name);
+        const catLabel = tf(f.category_label) || t('category_' + f.category) || f.category;
+        const actionLine = (kc.icon || action)
+          ? `<p class="card-key-check">${escapeHTML(kc.icon || '')} ${escapeHTML(action || '')}</p>`
           : '';
-        const judgmentLine = kc.judgment
-          ? `<p class="card-judgment">✅ ${escapeHTML(kc.judgment)}</p>`
+        const judgmentLine = judgment
+          ? `<p class="card-judgment">✅ ${escapeHTML(judgment)}</p>`
           : '';
         return `
-          <a class="card" href="#/item/${encodeURIComponent(f.id)}" style="${themeStyle}" aria-label="${escapeHTML(f.name)}">
+          <a class="card" href="#/item/${encodeURIComponent(f.id)}" style="${themeStyle}" aria-label="${escapeHTML(name)}">
             <div class="card-img-wrap">
               <img src="svg/parts/${encodeURIComponent(f.id)}_ok.svg" alt="" loading="lazy" decoding="async">
             </div>
             <div class="card-body">
-              <h3 class="card-name">${escapeHTML(f.name)}</h3>
+              <h3 class="card-name">${escapeHTML(name)}</h3>
               ${actionLine}
               ${judgmentLine}
               <div class="card-tags">
-                <span class="tag">${escapeHTML(f.category_label || '')}</span>
+                <span class="tag">${escapeHTML(catLabel)}</span>
                 <span class="tag${inSeason ? ' in-season' : ''}">${escapeHTML(seasonText)}</span>
               </div>
             </div>
@@ -1009,9 +1196,14 @@
     // ============================================================
     function buildDiagramBlock(food, side) {
       const isOK = side === 'ok';
-      const labelText = isOK ? `良い${food.name}` : `避けたい${food.name}`;
+      const name = tf(food.name);
+      // i18n: 「良い大根」 / "Good Daikon" のように prefix + name
+      // 英語の場合は "Good <name>" のスペース区切り
+      const prefix = isOK ? t('good_diagram_label') : t('bad_diagram_label');
+      const sep = App.lang === 'en' ? ' ' : '';
+      const labelText = `${prefix}${sep}${name}`;
       const badge = isOK ? '○' : '×';
-      const summary = isOK ? food.summary_ok : food.summary_ng;
+      const summary = isOK ? tf(food.summary_ok) : tf(food.summary_ng);
       const cls = isOK ? 'ok' : 'ng';
       return `
         <div class="diagram-block ${cls}">
@@ -1030,7 +1222,7 @@
 
     function buildDiagram(food) {
       return `
-        <div class="diagram-grid" role="group" aria-label="OK / NG 比較図解">
+        <div class="diagram-grid" role="group" aria-label="${escapeHTML(t('diagram_aria'))}">
           ${buildDiagramBlock(food, 'ok')}
           ${buildDiagramBlock(food, 'ng')}
         </div>`;
@@ -1045,45 +1237,53 @@
     // ============================================================
     function buildModeToggle() {
       // 大きめのセグメントコントロール (売場での片手操作前提)
-      // スライドハイライトは body[data-mode] と CSS::before の transform 連動
       return `
-        <div class="mode-toggle" role="group" aria-label="表示モード">
+        <div class="mode-toggle" role="group" aria-label="${escapeHTML(t('mode_aria'))}">
           <button class="mode-opt${App.mode === 'simple' ? ' active' : ''}" data-set-mode="simple"
                   aria-pressed="${App.mode === 'simple'}">
-            <span class="mode-opt-main">シンプル</span>
-            <span class="mode-opt-sub">売場で素早くチェック</span>
+            <span class="mode-opt-main">${escapeHTML(t('mode_simple'))}</span>
+            <span class="mode-opt-sub">${escapeHTML(t('mode_simple_desc'))}</span>
           </button>
           <button class="mode-opt${App.mode === 'detail' ? ' active' : ''}" data-set-mode="detail"
                   aria-pressed="${App.mode === 'detail'}">
-            <span class="mode-opt-main">詳細</span>
-            <span class="mode-opt-sub">じっくり読む</span>
+            <span class="mode-opt-main">${escapeHTML(t('mode_detail'))}</span>
+            <span class="mode-opt-sub">${escapeHTML(t('mode_detail_desc'))}</span>
           </button>
         </div>`;
     }
 
     function buildKeyCheckHero(food) {
       const kc = food.key_check;
-      if (!kc || (!kc.action && !kc.judgment)) return '';
+      if (!kc) return '';
+      const action = tf(kc.action);
+      const judgment = tf(kc.judgment);
+      if (!action && !judgment) return '';
       return `
         <div class="key-check-hero">
           <div class="key-check-icon" aria-hidden="true">${escapeHTML(kc.icon || '👆')}</div>
           <div class="key-check-content">
-            ${kc.action ? `<p class="key-check-action">${escapeHTML(kc.action)}</p>` : ''}
-            ${kc.judgment ? `<p class="key-check-judgment">${escapeHTML(kc.judgment)}</p>` : ''}
+            ${action ? `<p class="key-check-action">${escapeHTML(action)}</p>` : ''}
+            ${judgment ? `<p class="key-check-judgment">${escapeHTML(judgment)}</p>` : ''}
           </div>
         </div>`;
     }
 
     function buildKeyPointsList(items, side) {
-      if (!Array.isArray(items) || items.length === 0) return '';
+      // items は配列 or {ja, en} オブジェクト → tfArr() で正規化
+      const arr = tfArr(items);
+      if (!arr || arr.length === 0) return '';
       const cls = side === 'ok' ? 'ok' : 'ng';
       const badge = side === 'ok' ? '✓' : '✕';
-      const lis = items.filter(t => t && t.trim()).map(text => {
-        const idx = String(text).indexOf(':');
-        let part = '', keyword = text;
+      // i18n: 区切り文字は日本語 ':' / 英語 ': ' を許容
+      const lis = arr.filter(t => t && t.trim()).map(text => {
+        const s = String(text);
+        // 全角 / 半角コロンのいずれかで分割
+        let idx = s.indexOf(':');
+        if (idx < 0) idx = s.indexOf(':');
+        let part = '', keyword = s;
         if (idx >= 0) {
-          part = String(text).slice(0, idx);
-          keyword = String(text).slice(idx + 1);
+          part = s.slice(0, idx).trim();
+          keyword = s.slice(idx + 1).trim();
         }
         return `
           <li>
@@ -1098,21 +1298,26 @@
     function renderDetail(id) {
       const food = App.foods.find(f => f.id === id);
       if (!food) {
-        App.el.detailTitle.textContent = '見つかりません';
-        App.el.detailBody.innerHTML = `<div class="empty">指定された食材が見つかりませんでした。</div>`;
+        App.el.detailTitle.textContent = t('not_found');
+        App.el.detailBody.innerHTML = `<div class="empty">${escapeHTML(t('not_found_msg'))}</div>`;
         return;
       }
-      App.el.detailTitle.textContent = food.name;
+      const name = tf(food.name);
+      App.el.detailTitle.textContent = name;
 
+      const peak = tf(food.season_peak);
       const seasonTag = isInSeason(food)
-        ? `<span class="tag in-season">今が旬</span>`
-        : `<span class="tag">旬: ${escapeHTML(food.season_peak || '-')}</span>`;
+        ? `<span class="tag in-season">${escapeHTML(t('season_now'))}</span>`
+        : `<span class="tag">${escapeHTML(t('season_label_colon'))} ${escapeHTML(peak || '-')}</span>`;
+
+      const catLabel = tf(food.category_label) || t('category_' + food.category) || food.category;
+      const subcat = tf(food.subcategory);
 
       const metaRow = `
         <div class="detail-meta-row">
           <div class="detail-meta">
-            <span class="tag">${escapeHTML(food.category_label || '')}</span>
-            ${food.subcategory ? `<span class="tag">${escapeHTML(food.subcategory)}</span>` : ''}
+            <span class="tag">${escapeHTML(catLabel)}</span>
+            ${subcat ? `<span class="tag">${escapeHTML(subcat)}</span>` : ''}
             ${seasonTag}
           </div>
         </div>`;
@@ -1131,38 +1336,43 @@
           + buildKeyPointsList(food.ok_short, 'ok');
       } else {
         // ★ フル情報モード(従来) ★
-        const okItems = (food.ok_points || []).map(p => `<li>${escapeHTML(p)}</li>`).join('');
-        const ngItems = (food.ng_points || []).map(p => `<li>${escapeHTML(p)}</li>`).join('');
+        const okItems = tfArr(food.ok_points).map(p => `<li>${escapeHTML(p)}</li>`).join('');
+        const ngItems = tfArr(food.ng_points).map(p => `<li>${escapeHTML(p)}</li>`).join('');
         const storage = food.storage || {};
+        const sMethod = tf(storage.method);
+        const sDuration = tf(storage.duration);
+        const sTips = tf(storage.tips);
         const storageHTML = `
           <dl class="info-body">
-            ${storage.method ? `<dt>方法</dt><dd>${escapeHTML(storage.method)}</dd>` : ''}
-            ${storage.duration ? `<dt>日持ち</dt><dd>${escapeHTML(storage.duration)}</dd>` : ''}
-            ${storage.tips ? `<dt>コツ</dt><dd>${escapeHTML(storage.tips)}</dd>` : ''}
+            ${sMethod ? `<dt>${escapeHTML(t('storage_method'))}</dt><dd>${escapeHTML(sMethod)}</dd>` : ''}
+            ${sDuration ? `<dt>${escapeHTML(t('storage_duration'))}</dt><dd>${escapeHTML(sDuration)}</dd>` : ''}
+            ${sTips ? `<dt>${escapeHTML(t('storage_tips'))}</dt><dd>${escapeHTML(sTips)}</dd>` : ''}
           </dl>`;
+        const usage = tf(food.usage_tips);
+        const nutrition = tf(food.nutrition_highlight);
         body = metaRow + modeToggleRow + hero
           + buildDiagram(food)
           + `<div class="points">
               <div class="points-block ok">
-                <h3 class="points-title">○ 良い見分け方</h3>
+                <h3 class="points-title">${escapeHTML(t('good_signs_title'))}</h3>
                 <ul>${okItems}</ul>
               </div>
               <div class="points-block ng">
-                <h3 class="points-title">× 避けたい状態</h3>
+                <h3 class="points-title">${escapeHTML(t('bad_signs_title'))}</h3>
                 <ul>${ngItems}</ul>
               </div>
             </div>`
-          + (food.usage_tips ? `<div class="info-section">
-              <h3 class="info-title">使い分け・調理</h3>
-              <p class="info-body">${escapeHTML(food.usage_tips)}</p>
+          + (usage ? `<div class="info-section">
+              <h3 class="info-title">${escapeHTML(t('usage_title'))}</h3>
+              <p class="info-body">${escapeHTML(usage)}</p>
             </div>` : '')
           + `<div class="info-section">
-              <h3 class="info-title">保存方法</h3>
+              <h3 class="info-title">${escapeHTML(t('storage_title'))}</h3>
               ${storageHTML}
             </div>`
-          + (food.nutrition_highlight ? `<div class="info-section">
-              <h3 class="info-title">栄養ハイライト</h3>
-              <p class="info-body">${escapeHTML(food.nutrition_highlight)}</p>
+          + (nutrition ? `<div class="info-section">
+              <h3 class="info-title">${escapeHTML(t('nutrition_title'))}</h3>
+              <p class="info-body">${escapeHTML(nutrition)}</p>
             </div>` : '');
       }
 
@@ -1170,11 +1380,11 @@
       window.scrollTo(0, 0);
 
       // GA4: 食材詳細閲覧をカスタムイベントで記録
-      // 食材IDごとの閲覧数を Engagement レポートで分析可能
+      // i18n: food_name は ja で固定 (集計を一意にするため)
       if (typeof gtag === 'function') {
         gtag('event', 'view_food', {
           food_id: food.id,
-          food_name: food.name,
+          food_name: (food.name && food.name.ja) || tf(food.name),
           food_category: food.category,
         });
       }
@@ -1193,6 +1403,62 @@
       try { navigator.vibrate && navigator.vibrate(10); } catch {}
       // 詳細画面ならコンテンツ再描画 (スライドアニメは body class 経由で先行)
       if (document.body.dataset.view === 'detail') applyRoute();
+    }
+
+    // 言語切替
+    function setLang(lang) {
+      if (lang !== 'ja' && lang !== 'en') return;
+      if (App.lang === lang) return;
+      App.lang = lang;
+      try { localStorage.setItem(I18N_KEY, lang); } catch {}
+      document.documentElement.lang = lang;
+      document.body.dataset.lang = lang;
+      document.title = t('page_title');
+      try { navigator.vibrate && navigator.vibrate(10); } catch {}
+      // 静的UIテキストを更新 + 動的レンダリングを再実行
+      updateStaticUI();
+      // 検索インデックスはどの言語でも両方含むため再構築不要
+      renderCategories();
+      renderGrid();
+      applyRoute();
+    }
+
+    /** 言語切替時にHTML静的要素を更新 */
+    function updateStaticUI() {
+      const set = (selector, attr, key) => {
+        const el = document.querySelector(selector);
+        if (!el) return;
+        if (attr === 'text') el.textContent = t(key);
+        else if (attr === 'placeholder') el.placeholder = t(key);
+        else el.setAttribute(attr, t(key));
+      };
+      set('.app-title', 'text', 'app_title');
+      set('#search', 'placeholder', 'search_placeholder');
+      set('#search-clear', 'aria-label', 'search_clear');
+      set('.beta-banner-text', 'text', 'beta_banner');
+      set('#beta-banner-close', 'aria-label', 'beta_close_aria');
+      set('#feedback-fab', 'aria-label', 'feedback_fab_aria');
+      set('#share-btn', 'aria-label', 'share_aria');
+      set('#fav-btn', 'aria-label', 'favorite_aria');
+      set('#back-btn', 'aria-label', 'back_aria');
+      // 戻るボタンのラベル文字列
+      const backLabel = document.querySelector('#back-btn');
+      if (backLabel) {
+        // ラベルテキストはSVGアイコンの後の文字。<svg>と空白文字を除去して入れ替え
+        const svg = backLabel.querySelector('svg');
+        backLabel.innerHTML = '';
+        if (svg) backLabel.appendChild(svg);
+        backLabel.appendChild(document.createTextNode(' ' + t('back_to_list')));
+        backLabel.setAttribute('aria-label', t('back_aria'));
+      }
+      // モーダル
+      set('#modal-title', 'text', 'feedback_title');
+      // 言語トグルの aria-pressed 状態
+      document.querySelectorAll('.lang-opt').forEach(btn => {
+        const isActive = btn.dataset.setLang === App.lang;
+        btn.classList.toggle('active', isActive);
+        btn.setAttribute('aria-pressed', String(isActive));
+      });
     }
 
     // ============================================================
@@ -1293,8 +1559,31 @@
     function openFeedbackModal() {
       const ctx = getCurrentContext();
       const modal = document.getElementById('feedback-modal');
-      document.getElementById('modal-context').textContent = `現在のページ: ${ctx.label}`;
-      document.getElementById('modal-form-context').textContent = `現在のページ: ${ctx.label}`;
+      const ctxLabel = `${t('feedback_current_page')}: ${ctx.label}`;
+      document.getElementById('modal-context').textContent = ctxLabel;
+      document.getElementById('modal-form-context').textContent = ctxLabel;
+      // モーダル内の静的UI を i18n 反映
+      const setText = (id, key) => {
+        const el = document.getElementById(id);
+        if (el) el.textContent = t(key);
+      };
+      setText('modal-title', 'feedback_title');
+      setText('fb-form-btn', 'feedback_form_btn');
+      setText('fb-submit-btn', 'feedback_submit');
+      setText('fb-back-btn', 'feedback_back');
+      const cancelBtns = modal.querySelectorAll('.modal-btn.cancel');
+      cancelBtns.forEach(b => { b.textContent = t('feedback_cancel'); });
+      const formTitle = modal.querySelector('.modal-screen[data-screen="form"] .modal-title');
+      if (formTitle) formTitle.textContent = t('feedback_form_title');
+      const nicknameLabel = modal.querySelector('label[for="fb-nickname"]');
+      if (nicknameLabel) {
+        nicknameLabel.innerHTML = `${escapeHTML(t('feedback_nickname'))}<span class="field-optional">${escapeHTML(t('feedback_optional'))}</span>`;
+      }
+      const messageLabel = modal.querySelector('label[for="fb-message"]');
+      if (messageLabel) messageLabel.textContent = t('feedback_message');
+      const messageInput = document.getElementById('fb-message');
+      if (messageInput) messageInput.placeholder = t('feedback_message_placeholder');
+
       setModalScreen('menu');
       modal.hidden = false;
       document.documentElement.style.overflow = 'hidden';
@@ -1312,7 +1601,7 @@
       const message = form.message.value.trim();
       if (!message) {
         form.message.focus();
-        showToast('内容を入力してください', 1800);
+        showToast(t('feedback_empty'), 1800);
         return;
       }
 
@@ -1322,13 +1611,14 @@
         message,
         page_url: ctx.url,
         food_id: ctx.food ? ctx.food.id : '',
+        lang: App.lang,
         timestamp: new Date().toISOString(),
         user_agent: navigator.userAgent,
       };
 
       submitBtn.disabled = true;
       const originalLabel = submitBtn.textContent;
-      submitBtn.textContent = '送信中…';
+      submitBtn.textContent = t('feedback_sending');
 
       try {
         const res = await fetch(FEEDBACK_CONFIG.formspreeUrl, {
@@ -1337,12 +1627,12 @@
           body: JSON.stringify(payload),
         });
         if (!res.ok) throw new Error(`HTTP ${res.status}`);
-        showToast('送信ありがとうございます!', 2500);
+        showToast(t('feedback_success'), 2500);
         form.reset();
         closeFeedbackModal();
       } catch (err) {
         console.warn('feedback submit failed', err);
-        showToast('送信に失敗しました。もう一度お試しください', 3000);
+        showToast(t('feedback_failed'), 3000);
       } finally {
         submitBtn.disabled = false;
         submitBtn.textContent = originalLabel;
@@ -1369,9 +1659,9 @@
       // フォールバック: URL をクリップボードへコピー
       try {
         await navigator.clipboard.writeText(ctx.url);
-        showToast('URLをコピーしました');
+        showToast(t('toast_url_copied'));
       } catch {
-        showToast('コピーできませんでした', 2500);
+        showToast(t('toast_copy_failed'), 2500);
       }
     }
 
@@ -1410,6 +1700,12 @@
         if (btn) setMode(btn.dataset.setMode);
       });
 
+      // 言語切替 (List/Detail 両方にトグルがあるのでドキュメント全体で委譲)
+      document.addEventListener('click', (e) => {
+        const btn = e.target.closest('[data-set-lang]');
+        if (btn) setLang(btn.dataset.setLang);
+      });
+
       // フィードバック FAB & モーダル
       document.getElementById('feedback-fab').addEventListener('click', openFeedbackModal);
       document.getElementById('feedback-modal').addEventListener('click', (e) => {
@@ -1438,6 +1734,12 @@
     //  Bootstrap
     // ============================================================
     async function init() {
+      // i18n: 言語を localStorage / navigator.language から復元
+      App.lang = detectInitialLang();
+      document.documentElement.lang = App.lang;
+      document.body.dataset.lang = App.lang;
+      document.title = t('page_title');
+
       // 表示モードを localStorage から復元(初回はデフォルトの 'simple')
       try {
         const saved = localStorage.getItem(MODE_KEY);
@@ -1446,6 +1748,8 @@
       document.body.dataset.mode = App.mode;
 
       bind();
+      // 静的UI を現在言語に反映 (HTMLのデフォルトはJAなので、ENならここで上書き)
+      updateStaticUI();
       maybeShowBanner();
       try {
         const res = await fetch('data/foods.json', { cache: 'no-cache' });
