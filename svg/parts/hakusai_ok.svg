@@ -1,68 +1,77 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" opacity="0.9">
-  <defs>
-    <radialGradient id="hakusai-aura-ok" cx="50%" cy="55%" r="50%">
-      <stop offset="0%" stop-color="#D8E5B0" stop-opacity="0.45"/>
-      <stop offset="100%" stop-color="#D8E5B0" stop-opacity="0"/>
-    </radialGradient>
-    <linearGradient id="hakusai-body-ok" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#A8C770"/>
-      <stop offset="20%" stop-color="#C8DC8E"/>
-      <stop offset="45%" stop-color="#F8FAE0"/>
-      <stop offset="70%" stop-color="#FFFAE8"/>
-      <stop offset="100%" stop-color="#F0E8C8"/>
-    </linearGradient>
-    <linearGradient id="hakusai-leaf-ok" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#7FA850"/>
-      <stop offset="60%" stop-color="#B8D480"/>
-      <stop offset="100%" stop-color="#E8EDC0"/>
-    </linearGradient>
-  </defs>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-150 -180 300 340" font-family="Noto Sans CJK JP, sans-serif">
+<defs>
+      <linearGradient id="wcBodyHakusai" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#A8C770" stop-opacity="0.85"/>
+        <stop offset="20%" stop-color="#C8DC8E" stop-opacity="0.9"/>
+        <stop offset="50%" stop-color="#F8FAE0" stop-opacity="0.95"/>
+        <stop offset="80%" stop-color="#FFFAE8" stop-opacity="0.95"/>
+        <stop offset="100%" stop-color="#F0E8C8" stop-opacity="0.9"/>
+      </linearGradient>
+      <linearGradient id="wcLeafHakusai" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#7FA850" stop-opacity="0.9"/>
+        <stop offset="100%" stop-color="#B8D480" stop-opacity="0.7"/>
+      </linearGradient>
+      <filter id="wcRoughHakusai" x="-10%" y="-10%" width="120%" height="120%">
+        <feTurbulence baseFrequency="0.04" numOctaves="3" seed="13"/>
+        <feDisplacementMap in="SourceGraphic" scale="4"/>
+      </filter>
+      <filter id="wcBlurHakusai">
+        <feGaussianBlur stdDeviation="1.5"/>
+      </filter>
+    </defs>
 
-  <ellipse cx="200" cy="225" rx="140" ry="180" fill="url(#hakusai-aura-ok)"/>
+    <!-- Watercolor bleeds -->
+    <g filter="url(#wcBlurHakusai)" opacity="0.4">
+      <ellipse cx="0" cy="-130" rx="70" ry="40" fill="#7FA850"/>
+      <ellipse cx="0" cy="20" rx="80" ry="130" fill="#F8FAE0"/>
+      <ellipse cx="0" cy="160" rx="55" ry="30" fill="#E8DCB0"/>
+    </g>
 
-  <!-- 本体: 縦長砲弾型 -->
-  <path d="M 200 60
-           Q 145 65 130 130
-           Q 118 200 122 280
-           Q 130 345 200 355
-           Q 270 345 278 280
-           Q 282 200 270 130
-           Q 255 65 200 60 Z"
-        fill="url(#hakusai-body-ok)" stroke="#3D2817" stroke-width="3" stroke-linejoin="round"/>
+    <!-- 上部の葉(濃い緑) -->
+    <g filter="url(#wcRoughHakusai)" opacity="0.85">
+      <path d="M -35 -150 Q -45 -175 -25 -180 Q -15 -160 -22 -140 Z" fill="url(#wcLeafHakusai)"/>
+      <path d="M 0 -160 Q -5 -185 15 -183 Q 20 -163 10 -145 Z" fill="url(#wcLeafHakusai)"/>
+      <path d="M 35 -150 Q 45 -180 28 -185 Q 18 -165 22 -143 Z" fill="url(#wcLeafHakusai)"/>
+    </g>
 
-  <!-- 上部の葉(濃い緑が巻き込まれる葉先) -->
-  <path d="M 165 65 Q 155 50 175 45 Q 185 60 178 75 Z" fill="url(#hakusai-leaf-ok)" stroke="#3D2817" stroke-width="2.5" stroke-linejoin="round"/>
-  <path d="M 200 55 Q 195 40 215 42 Q 220 58 210 70 Z" fill="url(#hakusai-leaf-ok)" stroke="#3D2817" stroke-width="2.5" stroke-linejoin="round"/>
-  <path d="M 235 65 Q 245 48 230 42 Q 218 55 222 72 Z" fill="url(#hakusai-leaf-ok)" stroke="#3D2817" stroke-width="2.5" stroke-linejoin="round"/>
+    <!-- 本体: 縦長砲弾型 -->
+    <g filter="url(#wcRoughHakusai)">
+      <path d="M 0 -150
+               Q -55 -145 -70 -75
+               Q -82 -5 -78 75
+               Q -70 145 0 158
+               Q 70 145 78 75
+               Q 82 -5 70 -75
+               Q 55 -145 0 -150 Z" fill="url(#wcBodyHakusai)"/>
+    </g>
 
-  <!-- 葉の重なり(白系で同じ縦縞=白菜の透明感のある軸を表現) -->
-  <path d="M 145 75 Q 138 200 145 340" fill="none" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" opacity="0.65"/>
-  <path d="M 165 65 Q 158 200 162 348" fill="none" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" opacity="0.7"/>
-  <path d="M 185 60 Q 182 200 183 353" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
-  <path d="M 200 60 Q 200 200 200 355" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" opacity="0.55"/>
-  <path d="M 215 60 Q 218 200 217 353" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
-  <path d="M 235 65 Q 242 200 238 348" fill="none" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" opacity="0.7"/>
-  <path d="M 255 75 Q 262 200 255 340" fill="none" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" opacity="0.65"/>
+    <!-- Strong ink lines -->
+    <g stroke="#3D2817" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.9">
+      <!-- 本体輪郭 -->
+      <path d="M 0 -150 Q -55 -145 -70 -75 Q -82 -5 -78 75 Q -70 145 0 158 Q 70 145 78 75 Q 82 -5 70 -75 Q 55 -145 0 -150 Z"/>
+      <!-- 上部の葉 -->
+      <path d="M -35 -150 Q -45 -175 -25 -180 Q -15 -160 -22 -140 Z"/>
+      <path d="M 0 -160 Q -5 -185 15 -183 Q 20 -163 10 -145 Z"/>
+      <path d="M 35 -150 Q 45 -180 28 -185 Q 18 -165 22 -143 Z"/>
+      <!-- 葉先のフリル -->
+      <path d="M -70 -75 Q -62 -90 -52 -82 Q -45 -100 -35 -90" stroke-width="2" opacity="0.7"/>
+      <path d="M 35 -90 Q 45 -100 52 -82 Q 62 -90 70 -75" stroke-width="2" opacity="0.7"/>
+      <!-- 縦縞(葉の重なり) -->
+      <path d="M -55 -130 Q -62 0 -55 145" opacity="0.7"/>
+      <path d="M -35 -150 Q -42 0 -38 152" opacity="0.7"/>
+      <path d="M -15 -158 Q -18 0 -17 156" opacity="0.65"/>
+      <path d="M 0 -158 Q 0 0 0 158" opacity="0.65"/>
+      <path d="M 15 -158 Q 18 0 17 156" opacity="0.65"/>
+      <path d="M 35 -150 Q 42 0 38 152" opacity="0.7"/>
+      <path d="M 55 -130 Q 62 0 55 145" opacity="0.7"/>
+      <!-- 切り口の楕円 -->
+      <ellipse cx="0" cy="158" rx="40" ry="6"/>
+    </g>
 
-  <!-- 軸の中央線(うっすら影、薄ベージュで自然に) -->
-  <path d="M 175 90 Q 173 175 178 280 Q 180 320 178 345" fill="none" stroke="#D4C495" stroke-width="2" stroke-linecap="round" opacity="0.5"/>
-  <path d="M 225 90 Q 227 175 222 280 Q 220 320 222 345" fill="none" stroke="#D4C495" stroke-width="2" stroke-linecap="round" opacity="0.5"/>
-
-  <!-- 上部のフリル -->
-  <path d="M 130 130 Q 138 110 148 120 Q 156 100 165 115" fill="none" stroke="#3D2817" stroke-width="2" stroke-linecap="round" opacity="0.55"/>
-  <path d="M 235 115 Q 244 100 252 120 Q 262 110 270 130" fill="none" stroke="#3D2817" stroke-width="2" stroke-linecap="round" opacity="0.55"/>
-
-  <!-- 上部の緑頭部 -->
-  <path d="M 130 130 Q 145 90 200 85 Q 255 90 270 130 Q 260 105 200 95 Q 140 105 130 130 Z"
-        fill="#9DC560" opacity="0.5"/>
-
-  <!-- 切り口(白く新鮮に) -->
-  <ellipse cx="200" cy="355" rx="40" ry="6" fill="#FFFAE8" stroke="#3D2817" stroke-width="2.5"/>
-  <ellipse cx="200" cy="354" rx="35" ry="3.5" fill="#F0E8C8"/>
-
-  <!-- 大きなハイライト(瑞々しい) -->
-  <ellipse cx="170" cy="180" rx="25" ry="90" fill="#FFFFFF" opacity="0.4" transform="rotate(-5 170 180)"/>
-  <ellipse cx="160" cy="140" rx="15" ry="35" fill="#FFFFFF" opacity="0.55" transform="rotate(-5 160 140)"/>
-
-  <ellipse cx="200" cy="370" rx="80" ry="7" fill="#3D2817" opacity="0.12"/>
+    <!-- 縦縞の白いハイライト(瑞々しさ) -->
+    <g stroke="#FFFFFF" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.7">
+      <path d="M -35 -148 Q -42 0 -38 150"/>
+      <path d="M 0 -156 Q 0 0 0 156"/>
+      <path d="M 35 -148 Q 42 0 38 150"/>
+    </g>
 </svg>

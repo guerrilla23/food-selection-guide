@@ -2,49 +2,132 @@
   <rect width="1080" height="600" fill="#FFFFFF" rx="20"/>
 
   <!-- Header -->
-  <text x="60" y="60" font-size="44" font-weight="900" fill="#5D9F3D">キャベツ</text>
-  <line x1="60" y1="75" x2="180" y2="75" stroke="#5D9F3D" stroke-width="4"/>
-  <text x="200" y="68" font-size="22" fill="#666">旬:春・冬</text>
+  <text x="60" y="60" font-size="44" font-weight="900" fill="#5D8F3D">キャベツ</text>
+  <line x1="60" y1="75" x2="240" y2="75" stroke="#5D8F3D" stroke-width="4"/>
+  <text x="260" y="68" font-size="22" fill="#666">旬:春・冬</text>
 
   <line x1="540" y1="100" x2="540" y2="540" stroke="#DDD" stroke-width="2" stroke-dasharray="6,6"/>
 
-  <!-- OK side (watercolor Pattern A) -->
+  <!-- OK side (Pattern A: watercolor with strong ink lines) -->
   <g transform="translate(280, 320)">
     <circle cx="-200" cy="-180" r="22" fill="#2C5F2D"/>
     <text x="-200" y="-172" font-size="26" font-weight="900" fill="white" text-anchor="middle">○</text>
+
     <defs>
-      <radialGradient id="wcBodyCabbage" cx="35%" cy="25%"><stop offset="0%" stop-color="#D4E8B5" stop-opacity="0.95"/><stop offset="40%" stop-color="#9BCB7A" stop-opacity="0.9"/><stop offset="80%" stop-color="#5D8F3D" stop-opacity="0.85"/><stop offset="100%" stop-color="#2C5F2D" stop-opacity="0.65"/></radialGradient>
-      <radialGradient id="wcLeafCabbage" cx="50%" cy="20%"><stop offset="0%" stop-color="#9BCB7A" stop-opacity="0.9"/><stop offset="60%" stop-color="#5D8F3D" stop-opacity="0.7"/><stop offset="100%" stop-color="#2C5F2D" stop-opacity="0.5"/></radialGradient>
+      <radialGradient id="wcBodyCabbage" cx="35%" cy="25%">
+        <stop offset="0%" stop-color="#E8F5C8" stop-opacity="0.95"/>
+        <stop offset="50%" stop-color="#A8C97C" stop-opacity="0.85"/>
+        <stop offset="100%" stop-color="#5D8F3D" stop-opacity="0.7"/>
+      </radialGradient>
+      <radialGradient id="wcOuterCabbage" cx="50%" cy="40%">
+        <stop offset="0%" stop-color="#9BCB7A" stop-opacity="0.9"/>
+        <stop offset="100%" stop-color="#4A6B2A" stop-opacity="0.7"/>
+      </radialGradient>
       <filter id="wcRoughCabbage" x="-10%" y="-10%" width="120%" height="120%">
-        <feTurbulence baseFrequency="0.04" numOctaves="3" seed="29"/>
+        <feTurbulence baseFrequency="0.04" numOctaves="3" seed="9"/>
         <feDisplacementMap in="SourceGraphic" scale="4"/>
       </filter>
-      <filter id="wcBlurCabbage"><feGaussianBlur stdDeviation="1.5"/></filter>
+      <filter id="wcBlurCabbage">
+        <feGaussianBlur stdDeviation="1.5"/>
+      </filter>
     </defs>
-    <g filter="url(#wcBlurCabbage)" opacity="0.4"><ellipse cx="0" cy="0" rx="110" ry="100" fill="#9BCB7A"/></g>
-    
-    <g filter="url(#wcRoughCabbage)"><path d="M 0 -100 Q -100 -90 -100 -10 Q -100 80 0 100 Q 100 80 100 -10 Q 100 -90 0 -100 Z" fill="url(#wcBodyCabbage)"/></g>
-    
-    <g stroke="#3D2817" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"><path d="M 0 -100 Q -100 -90 -100 -10 Q -100 80 0 100 Q 100 80 100 -10 Q 100 -90 0 -100 Z"/><path d="M -85 -30 Q 0 -20 85 -30" opacity="0.7" stroke-width="1.8"/><path d="M -90 0 Q 0 10 90 0" opacity="0.7" stroke-width="1.8"/><path d="M -85 30 Q 0 40 85 30" opacity="0.7" stroke-width="1.8"/><path d="M 0 -95 L 0 50" opacity="0.6" stroke-width="1.5"/><path d="M -50 -90 Q -55 -10 -45 75" opacity="0.5" stroke-width="1.3"/><path d="M 50 -90 Q 55 -10 45 75" opacity="0.5" stroke-width="1.3"/></g>
+
+    <!-- Watercolor bleeds (背景) -->
+    <g filter="url(#wcBlurCabbage)" opacity="0.4">
+      <ellipse cx="0" cy="0" rx="160" ry="150" fill="#9BCB7A"/>
+      <ellipse cx="-80" cy="20" rx="60" ry="80" fill="#5D8F3D"/>
+      <ellipse cx="80" cy="20" rx="60" ry="80" fill="#5D8F3D"/>
+    </g>
+
+    <!-- 外葉(左、開いた状態) -->
+    <g filter="url(#wcRoughCabbage)" opacity="0.85">
+      <path d="M -130 30 Q -150 -10 -140 -55 Q -110 -85 -75 -75 Q -70 -30 -78 5 Q -90 50 -120 65 Q -135 60 -130 30 Z" fill="url(#wcOuterCabbage)"/>
+    </g>
+
+    <!-- 外葉(右) -->
+    <g filter="url(#wcRoughCabbage)" opacity="0.85">
+      <path d="M 130 30 Q 150 -10 140 -55 Q 110 -85 75 -75 Q 70 -30 78 5 Q 90 50 120 65 Q 135 60 130 30 Z" fill="url(#wcOuterCabbage)"/>
+    </g>
+
+    <!-- 本体球 -->
+    <g filter="url(#wcRoughCabbage)">
+      <ellipse cx="0" cy="0" rx="115" ry="110" fill="url(#wcBodyCabbage)"/>
+    </g>
+
+    <!-- Strong ink lines (Pattern A) -->
+    <g stroke="#3D2817" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.9">
+      <!-- 本体輪郭 -->
+      <ellipse cx="0" cy="0" rx="115" ry="110"/>
+      <!-- 外葉(左) -->
+      <path d="M -130 30 Q -150 -10 -140 -55 Q -110 -85 -75 -75 Q -70 -30 -78 5 Q -90 50 -120 65 Q -135 60 -130 30 Z"/>
+      <!-- 外葉(右) -->
+      <path d="M 130 30 Q 150 -10 140 -55 Q 110 -85 75 -75 Q 70 -30 78 5 Q 90 50 120 65 Q 135 60 130 30 Z"/>
+      <!-- 葉の重なり線(中央から放射) -->
+      <path d="M 0 -105 Q -25 -75 -45 -25 Q -55 25 -35 90" opacity="0.75"/>
+      <path d="M 0 -105 Q 25 -75 45 -25 Q 55 25 35 90" opacity="0.75"/>
+      <path d="M 0 -108 Q 0 -50 0 100" opacity="0.7"/>
+      <!-- 葉脈(横方向、白系で透明感) -->
+      <path d="M -90 -10 Q -50 -25 -5 -38" opacity="0.55"/>
+      <path d="M -85 50 Q -50 50 -5 50" opacity="0.55"/>
+      <path d="M 90 -10 Q 50 -25 5 -38" opacity="0.55"/>
+      <path d="M 85 50 Q 50 50 5 50" opacity="0.55"/>
+      <!-- 上部の頂点 -->
+      <path d="M -5 -110 Q 0 -118 5 -110"/>
+    </g>
+
+    <!-- 葉脈の白い光(瑞々しさ表現) -->
+    <g stroke="#FFFFFF" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.7">
+      <path d="M 0 -100 Q -22 -70 -42 -20 Q -50 28 -32 88"/>
+      <path d="M 0 -100 Q 22 -70 42 -20 Q 50 28 32 88"/>
+    </g>
   </g>
 
-  <!-- NG side (flat) -->
+  <!-- NG side (フラット塗り、変色・シミ) -->
   <g transform="translate(800, 320)">
     <circle cx="-200" cy="-180" r="22" fill="#C62828"/>
     <text x="-200" y="-172" font-size="26" font-weight="900" fill="white" text-anchor="middle">×</text>
-    <path d="M 0 -100 Q -100 -90 -100 -10 Q -100 80 0 100 Q 100 80 100 -10 Q 100 -90 0 -100 Z" fill="#B8B860"/><path d="M -100 -10 Q -110 -5 -115 10 Q -90 -5 -100 0" stroke="#A0A040" stroke-width="2" fill="none" opacity="0.7"/><ellipse cx="-20" cy="30" rx="15" ry="10" fill="#7A5520" opacity="0.45"/><ellipse cx="40" cy="-10" rx="10" ry="8" fill="#7A5520" opacity="0.4"/><path d="M -85 -30 Q 0 -25 85 -30" stroke="#5D4E37" stroke-width="1.5" fill="none" opacity="0.5"/><path d="M -90 0 Q 0 5 90 0" stroke="#5D4E37" stroke-width="1.5" fill="none" opacity="0.5"/>
+
+    <!-- 外葉(萎れて変色) -->
+    <path d="M -130 35 Q -150 -10 -140 -55 Q -105 -85 -72 -73 Q -68 -28 -78 8 Q -88 55 -118 70 Q -135 62 -130 35 Z" fill="#A8A058"/>
+    <!-- 葉先の枯れ -->
+    <path d="M -148 -25 Q -135 -40 -118 -32 Q -120 -15 -135 -10 Z" fill="#7A4A1F" opacity="0.65"/>
+
+    <path d="M 130 35 Q 150 -10 140 -55 Q 105 -85 72 -73 Q 68 -28 78 8 Q 88 55 118 70 Q 135 62 130 35 Z" fill="#A8A058"/>
+    <path d="M 148 -25 Q 135 -40 118 -32 Q 120 -15 135 -10 Z" fill="#7A4A1F" opacity="0.65"/>
+
+    <!-- 本体球(くすんだ黄緑) -->
+    <ellipse cx="0" cy="0" rx="113" ry="108" fill="#C5C295"/>
+
+    <!-- 茶色のシミ -->
+    <ellipse cx="-30" cy="-20" rx="14" ry="10" fill="#8B5A30" opacity="0.55"/>
+    <ellipse cx="40" cy="30" rx="12" ry="8" fill="#8B5A30" opacity="0.5"/>
+    <ellipse cx="-5" cy="60" rx="16" ry="9" fill="#8B5A30" opacity="0.5"/>
+
+    <!-- 重なり線(雑) -->
+    <path d="M 0 -105 Q -25 -75 -45 -25 Q -55 25 -35 90" stroke="#5D4E37" stroke-width="1.5" fill="none" opacity="0.6"/>
+    <path d="M 0 -105 Q 25 -75 45 -25 Q 55 25 35 90" stroke="#5D4E37" stroke-width="1.5" fill="none" opacity="0.6"/>
+    <path d="M 0 -108 Q 0 -50 0 100" stroke="#5D4E37" stroke-width="1.3" fill="none" opacity="0.5"/>
+
+    <!-- 黒い斑点 -->
+    <circle cx="-50" cy="40" r="3" fill="#2A2820" opacity="0.7"/>
+    <circle cx="35" cy="-30" r="2.5" fill="#2A2820" opacity="0.65"/>
+
+    <!-- 輪郭 -->
+    <ellipse cx="0" cy="0" rx="113" ry="108" stroke="#3D2817" stroke-width="3" fill="none"/>
+    <path d="M -130 35 Q -150 -10 -140 -55 Q -105 -85 -72 -73 Q -68 -28 -78 8 Q -88 55 -118 70 Q -135 62 -130 35 Z" stroke="#3D2817" stroke-width="3" fill="none"/>
+    <path d="M 130 35 Q 150 -10 140 -55 Q 105 -85 72 -73 Q 68 -28 78 8 Q 88 55 118 70 Q 135 62 130 35 Z" stroke="#3D2817" stroke-width="3" fill="none"/>
   </g>
 
   <!-- Comparison labels -->
   <g font-size="20" fill="#333">
     <rect x="60" y="495" width="460" height="80" rx="8" fill="#E8F5E9"/>
-    <text x="80" y="520" font-weight="bold" fill="#2C5F2D">● ずっしり重い(同サイズで)</text>
-    <text x="80" y="545" font-weight="bold" fill="#2C5F2D">● 外葉の緑が鮮やか、ハリあり</text>
-    <text x="80" y="568" fill="#666" font-size="17">春キャベツ=軽くフワッ、冬=重く詰まる</text>
+    <text x="80" y="520" font-weight="bold" fill="#2C5F2D">● 外葉が鮮やかな緑、ハリがある</text>
+    <text x="80" y="545" font-weight="bold" fill="#2C5F2D">● 持つとずっしり重く葉が密に詰まる</text>
+    <text x="80" y="568" fill="#666" font-size="17">芯の切り口が500円玉以下なら甘くて柔らかい</text>
 
     <rect x="560" y="495" width="460" height="80" rx="8" fill="#FFEBEE"/>
-    <text x="580" y="520" font-weight="bold" fill="#C62828">× 軽い、外葉が黄色く萎れ</text>
-    <text x="580" y="545" font-weight="bold" fill="#C62828">× 切り口が茶色、ベタつく</text>
-    <text x="580" y="568" fill="#666" font-size="17">カット品は切り口が白いものを選ぶ</text>
+    <text x="580" y="520" font-weight="bold" fill="#C62828">× 葉が黄ばみ、葉先が茶色く枯れる</text>
+    <text x="580" y="545" font-weight="bold" fill="#C62828">× 黒い斑点や茶色のシミが多い</text>
+    <text x="580" y="568" fill="#666" font-size="17">芯が大きく茶色=収穫から日数経過のサイン</text>
   </g>
 </svg>

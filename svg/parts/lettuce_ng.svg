@@ -1,70 +1,33 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" opacity="0.9">
-  <defs>
-    <radialGradient id="lettuce-aura-ng" cx="50%" cy="55%" r="55%">
-      <stop offset="0%" stop-color="#D8C088" stop-opacity="0.4"/>
-      <stop offset="100%" stop-color="#D8C088" stop-opacity="0"/>
-    </radialGradient>
-    <radialGradient id="lettuce-body-ng" cx="40%" cy="35%" r="80%">
-      <stop offset="0%" stop-color="#EFEAC8"/>
-      <stop offset="55%" stop-color="#BFC082"/>
-      <stop offset="100%" stop-color="#7A8045"/>
-    </radialGradient>
-    <radialGradient id="lettuce-outer-ng" cx="50%" cy="40%" r="65%">
-      <stop offset="0%" stop-color="#C5C078"/>
-      <stop offset="100%" stop-color="#7A7A35"/>
-    </radialGradient>
-  </defs>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-150 -130 300 270" font-family="Noto Sans CJK JP, sans-serif">
+<!-- 上部の葉(変色) -->
+    <path d="M 0 -85 Q -45 -70 -70 -40 Q -75 -80 -45 -105 Q 0 -125 45 -105 Q 75 -80 70 -40 Q 45 -70 0 -85 Z" fill="#A8A058"/>
+    <!-- 葉先の赤茶 -->
+    <path d="M -45 -108 Q -35 -118 -25 -110" stroke="#A85530" stroke-width="3" fill="none" opacity="0.7"/>
+    <path d="M 25 -110 Q 35 -118 45 -108" stroke="#A85530" stroke-width="3" fill="none" opacity="0.7"/>
 
-  <!-- aura -->
-  <ellipse cx="200" cy="225" rx="185" ry="160" fill="url(#lettuce-aura-ng)"/>
+    <!-- 外葉(左) -->
+    <path d="M -120 35 Q -150 5 -150 -35 Q -128 -80 -82 -85 Q -62 -45 -72 5 Q -82 55 -108 85 Q -135 78 -120 35 Z" fill="#A8A058"/>
+    <!-- 葉先の赤茶 -->
+    <path d="M -150 -10 Q -135 -22 -118 -15 Q -125 0 -140 5 Z" fill="#A85530" opacity="0.7"/>
 
-  <!-- 外葉(左): しおれて垂れ下がる -->
-  <path d="M 75 245 Q 50 215 58 175 Q 70 138 108 128 Q 135 125 152 140
-           Q 148 110 168 102 Q 145 152 152 200
-           Q 145 255 122 295 Q 95 308 78 290 Q 50 270 75 245 Z"
-        fill="url(#lettuce-outer-ng)" stroke="#3D2817" stroke-width="3" stroke-linejoin="round"/>
-  <!-- 葉縁の赤茶変色(NGポイント) -->
-  <path d="M 58 180 Q 70 170 85 175 Q 95 185 90 200 Q 75 205 60 195 Z" fill="#A85530" opacity="0.65"/>
-  <path d="M 78 295 Q 92 285 105 295 Q 100 305 85 305 Q 75 300 78 295 Z" fill="#A85530" opacity="0.6"/>
-  <path d="M 60 175 Q 65 168 72 175 Q 78 168 85 175 Q 92 168 100 175"
-        fill="none" stroke="#3D2817" stroke-width="2" stroke-linecap="round" opacity="0.65"/>
-  <path d="M 105 295 Q 100 200 130 115" fill="none" stroke="#3D2817" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
+    <!-- 外葉(右) -->
+    <path d="M 120 35 Q 150 5 150 -35 Q 128 -80 82 -85 Q 62 -45 72 5 Q 82 55 108 85 Q 135 78 120 35 Z" fill="#A8A058"/>
+    <path d="M 150 -10 Q 135 -22 118 -15 Q 125 0 140 5 Z" fill="#A85530" opacity="0.7"/>
 
-  <!-- 外葉(右) -->
-  <path d="M 325 245 Q 350 215 342 175 Q 330 138 292 128 Q 265 125 248 140
-           Q 252 110 232 102 Q 255 152 248 200
-           Q 255 255 278 295 Q 305 308 322 290 Q 350 270 325 245 Z"
-        fill="url(#lettuce-outer-ng)" stroke="#3D2817" stroke-width="3" stroke-linejoin="round"/>
-  <!-- 赤茶変色 -->
-  <path d="M 342 180 Q 330 170 315 175 Q 305 185 310 200 Q 325 205 340 195 Z" fill="#A85530" opacity="0.65"/>
-  <path d="M 322 295 Q 308 285 295 295 Q 300 305 315 305 Q 325 300 322 295 Z" fill="#A85530" opacity="0.6"/>
-  <path d="M 295 295 Q 300 200 270 115" fill="none" stroke="#3D2817" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
+    <!-- 本体(くすむ) -->
+    <ellipse cx="0" cy="5" rx="103" ry="98" fill="#BFBF82"/>
 
-  <!-- 上部の葉 -->
-  <path d="M 200 85 Q 165 95 145 125 Q 140 100 175 78 Q 200 68 230 78 Q 260 100 255 125 Q 235 95 200 85 Z"
-        fill="url(#lettuce-outer-ng)" stroke="#3D2817" stroke-width="3" stroke-linejoin="round"/>
-  <!-- 葉縁の赤茶 -->
-  <path d="M 175 78 Q 185 70 195 78" fill="none" stroke="#A85530" stroke-width="3" stroke-linecap="round" opacity="0.6"/>
-  <path d="M 215 78 Q 225 70 235 78" fill="none" stroke="#A85530" stroke-width="3" stroke-linecap="round" opacity="0.6"/>
+    <!-- 茶色のシミ -->
+    <ellipse cx="-30" cy="-15" rx="15" ry="10" fill="#8A4520" opacity="0.5"/>
+    <ellipse cx="40" cy="35" rx="13" ry="9" fill="#8A4520" opacity="0.5"/>
+    <ellipse cx="0" cy="80" rx="18" ry="9" fill="#8A4520" opacity="0.5"/>
 
-  <!-- 本体 -->
-  <ellipse cx="200" cy="222" rx="115" ry="113" fill="url(#lettuce-body-ng)" stroke="#3D2817" stroke-width="3"/>
+    <!-- 重なり線 -->
+    <path d="M 0 -85 Q -25 -55 -40 0 Q -45 55 -25 95" stroke="#5D4E37" stroke-width="1.5" fill="none" opacity="0.6"/>
+    <path d="M 0 -85 Q 25 -55 40 0 Q 45 55 25 95" stroke="#5D4E37" stroke-width="1.5" fill="none" opacity="0.6"/>
 
-  <!-- 内側葉の重なり -->
-  <path d="M 200 125 Q 170 158 158 218 Q 155 270 180 315" fill="none" stroke="#3D2817" stroke-width="2" stroke-linecap="round" opacity="0.55"/>
-  <path d="M 200 125 Q 230 158 242 218 Q 245 270 220 315" fill="none" stroke="#3D2817" stroke-width="2" stroke-linecap="round" opacity="0.55"/>
-  <path d="M 200 120 Q 200 180 200 325" fill="none" stroke="#3D2817" stroke-width="1.5" stroke-linecap="round" opacity="0.45"/>
-
-  <!-- 茶色のシミ・傷み -->
-  <ellipse cx="170" cy="200" rx="16" ry="11" fill="#8A4520" opacity="0.5" transform="rotate(-15 170 200)"/>
-  <ellipse cx="245" cy="245" rx="14" ry="9" fill="#8A4520" opacity="0.5" transform="rotate(20 245 245)"/>
-  <ellipse cx="200" cy="290" rx="18" ry="10" fill="#8A4520" opacity="0.5"/>
-  <ellipse cx="155" cy="265" rx="11" ry="8" fill="#8A4520" opacity="0.4"/>
-
-  <!-- 細かい葉脈 -->
-  <path d="M 100 200 Q 145 198 195 200" fill="none" stroke="#3D2817" stroke-width="1.3" stroke-linecap="round" opacity="0.4"/>
-  <path d="M 205 200 Q 255 198 300 200" fill="none" stroke="#3D2817" stroke-width="1.3" stroke-linecap="round" opacity="0.4"/>
-
-  <!-- 影 -->
-  <ellipse cx="200" cy="350" rx="113" ry="9" fill="#3D2817" opacity="0.08"/>
+    <!-- 輪郭 -->
+    <ellipse cx="0" cy="5" rx="103" ry="98" stroke="#3D2817" stroke-width="3" fill="none"/>
+    <path d="M -120 35 Q -150 5 -150 -35 Q -128 -80 -82 -85 Q -62 -45 -72 5 Q -82 55 -108 85 Q -135 78 -120 35 Z" stroke="#3D2817" stroke-width="3" fill="none"/>
+    <path d="M 120 35 Q 150 5 150 -35 Q 128 -80 82 -85 Q 62 -45 72 5 Q 82 55 108 85 Q 135 78 120 35 Z" stroke="#3D2817" stroke-width="3" fill="none"/>
 </svg>

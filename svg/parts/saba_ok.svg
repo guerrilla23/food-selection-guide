@@ -1,16 +1,90 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="-160 -80 320 160" font-family="Noto Sans CJK JP, sans-serif">
 <defs>
-      <radialGradient id="wcBodySaba" cx="35%" cy="25%"><stop offset="0%" stop-color="#F8F8FA" stop-opacity="0.95"/><stop offset="40%" stop-color="#D0D8DC" stop-opacity="0.9"/><stop offset="80%" stop-color="#90A0A8" stop-opacity="0.85"/><stop offset="100%" stop-color="#506068" stop-opacity="0.65"/></radialGradient>
-      <radialGradient id="wcLeafSaba" cx="50%" cy="20%"><stop offset="0%" stop-color="#9BCB7A" stop-opacity="0.9"/><stop offset="60%" stop-color="#5D8F3D" stop-opacity="0.7"/><stop offset="100%" stop-color="#2C5F2D" stop-opacity="0.5"/></radialGradient>
+      <linearGradient id="wcBodySaba" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#3A5A6A" stop-opacity="0.92"/>
+        <stop offset="35%" stop-color="#5C7A8A" stop-opacity="0.9"/>
+        <stop offset="55%" stop-color="#A8BCC4" stop-opacity="0.92"/>
+        <stop offset="80%" stop-color="#E8E8E0" stop-opacity="0.9"/>
+        <stop offset="100%" stop-color="#D0D0C8" stop-opacity="0.85"/>
+      </linearGradient>
       <filter id="wcRoughSaba" x="-10%" y="-10%" width="120%" height="120%">
-        <feTurbulence baseFrequency="0.04" numOctaves="3" seed="191"/>
-        <feDisplacementMap in="SourceGraphic" scale="4"/>
+        <feTurbulence baseFrequency="0.04" numOctaves="3" seed="31"/>
+        <feDisplacementMap in="SourceGraphic" scale="3"/>
       </filter>
-      <filter id="wcBlurSaba"><feGaussianBlur stdDeviation="1.5"/></filter>
+      <filter id="wcBlurSaba">
+        <feGaussianBlur stdDeviation="1.5"/>
+      </filter>
     </defs>
-    <g filter="url(#wcBlurSaba)" opacity="0.4"><ellipse cx="0" cy="0" rx="145" ry="55" fill="#90A0A8"/></g>
-    
-    <g filter="url(#wcRoughSaba)"><path d="M -130 0 Q -125 -45 -50 -50 Q 60 -50 110 -28 L 130 -22 Q 145 -10 145 0 Q 145 10 130 22 L 110 28 Q 60 50 -50 50 Q -125 45 -130 0 Z" fill="url(#wcBodySaba)"/><path d="M 130 -22 L 155 -45 L 150 0 L 155 45 L 130 22 Z" fill="url(#wcBodySaba)"/></g>
-    
-    <g stroke="#3D2817" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"><path d="M -130 0 Q -125 -45 -50 -50 Q 60 -50 110 -28 L 130 -22 Q 145 -10 145 0 Q 145 10 130 22 L 110 28 Q 60 50 -50 50 Q -125 45 -130 0 Z"/><path d="M 130 -22 L 155 -45 L 150 0 L 155 45 L 130 22"/><path d="M -110 -15 m -5 0 a 5 5 0 1 0 10 0 a 5 5 0 1 0 -10 0 Z" opacity="0.95" stroke-width="2.2"/><path d="M -130 0 Q -135 5 -125 12" opacity="0.85" stroke-width="1.8"/><path d="M -80 -38 Q -50 -45 -20 -38" opacity="0.75" stroke-width="2"/><path d="M 0 -42 Q 30 -48 60 -40" opacity="0.75" stroke-width="2"/><path d="M -60 -28 Q -30 -35 -10 -28" opacity="0.6" stroke-width="1.6"/><path d="M 20 -32 Q 50 -38 80 -30" opacity="0.6" stroke-width="1.6"/><path d="M -100 5 Q 0 8 110 5" opacity="0.5" stroke-width="1.4"/><path d="M -90 -30 Q -85 0 -88 30" opacity="0.6" stroke-width="1.6"/></g>
+
+    <!-- Watercolor bleeds -->
+    <g filter="url(#wcBlurSaba)" opacity="0.4">
+      <ellipse cx="0" cy="0" rx="195" ry="50" fill="#5C7A8A"/>
+    </g>
+
+    <!-- 本体: スリムな細長い形(サバの特徴) -->
+    <g filter="url(#wcRoughSaba)">
+      <path d="M -195 0
+               Q -190 -35 -130 -42
+               Q -50 -47 50 -42
+               Q 120 -38 145 -22
+               L 188 -45
+               L 180 0
+               L 188 45
+               L 145 22
+               Q 120 38 50 42
+               Q -50 47 -130 42
+               Q -190 35 -195 0 Z" fill="url(#wcBodySaba)"/>
+    </g>
+
+    <!-- Strong ink lines -->
+    <g stroke="#3D2817" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.9">
+      <!-- 本体輪郭 -->
+      <path d="M -195 0 Q -190 -35 -130 -42 Q -50 -47 50 -42 Q 120 -38 145 -22 L 188 -45 L 180 0 L 188 45 L 145 22 Q 120 38 50 42 Q -50 47 -130 42 Q -190 35 -195 0 Z"/>
+      <!-- 尾びれ内側の線 -->
+      <path d="M 145 -22 L 188 -45" opacity="0.6"/>
+      <path d="M 145 22 L 188 45" opacity="0.6"/>
+      <path d="M 160 -25 L 180 -38" stroke-width="1.5" opacity="0.65"/>
+      <path d="M 165 0 L 183 0" stroke-width="1.5" opacity="0.65"/>
+      <path d="M 160 25 L 180 38" stroke-width="1.5" opacity="0.65"/>
+
+      <!-- ★背中の波模様(さば模様、サバの最大の特徴) -->
+      <path d="M -100 -25 Q -85 -32 -70 -25 Q -55 -32 -40 -25" stroke="#1F3845" stroke-width="3.5" opacity="0.85"/>
+      <path d="M -25 -28 Q -10 -35 5 -28 Q 20 -35 35 -28" stroke="#1F3845" stroke-width="3.5" opacity="0.85"/>
+      <path d="M 50 -27 Q 65 -33 80 -27 Q 95 -33 110 -27" stroke="#1F3845" stroke-width="3.5" opacity="0.85"/>
+      <!-- 上段の波 -->
+      <path d="M -90 -33 Q -75 -37 -60 -33" stroke="#1F3845" stroke-width="2.5" opacity="0.7"/>
+      <path d="M -15 -35 Q 0 -39 15 -35" stroke="#1F3845" stroke-width="2.5" opacity="0.7"/>
+      <path d="M 60 -33 Q 75 -37 90 -33" stroke="#1F3845" stroke-width="2.5" opacity="0.7"/>
+
+      <!-- 目(澄んでいる) -->
+      <circle cx="-160" cy="-12" r="10" fill="#FFFFFF"/>
+      <circle cx="-159" cy="-11" r="6" fill="#3D2817"/>
+      <circle cx="-157" cy="-14" r="2.2" fill="#FFFFFF"/>
+
+      <!-- エラ -->
+      <path d="M -115 -32 Q -115 0 -110 32" stroke-width="2.5"/>
+      <!-- エラの内側(赤、新鮮さ) -->
+      <path d="M -118 -20 Q -118 0 -113 20" stroke="#C62828" stroke-width="1.5" opacity="0.6"/>
+
+      <!-- 背びれ(2つ、サバの特徴) -->
+      <path d="M -55 -42 L -45 -62 L -28 -55 L -22 -45" stroke-width="2.5"/>
+      <!-- 第二背びれ -->
+      <path d="M 50 -45 Q 70 -55 95 -45" stroke-width="2"/>
+      <path d="M 60 -45 L 75 -55 L 90 -45" stroke-width="1.5"/>
+      <!-- 小離鰭(サバの特徴、尾の手前に小さなヒレが並ぶ) -->
+      <path d="M 110 -30 L 113 -35 L 117 -30" stroke-width="1.8"/>
+      <path d="M 122 -28 L 125 -33 L 129 -28" stroke-width="1.8"/>
+      <path d="M 110 30 L 113 35 L 117 30" stroke-width="1.8"/>
+      <path d="M 122 28 L 125 33 L 129 28" stroke-width="1.8"/>
+
+      <!-- 腹びれ -->
+      <path d="M -75 42 Q -65 56 -55 42" stroke-width="2.5"/>
+    </g>
+
+    <!-- 銀色の腹のハイライト -->
+    <ellipse cx="-30" cy="22" rx="85" ry="8" fill="#FFFFFF" opacity="0.55"/>
+    <ellipse cx="-50" cy="20" rx="40" ry="3" fill="#FFFFFF" opacity="0.7"/>
+
+    <!-- 影 -->
+    <ellipse cx="-30" cy="75" rx="170" ry="5" fill="#3D2817" opacity="0.12"/>
 </svg>

@@ -2,49 +2,236 @@
   <rect width="1080" height="600" fill="#FFFFFF" rx="20"/>
 
   <!-- Header -->
-  <text x="60" y="60" font-size="44" font-weight="900" fill="#5D4E37">舞茸</text>
-  <line x1="60" y1="75" x2="120" y2="75" stroke="#5D4E37" stroke-width="4"/>
-  <text x="140" y="68" font-size="22" fill="#666">旬:9〜10月</text>
+  <text x="60" y="60" font-size="44" font-weight="900" fill="#785220">舞茸</text>
+  <line x1="60" y1="75" x2="200" y2="75" stroke="#785220" stroke-width="4"/>
+  <text x="220" y="68" font-size="22" fill="#666">旬:秋(通年流通)</text>
 
   <line x1="540" y1="100" x2="540" y2="540" stroke="#DDD" stroke-width="2" stroke-dasharray="6,6"/>
 
-  <!-- OK side (watercolor Pattern A) -->
+  <!-- OK side -->
   <g transform="translate(280, 320)">
     <circle cx="-200" cy="-180" r="22" fill="#2C5F2D"/>
     <text x="-200" y="-172" font-size="26" font-weight="900" fill="white" text-anchor="middle">○</text>
+
     <defs>
-      <radialGradient id="wcBodyMaitake" cx="35%" cy="25%"><stop offset="0%" stop-color="#D8B89A" stop-opacity="0.95"/><stop offset="40%" stop-color="#A07848" stop-opacity="0.9"/><stop offset="80%" stop-color="#7E5A2A" stop-opacity="0.85"/><stop offset="100%" stop-color="#4F3A1F" stop-opacity="0.65"/></radialGradient>
-      <radialGradient id="wcLeafMaitake" cx="50%" cy="20%"><stop offset="0%" stop-color="#9BCB7A" stop-opacity="0.9"/><stop offset="60%" stop-color="#5D8F3D" stop-opacity="0.7"/><stop offset="100%" stop-color="#2C5F2D" stop-opacity="0.5"/></radialGradient>
+      <radialGradient id="wcCapMaitake" cx="50%" cy="40%">
+        <stop offset="0%" stop-color="#A88858" stop-opacity="0.92"/>
+        <stop offset="60%" stop-color="#7A6235" stop-opacity="0.88"/>
+        <stop offset="100%" stop-color="#5A4520" stop-opacity="0.8"/>
+      </radialGradient>
+      <linearGradient id="wcStemMaitake" x1="0" y1="0" x2="1" y2="0">
+        <stop offset="0%" stop-color="#E8DCB8" stop-opacity="0.92"/>
+        <stop offset="50%" stop-color="#FAF2D8" stop-opacity="0.95"/>
+        <stop offset="100%" stop-color="#C8B888" stop-opacity="0.88"/>
+      </linearGradient>
       <filter id="wcRoughMaitake" x="-10%" y="-10%" width="120%" height="120%">
-        <feTurbulence baseFrequency="0.04" numOctaves="3" seed="103"/>
-        <feDisplacementMap in="SourceGraphic" scale="4"/>
+        <feTurbulence baseFrequency="0.04" numOctaves="3" seed="25"/>
+        <feDisplacementMap in="SourceGraphic" scale="3"/>
       </filter>
-      <filter id="wcBlurMaitake"><feGaussianBlur stdDeviation="1.5"/></filter>
+      <filter id="wcBlurMaitake">
+        <feGaussianBlur stdDeviation="1.5"/>
+      </filter>
     </defs>
-    <g filter="url(#wcBlurMaitake)" opacity="0.4"><ellipse cx="0" cy="0" rx="125" ry="100" fill="#8B6840"/></g>
-    
-    <g filter="url(#wcRoughMaitake)"><path d="M -125 25 Q -135 -65 -85 -100 Q -55 -100 -55 -65 Q -75 -25 -78 30 Q -100 45 -125 25 Z" fill="url(#wcBodyMaitake)" opacity="0.7"/><path d="M -78 50 Q -90 -45 -45 -100 Q -15 -100 -10 -65 Q -35 -25 -32 60 Q -55 70 -78 50 Z" fill="url(#wcBodyMaitake)" opacity="0.85"/><path d="M -28 65 Q -38 -25 10 -105 Q 40 -105 38 -60 Q 18 -10 22 75 Q -5 85 -28 65 Z" fill="url(#wcBodyMaitake)"/><path d="M 28 60 Q 22 -30 70 -100 Q 95 -100 88 -55 Q 65 -10 70 65 Q 48 75 28 60 Z" fill="url(#wcBodyMaitake)" opacity="0.92"/><path d="M 75 35 Q 75 -50 120 -85 Q 135 -82 122 -35 Q 105 0 105 50 Q 85 60 75 35 Z" fill="url(#wcBodyMaitake)"/></g>
-    
-    <g stroke="#3D2817" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"><path d="M -125 25 Q -135 -65 -85 -100 Q -55 -100 -55 -65 Q -75 -25 -78 30 Q -100 45 -125 25 Z"/><path d="M -78 50 Q -90 -45 -45 -100 Q -15 -100 -10 -65 Q -35 -25 -32 60 Q -55 70 -78 50 Z"/><path d="M -28 65 Q -38 -25 10 -105 Q 40 -105 38 -60 Q 18 -10 22 75 Q -5 85 -28 65 Z"/><path d="M 28 60 Q 22 -30 70 -100 Q 95 -100 88 -55 Q 65 -10 70 65 Q 48 75 28 60 Z"/><path d="M 75 35 Q 75 -50 120 -85 Q 135 -82 122 -35 Q 105 0 105 50 Q 85 60 75 35 Z"/><path d="M -100 35 Q -105 -25 -85 -85" opacity="0.65" stroke-width="1.4"/><path d="M -55 60 Q -65 -10 -45 -85" opacity="0.65" stroke-width="1.4"/><path d="M -42 60 Q -50 0 -30 -75" opacity="0.55" stroke-width="1.3"/><path d="M -8 75 Q -15 0 5 -90" opacity="0.65" stroke-width="1.4"/><path d="M 8 75 Q 5 0 22 -90" opacity="0.55" stroke-width="1.3"/><path d="M 48 65 Q 45 -10 65 -85" opacity="0.65" stroke-width="1.4"/><path d="M 60 60 Q 60 0 80 -75" opacity="0.55" stroke-width="1.3"/><path d="M 92 40 Q 92 -25 110 -75" opacity="0.65" stroke-width="1.4"/><path d="M -115 30 Q -55 60 0 70 Q 60 65 105 45" opacity="0.45" stroke-width="1.2"/></g>
+
+    <!-- Watercolor bleeds -->
+    <g filter="url(#wcBlurMaitake)" opacity="0.4">
+      <ellipse cx="0" cy="0" rx="135" ry="105" fill="#A88858"/>
+    </g>
+
+    <!-- ====================
+         エリンギ風の小さなキノコ4本が束になる構造
+         株元で軸が集まり、傘が個別に見える
+         ==================== -->
+
+    <!-- 株元(軸が集まる白い部分) -->
+    <g filter="url(#wcRoughMaitake)">
+      <ellipse cx="0" cy="105" rx="55" ry="18" fill="url(#wcStemMaitake)"/>
+    </g>
+
+    <!-- ===== キノコ1: 左奥(後ろ、少し小さく) ===== -->
+    <!-- 軸 -->
+    <g filter="url(#wcRoughMaitake)">
+      <path d="M -65 -10
+               Q -68 35 -65 90
+               Q -60 105 -45 105
+               Q -32 100 -32 90
+               Q -33 35 -33 -10 Z" fill="url(#wcStemMaitake)"/>
+    </g>
+    <!-- 傘 -->
+    <g filter="url(#wcRoughMaitake)">
+      <path d="M -85 -10
+               Q -88 -45 -65 -60
+               Q -45 -65 -28 -60
+               Q -10 -45 -12 -10
+               Q -20 -2 -32 -2
+               Q -50 0 -65 -2
+               Q -78 -2 -85 -10 Z" fill="url(#wcCapMaitake)"/>
+    </g>
+
+    <!-- ===== キノコ2: 中央左(前、最も大きい) ===== -->
+    <!-- 軸 -->
+    <g filter="url(#wcRoughMaitake)">
+      <path d="M -25 -5
+               Q -28 35 -25 95
+               Q -20 110 -5 110
+               Q 8 105 8 95
+               Q 7 35 7 -5 Z" fill="url(#wcStemMaitake)"/>
+    </g>
+    <!-- 傘 -->
+    <g filter="url(#wcRoughMaitake)">
+      <path d="M -45 -5
+               Q -48 -55 -25 -72
+               Q 0 -78 18 -72
+               Q 35 -55 32 -5
+               Q 25 5 8 5
+               Q -10 7 -25 5
+               Q -38 5 -45 -5 Z" fill="url(#wcCapMaitake)"/>
+    </g>
+
+    <!-- ===== キノコ3: 中央右(前) ===== -->
+    <!-- 軸 -->
+    <g filter="url(#wcRoughMaitake)">
+      <path d="M 18 0
+               Q 15 40 18 100
+               Q 23 115 38 110
+               Q 52 105 50 95
+               Q 50 40 50 0 Z" fill="url(#wcStemMaitake)"/>
+    </g>
+    <!-- 傘 -->
+    <g filter="url(#wcRoughMaitake)">
+      <path d="M 0 0
+               Q -3 -50 18 -68
+               Q 38 -73 60 -68
+               Q 78 -50 75 0
+               Q 65 8 50 8
+               Q 30 10 18 8
+               Q 5 8 0 0 Z" fill="url(#wcCapMaitake)"/>
+    </g>
+
+    <!-- ===== キノコ4: 右奥(後ろ、少し小さく) ===== -->
+    <!-- 軸 -->
+    <g filter="url(#wcRoughMaitake)">
+      <path d="M 60 -5
+               Q 58 35 60 90
+               Q 65 100 78 100
+               Q 90 95 90 88
+               Q 90 35 90 -5 Z" fill="url(#wcStemMaitake)"/>
+    </g>
+    <!-- 傘 -->
+    <g filter="url(#wcRoughMaitake)">
+      <path d="M 45 -5
+               Q 42 -45 62 -60
+               Q 80 -65 95 -60
+               Q 110 -45 108 -5
+               Q 100 2 90 2
+               Q 75 4 62 2
+               Q 50 2 45 -5 Z" fill="url(#wcCapMaitake)"/>
+    </g>
+
+    <!-- Strong ink lines -->
+    <g stroke="#3D2817" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.9">
+      <!-- 株元 -->
+      <ellipse cx="0" cy="105" rx="55" ry="18"/>
+
+      <!-- キノコ1 -->
+      <path d="M -65 -10 Q -68 35 -65 90 Q -60 105 -45 105 Q -32 100 -32 90 Q -33 35 -33 -10"/>
+      <path d="M -85 -10 Q -88 -45 -65 -60 Q -45 -65 -28 -60 Q -10 -45 -12 -10 Q -20 -2 -32 -2 Q -50 0 -65 -2 Q -78 -2 -85 -10 Z"/>
+      <path d="M -85 -10 Q -50 -5 -12 -10" opacity="0.6"/>
+
+      <!-- キノコ2(中央左) -->
+      <path d="M -25 -5 Q -28 35 -25 95 Q -20 110 -5 110 Q 8 105 8 95 Q 7 35 7 -5"/>
+      <path d="M -45 -5 Q -48 -55 -25 -72 Q 0 -78 18 -72 Q 35 -55 32 -5 Q 25 5 8 5 Q -10 7 -25 5 Q -38 5 -45 -5 Z"/>
+      <path d="M -45 -5 Q -10 0 32 -5" opacity="0.6"/>
+
+      <!-- キノコ3(中央右) -->
+      <path d="M 18 0 Q 15 40 18 100 Q 23 115 38 110 Q 52 105 50 95 Q 50 40 50 0"/>
+      <path d="M 0 0 Q -3 -50 18 -68 Q 38 -73 60 -68 Q 78 -50 75 0 Q 65 8 50 8 Q 30 10 18 8 Q 5 8 0 0 Z"/>
+      <path d="M 0 0 Q 35 5 75 0" opacity="0.6"/>
+
+      <!-- キノコ4 -->
+      <path d="M 60 -5 Q 58 35 60 90 Q 65 100 78 100 Q 90 95 90 88 Q 90 35 90 -5"/>
+      <path d="M 45 -5 Q 42 -45 62 -60 Q 80 -65 95 -60 Q 110 -45 108 -5 Q 100 2 90 2 Q 75 4 62 2 Q 50 2 45 -5 Z"/>
+      <path d="M 45 -5 Q 75 0 108 -5" opacity="0.6"/>
+
+      <!-- 傘の表面のうねり線(各キノコ) -->
+      <path d="M -75 -35 Q -50 -42 -22 -35" opacity="0.5" stroke-width="1.5"/>
+      <path d="M -35 -50 Q 0 -58 25 -50" opacity="0.5" stroke-width="1.5"/>
+      <path d="M 10 -45 Q 38 -55 65 -45" opacity="0.5" stroke-width="1.5"/>
+      <path d="M 55 -35 Q 78 -42 100 -35" opacity="0.5" stroke-width="1.5"/>
+    </g>
+
+    <!-- 軸のハイライト(各キノコ) -->
+    <ellipse cx="-50" cy="40" rx="3" ry="40" fill="#FFFFFF" opacity="0.5"/>
+    <ellipse cx="-12" cy="50" rx="4" ry="45" fill="#FFFFFF" opacity="0.55"/>
+    <ellipse cx="30" cy="50" rx="4" ry="45" fill="#FFFFFF" opacity="0.55"/>
+    <ellipse cx="73" cy="40" rx="3" ry="40" fill="#FFFFFF" opacity="0.5"/>
+
+    <!-- 影 -->
+    <ellipse cx="0" cy="128" rx="55" ry="6" fill="#3D2817" opacity="0.12"/>
   </g>
 
-  <!-- NG side (flat) -->
+  <!-- NG side -->
   <g transform="translate(800, 320)">
     <circle cx="-200" cy="-180" r="22" fill="#C62828"/>
     <text x="-200" y="-172" font-size="26" font-weight="900" fill="white" text-anchor="middle">×</text>
-    <path d="M -120 30 Q -130 -55 -75 -90 Q -50 -88 -45 -55 Q -65 -10 -65 35 Q -90 50 -120 30 Z" fill="#A09078"/><path d="M -55 50 Q -68 -35 -10 -100 Q 18 -98 22 -65 Q 0 -10 0 60 Q -28 70 -55 50 Z" fill="#A09078"/><path d="M 5 60 Q 0 -25 55 -90 Q 80 -85 78 -50 Q 58 0 58 65 Q 30 75 5 60 Z" fill="#A09078"/><path d="M 60 40 Q 60 -40 110 -75 Q 125 -70 115 -30 Q 100 5 100 45 Q 80 60 60 40 Z" fill="#A09078"/><ellipse cx="-30" cy="40" rx="22" ry="18" fill="#3D2817" opacity="0.5"/><ellipse cx="40" cy="-30" rx="18" ry="14" fill="#3D2817" opacity="0.5"/><path d="M -90 55 Q 0 70 95 50" stroke="#5D4E37" stroke-width="1.5" fill="none" opacity="0.5"/>
+
+    <!-- 株元(変色) -->
+    <ellipse cx="0" cy="105" rx="55" ry="18" fill="#A89060"/>
+    <ellipse cx="-15" cy="105" rx="10" ry="4" fill="#5A3215" opacity="0.7"/>
+    <ellipse cx="20" cy="107" rx="9" ry="3" fill="#5A3215" opacity="0.65"/>
+
+    <!-- キノコ1 軸+傘(くすむ) -->
+    <path d="M -65 -10 Q -68 35 -65 90 Q -60 105 -45 105 Q -32 100 -32 90 Q -33 35 -33 -10 Z" fill="#C8B888"/>
+    <path d="M -85 -10 Q -88 -45 -65 -60 Q -45 -65 -28 -60 Q -10 -45 -12 -10 Q -20 -2 -32 -2 Q -50 0 -65 -2 Q -78 -2 -85 -10 Z" fill="#5A4218"/>
+
+    <!-- キノコ2 -->
+    <path d="M -25 -5 Q -28 35 -25 95 Q -20 110 -5 110 Q 8 105 8 95 Q 7 35 7 -5 Z" fill="#C8B888"/>
+    <path d="M -45 -5 Q -48 -55 -25 -72 Q 0 -78 18 -72 Q 35 -55 32 -5 Q 25 5 8 5 Q -10 7 -25 5 Q -38 5 -45 -5 Z" fill="#5A4218"/>
+
+    <!-- キノコ3 -->
+    <path d="M 18 0 Q 15 40 18 100 Q 23 115 38 110 Q 52 105 50 95 Q 50 40 50 0 Z" fill="#C8B888"/>
+    <path d="M 0 0 Q -3 -50 18 -68 Q 38 -73 60 -68 Q 78 -50 75 0 Q 65 8 50 8 Q 30 10 18 8 Q 5 8 0 0 Z" fill="#5A4218"/>
+
+    <!-- キノコ4 -->
+    <path d="M 60 -5 Q 58 35 60 90 Q 65 100 78 100 Q 90 95 90 88 Q 90 35 90 -5 Z" fill="#C8B888"/>
+    <path d="M 45 -5 Q 42 -45 62 -60 Q 80 -65 95 -60 Q 110 -45 108 -5 Q 100 2 90 2 Q 75 4 62 2 Q 50 2 45 -5 Z" fill="#5A4218"/>
+
+    <!-- 黒い斑点 -->
+    <ellipse cx="-55" cy="-35" rx="9" ry="6" fill="#1F1408" opacity="0.7"/>
+    <ellipse cx="0" cy="-50" rx="10" ry="7" fill="#1F1408" opacity="0.7"/>
+    <ellipse cx="40" cy="-45" rx="9" ry="6" fill="#1F1408" opacity="0.7"/>
+    <ellipse cx="80" cy="-30" rx="9" ry="6" fill="#1F1408" opacity="0.65"/>
+
+    <!-- 軸の茶色シミ -->
+    <ellipse cx="-48" cy="40" rx="6" ry="9" fill="#7A4A1F" opacity="0.55"/>
+    <ellipse cx="-5" cy="50" rx="6" ry="10" fill="#7A4A1F" opacity="0.55"/>
+    <ellipse cx="35" cy="60" rx="6" ry="9" fill="#7A4A1F" opacity="0.55"/>
+    <ellipse cx="78" cy="40" rx="5" ry="8" fill="#7A4A1F" opacity="0.5"/>
+
+    <!-- 輪郭(再描画) -->
+    <g stroke="#3D2817" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <ellipse cx="0" cy="105" rx="55" ry="18"/>
+      <path d="M -65 -10 Q -68 35 -65 90 Q -60 105 -45 105 Q -32 100 -32 90 Q -33 35 -33 -10"/>
+      <path d="M -85 -10 Q -88 -45 -65 -60 Q -45 -65 -28 -60 Q -10 -45 -12 -10 Q -20 -2 -32 -2 Q -50 0 -65 -2 Q -78 -2 -85 -10 Z"/>
+      <path d="M -25 -5 Q -28 35 -25 95 Q -20 110 -5 110 Q 8 105 8 95 Q 7 35 7 -5"/>
+      <path d="M -45 -5 Q -48 -55 -25 -72 Q 0 -78 18 -72 Q 35 -55 32 -5 Q 25 5 8 5 Q -10 7 -25 5 Q -38 5 -45 -5 Z"/>
+      <path d="M 18 0 Q 15 40 18 100 Q 23 115 38 110 Q 52 105 50 95 Q 50 40 50 0"/>
+      <path d="M 0 0 Q -3 -50 18 -68 Q 38 -73 60 -68 Q 78 -50 75 0 Q 65 8 50 8 Q 30 10 18 8 Q 5 8 0 0 Z"/>
+      <path d="M 60 -5 Q 58 35 60 90 Q 65 100 78 100 Q 90 95 90 88 Q 90 35 90 -5"/>
+      <path d="M 45 -5 Q 42 -45 62 -60 Q 80 -65 95 -60 Q 110 -45 108 -5 Q 100 2 90 2 Q 75 4 62 2 Q 50 2 45 -5 Z"/>
+    </g>
   </g>
 
   <!-- Comparison labels -->
   <g font-size="20" fill="#333">
     <rect x="60" y="495" width="460" height="80" rx="8" fill="#E8F5E9"/>
-    <text x="80" y="520" font-weight="bold" fill="#2C5F2D">● 株がしっかりまとまる</text>
-    <text x="80" y="545" font-weight="bold" fill="#2C5F2D">● 色が深い茶色、肉厚</text>
-    <text x="80" y="568" fill="#666" font-size="17">香り強い=料理映え</text>
+    <text x="80" y="520" font-weight="bold" fill="#2C5F2D">● 傘がしっかり立体的、濃い茶色</text>
+    <text x="80" y="545" font-weight="bold" fill="#2C5F2D">● 株元が乾いてしっかりしている</text>
+    <text x="80" y="568" fill="#666" font-size="17">小房に分かれていても傘がしっかりが目印</text>
 
     <rect x="560" y="495" width="460" height="80" rx="8" fill="#FFEBEE"/>
-    <text x="580" y="520" font-weight="bold" fill="#C62828">× カサがバラバラに崩れる</text>
-    <text x="580" y="545" font-weight="bold" fill="#C62828">× 色がくすむ・湿気</text>
-    <text x="580" y="568" fill="#666" font-size="17">黒ずみ=古い・劣化</text>
+    <text x="580" y="520" font-weight="bold" fill="#C62828">× 傘が黒ずみ、湿っぽくしんなり</text>
+    <text x="580" y="545" font-weight="bold" fill="#C62828">× 株元が水っぽく、茶色く変色</text>
+    <text x="580" y="568" fill="#666" font-size="17">パック内で水滴が多い=傷みのサイン</text>
   </g>
 </svg>

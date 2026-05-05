@@ -2,49 +2,161 @@
   <rect width="1080" height="600" fill="#FFFFFF" rx="20"/>
 
   <!-- Header -->
-  <text x="60" y="60" font-size="44" font-weight="900" fill="#506068">アジ</text>
-  <line x1="60" y1="75" x2="120" y2="75" stroke="#506068" stroke-width="4"/>
-  <text x="140" y="68" font-size="22" fill="#666">旬:5〜8月</text>
+  <text x="60" y="60" font-size="44" font-weight="900" fill="#7A8896">アジ</text>
+  <line x1="60" y1="75" x2="180" y2="75" stroke="#7A8896" stroke-width="4"/>
+  <text x="200" y="68" font-size="22" fill="#666">旬:夏</text>
 
   <line x1="540" y1="100" x2="540" y2="540" stroke="#DDD" stroke-width="2" stroke-dasharray="6,6"/>
 
-  <!-- OK side (watercolor Pattern A) -->
+  <!-- OK side -->
   <g transform="translate(280, 320)">
     <circle cx="-200" cy="-180" r="22" fill="#2C5F2D"/>
     <text x="-200" y="-172" font-size="26" font-weight="900" fill="white" text-anchor="middle">○</text>
+
     <defs>
-      <radialGradient id="wcBodyAji" cx="35%" cy="25%"><stop offset="0%" stop-color="#F8F8FA" stop-opacity="0.95"/><stop offset="40%" stop-color="#D0D8DC" stop-opacity="0.9"/><stop offset="80%" stop-color="#90A0A8" stop-opacity="0.85"/><stop offset="100%" stop-color="#506068" stop-opacity="0.65"/></radialGradient>
-      <radialGradient id="wcLeafAji" cx="50%" cy="20%"><stop offset="0%" stop-color="#9BCB7A" stop-opacity="0.9"/><stop offset="60%" stop-color="#5D8F3D" stop-opacity="0.7"/><stop offset="100%" stop-color="#2C5F2D" stop-opacity="0.5"/></radialGradient>
+      <linearGradient id="wcBodyAji" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#7A8896" stop-opacity="0.92"/>
+        <stop offset="40%" stop-color="#A8B5C0" stop-opacity="0.9"/>
+        <stop offset="60%" stop-color="#D8DCDC" stop-opacity="0.92"/>
+        <stop offset="80%" stop-color="#F0E8C0" stop-opacity="0.9"/>
+        <stop offset="100%" stop-color="#D8C880" stop-opacity="0.85"/>
+      </linearGradient>
       <filter id="wcRoughAji" x="-10%" y="-10%" width="120%" height="120%">
-        <feTurbulence baseFrequency="0.04" numOctaves="3" seed="193"/>
-        <feDisplacementMap in="SourceGraphic" scale="4"/>
+        <feTurbulence baseFrequency="0.04" numOctaves="3" seed="29"/>
+        <feDisplacementMap in="SourceGraphic" scale="3"/>
       </filter>
-      <filter id="wcBlurAji"><feGaussianBlur stdDeviation="1.5"/></filter>
+      <filter id="wcBlurAji">
+        <feGaussianBlur stdDeviation="1.5"/>
+      </filter>
     </defs>
-    <g filter="url(#wcBlurAji)" opacity="0.4"><ellipse cx="0" cy="0" rx="125" ry="55" fill="#90A0A8"/></g>
-    
-    <g filter="url(#wcRoughAji)"><path d="M -110 0 Q -105 -42 -40 -48 Q 50 -50 95 -28 L 115 -22 Q 128 -10 128 0 Q 128 10 115 22 L 95 28 Q 50 50 -40 48 Q -105 42 -110 0 Z" fill="url(#wcBodyAji)"/><path d="M 115 -22 L 135 -38 L 130 0 L 135 38 L 115 22 Z" fill="url(#wcBodyAji)"/></g>
-    
-    <g stroke="#3D2817" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"><path d="M -110 0 Q -105 -42 -40 -48 Q 50 -50 95 -28 L 115 -22 Q 128 -10 128 0 Q 128 10 115 22 L 95 28 Q 50 50 -40 48 Q -105 42 -110 0 Z"/><path d="M 115 -22 L 135 -38 L 130 0 L 135 38 L 115 22"/><path d="M -90 -15 m -5 0 a 5 5 0 1 0 10 0 a 5 5 0 1 0 -10 0 Z" opacity="0.95" stroke-width="2.2"/><path d="M -110 0 Q -115 5 -105 12" opacity="0.85" stroke-width="1.8"/><path d="M -70 5 Q 0 10 95 8" opacity="0.85" stroke-width="3"/><path d="M -80 -25 Q -75 0 -78 25" opacity="0.6" stroke-width="1.6"/><path d="M -50 -25 Q -20 -20 10 -25" opacity="0.5" stroke-width="1.4"/><path d="M 20 -25 Q 50 -20 80 -25" opacity="0.5" stroke-width="1.4"/></g>
+
+    <!-- Watercolor bleeds -->
+    <g filter="url(#wcBlurAji)" opacity="0.4">
+      <ellipse cx="0" cy="0" rx="180" ry="60" fill="#A8B5C0"/>
+    </g>
+
+    <!-- 本体: ずんぐりした楕円形(アジの特徴) -->
+    <g filter="url(#wcRoughAji)">
+      <path d="M -180 0
+               Q -175 -45 -120 -55
+               Q -50 -60 30 -55
+               Q 100 -50 130 -25
+               L 175 -50
+               L 168 0
+               L 175 50
+               L 130 25
+               Q 100 50 30 55
+               Q -50 60 -120 55
+               Q -175 45 -180 0 Z" fill="url(#wcBodyAji)"/>
+    </g>
+
+    <!-- Strong ink lines -->
+    <g stroke="#3D2817" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.9">
+      <!-- 本体輪郭 -->
+      <path d="M -180 0 Q -175 -45 -120 -55 Q -50 -60 30 -55 Q 100 -50 130 -25 L 175 -50 L 168 0 L 175 50 L 130 25 Q 100 50 30 55 Q -50 60 -120 55 Q -175 45 -180 0 Z"/>
+      <!-- 尾びれの内側の線 -->
+      <path d="M 130 -25 L 175 -50" opacity="0.6"/>
+      <path d="M 130 25 L 175 50" opacity="0.6"/>
+      <!-- 尾びれの放射線 -->
+      <path d="M 145 -30 L 165 -45" stroke-width="1.5" opacity="0.65"/>
+      <path d="M 155 0 L 172 0" stroke-width="1.5" opacity="0.65"/>
+      <path d="M 145 30 L 165 45" stroke-width="1.5" opacity="0.65"/>
+
+      <!-- ★ぜいご(尾の手前の硬い鱗ライン、アジ最大の特徴) -->
+      <path d="M 30 0 Q 80 -3 130 0" stroke-width="3.5" opacity="0.95"/>
+      <path d="M 30 5 Q 80 2 130 5" stroke-width="2.5" opacity="0.75"/>
+      <!-- ぜいごのギザギザ -->
+      <path d="M 40 -3 L 45 -8 L 50 -3" stroke-width="2"/>
+      <path d="M 60 -3 L 65 -8 L 70 -3" stroke-width="2"/>
+      <path d="M 80 -3 L 85 -8 L 90 -3" stroke-width="2"/>
+      <path d="M 100 -3 L 105 -8 L 110 -3" stroke-width="2"/>
+      <path d="M 120 -3 L 125 -8 L 130 -3" stroke-width="2"/>
+
+      <!-- 目 -->
+      <circle cx="-145" cy="-15" r="11" fill="#FFFFFF"/>
+      <circle cx="-144" cy="-14" r="7" fill="#3D2817"/>
+      <circle cx="-142" cy="-17" r="2.5" fill="#FFFFFF"/>
+
+      <!-- エラ -->
+      <path d="M -100 -38 Q -100 0 -95 38" stroke-width="2.5"/>
+      <!-- エラの内側(赤、新鮮さ) -->
+      <path d="M -103 -25 Q -103 0 -98 25" stroke="#C62828" stroke-width="1.5" opacity="0.55"/>
+
+      <!-- 背びれ -->
+      <path d="M -65 -55 L -55 -75 L -40 -68 L -35 -58 L -40 -52" stroke-width="2.5"/>
+      <!-- 第二背びれ -->
+      <path d="M 0 -55 Q 15 -65 30 -55" stroke-width="2"/>
+      <path d="M 5 -55 L 15 -62 L 25 -55" stroke-width="1.5"/>
+
+      <!-- 腹びれ -->
+      <path d="M -55 55 Q -45 68 -35 55" stroke-width="2.5"/>
+
+      <!-- 側線 -->
+      <path d="M -110 -20 Q -50 -15 30 0" stroke-width="1.5" opacity="0.55"/>
+    </g>
+
+    <!-- 銀色の腹のハイライト -->
+    <ellipse cx="-50" cy="20" rx="60" ry="8" fill="#FFFFFF" opacity="0.5"/>
+    <ellipse cx="-60" cy="20" rx="25" ry="3" fill="#FFFFFF" opacity="0.7"/>
+
+    <!-- 影 -->
+    <ellipse cx="-30" cy="80" rx="155" ry="6" fill="#3D2817" opacity="0.12"/>
   </g>
 
-  <!-- NG side (flat) -->
+  <!-- NG side -->
   <g transform="translate(800, 320)">
     <circle cx="-200" cy="-180" r="22" fill="#C62828"/>
     <text x="-200" y="-172" font-size="26" font-weight="900" fill="white" text-anchor="middle">×</text>
-    <path d="M -110 0 Q -105 -42 -40 -48 Q 50 -50 95 -28 L 115 -22 Q 128 -10 128 0 Q 128 10 115 22 L 95 28 Q 50 50 -40 48 Q -105 42 -110 0 Z" fill="#787878"/><path d="M 115 -22 L 135 -38 L 130 0 L 135 38 L 115 22 Z" fill="#787878"/><ellipse cx="-90" cy="-15" rx="5" ry="5" fill="#C8C0B0" opacity="0.85"/><ellipse cx="-80" cy="0" rx="8" ry="18" fill="#7A4828" opacity="0.55"/><ellipse cx="30" cy="0" rx="60" ry="25" fill="#5D4E37" opacity="0.3"/>
+
+    <!-- 本体(くすんだ色) -->
+    <path d="M -180 0 Q -175 -45 -120 -55 Q -50 -60 30 -55 Q 100 -50 130 -25 L 175 -50 L 168 0 L 175 50 L 130 25 Q 100 50 30 55 Q -50 60 -120 55 Q -175 45 -180 0 Z" fill="#9C9888"/>
+
+    <!-- 茶色く変色したシミ -->
+    <ellipse cx="-50" cy="-15" rx="14" ry="9" fill="#7A4A1F" opacity="0.5"/>
+    <ellipse cx="0" cy="20" rx="16" ry="8" fill="#7A4A1F" opacity="0.5"/>
+    <ellipse cx="60" cy="-20" rx="11" ry="7" fill="#7A4A1F" opacity="0.45"/>
+
+    <!-- ぜいご(劣化、控えめ) -->
+    <g stroke="#3D2817" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.55">
+      <path d="M 30 0 Q 80 0 130 0"/>
+      <path d="M 50 -3 L 55 -7 L 60 -3"/>
+      <path d="M 90 -3 L 95 -7 L 100 -3"/>
+    </g>
+
+    <!-- 目(濁って白っぽい) -->
+    <circle cx="-145" cy="-15" r="11" fill="#D8D0B8" stroke="#3D2817" stroke-width="2.5"/>
+    <circle cx="-144" cy="-14" r="7" fill="#7A7060" opacity="0.7"/>
+
+    <!-- 輪郭 -->
+    <g stroke="#3D2817" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M -180 0 Q -175 -45 -120 -55 Q -50 -60 30 -55 Q 100 -50 130 -25 L 175 -50 L 168 0 L 175 50 L 130 25 Q 100 50 30 55 Q -50 60 -120 55 Q -175 45 -180 0 Z"/>
+      <path d="M 130 -25 L 175 -50" opacity="0.6"/>
+      <path d="M 130 25 L 175 50" opacity="0.6"/>
+
+      <!-- エラ(黒ずむ) -->
+      <path d="M -100 -38 Q -100 0 -95 38" stroke-width="2.5"/>
+      <path d="M -103 -25 Q -103 0 -98 25" stroke="#5A3215" stroke-width="1.5" opacity="0.6"/>
+
+      <!-- 背びれ -->
+      <path d="M -65 -55 L -55 -75 L -40 -68 L -35 -58 L -40 -52" stroke-width="2.5"/>
+      <path d="M 0 -55 Q 15 -65 30 -55" stroke-width="2"/>
+      <!-- 腹びれ -->
+      <path d="M -55 55 Q -45 68 -35 55" stroke-width="2.5"/>
+    </g>
+
+    <ellipse cx="-30" cy="80" rx="155" ry="5" fill="#3D2817" opacity="0.1"/>
   </g>
 
   <!-- Comparison labels -->
   <g font-size="20" fill="#333">
     <rect x="60" y="495" width="460" height="80" rx="8" fill="#E8F5E9"/>
-    <text x="80" y="520" font-weight="bold" fill="#2C5F2D">● 目が澄む、エラ赤、銀光る</text>
-    <text x="80" y="545" font-weight="bold" fill="#2C5F2D">● ぜいご(尾近の硬鱗)固</text>
-    <text x="80" y="568" fill="#666" font-size="17">ハリあり、腹に張りがある</text>
+    <text x="80" y="520" font-weight="bold" fill="#2C5F2D">● 目が澄んで黒目クッキリ、エラが鮮赤</text>
+    <text x="80" y="545" font-weight="bold" fill="#2C5F2D">● ぜいご(尾元の硬い鱗)がしっかり立つ</text>
+    <text x="80" y="568" fill="#666" font-size="17">体がふっくらずんぐり=脂のった状態</text>
 
     <rect x="560" y="495" width="460" height="80" rx="8" fill="#FFEBEE"/>
-    <text x="580" y="520" font-weight="bold" fill="#C62828">× 目が濁る、エラ茶色</text>
-    <text x="580" y="545" font-weight="bold" fill="#C62828">× 体表ヌメ、軟らか</text>
-    <text x="580" y="568" fill="#666" font-size="17">お腹が柔→内臓劣化</text>
+    <text x="580" y="520" font-weight="bold" fill="#C62828">× 目が白く濁る、エラが黒ずむ</text>
+    <text x="580" y="545" font-weight="bold" fill="#C62828">× 体表が乾燥、ぜいごがフラットに</text>
+    <text x="580" y="568" fill="#666" font-size="17">腹がブヨブヨ=内臓が傷んでいるサイン</text>
   </g>
 </svg>

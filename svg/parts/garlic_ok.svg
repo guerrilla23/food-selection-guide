@@ -1,16 +1,78 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="-120 -150 240 290" font-family="Noto Sans CJK JP, sans-serif">
 <defs>
-      <radialGradient id="wcBodyGarlic" cx="35%" cy="25%"><stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.95"/><stop offset="40%" stop-color="#F5EFE8" stop-opacity="0.9"/><stop offset="80%" stop-color="#D8C8C8" stop-opacity="0.75"/><stop offset="100%" stop-color="#A088A0" stop-opacity="0.5"/></radialGradient>
-      <radialGradient id="wcLeafGarlic" cx="50%" cy="20%"><stop offset="0%" stop-color="#9BCB7A" stop-opacity="0.9"/><stop offset="60%" stop-color="#5D8F3D" stop-opacity="0.7"/><stop offset="100%" stop-color="#2C5F2D" stop-opacity="0.5"/></radialGradient>
+      <radialGradient id="wcBodyGarlic" cx="35%" cy="65%">
+        <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.95"/>
+        <stop offset="60%" stop-color="#F5F0DC" stop-opacity="0.9"/>
+        <stop offset="100%" stop-color="#D8C8A0" stop-opacity="0.85"/>
+      </radialGradient>
       <filter id="wcRoughGarlic" x="-10%" y="-10%" width="120%" height="120%">
-        <feTurbulence baseFrequency="0.04" numOctaves="3" seed="43"/>
-        <feDisplacementMap in="SourceGraphic" scale="4"/>
+        <feTurbulence baseFrequency="0.04" numOctaves="3" seed="21"/>
+        <feDisplacementMap in="SourceGraphic" scale="3"/>
       </filter>
-      <filter id="wcBlurGarlic"><feGaussianBlur stdDeviation="1.5"/></filter>
+      <filter id="wcBlurGarlic">
+        <feGaussianBlur stdDeviation="1.5"/>
+      </filter>
     </defs>
-    <g filter="url(#wcBlurGarlic)" opacity="0.4"><ellipse cx="0" cy="10" rx="100" ry="105" fill="#E8DCD8"/></g>
-    
-    <g filter="url(#wcRoughGarlic)"><path d="M -90 0 Q -100 70 0 110 Q 100 70 90 0 Q 88 -65 40 -85 Q 0 -98 -40 -85 Q -88 -65 -90 0 Z" fill="url(#wcBodyGarlic)"/></g>
-    
-    <g stroke="#3D2817" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"><path d="M -90 0 Q -100 70 0 110 Q 100 70 90 0 Q 88 -65 40 -85 Q 0 -98 -40 -85 Q -88 -65 -90 0 Z"/><path d="M -10 -98 L -8 -130" opacity="0.85" stroke-width="2.2"/><path d="M 0 -98 L 0 -135" opacity="0.85" stroke-width="2.2"/><path d="M 10 -98 L 8 -130" opacity="0.85" stroke-width="2.2"/><path d="M -68 -50 Q -78 0 -55 95" opacity="0.7" stroke-width="1.6"/><path d="M -38 -75 Q -45 0 -32 105" opacity="0.7" stroke-width="1.6"/><path d="M -10 -90 Q -12 0 -10 110" opacity="0.7" stroke-width="1.6"/><path d="M 18 -90 Q 18 0 16 110" opacity="0.7" stroke-width="1.6"/><path d="M 45 -75 Q 50 0 38 105" opacity="0.7" stroke-width="1.6"/><path d="M 70 -50 Q 80 0 60 95" opacity="0.7" stroke-width="1.6"/><path d="M -25 110 L -32 130" opacity="0.75" stroke-width="1.8"/><path d="M -10 113 L -12 135" opacity="0.75" stroke-width="1.8"/><path d="M 5 113 L 6 138" opacity="0.75" stroke-width="1.8"/><path d="M 20 110 L 25 132" opacity="0.75" stroke-width="1.8"/><path d="M 35 107 L 42 128" opacity="0.75" stroke-width="1.8"/></g>
+
+    <!-- Watercolor bleeds (下にお尻のような膨らみを強調するため、下部に集中) -->
+    <g filter="url(#wcBlurGarlic)" opacity="0.4">
+      <ellipse cx="0" cy="50" rx="115" ry="105" fill="#F0E5C8"/>
+    </g>
+
+    <!-- 上部の茎(短く尖る) -->
+    <g filter="url(#wcRoughGarlic)">
+      <path d="M -5 -150 Q 0 -165 5 -150 L 4 -135 Q 0 -133 -4 -135 Z" fill="#A89060"/>
+    </g>
+
+    <!-- 本体: 逆涙型(上が細く尖り、下がお尻のようにふっくら丸く膨らむ)
+         参考画像をベースに、お尻形状を強調 -->
+    <g filter="url(#wcRoughGarlic)">
+      <path d="M 0 -135
+               Q -15 -132 -25 -120
+               Q -45 -95 -65 -55
+               Q -90 -5 -100 50
+               Q -100 95 -85 115
+               Q -75 120 -65 110
+               Q -50 122 -35 115
+               Q -20 125 -8 117
+               Q 0 130 8 117
+               Q 20 125 35 115
+               Q 50 122 65 110
+               Q 75 120 85 115
+               Q 100 95 100 50
+               Q 90 -5 65 -55
+               Q 45 -95 25 -120
+               Q 15 -132 0 -135 Z" fill="url(#wcBodyGarlic)"/>
+    </g>
+
+    <!-- Strong ink lines -->
+    <g stroke="#3D2817" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.9">
+      <!-- 茎 -->
+      <path d="M -5 -150 Q 0 -165 5 -150 L 4 -135 Q 0 -133 -4 -135 Z"/>
+      <!-- 本体輪郭(逆涙型+下のお尻フリル) -->
+      <path d="M 0 -135
+               Q -15 -132 -25 -120
+               Q -45 -95 -65 -55
+               Q -90 -5 -100 50
+               Q -100 95 -85 115
+               Q -75 120 -65 110
+               Q -50 122 -35 115
+               Q -20 125 -8 117
+               Q 0 130 8 117
+               Q 20 125 35 115
+               Q 50 122 65 110
+               Q 75 120 85 115
+               Q 100 95 100 50
+               Q 90 -5 65 -55
+               Q 45 -95 25 -120
+               Q 15 -132 0 -135 Z"/>
+      <!-- 鱗片の縦線(上の細い頂点から下のフリル各位置へ広がる) -->
+      <path d="M -65 110 Q -45 30 -18 -125" opacity="0.7"/>
+      <path d="M -35 115 Q -20 30 -3 -132" opacity="0.7"/>
+      <path d="M 35 115 Q 20 30 3 -132" opacity="0.7"/>
+      <path d="M 65 110 Q 45 30 18 -125" opacity="0.7"/>
+    </g>
+
+    <!-- ハイライト(光沢、上部の方に) -->
+    <ellipse cx="-35" cy="-50" rx="20" ry="38" fill="#FFFFFF" opacity="0.45" transform="rotate(-15 -35 -50)"/>
 </svg>

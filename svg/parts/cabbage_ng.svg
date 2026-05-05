@@ -1,63 +1,31 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" opacity="0.9">
-  <defs>
-    <radialGradient id="cabbage-aura-ng" cx="50%" cy="55%" r="55%">
-      <stop offset="0%" stop-color="#D4C285" stop-opacity="0.4"/>
-      <stop offset="100%" stop-color="#D4C285" stop-opacity="0"/>
-    </radialGradient>
-    <radialGradient id="cabbage-body-ng" cx="40%" cy="35%" r="75%">
-      <stop offset="0%" stop-color="#F0EBC8"/>
-      <stop offset="55%" stop-color="#C8C285"/>
-      <stop offset="100%" stop-color="#8B8848"/>
-    </radialGradient>
-    <radialGradient id="cabbage-outer-ng" cx="50%" cy="50%" r="60%">
-      <stop offset="0%" stop-color="#A8A858"/>
-      <stop offset="100%" stop-color="#6B6028"/>
-    </radialGradient>
-  </defs>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-140 -130 280 270" font-family="Noto Sans CJK JP, sans-serif">
+<!-- 外葉(萎れて変色) -->
+    <path d="M -130 35 Q -150 -10 -140 -55 Q -105 -85 -72 -73 Q -68 -28 -78 8 Q -88 55 -118 70 Q -135 62 -130 35 Z" fill="#A8A058"/>
+    <!-- 葉先の枯れ -->
+    <path d="M -148 -25 Q -135 -40 -118 -32 Q -120 -15 -135 -10 Z" fill="#7A4A1F" opacity="0.65"/>
 
-  <!-- aura -->
-  <ellipse cx="200" cy="220" rx="180" ry="160" fill="url(#cabbage-aura-ng)"/>
+    <path d="M 130 35 Q 150 -10 140 -55 Q 105 -85 72 -73 Q 68 -28 78 8 Q 88 55 118 70 Q 135 62 130 35 Z" fill="#A8A058"/>
+    <path d="M 148 -25 Q 135 -40 118 -32 Q 120 -15 135 -10 Z" fill="#7A4A1F" opacity="0.65"/>
 
-  <!-- 外葉: 左下からへたって垂れ下がる -->
-  <path d="M 75 260 Q 45 230 55 185 Q 75 150 125 145 Q 142 180 138 225 Q 122 275 88 290 Q 68 282 75 260 Z"
-        fill="url(#cabbage-outer-ng)" stroke="#3D2817" stroke-width="3" stroke-linejoin="round"/>
-  <!-- 葉縁の枯れ茶色シミ -->
-  <path d="M 60 195 Q 70 180 85 185 Q 88 200 78 210 Q 65 210 60 195 Z" fill="#7A4A1F" opacity="0.6"/>
-  <path d="M 75 270 Q 85 260 92 270 Q 88 285 75 280 Q 70 275 75 270 Z" fill="#7A4A1F" opacity="0.55"/>
-  <path d="M 95 280 Q 100 220 115 165" fill="none" stroke="#3D2817" stroke-width="2" stroke-linecap="round" opacity="0.7"/>
-  <path d="M 95 280 Q 80 250 65 220" fill="none" stroke="#3D2817" stroke-width="1.5" stroke-linecap="round" opacity="0.55"/>
+    <!-- 本体球(くすんだ黄緑) -->
+    <ellipse cx="0" cy="0" rx="113" ry="108" fill="#C5C295"/>
 
-  <!-- 外葉: 右下からへたって萎える -->
-  <path d="M 325 250 Q 355 225 348 180 Q 325 145 278 148 Q 263 185 268 225 Q 285 268 312 285 Q 330 278 325 250 Z"
-        fill="url(#cabbage-outer-ng)" stroke="#3D2817" stroke-width="3" stroke-linejoin="round"/>
-  <!-- 枯れシミ -->
-  <path d="M 335 200 Q 345 190 350 200 Q 348 215 338 215 Q 332 210 335 200 Z" fill="#7A4A1F" opacity="0.55"/>
-  <path d="M 305 280 Q 295 220 285 170" fill="none" stroke="#3D2817" stroke-width="2" stroke-linecap="round" opacity="0.7"/>
+    <!-- 茶色のシミ -->
+    <ellipse cx="-30" cy="-20" rx="14" ry="10" fill="#8B5A30" opacity="0.55"/>
+    <ellipse cx="40" cy="30" rx="12" ry="8" fill="#8B5A30" opacity="0.5"/>
+    <ellipse cx="-5" cy="60" rx="16" ry="9" fill="#8B5A30" opacity="0.5"/>
 
-  <!-- 本体球(やや小さく、ふさっと) -->
-  <ellipse cx="200" cy="215" rx="120" ry="115" fill="url(#cabbage-body-ng)" stroke="#3D2817" stroke-width="3"/>
+    <!-- 重なり線(雑) -->
+    <path d="M 0 -105 Q -25 -75 -45 -25 Q -55 25 -35 90" stroke="#5D4E37" stroke-width="1.5" fill="none" opacity="0.6"/>
+    <path d="M 0 -105 Q 25 -75 45 -25 Q 55 25 35 90" stroke="#5D4E37" stroke-width="1.5" fill="none" opacity="0.6"/>
+    <path d="M 0 -108 Q 0 -50 0 100" stroke="#5D4E37" stroke-width="1.3" fill="none" opacity="0.5"/>
 
-  <!-- 葉の重なり線(やや乱れた印象) -->
-  <path d="M 200 115 Q 170 145 152 200 Q 145 250 168 305" fill="none" stroke="#3D2817" stroke-width="2" stroke-linecap="round" opacity="0.65"/>
-  <path d="M 200 115 Q 230 145 248 200 Q 255 250 232 305" fill="none" stroke="#3D2817" stroke-width="2" stroke-linecap="round" opacity="0.65"/>
-  <path d="M 200 110 Q 200 175 200 320" fill="none" stroke="#3D2817" stroke-width="1.8" stroke-linecap="round" opacity="0.55"/>
-  <path d="M 85 215 Q 145 222 200 215" fill="none" stroke="#3D2817" stroke-width="1.5" stroke-linecap="round" opacity="0.45"/>
-  <path d="M 200 215 Q 255 222 315 215" fill="none" stroke="#3D2817" stroke-width="1.5" stroke-linecap="round" opacity="0.45"/>
+    <!-- 黒い斑点 -->
+    <circle cx="-50" cy="40" r="3" fill="#2A2820" opacity="0.7"/>
+    <circle cx="35" cy="-30" r="2.5" fill="#2A2820" opacity="0.65"/>
 
-  <!-- 葉脈 -->
-  <path d="M 110 195 Q 145 180 195 165" fill="none" stroke="#3D2817" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/>
-  <path d="M 115 250 Q 150 250 195 250" fill="none" stroke="#3D2817" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/>
-  <path d="M 290 195 Q 255 180 205 165" fill="none" stroke="#3D2817" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/>
-  <path d="M 285 250 Q 250 250 205 250" fill="none" stroke="#3D2817" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/>
-
-  <!-- 茶色の傷・シミ -->
-  <ellipse cx="170" cy="195" rx="14" ry="10" fill="#7A4A1F" opacity="0.45" transform="rotate(-15 170 195)"/>
-  <ellipse cx="245" cy="240" rx="12" ry="8" fill="#7A4A1F" opacity="0.4" transform="rotate(20 245 240)"/>
-  <ellipse cx="195" cy="285" rx="16" ry="9" fill="#7A4A1F" opacity="0.4"/>
-
-  <!-- 上部頂点 -->
-  <path d="M 195 115 Q 200 105 205 115" fill="#8B8848" stroke="#3D2817" stroke-width="2.5" stroke-linejoin="round"/>
-
-  <!-- 影 -->
-  <ellipse cx="200" cy="345" rx="115" ry="11" fill="#3D2817" opacity="0.1"/>
+    <!-- 輪郭 -->
+    <ellipse cx="0" cy="0" rx="113" ry="108" stroke="#3D2817" stroke-width="3" fill="none"/>
+    <path d="M -130 35 Q -150 -10 -140 -55 Q -105 -85 -72 -73 Q -68 -28 -78 8 Q -88 55 -118 70 Q -135 62 -130 35 Z" stroke="#3D2817" stroke-width="3" fill="none"/>
+    <path d="M 130 35 Q 150 -10 140 -55 Q 105 -85 72 -73 Q 68 -28 78 8 Q 88 55 118 70 Q 135 62 130 35 Z" stroke="#3D2817" stroke-width="3" fill="none"/>
 </svg>

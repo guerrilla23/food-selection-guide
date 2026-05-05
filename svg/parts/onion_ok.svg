@@ -1,16 +1,95 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="-130 -180 260 320" font-family="Noto Sans CJK JP, sans-serif">
 <defs>
-      <radialGradient id="wcBodyOnion" cx="35%" cy="25%"><stop offset="0%" stop-color="#F8E8C8" stop-opacity="0.95"/><stop offset="40%" stop-color="#E0C088" stop-opacity="0.9"/><stop offset="80%" stop-color="#B89058" stop-opacity="0.85"/><stop offset="100%" stop-color="#7E5A2A" stop-opacity="0.7"/></radialGradient>
-      <radialGradient id="wcLeafOnion" cx="50%" cy="20%"><stop offset="0%" stop-color="#9BCB7A" stop-opacity="0.9"/><stop offset="60%" stop-color="#5D8F3D" stop-opacity="0.7"/><stop offset="100%" stop-color="#2C5F2D" stop-opacity="0.5"/></radialGradient>
+      <radialGradient id="wcSkinOnion" cx="50%" cy="50%">
+        <stop offset="0%" stop-color="#E8C588" stop-opacity="0.85"/>
+        <stop offset="60%" stop-color="#C8A060" stop-opacity="0.9"/>
+        <stop offset="100%" stop-color="#9A7038" stop-opacity="0.85"/>
+      </radialGradient>
+      <radialGradient id="wcLayer1Onion" cx="50%" cy="50%">
+        <stop offset="0%" stop-color="#FAFAF0" stop-opacity="0.95"/>
+        <stop offset="100%" stop-color="#E8E0C8" stop-opacity="0.9"/>
+      </radialGradient>
+      <radialGradient id="wcLayer2Onion" cx="50%" cy="50%">
+        <stop offset="0%" stop-color="#FCFCEC" stop-opacity="0.95"/>
+        <stop offset="100%" stop-color="#E0D8B8" stop-opacity="0.9"/>
+      </radialGradient>
       <filter id="wcRoughOnion" x="-10%" y="-10%" width="120%" height="120%">
-        <feTurbulence baseFrequency="0.04" numOctaves="3" seed="13"/>
-        <feDisplacementMap in="SourceGraphic" scale="4"/>
+        <feTurbulence baseFrequency="0.04" numOctaves="3" seed="15"/>
+        <feDisplacementMap in="SourceGraphic" scale="3"/>
       </filter>
-      <filter id="wcBlurOnion"><feGaussianBlur stdDeviation="1.5"/></filter>
+      <filter id="wcBlurOnion">
+        <feGaussianBlur stdDeviation="1.5"/>
+      </filter>
     </defs>
-    <g filter="url(#wcBlurOnion)" opacity="0.4"><ellipse cx="0" cy="10" rx="100" ry="110" fill="#E0C088"/><ellipse cx="0" cy="-130" rx="25" ry="18" fill="#5D8F3D"/></g>
-    <g filter="url(#wcRoughOnion)" opacity="0.8"><path d="M -8 -130 L -3 -160 L 0 -130 Z" fill="url(#wcLeafOnion)"/><path d="M 0 -130 L 5 -158 L 8 -130 Z" fill="url(#wcLeafOnion)"/></g>
-    <g filter="url(#wcRoughOnion)"><path d="M -85 -50 Q -90 60 0 110 Q 90 60 85 -50 Q 75 -120 0 -130 Q -75 -120 -85 -50 Z" fill="url(#wcBodyOnion)"/></g>
-    
-    <g stroke="#3D2817" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"><path d="M -85 -50 Q -90 60 0 110 Q 90 60 85 -50 Q 75 -120 0 -130 Q -75 -120 -85 -50 Z"/><path d="M -10 -130 L -3 -160 L 3 -160 L 10 -130" opacity="0.7" stroke-width="2"/><path d="M -55 -100 Q -50 0 -55 100" opacity="0.5" stroke-width="1.2"/><path d="M -25 -120 Q -20 0 -25 110" opacity="0.5" stroke-width="1.2"/><path d="M 25 -120 Q 20 0 25 110" opacity="0.5" stroke-width="1.2"/><path d="M 55 -100 Q 50 0 55 100" opacity="0.5" stroke-width="1.2"/><path d="M -20 110 L -25 130" opacity="0.7" stroke-width="2"/><path d="M -8 112 L -10 135" opacity="0.7" stroke-width="2"/><path d="M 5 112 L 5 138" opacity="0.7" stroke-width="2"/><path d="M 18 112 L 22 135" opacity="0.7" stroke-width="2"/><path d="M 30 110 L 38 130" opacity="0.7" stroke-width="2"/></g>
+
+    <!-- Watercolor bleeds (背景) -->
+    <g filter="url(#wcBlurOnion)" opacity="0.4">
+      <ellipse cx="0" cy="0" rx="135" ry="135" fill="#E8C588"/>
+      <ellipse cx="0" cy="0" rx="100" ry="105" fill="#FAFAF0"/>
+    </g>
+
+    <!-- 上部の茎の切り口(乾いた茶色) -->
+    <g filter="url(#wcRoughOnion)">
+      <path d="M -10 -148 Q 0 -152 10 -148 L 8 -135 Q 0 -132 -8 -135 Z" fill="#9A7038" opacity="0.9"/>
+    </g>
+
+    <!-- 一番外側の薄皮(乾いた茶色、断面なので楕円形) -->
+    <g filter="url(#wcRoughOnion)">
+      <ellipse cx="0" cy="0" rx="125" ry="135" fill="url(#wcSkinOnion)"/>
+    </g>
+
+    <!-- 第2層(乾いた皮の内側) -->
+    <g filter="url(#wcRoughOnion)">
+      <ellipse cx="0" cy="2" rx="113" ry="123" fill="#D8B888" opacity="0.85"/>
+    </g>
+
+    <!-- 第3層(白っぽい層、ここから内側) -->
+    <g filter="url(#wcRoughOnion)">
+      <ellipse cx="0" cy="3" rx="100" ry="110" fill="url(#wcLayer1Onion)"/>
+    </g>
+
+    <!-- 第4層 -->
+    <g filter="url(#wcRoughOnion)">
+      <ellipse cx="0" cy="4" rx="82" ry="92" fill="url(#wcLayer2Onion)"/>
+    </g>
+
+    <!-- 第5層 -->
+    <g filter="url(#wcRoughOnion)">
+      <ellipse cx="0" cy="5" rx="62" ry="72" fill="url(#wcLayer1Onion)"/>
+    </g>
+
+    <!-- 第6層(中心に近い) -->
+    <g filter="url(#wcRoughOnion)">
+      <ellipse cx="0" cy="6" rx="40" ry="48" fill="url(#wcLayer2Onion)"/>
+    </g>
+
+    <!-- 中心の芯 -->
+    <g filter="url(#wcRoughOnion)">
+      <ellipse cx="0" cy="7" rx="18" ry="22" fill="#F0E8C0" opacity="0.95"/>
+    </g>
+
+    <!-- Strong ink lines (層の境界) -->
+    <g stroke="#3D2817" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.9">
+      <!-- 一番外側 -->
+      <ellipse cx="0" cy="0" rx="125" ry="135"/>
+      <!-- 茎の切り口 -->
+      <path d="M -10 -148 Q 0 -152 10 -148 L 8 -135 Q 0 -132 -8 -135 Z"/>
+    </g>
+    <!-- 内側の層は細めの線 -->
+    <g stroke="#8A5A28" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.75">
+      <ellipse cx="0" cy="2" rx="113" ry="123"/>
+      <ellipse cx="0" cy="3" rx="100" ry="110"/>
+      <ellipse cx="0" cy="4" rx="82" ry="92"/>
+      <ellipse cx="0" cy="5" rx="62" ry="72"/>
+      <ellipse cx="0" cy="6" rx="40" ry="48"/>
+      <ellipse cx="0" cy="7" rx="18" ry="22"/>
+    </g>
+
+    <!-- 下のひげ根の切り口 -->
+    <g stroke="#3D2817" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.85">
+      <line x1="-15" y1="135" x2="-15" y2="148"/>
+      <line x1="-5" y1="135" x2="-5" y2="150"/>
+      <line x1="5" y1="135" x2="5" y2="150"/>
+      <line x1="15" y1="135" x2="15" y2="148"/>
+    </g>
 </svg>

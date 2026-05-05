@@ -1,3 +1,33 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="-90 -150 180 280" font-family="Noto Sans CJK JP, sans-serif">
-<path d="M -45 -110 Q -55 -120 -30 -130 Q 0 -135 30 -130 Q 55 -120 45 -110 L 35 -90 Q 40 -50 35 50 Q 30 100 0 110 Q -30 100 -35 50 Q -40 -50 -35 -90 Z" fill="#C8B898"/><ellipse cx="-10" cy="30" rx="18" ry="22" fill="#8B6F47" opacity="0.45"/><path d="M -35 80 Q 0 92 35 80" stroke="#5D4E37" stroke-width="1.5" fill="none" opacity="0.55"/>
+<!-- 軸(しなびた、変色) -->
+    <path d="M -45 -55 Q -50 0 -48 100 Q -46 128 0 130 Q 46 128 48 100 Q 50 0 45 -55 Z" fill="#C8B888"/>
+    <!-- 傘(変色、黄ばみ+黒ずみ) -->
+    <path d="M -100 -55 Q -105 -100 -65 -118 Q -25 -130 0 -130 Q 25 -130 65 -118 Q 105 -100 100 -55 Q 90 -42 65 -42 Q 25 -40 0 -40 Q -25 -40 -65 -42 Q -90 -42 -100 -55 Z" fill="#C8B888"/>
+
+    <!-- 軸の縦シワ -->
+    <g stroke="#3D2817" stroke-width="1.5" fill="none" stroke-linecap="round" opacity="0.55">
+      <path d="M -30 -45 Q -32 50 -28 125"/>
+      <path d="M 0 -45 Q 0 50 0 130"/>
+      <path d="M 30 -45 Q 32 50 28 125"/>
+    </g>
+
+    <!-- 軸の茶色シミ -->
+    <ellipse cx="-20" cy="20" rx="9" ry="13" fill="#7A4A1F" opacity="0.55"/>
+    <ellipse cx="25" cy="60" rx="8" ry="11" fill="#7A4A1F" opacity="0.5"/>
+    <ellipse cx="-5" cy="100" rx="9" ry="6" fill="#7A4A1F" opacity="0.5"/>
+
+    <!-- 傘の黒ずみ(NG表現) -->
+    <ellipse cx="-50" cy="-85" rx="14" ry="9" fill="#3A2818" opacity="0.6"/>
+    <ellipse cx="35" cy="-90" rx="13" ry="8" fill="#3A2818" opacity="0.55"/>
+    <ellipse cx="0" cy="-95" rx="6" ry="4" fill="#3A2818" opacity="0.55"/>
+    <!-- 茶色シミ -->
+    <ellipse cx="-25" cy="-70" rx="10" ry="6" fill="#7A4A1F" opacity="0.5"/>
+    <ellipse cx="55" cy="-70" rx="10" ry="6" fill="#7A4A1F" opacity="0.5"/>
+
+    <!-- 輪郭 -->
+    <g stroke="#3D2817" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M -45 -55 Q -50 0 -48 100 Q -46 128 0 130 Q 46 128 48 100 Q 50 0 45 -55"/>
+      <path d="M -100 -55 Q -105 -100 -65 -118 Q -25 -130 0 -130 Q 25 -130 65 -118 Q 105 -100 100 -55 Q 90 -42 65 -42 Q 25 -40 0 -40 Q -25 -40 -65 -42 Q -90 -42 -100 -55 Z"/>
+      <path d="M -100 -55 Q -50 -50 0 -50 Q 50 -50 100 -55" opacity="0.65"/>
+    </g>
 </svg>
