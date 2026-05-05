@@ -1,16 +1,68 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="-90 -140 180 280" font-family="Noto Sans CJK JP, sans-serif">
 <defs>
-      <radialGradient id="wcBodyAvocado" cx="35%" cy="25%"><stop offset="0%" stop-color="#9BCB7A" stop-opacity="0.95"/><stop offset="40%" stop-color="#5D8F3D" stop-opacity="0.9"/><stop offset="80%" stop-color="#3D5F2D" stop-opacity="0.85"/><stop offset="100%" stop-color="#1A3F1A" stop-opacity="0.65"/></radialGradient>
-      <radialGradient id="wcLeafAvocado" cx="50%" cy="20%"><stop offset="0%" stop-color="#9BCB7A" stop-opacity="0.9"/><stop offset="60%" stop-color="#5D8F3D" stop-opacity="0.7"/><stop offset="100%" stop-color="#2C5F2D" stop-opacity="0.5"/></radialGradient>
+      <radialGradient id="wcFleshAvocado" cx="50%" cy="40%">
+        <stop offset="0%" stop-color="#EFE090" stop-opacity="0.95"/>
+        <stop offset="50%" stop-color="#C8D878" stop-opacity="0.92"/>
+        <stop offset="100%" stop-color="#7AAB42" stop-opacity="0.88"/>
+      </radialGradient>
+      <radialGradient id="wcSeedAvocado" cx="38%" cy="38%">
+        <stop offset="0%" stop-color="#B47C56" stop-opacity="0.95"/>
+        <stop offset="55%" stop-color="#8A5530" stop-opacity="0.92"/>
+        <stop offset="100%" stop-color="#5D3520" stop-opacity="0.9"/>
+      </radialGradient>
+      <radialGradient id="wcSkinAvocado" cx="50%" cy="50%">
+        <stop offset="0%" stop-color="#3D2A1A" stop-opacity="0.95"/>
+        <stop offset="100%" stop-color="#1A1208" stop-opacity="0.95"/>
+      </radialGradient>
       <filter id="wcRoughAvocado" x="-10%" y="-10%" width="120%" height="120%">
-        <feTurbulence baseFrequency="0.04" numOctaves="3" seed="113"/>
-        <feDisplacementMap in="SourceGraphic" scale="4"/>
+        <feTurbulence baseFrequency="0.05" numOctaves="3" seed="113"/>
+        <feDisplacementMap in="SourceGraphic" scale="3"/>
       </filter>
       <filter id="wcBlurAvocado"><feGaussianBlur stdDeviation="1.5"/></filter>
     </defs>
-    <g filter="url(#wcBlurAvocado)" opacity="0.4"><ellipse cx="0" cy="10" rx="80" ry="115" fill="#5D8F3D"/></g>
-    
-    <g filter="url(#wcRoughAvocado)"><path d="M 0 -110 Q -25 -100 -35 -75 Q -55 -50 -65 0 Q -75 70 0 110 Q 75 70 65 0 Q 55 -50 35 -75 Q 25 -100 0 -110 Z" fill="url(#wcBodyAvocado)"/></g>
-    
-    <g stroke="#3D2817" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"><path d="M 0 -110 Q -25 -100 -35 -75 Q -55 -50 -65 0 Q -75 70 0 110 Q 75 70 65 0 Q 55 -50 35 -75 Q 25 -100 0 -110 Z"/><path d="M 0 -110 L 0 -125" opacity="0.85" stroke-width="2.5"/><path d="M -40 -30 L -38 -28" opacity="0.7" stroke-width="2.2"/><path d="M -25 30 L -23 32" opacity="0.7" stroke-width="2.2"/><path d="M 30 -10 L 32 -8" opacity="0.7" stroke-width="2.2"/><path d="M 40 50 L 42 52" opacity="0.7" stroke-width="2.2"/><path d="M 0 70 L 2 72" opacity="0.7" stroke-width="2.2"/><path d="M -45 60 L -43 62" opacity="0.7" stroke-width="2.2"/></g>
+
+    <g filter="url(#wcBlurAvocado)" opacity="0.35"><ellipse cx="0" cy="0" rx="80" ry="118" fill="#9BCB7A"/></g>
+
+    <g filter="url(#wcRoughAvocado)">
+      <!-- Outer skin (dark, almost black, with stipple texture suggested) -->
+      <path d="M 0 -110 Q -25 -100 -35 -75 Q -55 -50 -65 0 Q -75 70 0 110 Q 75 70 65 0 Q 55 -50 35 -75 Q 25 -100 0 -110 Z M 0 -100 Q -22 -92 -30 -68 Q -48 -45 -55 0 Q -65 60 0 100 Q 65 60 55 0 Q 48 -45 30 -68 Q 22 -92 0 -100 Z" fill="url(#wcSkinAvocado)" fill-rule="evenodd"/>
+      <!-- Flesh (yellow-green pear shape inside) -->
+      <path d="M 0 -100 Q -22 -92 -30 -68 Q -48 -45 -55 0 Q -65 60 0 100 Q 65 60 55 0 Q 48 -45 30 -68 Q 22 -92 0 -100 Z" fill="url(#wcFleshAvocado)"/>
+    </g>
+
+    <!-- Skin texture stippling (small dots on dark skin) -->
+    <g fill="#5A4030" opacity="0.55">
+      <circle cx="-58" cy="-15" r="1.4"/>
+      <circle cx="-55" cy="20" r="1.2"/>
+      <circle cx="-50" cy="55" r="1.4"/>
+      <circle cx="-30" cy="80" r="1.3"/>
+      <circle cx="0" cy="92" r="1.4"/>
+      <circle cx="30" cy="80" r="1.3"/>
+      <circle cx="50" cy="55" r="1.4"/>
+      <circle cx="55" cy="20" r="1.2"/>
+      <circle cx="58" cy="-15" r="1.4"/>
+      <circle cx="-40" cy="-50" r="1.2"/>
+      <circle cx="40" cy="-50" r="1.2"/>
+    </g>
+
+    <!-- Seed cavity highlight (subtle ring around where seed sits) -->
+    <circle cx="0" cy="-25" r="42" fill="#D8C870" opacity="0.4"/>
+
+    <!-- Seed (large round brown) -->
+    <circle cx="0" cy="-25" r="38" fill="url(#wcSeedAvocado)" stroke="#3D2817" stroke-width="2.5"/>
+    <!-- Seed surface texture (subtle bands) -->
+    <g stroke="#5D3825" stroke-width="0.7" fill="none" opacity="0.55">
+      <path d="M -22 -50 Q 0 -55 25 -45"/>
+      <path d="M -28 -25 Q 0 -33 28 -20"/>
+      <path d="M -25 -5 Q 0 -10 25 0"/>
+      <path d="M -18 -55 Q -5 -52 5 -55"/>
+    </g>
+    <!-- Seed highlight -->
+    <ellipse cx="-12" cy="-40" rx="9" ry="6" fill="#FFFFFF" opacity="0.32"/>
+
+    <!-- Outer outline + stem -->
+    <g stroke="#3D2817" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.9">
+      <path d="M 0 -110 Q -25 -100 -35 -75 Q -55 -50 -65 0 Q -75 70 0 110 Q 75 70 65 0 Q 55 -50 35 -75 Q 25 -100 0 -110 Z"/>
+      <path d="M 0 -110 L 0 -125" stroke-width="2.5"/>
+    </g>
 </svg>

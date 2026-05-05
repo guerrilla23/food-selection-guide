@@ -1,3 +1,17 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="-90 -140 180 280" font-family="Noto Sans CJK JP, sans-serif">
-<path d="M 0 -110 Q -25 -100 -35 -75 Q -55 -50 -65 0 Q -75 70 0 110 Q 75 70 65 0 Q 55 -50 35 -75 Q 25 -100 0 -110 Z" fill="#5A4030"/><ellipse cx="-30" cy="30" rx="25" ry="30" fill="#1A1008" opacity="0.6"/><ellipse cx="35" cy="-20" rx="18" ry="22" fill="#1A1008" opacity="0.55"/>
+<!-- Outer skin (cracked, brown) -->
+    <path d="M 0 -110 Q -25 -100 -35 -75 Q -55 -50 -65 0 Q -75 70 0 110 Q 75 70 65 0 Q 55 -50 35 -75 Q 25 -100 0 -110 Z M 0 -100 Q -22 -92 -30 -68 Q -48 -45 -55 0 Q -65 60 0 100 Q 65 60 55 0 Q 48 -45 30 -68 Q 22 -92 0 -100 Z" fill="#3A2818" fill-rule="evenodd"/>
+    <!-- Flesh (gray-brown, oxidized) -->
+    <path d="M 0 -100 Q -22 -92 -30 -68 Q -48 -45 -55 0 Q -65 60 0 100 Q 65 60 55 0 Q 48 -45 30 -68 Q 22 -92 0 -100 Z" fill="#9A8868"/>
+    <!-- Brown rotting spots -->
+    <g fill="#3D2818" opacity="0.65">
+      <ellipse cx="-25" cy="20" rx="18" ry="14"/>
+      <ellipse cx="22" cy="-50" rx="12" ry="9"/>
+      <ellipse cx="-15" cy="60" rx="14" ry="10"/>
+      <ellipse cx="30" cy="40" rx="10" ry="8"/>
+    </g>
+    <!-- Loose darkened seed -->
+    <circle cx="0" cy="-25" r="38" fill="#3A2515" stroke="#1A1008" stroke-width="2"/>
+    <!-- Outline -->
+    <path d="M 0 -110 Q -25 -100 -35 -75 Q -55 -50 -65 0 Q -75 70 0 110 Q 75 70 65 0 Q 55 -50 35 -75 Q 25 -100 0 -110 Z" stroke="#3D2817" stroke-width="2.5" fill="none" opacity="0.7"/>
 </svg>

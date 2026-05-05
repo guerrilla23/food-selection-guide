@@ -1,16 +1,60 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="-130 -150 260 270" font-family="Noto Sans CJK JP, sans-serif">
 <defs>
-      <radialGradient id="wcBodyPumpkin" cx="35%" cy="25%"><stop offset="0%" stop-color="#7BAB46" stop-opacity="0.95"/><stop offset="40%" stop-color="#4A7C2E" stop-opacity="0.9"/><stop offset="80%" stop-color="#2C5F2D" stop-opacity="0.85"/><stop offset="100%" stop-color="#1A3F1A" stop-opacity="0.7"/></radialGradient>
-      <radialGradient id="wcLeafPumpkin" cx="50%" cy="20%"><stop offset="0%" stop-color="#9BCB7A" stop-opacity="0.9"/><stop offset="60%" stop-color="#5D8F3D" stop-opacity="0.7"/><stop offset="100%" stop-color="#2C5F2D" stop-opacity="0.5"/></radialGradient>
+      <radialGradient id="wcFleshPumpkin" cx="50%" cy="50%">
+        <stop offset="0%" stop-color="#FFD095" stop-opacity="0.95"/>
+        <stop offset="50%" stop-color="#F09838" stop-opacity="0.92"/>
+        <stop offset="100%" stop-color="#C66818" stop-opacity="0.88"/>
+      </radialGradient>
+      <radialGradient id="wcSkinPumpkin" cx="50%" cy="20%">
+        <stop offset="0%" stop-color="#5D8F3D" stop-opacity="0.95"/>
+        <stop offset="100%" stop-color="#1A3F1A" stop-opacity="0.95"/>
+      </radialGradient>
       <filter id="wcRoughPumpkin" x="-10%" y="-10%" width="120%" height="120%">
-        <feTurbulence baseFrequency="0.04" numOctaves="3" seed="79"/>
-        <feDisplacementMap in="SourceGraphic" scale="4"/>
+        <feTurbulence baseFrequency="0.05" numOctaves="3" seed="79"/>
+        <feDisplacementMap in="SourceGraphic" scale="3"/>
       </filter>
       <filter id="wcBlurPumpkin"><feGaussianBlur stdDeviation="1.5"/></filter>
     </defs>
-    <g filter="url(#wcBlurPumpkin)" opacity="0.4"><ellipse cx="0" cy="0" rx="120" ry="95" fill="#5D8F3D"/></g>
-    
-    <g filter="url(#wcRoughPumpkin)"><path d="M -110 0 Q -115 70 0 95 Q 115 70 110 0 Q 100 -75 0 -85 Q -100 -75 -110 0 Z" fill="url(#wcBodyPumpkin)"/></g>
-    
-    <g stroke="#3D2817" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"><path d="M -110 0 Q -115 70 0 95 Q 115 70 110 0 Q 100 -75 0 -85 Q -100 -75 -110 0 Z"/><path d="M -8 -85 L -10 -120 L 10 -118 L 8 -85" opacity="0.85" stroke-width="2.5"/><path d="M -90 -50 Q -85 30 -85 75" opacity="0.65" stroke-width="1.6"/><path d="M -55 -75 Q -50 30 -50 90" opacity="0.65" stroke-width="1.6"/><path d="M -20 -85 Q -15 30 -18 95" opacity="0.65" stroke-width="1.6"/><path d="M 20 -85 Q 15 30 18 95" opacity="0.65" stroke-width="1.6"/><path d="M 55 -75 Q 50 30 50 90" opacity="0.65" stroke-width="1.6"/><path d="M 90 -50 Q 85 30 85 75" opacity="0.65" stroke-width="1.6"/></g>
+
+    <g filter="url(#wcBlurPumpkin)" opacity="0.35"><ellipse cx="0" cy="0" rx="120" ry="100" fill="#E89540"/></g>
+
+    <g filter="url(#wcRoughPumpkin)">
+      <!-- Outer skin ring (dark green) -->
+      <path d="M -110 0 Q -115 80 0 95 Q 115 80 110 0 Q 100 -75 0 -85 Q -100 -75 -110 0 Z M -98 0 Q -103 68 0 82 Q 103 68 98 0 Q 88 -65 0 -73 Q -88 -65 -98 0 Z" fill="url(#wcSkinPumpkin)" fill-rule="evenodd"/>
+      <!-- Inner skin band (lighter green transition) -->
+      <path d="M -98 0 Q -103 68 0 82 Q 103 68 98 0 Q 88 -65 0 -73 Q -88 -65 -98 0 Z M -88 0 Q -93 60 0 73 Q 93 60 88 0 Q 78 -58 0 -65 Q -78 -58 -88 0 Z" fill="#7AAB46" fill-rule="evenodd" opacity="0.85"/>
+      <!-- Flesh (orange) -->
+      <path d="M -88 0 Q -93 60 0 73 Q 93 60 88 0 Q 78 -58 0 -65 Q -78 -58 -88 0 Z" fill="url(#wcFleshPumpkin)"/>
+    </g>
+
+    <!-- Seed cavity (slightly lighter oval) -->
+    <ellipse cx="0" cy="-3" rx="50" ry="34" fill="#FFF0CC" opacity="0.6"/>
+    <!-- Stringy fibers around cavity -->
+    <g stroke="#D08840" stroke-width="0.8" fill="none" opacity="0.5">
+      <path d="M -48 -20 Q -32 -10 -18 -5"/>
+      <path d="M 48 -20 Q 32 -10 18 -5"/>
+      <path d="M -45 20 Q -28 12 -12 8"/>
+      <path d="M 45 20 Q 28 12 12 8"/>
+      <path d="M -35 -28 Q -20 -22 -8 -28"/>
+      <path d="M 35 -28 Q 20 -22 8 -28"/>
+    </g>
+    <!-- Seeds (8 almond shapes scattered in cavity) -->
+    <g fill="#FFF8E0" stroke="#3D2817" stroke-width="1.3">
+      <ellipse cx="-28" cy="-12" rx="6.5" ry="10" transform="rotate(-25 -28 -12)"/>
+      <ellipse cx="-10" cy="-22" rx="6.5" ry="10" transform="rotate(8 -10 -22)"/>
+      <ellipse cx="14" cy="-20" rx="6.5" ry="10" transform="rotate(-18 14 -20)"/>
+      <ellipse cx="30" cy="-6" rx="6.5" ry="10" transform="rotate(22 30 -6)"/>
+      <ellipse cx="-32" cy="8" rx="6.5" ry="10" transform="rotate(15 -32 8)"/>
+      <ellipse cx="-12" cy="14" rx="6.5" ry="10" transform="rotate(-8 -12 14)"/>
+      <ellipse cx="10" cy="16" rx="6.5" ry="10" transform="rotate(20 10 16)"/>
+      <ellipse cx="28" cy="12" rx="6.5" ry="10" transform="rotate(-22 28 12)"/>
+    </g>
+
+    <!-- Outer outline + skin ridges -->
+    <g stroke="#3D2817" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.9">
+      <path d="M -110 0 Q -115 80 0 95 Q 115 80 110 0 Q 100 -75 0 -85 Q -100 -75 -110 0 Z"/>
+      <path d="M -98 0 Q -103 68 0 82 Q 103 68 98 0 Q 88 -65 0 -73 Q -88 -65 -98 0 Z" stroke-width="1.5" opacity="0.7"/>
+    </g>
+    <!-- Stem (visible cross-section nub on top) -->
+    <path d="M -10 -85 L -12 -110 L 12 -108 L 10 -85 Z" fill="#5D8F3D" stroke="#3D2817" stroke-width="2.5" stroke-linejoin="round"/>
 </svg>

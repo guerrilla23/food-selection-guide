@@ -1,16 +1,84 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="-90 -130 180 260" font-family="Noto Sans CJK JP, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-100 -150 200 280" font-family="Noto Sans CJK JP, sans-serif">
 <defs>
-      <radialGradient id="wcBodyYogurt" cx="35%" cy="25%"><stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.95"/><stop offset="40%" stop-color="#FAF5E8" stop-opacity="0.9"/><stop offset="80%" stop-color="#E8DCC0" stop-opacity="0.7"/><stop offset="100%" stop-color="#B89870" stop-opacity="0.4"/></radialGradient>
-      <radialGradient id="wcLeafYogurt" cx="50%" cy="20%"><stop offset="0%" stop-color="#9BCB7A" stop-opacity="0.9"/><stop offset="60%" stop-color="#5D8F3D" stop-opacity="0.7"/><stop offset="100%" stop-color="#2C5F2D" stop-opacity="0.5"/></radialGradient>
+      <radialGradient id="wcYogurtBody" cx="50%" cy="20%">
+        <stop offset="0%" stop-color="#FAF0DA" stop-opacity="0.95"/>
+        <stop offset="60%" stop-color="#EDE0C0" stop-opacity="0.92"/>
+        <stop offset="100%" stop-color="#C8B088" stop-opacity="0.88"/>
+      </radialGradient>
+      <radialGradient id="wcYogurtSurface" cx="50%" cy="50%">
+        <stop offset="0%" stop-color="#FFFFFF" stop-opacity="1"/>
+        <stop offset="80%" stop-color="#FAF7EE" stop-opacity="0.97"/>
+        <stop offset="100%" stop-color="#E8DCC0" stop-opacity="0.5"/>
+      </radialGradient>
+      <linearGradient id="wcFoilOK" x1="0%" y1="0%" x2="0%" y2="100%">
+        <stop offset="0%" stop-color="#F5F2E8" stop-opacity="0.95"/>
+        <stop offset="50%" stop-color="#E0DDC8" stop-opacity="0.95"/>
+        <stop offset="100%" stop-color="#B8B098" stop-opacity="0.92"/>
+      </linearGradient>
       <filter id="wcRoughYogurt" x="-10%" y="-10%" width="120%" height="120%">
-        <feTurbulence baseFrequency="0.04" numOctaves="3" seed="211"/>
-        <feDisplacementMap in="SourceGraphic" scale="4"/>
+        <feTurbulence baseFrequency="0.05" numOctaves="3" seed="211"/>
+        <feDisplacementMap in="SourceGraphic" scale="2"/>
       </filter>
       <filter id="wcBlurYogurt"><feGaussianBlur stdDeviation="1.5"/></filter>
     </defs>
-    <g filter="url(#wcBlurYogurt)" opacity="0.4"><ellipse cx="0" cy="0" rx="80" ry="110" fill="#F8F0E0"/></g>
-    
-    <g filter="url(#wcRoughYogurt)"><path d="M -75 -100 Q -78 -110 -65 -110 L 65 -110 Q 78 -110 75 -100 L 78 100 Q 80 115 60 115 L -60 115 Q -80 115 -78 100 Z" fill="url(#wcBodyYogurt)"/></g>
-    
-    <g stroke="#3D2817" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"><path d="M -75 -100 Q -78 -110 -65 -110 L 65 -110 Q 78 -110 75 -100 L 78 100 Q 80 115 60 115 L -60 115 Q -80 115 -78 100 Z"/><path d="M -75 -90 L 75 -90" opacity="0.7" stroke-width="1.6"/><path d="M -65 -75 Q 0 -78 65 -75" opacity="0.5" stroke-width="1.4"/><path d="M -60 -50 Q 0 -53 60 -50" opacity="0.4" stroke-width="1.2"/><path d="M -55 -10 L 55 -10 L 55 50 L -55 50 Z" opacity="0.45" stroke-width="1.4"/></g>
+
+    <!-- Soft drop shadow -->
+    <ellipse cx="0" cy="118" rx="62" ry="8" fill="#3D2817" opacity="0.18"/>
+
+    <g filter="url(#wcRoughYogurt)">
+      <!-- Cup side wall -->
+      <path d="M -85 -90 Q -80 80 -52 115 L 52 115 Q 80 80 85 -90 Z" fill="url(#wcYogurtBody)"/>
+    </g>
+
+    <!-- Top rim outer (broad oval — clearly a circular cup mouth) -->
+    <ellipse cx="0" cy="-90" rx="85" ry="22" fill="#E8DCC0" stroke="#3D2817" stroke-width="3"/>
+    <!-- White yogurt surface (visible) -->
+    <ellipse cx="0" cy="-92" rx="76" ry="17" fill="url(#wcYogurtSurface)" stroke="#D0C0A0" stroke-width="1.3"/>
+
+    <!-- Small whey droplets on surface (translucent pale yellow, fresh sign) -->
+    <g fill="#F0E090" opacity="0.42">
+      <ellipse cx="-25" cy="-92" rx="9" ry="2.5"/>
+      <ellipse cx="12" cy="-90" rx="6" ry="2"/>
+      <ellipse cx="35" cy="-95" rx="5" ry="1.8"/>
+    </g>
+    <!-- Tiny highlights on whey droplets -->
+    <g fill="#FFFFFF" opacity="0.7">
+      <ellipse cx="-27" cy="-93" rx="2" ry="0.8"/>
+      <ellipse cx="11" cy="-91" rx="1.5" ry="0.6"/>
+    </g>
+
+    <!-- Subtle surface ripples -->
+    <g fill="none" stroke="#EDE3D0" stroke-width="1.4" opacity="0.7">
+      <ellipse cx="0" cy="-92" rx="40" ry="9"/>
+      <ellipse cx="0" cy="-92" rx="60" ry="13"/>
+    </g>
+
+    <!-- ========================================================== -->
+    <!-- PEELED FOIL LID — taut, half-peeled, hinged along right rim -->
+    <!-- Large leaf-shaped flap so the silhouette clearly says
+         "this is opened yogurt", not pudding / tofu / chawan-mushi. -->
+    <g>
+      <!-- Foil sheet: extends from rim hinge up-and-right -->
+      <path d="M 30 -100
+               C 30 -125, 50 -148, 78 -148
+               C 96 -145, 100 -125, 96 -108
+               Q 92 -94 82 -90
+               Q 60 -88 45 -92
+               Q 32 -94 30 -100 Z"
+            fill="url(#wcFoilOK)" stroke="#3D2817" stroke-width="3" stroke-linejoin="round" opacity="0.95"/>
+      <!-- Hinge fold crease (where foil meets rim) -->
+      <path d="M 30 -100 Q 55 -92 82 -90" stroke="#3D2817" stroke-width="1.6" fill="none" opacity="0.7"/>
+      <!-- Foil shine highlight (taut, flat surface) -->
+      <path d="M 45 -135 Q 65 -140 88 -130" stroke="#FFFFFF" stroke-width="2.8" fill="none" opacity="0.85" stroke-linecap="round"/>
+      <!-- Subtle metallic texture line -->
+      <path d="M 40 -118 Q 60 -116 85 -120" stroke="#A89878" stroke-width="0.8" fill="none" opacity="0.5"/>
+    </g>
+
+    <!-- Highlight on cup rim front-left -->
+    <path d="M -55 -107 Q 0 -113 55 -107" stroke="#FFFFFF" stroke-width="4" fill="none" opacity="0.85" stroke-linecap="round"/>
+    <!-- Subtle shadow band under rim on body -->
+    <path d="M -82 -85 Q 0 -73 82 -85" stroke="#C8B088" stroke-width="2.5" fill="none" opacity="0.5"/>
+
+    <!-- Cup outline (last) -->
+    <path d="M -85 -90 Q -80 80 -52 115 L 52 115 Q 80 80 85 -90" fill="none" stroke="#3D2817" stroke-width="3" stroke-linejoin="round"/>
 </svg>
