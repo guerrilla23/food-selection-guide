@@ -26,14 +26,44 @@
     <g filter="url(#wcRoughBeef)"><path d="M -90 -45 Q -100 0 -90 50 Q 0 75 90 50 Q 100 0 90 -45 Q 0 -65 -90 -45 Z" fill="url(#wcBodyBeef)"/></g>
     
     <g stroke="#3D2817" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"><path d="M -90 -45 Q -100 0 -90 50 Q 0 75 90 50 Q 100 0 90 -45 Q 0 -65 -90 -45 Z"/><path d="M -75 -30 Q 0 -25 75 -30" opacity="0.65" stroke-width="1.5"/><path d="M -78 -5 Q 0 0 78 -5" opacity="0.65" stroke-width="1.5"/><path d="M -72 20 Q 0 25 72 20" opacity="0.65" stroke-width="1.5"/><path d="M -65 45 Q 0 50 65 45" opacity="0.65" stroke-width="1.5"/><path d="M -55 -18 Q -25 -12 5 -22" opacity="0.75" stroke-width="2.2"/><path d="M -10 -3 Q 20 5 50 -5" opacity="0.75" stroke-width="2.2"/><path d="M 25 18 Q 50 22 70 12" opacity="0.75" stroke-width="2.2"/><path d="M -45 32 Q -15 38 15 30" opacity="0.75" stroke-width="2.2"/><path d="M 30 45 Q 50 50 65 42" opacity="0.7" stroke-width="2"/></g>
-  </g>
+  
+    <!-- animal-icon: beef (horns + muzzle, brown) -->
+    <g transform="translate(88, 72)" data-icon="beef">
+      <circle cx="0" cy="0" r="38" fill="#FFFFFF" fill-opacity="0.96" stroke="#3D2817" stroke-width="2"/>
+      <path d="M -11 -14 Q -22 -25 -14 -31" fill="none" stroke="#3D2817" stroke-width="2.6" stroke-linecap="round"/>
+      <path d="M 11 -14 Q 22 -25 14 -31" fill="none" stroke="#3D2817" stroke-width="2.6" stroke-linecap="round"/>
+      <ellipse cx="-18" cy="-9" rx="5" ry="8" fill="#7A5A3A" stroke="#3D2817" stroke-width="1.8" transform="rotate(-30 -18 -9)"/>
+      <ellipse cx="18" cy="-9" rx="5" ry="8" fill="#7A5A3A" stroke="#3D2817" stroke-width="1.8" transform="rotate(30 18 -9)"/>
+      <path d="M -15 -3 Q -15 -14 -4 -17 Q 7 -17 15 -14 Q 19 0 18 10 Q 10 20 0 20 Q -13 20 -18 11 Q -18 0 -15 -3 Z" fill="#7A5A3A" stroke="#3D2817" stroke-width="2"/>
+      <ellipse cx="0" cy="13" rx="13" ry="7" fill="#D4B07A" stroke="#3D2817" stroke-width="1.7"/>
+      <ellipse cx="-4" cy="13" rx="1.3" ry="2" fill="#3D2817"/>
+      <ellipse cx="4" cy="13" rx="1.3" ry="2" fill="#3D2817"/>
+      <circle cx="-6" cy="-3" r="2.2" fill="#3D2817"/>
+      <circle cx="8" cy="-3" r="2.2" fill="#3D2817"/>
+    </g>
+</g>
 
   <!-- NG side (flat) -->
   <g transform="translate(800, 320)">
     <circle cx="-200" cy="-180" r="22" fill="#C62828"/>
     <text x="-200" y="-172" font-size="26" font-weight="900" fill="white" text-anchor="middle">×</text>
     <path d="M -90 -45 Q -100 0 -90 50 Q 0 75 90 50 Q 100 0 90 -45 Q 0 -65 -90 -45 Z" fill="#683838"/><ellipse cx="-25" cy="0" rx="30" ry="22" fill="#3D2817" opacity="0.55"/><ellipse cx="30" cy="20" rx="18" ry="14" fill="#3D2817" opacity="0.45"/><ellipse cx="0" cy="70" rx="55" ry="8" fill="#601810" opacity="0.6"/>
-  </g>
+  
+    <!-- animal-icon: beef (horns + muzzle, brown) -->
+    <g transform="translate(88, 72)" data-icon="beef">
+      <circle cx="0" cy="0" r="38" fill="#FFFFFF" fill-opacity="0.96" stroke="#3D2817" stroke-width="2"/>
+      <path d="M -11 -14 Q -22 -25 -14 -31" fill="none" stroke="#3D2817" stroke-width="2.6" stroke-linecap="round"/>
+      <path d="M 11 -14 Q 22 -25 14 -31" fill="none" stroke="#3D2817" stroke-width="2.6" stroke-linecap="round"/>
+      <ellipse cx="-18" cy="-9" rx="5" ry="8" fill="#7A5A3A" stroke="#3D2817" stroke-width="1.8" transform="rotate(-30 -18 -9)"/>
+      <ellipse cx="18" cy="-9" rx="5" ry="8" fill="#7A5A3A" stroke="#3D2817" stroke-width="1.8" transform="rotate(30 18 -9)"/>
+      <path d="M -15 -3 Q -15 -14 -4 -17 Q 7 -17 15 -14 Q 19 0 18 10 Q 10 20 0 20 Q -13 20 -18 11 Q -18 0 -15 -3 Z" fill="#7A5A3A" stroke="#3D2817" stroke-width="2"/>
+      <ellipse cx="0" cy="13" rx="13" ry="7" fill="#D4B07A" stroke="#3D2817" stroke-width="1.7"/>
+      <ellipse cx="-4" cy="13" rx="1.3" ry="2" fill="#3D2817"/>
+      <ellipse cx="4" cy="13" rx="1.3" ry="2" fill="#3D2817"/>
+      <circle cx="-6" cy="-3" r="2.2" fill="#3D2817"/>
+      <circle cx="8" cy="-3" r="2.2" fill="#3D2817"/>
+    </g>
+</g>
 
   <!-- Comparison labels -->
   <g font-size="20" fill="#333">
