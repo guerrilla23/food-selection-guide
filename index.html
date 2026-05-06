@@ -185,6 +185,39 @@
     .cat-tab.active {
       background: var(--accent); color: white; border-color: var(--accent);
     }
+    /* 「今が旬」タブ — 他カテゴリと差別化するためアンバー系のアクセント */
+    .cat-tab-special {
+      background: #FFF8EE;
+      border-color: #F0D9B0;
+      color: #8A4A0A;
+      font-weight: 700;
+    }
+    .cat-tab-special.active {
+      background: #E8A52B;
+      border-color: #E8A52B;
+      color: white;
+    }
+    @media (prefers-color-scheme: dark) {
+      .cat-tab-special {
+        background: #3D2A0F;
+        border-color: #5C4520;
+        color: #F2C77A;
+      }
+      .cat-tab-special.active {
+        background: #E8A52B;
+        border-color: #E8A52B;
+        color: #1A1A1A;
+      }
+    }
+    /* 区切り線 — 「今が旬」と「すべて」の間 */
+    .cat-sep {
+      flex: 0 0 auto;
+      width: 1px;
+      height: 24px;
+      background: var(--card-border);
+      margin: 0 4px;
+      align-self: center;
+    }
 
     /* ===== Grid (list) ===== */
     main { padding: 16px; padding-bottom: calc(env(safe-area-inset-bottom, 0px) + 32px); }
@@ -912,6 +945,7 @@
       search_clear:        { ja: '検索クリア', en: 'Clear search' },
       // Empty / loading
       empty_no_results:    { ja: '該当する食材がありません', en: 'No matching foods' },
+      empty_no_season:     { ja: '今月が旬の食材は登録されていません', en: 'No foods in season this month' },
       loading:             { ja: '読み込み中…', en: 'Loading...' },
       loading_diagram:     { ja: '図解を読み込み中…', en: 'Loading diagram...' },
       // Detail header
@@ -970,6 +1004,8 @@
       toast_url_copied:    { ja: 'URLをコピーしました', en: 'URL copied' },
       toast_copy_failed:   { ja: 'コピーできませんでした', en: 'Copy failed' },
       // Categories (foods.json の category_label を補完するフォールバック)
+      category_in_season:  { ja: '🌱 今が旬', en: '🌱 In Season' },
+      category_in_season_aria: { ja: '今月が旬の食材だけ表示', en: 'Show foods in season this month' },
       category_all:        { ja: 'すべて', en: 'All' },
       category_vegetable:  { ja: '野菜', en: 'Vegetable' },
       category_fruit:      { ja: '果物', en: 'Fruit' },
@@ -1165,7 +1201,11 @@
     function filteredFoods() {
       const q = normalize(App.filters.query);
       return App.foods.filter(f => {
-        if (App.filters.category !== 'all' && f.category !== App.filters.category) return false;
+        if (App.filters.category === 'in_season') {
+          if (!isInSeason(f)) return false;
+        } else if (App.filters.category !== 'all' && f.category !== App.filters.category) {
+          return false;
+        }
         if (q && !f._search.includes(q)) return false;
         return true;
       });
@@ -1190,9 +1230,13 @@
     //  Categories
     // ============================================================
     function renderCategories() {
+      // 'in_season' は当月旬の食材だけ絞り込む仮想カテゴリ(先頭固定)
       // 'all' は UI 辞書から、各カテゴリは food.category_label の現在言語を使用
       // データに翻訳がない場合は UI 辞書 (category_<id>) にフォールバック
-      const cats = [{ id: 'all', label: t('category_all') }];
+      const cats = [
+        { id: 'in_season', label: t('category_in_season'), special: true },
+        { id: 'all', label: t('category_all') },
+      ];
       const seen = new Set();
       for (const f of App.foods) {
         if (!seen.has(f.category)) {
@@ -1202,9 +1246,17 @@
           cats.push({ id: f.category, label: dataLabel || fallback || f.category });
         }
       }
-      App.el.catTabs.innerHTML = cats.map(c =>
-        `<button class="cat-tab${c.id === App.filters.category ? ' active' : ''}" data-cat="${escapeHTML(c.id)}">${escapeHTML(c.label)}</button>`
-      ).join('');
+      App.el.catTabs.innerHTML = cats.map((c, i) => {
+        const activeClass = c.id === App.filters.category ? ' active' : '';
+        const specialClass = c.special ? ' cat-tab-special' : '';
+        const ariaAttr = c.id === 'in_season'
+          ? ` aria-label="${escapeHTML(t('category_in_season_aria'))}"`
+          : '';
+        const btn = `<button class="cat-tab${activeClass}${specialClass}"${ariaAttr} data-cat="${escapeHTML(c.id)}">${escapeHTML(c.label)}</button>`;
+        // 「今が旬」と「すべて」の間に区切り線を入れる
+        const sep = i === 0 ? '<span class="cat-sep" aria-hidden="true"></span>' : '';
+        return btn + sep;
+      }).join('');
     }
 
     // ============================================================
@@ -1216,7 +1268,10 @@
     function renderGrid() {
       const list = filteredFoods();
       if (list.length === 0) {
-        App.el.grid.innerHTML = `<div class="empty">${escapeHTML(t('empty_no_results'))}</div>`;
+        const msgKey = App.filters.category === 'in_season'
+          ? 'empty_no_season'
+          : 'empty_no_results';
+        App.el.grid.innerHTML = `<div class="empty">${escapeHTML(t(msgKey))}</div>`;
         return;
       }
       App.el.grid.innerHTML = list.map(f => {
@@ -1753,6 +1808,13 @@
           b.classList.toggle('active', b === btn)
         );
         renderGrid();
+        // GA4: フィルター利用を記録 (「今が旬」の利用率も把握できるよう is_in_season を付与)
+        if (typeof gtag === 'function') {
+          gtag('event', 'filter_category', {
+            filter_value: btn.dataset.cat,
+            is_in_season: btn.dataset.cat === 'in_season',
+          });
+        }
       });
       App.el.backBtn.addEventListener('click', () => {
         if (history.length > 1 && document.referrer) history.back();

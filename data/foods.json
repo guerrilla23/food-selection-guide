@@ -692,13 +692,13 @@
           "殻:ヒビなし",
           "肌:ザラつかない",
           "汚れ:なし",
-          "賞味期限:余裕"
+          "賞味期限:余裕がある"
         ],
         "en": [
           "Shell: No cracks",
           "Surface: Smooth",
           "Cleanliness: Good",
-          "Best by: Plenty"
+          "Best by: Plenty of time"
         ]
       },
       "ng_short": {
@@ -793,20 +793,7 @@
       },
       "color_theme": "#FCEAE5",
       "accent_color": "#D87878",
-      "season": [
-        "1月",
-        "2月",
-        "3月",
-        "4月",
-        "5月",
-        "6月",
-        "7月",
-        "8月",
-        "9月",
-        "10月",
-        "11月",
-        "12月"
-      ],
+      "season": [],
       "season_peak": {
         "ja": "通年",
         "en": "Year-round"
@@ -4777,20 +4764,7 @@
       },
       "color_theme": "#FCE5DC",
       "accent_color": "#E08878",
-      "season": [
-        "1月",
-        "2月",
-        "3月",
-        "4月",
-        "5月",
-        "6月",
-        "7月",
-        "8月",
-        "9月",
-        "10月",
-        "11月",
-        "12月"
-      ],
+      "season": [],
       "season_peak": {
         "ja": "通年",
         "en": "Year-round"
@@ -4912,20 +4886,7 @@
       },
       "color_theme": "#F8D8D0",
       "accent_color": "#A04030",
-      "season": [
-        "1月",
-        "2月",
-        "3月",
-        "4月",
-        "5月",
-        "6月",
-        "7月",
-        "8月",
-        "9月",
-        "10月",
-        "11月",
-        "12月"
-      ],
+      "season": [],
       "season_peak": {
         "ja": "通年",
         "en": "Year-round"
@@ -5047,20 +5008,7 @@
       },
       "color_theme": "#FCD8D0",
       "accent_color": "#D87878",
-      "season": [
-        "1月",
-        "2月",
-        "3月",
-        "4月",
-        "5月",
-        "6月",
-        "7月",
-        "8月",
-        "9月",
-        "10月",
-        "11月",
-        "12月"
-      ],
+      "season": [],
       "season_peak": {
         "ja": "通年",
         "en": "Year-round"
@@ -5968,16 +5916,10 @@
       },
       "color_theme": "#FFD8C8",
       "accent_color": "#7A1810",
-      "season": [
-        "11月",
-        "12月",
-        "1月",
-        "2月",
-        "3月"
-      ],
+      "season": [],
       "season_peak": {
-        "ja": "冬(狩猟期)",
-        "en": "Winter (hunting season)"
+        "ja": "通年",
+        "en": "Year-round"
       },
       "key_check": {
         "icon": "👀",
@@ -6096,15 +6038,10 @@
       },
       "color_theme": "#FCD0C0",
       "accent_color": "#9A3020",
-      "season": [
-        "11月",
-        "12月",
-        "1月",
-        "2月"
-      ],
+      "season": [],
       "season_peak": {
-        "ja": "冬(脂のった旬)",
-        "en": "Winter (peak fat)"
+        "ja": "通年",
+        "en": "Year-round"
       },
       "key_check": {
         "icon": "👀",
